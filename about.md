@@ -1,30 +1,24 @@
 ---
 layout: page
-title: About
+title: À propos de ce site
+id: about
 ---
 
-<p class="message">
-  Hey there! This page is included as an example. Feel free to customize it for your own use upon downloading. Carry on!
-</p>
+Hello,
 
-In the novel, *The Strange Case of Dr. Jeykll and Mr. Hyde*, Mr. Poole is Dr. Jekyll's virtuous and loyal butler. Similarly, Poole is an upstanding and effective butler that helps you build Jekyll themes. It's made by [@mdo](https://twitter.com/mdo).
+Je m'appelle Timothée Carry, je suis développeur web et j'ai la chance
+d'habiter à Paris, une ville où un grand nombre de meetups et de conférences
+ont lieu. J'ai pris pour habitude de prendre de notes à ces évenements, de
+manière à avoir un support auquel me réferer quand ma mémoire me fait défaut.
 
-There are currently two themes built on Poole:
+En entrant à Octo Technology en 2014, j'ai pris l'habitude de mettre mes notes
+en forme sous forme de CR (Compte-Rendu) plus lisible et de le partager sur les
+mailing-lists internes avec mes collégues.
 
-* [Hyde](http://hyde.getpoole.com)
-* [Lanyon](http://lanyon.getpoole.com)
+Comme l'information n'a de la valeur que si elle est partagée, je me suis dit
+qu'il était dommage de ne pas en faire profiter plus de monde. J'ai donc mis
+rapidement sur pied ce site, et voici le résultat !
 
-Learn more and contribute on [GitHub](https://github.com/poole).
+Sharing is caring.
 
-## Setup
 
-Some fun facts about the setup of this project include:
-
-* Built for [Jekyll](http://jekyllrb.com)
-* Developed on GitHub and hosted for free on [GitHub Pages](https://pages.github.com)
-* Coded with [Sublime Text 2](http://sublimetext.com), an amazing code editor
-* Designed and developed while listening to music like [Blood Bros Trilogy](https://soundcloud.com/maddecent/sets/blood-bros-series)
-
-Have questions or suggestions? Feel free to [open an issue on GitHub](https://github.com/poole/issues/new) or [ask me on Twitter](https://twitter.com/mdo).
-
-Thanks for reading!
