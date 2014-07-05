@@ -1,3 +1,7 @@
+---
+layout: post
+title: Hackathon OpenData Day 2014
+---
 Le 22 Février est la journée mondiale de l'Open Data, et avait lieu à Paris un
 Hackathon, dans les locaux de Simplon, à Montreuil. Autant le dire tout de
 suite, c'était mal organisé. On était à peine douze en tout, en comptant les
