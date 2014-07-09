@@ -77,8 +77,7 @@ les requetes, check que les parametres indispensables soient bien là, fait
 quelques manips de data élémentaires et modifie la requete en conséquence
 avant de la laisser passer aux app.get et app.post plus précis ensuite.
 
-Il conseillait aussi la library paperwork
-([https://github.com/lperrin/paperwork](https://github.com/lperrin/paperwork))
+Il conseillait aussi la library [paperwork](https://github.com/lperrin/paperwork)
 qui permet de valider un schéma de JSON simplement, à intégrer dans une API
 REST. Elle retourne un 4xx avec le détail de l'erreur de validation si le JSON
 envoyé ne corresponds pas à ce qu'on attends.

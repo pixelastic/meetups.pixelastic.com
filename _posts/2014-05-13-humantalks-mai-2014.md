@@ -118,7 +118,7 @@ qui ne se serait pas forcément créée d'elle-même.
 
 La dernière conf', vu qu'on était chez Adobe, était sur les prochains produits
 et évolutions de produit Adobe. Présenté par
-[https://twitter.com/mchaize](@mchaize) qui bosse là bas et qui a pu nous
+[@mchaize](https://twitter.com/mchaize) qui bosse là bas et qui a pu nous
 donner une vision honnete de ce qu'il se passe chez Adobe.
 
 D'abord, c'est des améliorations dans la prochaine version de Photoshop.
@@ -156,7 +156,7 @@ directement sauter aux yeux les incohérences des designs ("pourquoi la marge es
 de 6px ici et de 4px là ?", "Pourquoi y a 12 gris différents et 6 polices ?").
 
 J'ai aussi appris que photoshop possédait une API pour le piloter en headless
-avec [http://github.com/adobe-photoshop/](plein de plugins dispos).
+avec [plein de plugins dispos](http://github.com/adobe-photoshop/).
 
 
 
