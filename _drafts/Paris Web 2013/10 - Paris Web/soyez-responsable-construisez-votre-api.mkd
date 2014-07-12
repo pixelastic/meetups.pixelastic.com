@@ -1,0 +1,46 @@
+11h40 Soyez responsables, construisez votre api
+-----------------------------------------------
+
+Pas forcément externe, mais même en interne, avoir une API. Les découpler. Pas
+de stack, découpler au maximum. Limiter son "empreinte carbone". Faire des
+composants modulaires, les plus légers possibles.
+
+CSS.
+Tout déclarer dans un block. Couleurs, texte, taille, etc. ?
+Plusieurs classes, positionnement, font, etc ?
+Préprocesseur permet de les remettre en un seul block.
+
+Surveiller la portée? Ps pourrir le global avec Javascript. Sandbox avec
+fonction auto-appellante.
+Fonctions privées, fonctions publiques en js. Ne pas tout exposer. Ouvrir petit
+à petit, sinon tout le monde s'engouffre et obligé de retrocompatible.
+
+Faire en sorte qu'élements, même vide ne cassent pas la vue. Widgets peuvent
+s'afficher correctement où qu'ils soient.
+
+Standards. URI, JSON, Timestamp, UTF8.
+
+Verbes pour REST, noms pour URI.
+
+Entetes HTTP Accept, retourner ce qui est demandé. Même ressource sous
+différents formats.
+
+Sélectionner la version dans l'url. /v1/
+
+Codes HTTP pour gérer les erreurs.
+
+Ne pas faire de gros frameworks, mais de petites briques qui font une chose,
+mais le font bien.
+
+Pas une stack, mais une galaxie. Dialogue entre les éléments. Possibilité de
+changer un élément par un autre.
+
+Utiliser des microlibs. Utiliser des preprocesseurs. Générer du static si
+possible. Utiliser des builders (automatiser les taches).
+
+Microframeworks. Sinatra. Express. Slim.
+
+
+
+
+

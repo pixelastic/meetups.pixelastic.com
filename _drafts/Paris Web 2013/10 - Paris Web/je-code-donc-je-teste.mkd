@@ -1,0 +1,51 @@
+11h Je code donc je teste
+-------------------------
+
+Pas de debug avec des logs. Débugs avec des breakpoints.
+Donne confiance dans le dev, peut reprendre code d'un autre dev.
+
+3 familles de test
+Unitaire, Intégration, Fonctionnels
+
+Unitaires
+Boite blanche. COnnaissance de l'implémentation. Fait par les devs.
+Jasmine. Mocha. Sinon
+
+Tes d'intégarion
+Valider l'intégrarion des composants entre eux.
+Karma. CasperJS.
+Scénarisés.
+
+Test fonctionnels
+Valider le fonctionnament d'un point de vue utilisateur.
+Selenium. Sikuli Script.
+
+Test de validité.
+Valider par rapport à des bests pracices.
+YSlow. W3C. OpQuast.
+
+Test de Compatibilité
+Compats sur différents supports.
+BrowserStack. TestSwarm.
+
+Industrialisation.
+Automatiser les tests. A chaque commit, etc.
+Jenkins. Yeoman. Grunt.
+
+Apprentissage.
+Ca prends du temps de savoir faire des tests. Pas si dur d'installer les
+frameworks, mais pus dur de savoir bien faire des tests. QUoi tester, comment
+? Evangélisation à faire.
+
+Réalisme.
+Pas forcément possible de TOUT tester sus TOUT les projets. Tests unitaires les
+plus simples. Pas obligé de tout tester. Par exemple rajouter les tests au fur
+et à mesure de la correction des tests. Ensuite, toujours tester le nouveau
+code.
+
+Rules
+PEnser au code et au test en même temps.
+Faire le code de tests en même temps que le code. QUand c'est encore frais.
+Un test moyen aujourd'hui est mieux qu'un test imparfait plus tard.
+Un test moche est mieux que pas de test du tout.
+
