@@ -1,3 +1,9 @@
+---
+layout: post
+title: 'HumanTalks Juin 2014'
+tags: humantalks
+---
+
 ## Introduction
 
 Mardi dernier avait lieu les HumanTalks. Cette fois-ci c'était dans les locaux

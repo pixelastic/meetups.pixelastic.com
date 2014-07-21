@@ -1,3 +1,9 @@
+---
+layout: post
+title: Réussir ses présentations PPT
+tags: madinier
+---
+
 J'ai eu la chance de participer à la formation "Réussir ses présentation PPT"
 à Octo. N'ayant jamais touché à PowerPoint et étant sous Linux, j'ai un peu
 galéré à installer une version de Windows Trial, et une version Office Trial

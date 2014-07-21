@@ -1,3 +1,8 @@
+---
+layout: post
+title: 'HumanTalks Mai 2014'
+tags: humantalks
+---
 ## Introduction
 
 HumanTalks chez Adobe, dans leurs magnifiques locaux. La "sécurité" à l'entrée

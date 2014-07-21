@@ -1,3 +1,8 @@
+---
+layout: post
+title: 'Paris Tech Talks #6'
+tags: techtalks
+---
 ## Introduction
 
 Le premier Tech Talk que je faisais, et sans doute le dernier. Tout était trop

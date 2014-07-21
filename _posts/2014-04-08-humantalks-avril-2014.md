@@ -1,6 +1,7 @@
 ---
 layout: post
 title: HumanTalks Avril 2014
+tags: humantalks
 ---
 
 ## Introduction

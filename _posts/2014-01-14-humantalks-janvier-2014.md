@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "HumanTalks Janvier 2014"
-tags:
+tags: humantalks
 ---
 
 ## Introduction
