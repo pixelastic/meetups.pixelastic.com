@@ -108,7 +108,119 @@ positifs.
 
 Et bien sur, ses slides sont [dispos online](http://bit.ly/pwdevtools).
 
+## Enrichissons nos frameworks web
 
+Raphaël Goetter et Nicolas Hoffman nous parlent de frameworks CSS, en prenant
+comme exemples leurs propres créations. Ils n'étaient pas là pour vendre leur
+solutions. Ils étaient plutot là pour donner leur retour d'experience, pour
+qu'on puisse en profiter quand on fait nous-même nos frameworks.
 
+Alors bien sur, on ne fait pas tous des frameworks CSS open-source que d'autres
+vont utiliser, mais on possède au moins un tas de classes qu'on réutilise d'un
+projet à un autre. POur faciler la réutilisation, il y a donc quelques bonnes
+pratiques à prendre en compte.
 
+Déjà, découper ses classes pour les rendre le plus réutilisables possibles.
+Utiliser une nomenclature cohérente pour nommes les éléments d'interfaces.
+Toujours garder ses fallbacks pour vieux browsers proches du code de la feature
+initiale (pas dans une feuille de style supplémentaire). Utiliser `normalize`
+pour être sur de partir sur la même base à chaque fois.
 
+Et surtout, une fois que votre nomenclature de nommage est statuée et
+cohérente, documentez-la et expliquez-là, donnez des exemples.
+
+Il est parfois nécessaire d'aller à l'encontre des bonnes pratiques, comme
+d'utiliser le sélecteur universel `*` pour remettre un box-model par défaut, ou
+utiliser `!important` pour être sur de ne pas avoir une règle fondamentale
+écrasée. Bon, là on a le droit, c'est pas une rustine pour un cas particulier.
+
+Finalement comme autres frameworks CSS, ils conseillent de tester Zurb
+Foundation.
+
+## Monitoring
+
+Dernière conférence de la journée et absolument passionante. On a eu un retour
+d'expérience d'un ops du journal 20 minutes (à moins que ce ne soit Metro ? Je
+ne me souviens plus).
+
+Il commence par nous dire qu'il est inutile de tout monitorer. Quand on tracke
+trop d'indicateurs et qu'on se mets trop d'alertes, on recoit plein d'emails et
+on finit par ne plus les lire et faire des règles de filtrage pour simplement
+les marquer comme lus.
+
+De la même façon, il faut éviter de créer des dashboards avec des tas de
+valeurs affichées partout. Le cerveau humain ne process pas cette info aussi
+vite que si on avait simplement affiché des couleurs, pour voir d'un coup d'œil
+ce qui cloche.
+
+Il nous a ensuite parlé des outils. Tout d'abord `collectd` qui collecte des
+tas d'infos sur le serveur où il tourne (process, RAM, hard drive, etc) et qui
+les envoie ensuite quelque part.
+
+De l'autre coté, on a Graphite dont le job est d'afficher des données sous
+forme de graph. Il peut s'installer chez soi ou s'utiliser en SaaS avec
+Librato. Graphite ne contient pas d'intelligence, il prends des données dans le
+temps, sous forme de flux, les map et les reduce, garde un historique et les
+affiche. Les infos ne sont pas stockées telles qu'elles, elles sont compressées
+au fil du temps pour ne garder qu'un trend.
+
+Graphite fonctionne sous forme de fenetres de temps (Jour, Heure, minutes, etc)
+sur lesquelles on génére des statistiques génériques. Seuls des valeurs
+numériques simples peuvent être sauvegardées. Le but est de voir l'évolution
+d'un "compteur" au fil du temps sur des fenetres plus ou moins grandes. Par
+défaut pour passer d'une fenetre de temps à une autre Graphite fait une
+moyenne, mais on peut le configurer pour faire un min, max ou une somme.
+
+Tout ceci est exposé sous forme d'url pour obtenir les valeurs depuis
+l'exterieur.
+
+Un autre outil à ajouter à sa ceinture est `statsd` qui permet de collecter des
+metrics plus personnalisés, applicatives. Cet outil prends des valeurs sous
+forme de jauge (% de RAM utilisé, jauge de vitesse, etc). Les metrics sont
+à prendre directement dans le code de l'application, et il existe des SDK pour
+à peu près tous les langages. L'idée c'est bien sur de lui faire ensuite
+envoyer ses informations à Graphite pour les tracker.
+
+Graphite n'est pas très performant en cas d'envoie de beaucoup de données. Il
+est donc possible que des datas soient envoyées, mais ne soient jamais recues.
+Dans ce cas, on peut faire comme Etsy qui utilise du sampling. C'est à dire
+qu'ils n'envoient pas toutes leurs données, mais seulement un sur 10, et ils
+extrapolent ensuite dans Graphite.
+
+Il semble aussi possible d'envoyer des données vers Graphite à partir de
+`munin` et `awstat` mais notre speaker ne l'a pas testé directement.
+
+Ensuite vient logstash, un outil basé sur elasticsearch qui permet de
+recueillir les logs et les étudier. La bonne pratique est déjà de centraliser
+ses logs sur un même serveyr, ne pas les laisser pourir les serveurs sur
+lesquels ils sont créés. Surtout quand on scale, on détruit beaucoup de
+machines et on risque donc de perdre des logs. Pour ça, on peut utiliser
+`syslogrc` ou `checksyslog`.
+
+Logstash permet de faire des requetes sous forme de regexp, ou de filtrer sur
+certaines url (pour savoir le nombre de connections à un panier d'achat par
+exemple). Pour peu que les urls du site soient bien ordonnées, ça permet de
+faire du tracking à peu de frais en utilisant les logs déjà générés par le
+serveur.
+
+Un marqueur important à garder dans graphite est les dates des déploiement, de
+manière à les correler avec les pics possibles d'erreurs et de pouvoir ainsi
+facilement les isoler. Idéalement chaque commit devrait être présent sur la
+timeline. Il est important d'avoir des métriques visuelles rapides dès qu'on
+déploie, pour voir si on a pété quelque chose en production. En intégration ça
+permet aussi de pouvoir comparer les stats d'un commit sur un autre.
+
+Il nous a aussi parlé de `ab` ou de `thung` (pas sur de l'orthographe) qui sont
+des outils pour tester un serveur, voir à quand il va s'effondrer. Descartes
+est un dashboard avec un peu plus de classe que le theme de base, pour
+Graphite.
+
+La fin du talk était surtout l'occasion de lancer quelques noms d'apps qui
+peuvent aussi aider dans le monitoring, comme `logly`, `logentries`,
+`papertrails` ou `spunk` pour l'analyse de logs. `sentry` pour les logs front,
+capturer les exceptions, observer les valauers des variables. Il est nécessaire
+de le configurer abondamment pour l'utiliser en prod car lui demander de
+logguer toutes les erreurs risque d'en faire beaucoup trop.
+
+Dans la veine de nagios, il nous conseillait [riemann](http://riemann.io/) ou
+[sensu](http://sensuapp.org/).
