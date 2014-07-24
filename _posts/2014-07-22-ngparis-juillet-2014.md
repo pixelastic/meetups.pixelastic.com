@@ -9,7 +9,7 @@ tags: ngparis
 Ce nouveau meetup angular avait lieu chez Sfeir, à Neuilly. Et Sfeir avait mis
 le paquet. En plus de la bouteille d'eau ou de la canette de SfeirBull brandée,
 on a eu le droit à un carton pour coopter un Sfeir. Même sans faire partie de
-Sfeir, si on leur propose un dev et qu'ils l'embauche, on gagne un MacBook Pro.
+Sfeir, si on leur propose un dev et qu'ils l'embauchent, on gagne un MacBook Pro.
 C'est sans doute moins cher qu'un cabinet de recrutement, mais c'est une drole
 de technique.
 
