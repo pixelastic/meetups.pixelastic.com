@@ -74,3 +74,5 @@ tags: gamejam
 - Blocs avec lettre, tape sur lettre, le fait disparaitre.
 - Grille 5x5, clic dessus, disparait et ceux au-dessus descendent.
 - Grille dont les carrés changent de couleur quand on passe en hold dessus.
+
+Téléphone : 06 44 06 94 23 ou 06 26 05 17 84
