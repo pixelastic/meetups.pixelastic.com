@@ -9,6 +9,10 @@ tags: perfUG
 l'autre coté, en tant que speaker. Remerçions dont Benjamin Brabant pour ce
 superbe compte-rendu.*
 
+*Vous pouvez retrouver plus d'infos sur l'évenement sur le site du
+[perfUG](http://perfug.github.io/compte-rendu/2014/08/31/compte-rendu-du-perfug--webperfs-pour-les-nuls/),
+dont [la vidéo de la présentation](http://octo.ubicast.tv/permalink/v12516c17909efi73ga5/).*
+
 Timothée pour son premier talk en meetup nous a fait une super présentation,
 pratique, claire et abordable, des bonnes méthodes à suivre pour optimiser
 basiquement les performances de son application Web.
