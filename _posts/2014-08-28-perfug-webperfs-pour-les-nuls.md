@@ -6,7 +6,8 @@ tags: perfUG
 
 ### Disclaimer
 *Pour une fois, le compte-rendu n'est pas de moi car cette fois-ci j'étais de
-l'autre coté, en tant que speaker. Remerçions dont Benjamin Brabant pour ce
+l'autre coté, en tant que speaker. Remerçions dont [Benjamin
+Brabant](https://twitter.com/Maastiff) pour ce
 superbe compte-rendu.*
 
 *Vous pouvez retrouver plus d'infos sur l'évenement sur le site du
