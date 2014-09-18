@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "HumanTalks Septembre 2014"
-tags: humantalks, tdd, hackathon, reactive
+tags: humantalks
 ---
 
 Pour Septembre, c'est Mozilla qui a bien voulu accueillir les HumanTalks. Au
