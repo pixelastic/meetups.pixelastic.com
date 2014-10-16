@@ -81,7 +81,7 @@ parfaitement".
 
 ## Gérez vos processus avec Kanban
 
-[Antoine Roux](@antoine_roux) nous a fait un état des lieux et un retour
+[Antoine Roux](https://twitter.com/antoine_roux) nous a fait un état des lieux et un retour
 d'expérience de la méthodologie Kanban, qu'il mets en pratique dans sa société
 depuis 4 ans.
 
@@ -171,8 +171,8 @@ pour des équipes de support, ou de TMA, pour des listes de questions
 
 ## JHipster
 
-Dernière présentation à base de live-coding par [Julien Dubois](@juliendubois),
-créateur de JHipster.
+Dernière présentation à base de live-coding par [Julien
+Dubois](https://twitter.com/juliendubois), créateur de JHipster.
 
 JHipster est un générateur d'application Java/Angular, basé sur Yeoman. C'est
 open-source, y a plein d'étoiles et de forks sur GitHub et y a même des projets
