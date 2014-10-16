@@ -214,3 +214,7 @@ passionantes autour de pizzas et de sushis. Les
 [HumanTalks](http://humantalks.com/) c'est tous les
 deuxième mardis de chaque mois, dans plusieurs villes de France. S'il y en
 a près de chez vous, je vous invite à aller y faire un tour.
+
+Ce post est cross-posté sur le [blog
+Octo](http://blog.octo.com/cr-humantalks-octobre-2014/).
+
