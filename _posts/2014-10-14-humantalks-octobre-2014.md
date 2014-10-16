@@ -17,18 +17,20 @@ la première présentation.
 
 ## Developers in tech
 
-Présenté par Jean-loup Karst de [breaz.io](), un site de recherche d'emploi
-pour développeurs. Breaz "mets aux enchères" 7 à 10 développeurs par mois, dont
-les profils sont alors accessibles aux entreprises enregistrées. Les
-entreprises sont filtrées pour n'accepter que celles qui proposent de vrais
-produits techs (pas de SSII, pas d'agence, pas de gros comptes). Le développeur
-se fait alors contacter par les entreprises qui sont intéressées par son
-profil.
+Présenté par Jean-loup Karst de [breaz.io](https://breaz.io/), un site de
+recherche d'emploi pour développeurs. Breaz "mets aux enchères" 7 à 10
+développeurs par mois, dont les profils sont alors accessibles aux entreprises
+enregistrées. Les entreprises sont filtrées pour n'accepter que celles qui
+proposent de vrais produits techs (pas de SSII, pas d'agence, pas de gros
+comptes). Le développeur se fait alors contacter par les entreprises qui sont
+intéressées par son profil.
 
 Du coup, breaz a pas mal de stats sur les technos qui sont actuellement le plus
 recherchées, en back-end comme en front-end, et a pu nous faire un état des
-lieux. La majorité des sociétés enregistrées sur Breaz sont sur Paris, et ont
-été créées dans les 5 dernières années.
+lieux. Les statistiques énoncées représentent une sélection de 100 sociétés
+parisiennes, créées depuis 2008, qui produisent une produit tech, donc elles ne
+sont clairement pas représentatives du parc mondial des applications
+actuellement en production.
 
 ![Stats de demande des technos backend](/public/img/2014-10-14/breaz.jpg)
 
@@ -41,10 +43,10 @@ Coté front-end, c'est sans surprise qu'on trouve Angular, Backbone et Ember
 majoritairement comme framework MVC. jQuery garde une place de choix dans la
 majorité des projets aussi.
 
-A noter que ces stats viennent d'une centaine de sociétés parisiennes,
-recemment implantées et ne représentent donc pas la réalité des systèmes
-actuellement en production. Node et Angular ne représentent même pas 1% de ces
-projets.
+A noter que si on compare ces statistiques aux chiffres mondiaux, englobant
+toutes les sociétés et tous les produits actuellement en production, on arrive
+à des données complétement différentes. Node, Ruby, Angular et Backbone, ici
+très bien représentés, ne parviennent même pas à 1% du parc mondial historique.
 
 Dans les questions-réponses qui ont suivi, il ressort que les profils qui ont
 un Github actif sont plus contactés que les autres. Pour l'entreprise cela est
