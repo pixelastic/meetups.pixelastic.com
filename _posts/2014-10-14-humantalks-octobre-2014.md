@@ -206,3 +206,11 @@ fonctions de CRUD basiques pour opérer sur nos objets, ainsi qu'une page de
 monitoring de la JVM.
 
 C'était vraiment bien pensé, ça m'a presque donné envie de faire du Java.
+
+## Conclusion
+
+Comme d'habitude, une très bonne session HumanTalks suivie de discussions
+passionantes autour de pizzas et de sushis. Les
+[HumanTalks](http://humantalks.com/) c'est tous les
+deuxième mardis de chaque mois, dans plusieurs villes de France. S'il y en
+a près de chez vous, je vous invite à aller y faire un tour.
