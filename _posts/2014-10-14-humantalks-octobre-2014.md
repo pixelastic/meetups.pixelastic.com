@@ -53,22 +53,17 @@ langages différents.
 
 ## Convaincre en quelques secondes
 
-Le talk suivant, de [Richard Hanna](https://twitter.com/richardhanna) était
-moins convaincant. Intitulé "Comment convaincre en quelques secondes" je
-m'attendais à trouver un speaker charismatique qui allait m'apprendre des trucs
-et me donner des astuces.
+Le talk suivant, de [Richard Hanna](https://twitter.com/richardhanna), était
+intitulé "Comment convaincre en quelques secondes".
 
-J'ai été déçu. Essentiellement parce que le speaker lisait ses notes et ne
-paraissait pas à l'aise, ce qui jurait avec son discours.
-
-Il conseillait de ne pas faire confiance à l'adage comme quoi l'habit ne pas
-fait le moine. Pour lui, si on est mal habillé, notre interlocuteur va le
+Il conseillait de ne pas faire confiance à l'adage comme quoi l'habit ne fait
+pas le moine. Pour lui, si on est mal habillé, notre interlocuteur va le
 remarquer, alors que si on est bien habillé, c'est notre personnalité qu'il va
 remarquer.  On juge de manière inconsciente sur les vêtements, le costume.
 
 Il nous propose ensuite de regarder ses interlocuteurs dans les yeux, et de
 sourire, afin de leur donner confiance. Se répeter mentalement 3 fois "Super,
-super, super" avant de prendre la parole pour essayer d'être souriant.
+super, super" avant de prendre la parole pour être souriant.
 
 Faire attention au langage corporel. Les bras fermés sur le torse est un signe
 de protection, on cherche à cacher quelque chose, ce qui peut donner à penser
@@ -81,8 +76,6 @@ Dans la formulation des idées, attention aux tournures négatives, préférer l
 tournures sans ambiguité. Par exemple, ne pas dire "C'est pas mauvais, il ne
 devrait pas y avoir de problème", mais préferer "C'est bien, tout va marcher
 parfaitement".
-
-Au final, les 10 minutes du talk ne m'ont pas réellement convaincues.
 
 ## Gérez vos processus avec Kanban
 
