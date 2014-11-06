@@ -4,7 +4,7 @@ title: "NodeJS - Chapitre 2, Conférence 2"
 tags: nodejs
 ---
 
-Pour ce NodeJS Paris S02E02, nous avons eu le droit aux joli amphi de l'école
+Pour ce NodeJS Paris S02E02, nous avons eu le droit aux joli amphis de l'école
 42, avec ses poufs multicolores (et inconfortables). Pas de dossier, donc pas
 très pratique de prendre des notes.
 
@@ -14,7 +14,7 @@ talks, etc, etc.
 
 Puis se sont enchainés plein de sponsors, beaucoup trop. Si encore il y en
 avait eu un ou deux, j'aurais pu écrire quelques mots sur chacun mais là il
-y en avait beaucoup trop. Le meetup commençait officiellement à 19h, mais je
+y en avait bien trop. Le meetup commençait officiellement à 19h, mais je
 pense que le premier orateur n'a pas du prendre la parole avant 20h au moins.
 
 En vrac, Marceau Innovation (qui n'a pas beaucoup innové pour trouvé son nom)
@@ -22,7 +22,7 @@ qui aide des français à partir s'installer à la Silicon Valley. Captain Dash
 (qui ont un très joli logo), qui font de la dataviz à partir des données des
 clients. Puis Digital & You dont je n'ai rien compris au pitch. Et puis je
 crois qu'il y avait encore d'autres sponsors ensuite mais franchement j'ai
-arrété de suivre.
+arreté de suivre.
 
 On a quand même ensuite pu commencer les choses sérieuses, et tant mieux car le
 programme était très intéressant : Cassandra, Testing Asynchronously, Breaz.io
@@ -38,7 +38,7 @@ que ça avait l'air bien !
 Donc Cassandra, ou `C*` pour les intimes, a été créé chez Facebook avant d'être
 open-sourcée en 2008. C'est une base dont le point fort est la scalabilité
 linéaire : il suffit de rajouter des nœuds pour scaler. Ils visent un uptime de
-100%, même pendant les upgrade. Elle est actuellement utilisée par Netflix et
+100%, même pendant les upgrades. Elle est actuellement utilisée par Netflix et
 possède un principe de multidatacenter out of the box, avec des facilités pour
 déployer sur Amazon.
 
@@ -49,7 +49,7 @@ On a eu ensuite droit à un exemple de fonctionnement. Imaginons que Cassandra
 tourne avec un cluster de X nœuds (8 étant le nombre utilisé dans l'exemple),
 alors chaque donnée est enregistrée sur un des X nœuds, grâce à un hash qui
 permet de toujours pointer vers le même nœud pour la même donnée. Si jamais
-notre charge augmente, on n'a juste besoin d'ajouter des nouveaux nœuds et les
+notre charge augmente, on a juste besoin d'ajouter des nouveaux nœuds et les
 nouvelles données seront réparties sur plus de nœuds.
 
 Pour assurer un bonne tolérance aux pannes des nœuds, la donnée de chaque nœud
@@ -60,8 +60,7 @@ coordinateur, pour indiquer sur quel nœud se trouve quelle donnée.
 
 Il est possible de définir pour cela trois niveaux de cohérence : `ONE`,
 `QUORUM` ou `ALL`. Ces règles s'appliquent autant pour la lecture que pour
-l'écriture. Grâce à ces règles, on peut faire des arbitrages entre la rapidité
-et la fiabilité de la donnée.
+l'écriture. 
 
 En mode `ONE`, on envoie l'écriture de la donnée aux trois nœuds qui peuvent la
 stocker et dès que l'un des trois l'a enregistré, on rends la main. Les deux
@@ -79,23 +78,24 @@ connexion aux autres nœuds, et celui qui a la latence la plus basse sera choisi
 en priorité).
 
 En lecture `QUORUM`, on va lire depuis un des nœuds aléatoirement, mais les
-deux autres nœuds vont nous donner un hash de la donnée. Si les hash
+deux autres nœuds vont nous donner un hash de la donnée. Si les hashs
 concordent, on rends la main, sinon on va récupérer la donnée sur le nœud qui
-l'a mise à jour le plus récemment, et les deux autres nœuds vont mettre à jour
-leur donnée.
+l'a mise à jour le plus récemment, et les deux autres nœuds vont se mettre
+à jour.
 
-Le langage de requete est très proche du SQL en terme de syntaxe, mais ce n'est
+Le langage de requête est très proche du SQL en terme de syntaxe, mais ce n'est
 pas du SQL, c'est du CQL. La primary key de chaque donnée sera son hash, ou clé
 de partition.
 
 Oui mais tout ça c'est bien beau, mais c'est quoi le rapport avec NodeJS ? Ben
-juste qu'il existe un driver nodejs pour Cassandra. Ce qui est couteux en
-Cassandra c'est l'ouverture des connections à la base, du coup le driver va
-maintenir des pools de connection ouvertes sur chaque nœud (2 par nœud). Le
-driver est optimisé pour paralleliser les requetes pour en lancer plusieurs
-sans avoir à attendre le retour de chacun.
+juste qu'il existe un driver nodejs pour Cassandra.
 
-Il est possible d'identifier un ensemble de requetes par un unique streamID, et
+Ce qui est couteux en Cassandra c'est l'ouverture des connexions à la base, du
+coup le driver va maintenir des pools de connections ouvertes sur chaque nœud (2
+par nœud). Le driver est optimisé pour paralleliser les requêtes pour en lancer
+plusieurs sans avoir à attendre le retour de chacun.
+
+Il est possible d'identifier un ensemble de requêtes par un unique streamID, et
 pouvoir ainsi récupérer toutes les réponses en même temps, de manière à faire
 de grosses économies en terme de latence. J'avoue que j'ai un peu moins bien
 suivi cette partie.
@@ -106,14 +106,14 @@ fonctionnalités de load-balancing entre plusieurs data-center par défaut. Il
 s'assure aussi que les connections vers les nœuds ne timeout pas. Si une
 connection part vers un nœud mais que celui-ci est tombé, alors plutot que de
 renvoyer une erreur le driver va réutiliser la même connection pour renvoyer la
-même requete vers un autre nœud porteur de la même donnée. La requete sera
+même requête vers un autre nœud porteur de la même donnée. La requête sera
 certes plus lente, mais elle ne sera jamais tombée en timeout.
 
 Coté code, ça signifie créer un `Cassandra.Client` en lui donnant l'ip ou
 l'adresse de quelques nœuds du cluster, et il se chargera de découvrir tous les
 autres et dresser la topologie complète du cluster. On lui envoie ensuite nos
-requetes en CQL, et on obtient un callback quand les données sont revenus.
-Comme souvent, pour économiser les temps de traitement, on donne notre requete
+requêtes en CQL, et on obtient un callback quand les données sont revenues.
+Comme souvent, pour économiser les temps de traitement, on donne notre requête
 sous forme de string avec des placeholders pour qu'elle soit optimisée derrière
 au moment de la jouer.
 
@@ -121,7 +121,7 @@ Vu qu'on est en node, le driver est aussi capable de streamer les résultats
 renvoyés. En interne il utilise un principe proche du cookie, pour se souvenir
 de sa place dans le stream et rejouer à partir de ce point. Dans les faits cela
 permet de continuer un stream même quand le nœud émetteur est tombé, on peut
-simplement continuer la même requete sur un autre nœud. Grâce au cookie, on
+simplement continuer la même requête sur un autre nœud. Grâce au cookie, on
 reprends le flux au même endroit. Par contre, si on écrit plus vite dans les
 données qu'on est en train de les lire, le cookie ne nous permettra pas de voir
 tout.
@@ -133,7 +133,7 @@ Après ce long exposé très intéressant, on a eu le droit à quelques
 questions/réponses. Quelques limitations du driver actuel ont été soulevés
 comme par exemple le fait que les opérations comme des count ou des sommes sur
 la data ne peuvent pas être faite directement dans Cassandra. Il faut récupérer
-la donnée et effectivement cette opération dans le driver. Les prochains
+la donnée et effectuer cette opération dans le driver. Les prochaines
 versions du driver devraient corriger ce soucis.
 
 ## Async is hard, test it harder
@@ -151,14 +151,14 @@ test est isolable et reproductible.
 
 Sauf que derrière tout ces beaux principes on a quelques soucis en Node. Il est
 difficile de savoir quand un test se termine vu que tout est asynchrone. Est-ce
-que mes requetes sont pending ou est-ce qu'elles vont bientot arriver ? Est-ce
+que mes requêtes sont pending ou est-ce qu'elles vont bientot arriver ? Est-ce
 que tout ce que j'ai lancé est bien revenu ? Est-ce que je termine mon test ou
 j'attends plus longtemps ?
 
 Et puis surtout, on a un problème de stacktrace avec l'event loop de node.
 A chaque itération on est dans un contexte différent, du coup les mécanismes
-classiques de `try`/`catch` ne fonctionnement pas. On a plusieurs approches
-pour contourner ce problèmes.
+classiques de `try`/`catch` ne fonctionnent pas. On a plusieurs approches
+pour contourner ce problème.
 
 On peut par exemple déclarer manuellement la fin du test comme le fait Tape ou
 NodeUnit. On appelle une méthode `.end()` pour signifier qu'on a assez attendu
@@ -175,7 +175,7 @@ quand ça arrive pour marquer la fin du test. Ca marche bien, ça nous donne les
 bons rapports d'erreurs sur les bons tests, mais c'est pas très lisible.
 
 Un moyen un peu meta de rendre tout ça plus lisible est de modifier la méthode
-`it` pour qu'elle wrappe sont contenu dans un trycact/domain. Ca nous fait
+`it` pour qu'elle wrappe son contenu dans un trycatch/domain. Ca nous fait
 revenir à une syntaxe plus lisible.
 
 La fin du talk était plus sur les outils annexes aux tests comme `jshint` ou
@@ -188,7 +188,7 @@ beaux rapport indiquant les lignes de code qui sont parcourues quand on lance
 nos tests. On peut comme ça voir les parties du code qui ne sont pas testés. Ca
 permet de voir ce qu'il reste à tester, ou même parfois à identifier du code
 mort. Il calcule aussi la complexité cyclomatique du code, qui donne une
-estimation de difficulté à le maintenir (globalement s'il n'est pas modulaire,
+estimation de la difficulté à le maintenir (globalement s'il n'est pas modulaire,
 avec des méthodes de 100+ lignes et des `if` imbriqués, c'est mauvais signe).
 
 Finalement, Florent termine par un conseil à ceux qui testent des streams. Ne
@@ -200,12 +200,12 @@ dans NodeJs, inutile de le faire. Il n'est nécessaire que de tester la méthode
 ## Breaz.io / Developers in tech
 
 Je vous renvoie à mon compte-rendu des HumanTalks précédent, Jean-loup
-y a donné le même talk.
+y a donné à peu près le même talk.
 
 ## Freelance Academy
 
 Et pour finir, Etienne Folio nous a parlé de la société de coaching de
-freelance qu'il vient de monter. Il est lui même passé freelance plus tot dans
+freelance qu'il vient de monter. Il est lui même passé freelance plus tôt dans
 l'année et peut se targuer d'avoir un TJM à 4 chiffres, tout en ne travaillant
 que 6 mois par an.
 
@@ -215,7 +215,7 @@ de la compta, de trouver des clients, etc. Il propose un stage de coaching de
 quelques semaines, suivi d'une année complète de formations (quelques jours par
 mois). Tout ça gratuitement. Il s'engage même à payer la différence de revenu
 entre le freelance et le salariat pour ceux qui se lancent, assurant à chacun
-un revenu ou moins égal à celui qu'il avait en CDI.
+un revenu au moins égal à celui qu'il avait en CDI.
 
 On a été plusieurs à se demander où était l'arnaque. En fait, c'est tout
 simplement que si jamais le nouveau freelance gagne plus que son ancien
