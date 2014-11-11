@@ -55,8 +55,8 @@ nouvelles données seront réparties sur plus de nœuds.
 Pour assurer un bonne tolérance aux pannes des nœuds, la donnée de chaque nœud
 est répliquée sur les deux nœuds voisins. Ainsi, si un nœud tombe, sa donnée
 n'est pas perdue et peut être récupérée depuis les deux nœuds voisins. Pour
-assurer un maximum de cohérence, certains nœuds sont dédiés à un rôle de
-coordinateur, pour indiquer sur quel nœud se trouve quelle donnée.
+assurer un maximum de cohérence, à chaque requete un nœud est dédié à une tâche
+de coordinateur, pour indiquer sur quel nœud la donnée peut être trouvée.
 
 Il est possible de définir pour cela trois niveaux de cohérence : `ONE`,
 `QUORUM` ou `ALL`. Ces règles s'appliquent autant pour la lecture que pour
@@ -79,9 +79,9 @@ en priorité).
 
 En lecture `QUORUM`, on va lire depuis un des nœuds aléatoirement, mais les
 deux autres nœuds vont nous donner un hash de la donnée. Si les hashs
-concordent, on rends la main, sinon on va récupérer la donnée sur le nœud qui
-l'a mise à jour le plus récemment, et les deux autres nœuds vont se mettre
-à jour.
+concordent, on rends la main. Sinon le coordinateur var récupérer la bonne
+donnée sur le nœud qui l'a mise à jour le plus récemment, et va mettre à jour
+les deux autres nœuds.
 
 Le langage de requête est très proche du SQL en terme de syntaxe, mais ce n'est
 pas du SQL, c'est du CQL. La primary key de chaque donnée sera son hash, ou clé
