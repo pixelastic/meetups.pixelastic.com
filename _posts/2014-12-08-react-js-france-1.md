@@ -137,7 +137,7 @@ retourner de manière simple sous forme de data.
 ## React, CSS in JS
 
 Le dernier talk était de Chistophe Chedeau, de chez Facebook (et sans doute
-connu de certains d'entre vous pour son boulot sur Curse Gaming. Il nous
+connu de certains d'entre vous pour son boulot sur Curse Gaming). Il nous
 a présenté React depuis sa création jusqu'à ce qu'il est aujourd'hui.
 
 L'idée principale derrière Reacte était de simplifier la codebase de Facebook.
