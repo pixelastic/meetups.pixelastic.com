@@ -8,6 +8,8 @@ Chez Octo.
 
 ## De l'idée au projet
 
+https://www.youtube.com/watch?v=qvaYpzTHRBc
+
 Comment faire un projet rapidement, une bonne stack pour fare de sfeatures,pas
 faire de la developpement de stack.
 
@@ -31,11 +33,13 @@ perdre de temps sur la stack.
 
 
 ## Protobuf
+https://www.youtube.com/watch?v=IIwQGb3hQCU
 
 Je me suis occupé de réceptionner les pizzas, du coup j'ai rien vu, dommage :)
 
 
 ## Formation
+https://www.youtube.com/watch?v=SXiOtd8hvsI
 
 auto-entrepreneur, facile de l'etre, mais on devient vite une "grosse
 entreprise" et on recoit plein de choses pour les grosses entreprises
@@ -59,3 +63,7 @@ du coup, pas facile, trop compliqué plein de choses à faire un dédale.
 
 retour de mathieu segret, humancoders. Est d'accord. A automatisé un maximum de
 choses, du coup rends les choses plus agréables.
+
+## Meteor
+
+https://www.youtube.com/watch?v=Kirit9Xl6ZM

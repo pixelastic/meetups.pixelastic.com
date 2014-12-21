@@ -14,6 +14,8 @@ Néanmoins les présentations étaient globalement très intéressantes.
 
 ## Cache Manifest
 
+[Video](https://www.youtube.com/watch?v=iicE_LMKSsw)
+
 Présentation trollesque sur cache manifest. Le speaker annoncait que les
 systèmes de cache natifs des browsers et des serveurs (ie. les entetes de cache
 HTTP) n'étaient pas assez robustes et que le cache manifest était donc la
@@ -45,6 +47,8 @@ deux collègues d'Octo qui y ont touché de près-.
 
 ## Git Deliver
 
+[Video](https://www.youtube.com/watch?v=8ISf4n4VXpk)
+
 `git deliver` est un ensemble de scripts git et bash qui permettent de faire
 des déploiements facilement directement depuis git.
 
@@ -73,6 +77,8 @@ pour ça). Si jamais l'archi nécessite des déploiements sur plus d'un serveur,
 ça devient rapidement moins adapté.
 
 ## La vie d'un manager
+
+[Video](https://www.youtube.com/watch?v=1HUBzpaDEZU)
 
 Un ancien développeur nous a raconté son parcours à travers plusieurs boites de
 différentes tailles, et comment il est passé de dev à manager et ce que c'est
@@ -120,6 +126,8 @@ qui l'embete, ce qui lui plait, etc, de manière à créer une cohésion de grou
 qui ne se serait pas forcément créée d'elle-même.
 
 ## Les nouveaux outils Adobe pour les Web Designers
+
+[Video](https://www.youtube.com/watch?v=JyJu9xZE-Dk)
 
 La dernière conf', vu qu'on était chez Adobe, était sur les prochains produits
 et évolutions de produit Adobe. Présenté par

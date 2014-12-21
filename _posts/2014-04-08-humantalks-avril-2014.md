@@ -11,6 +11,8 @@ le recrutement mobile et web".
 
 ## Aggregation pipeline pour mongoDB
 
+[Video](https://www.youtube.com/watch?v=gLULaMovrSc)
+
 Aggregation pipeline est un framework intégré à mongodb depuis la 2.2. Il
 permet de chainer des opérations de find sous forme de pipe, un peu à ma
 manière d'un map/reduce.
@@ -38,6 +40,8 @@ une machine bien puissante pour que ça fonctionne correctement.
 
 ## Programatoo
 
+[Video](https://www.youtube.com/watch?v=TLwoG11cgSE)
+
 Initiative de deux développeuses de chez Sfeir qui aiment l'informatique depuis
 qu'elles sont petites mais n'ont jamais trouvé dans les cursus nationaux de
 quoi satisfaire leur demande. L'informatique à l'école se limite à du
@@ -62,6 +66,8 @@ Elles ont remarqué qu'il y avait beaucoup plus de réticence à apprendre l'out
 informatique de la part des enseignants (à qui cela fait peur) qu'aux enfants.
 
 ## Programmation par contrats
+
+[Video](https://www.youtube.com/watch?v=T05z4PKF6pc)
 
 Jean Baylon de Soat nous a parlé de programmation par contrat. C'est un type de
 programmation défensive où on spécifie dans le code ce qu'on attends comme

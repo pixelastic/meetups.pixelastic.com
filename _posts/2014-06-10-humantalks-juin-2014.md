@@ -24,6 +24,8 @@ Au menu, on a eu 5 présentations :
 
 ## BoardGameArena
 
+[Video](https://www.youtube.com/watch?v=gCotCm5qYmE)
+
 Gregory Isabelli (@boardgamearena), nous parle de [Board Game
 Arena](http://fr.boardgamearena.com), un site où il est possible de jouer en
 temps réel avec d'autres joueurs à des jeux de plateaux.
@@ -66,6 +68,8 @@ directement dans le navigateur pour coder ses propres jeux.
 
 ## La Gamification, qu'est-ce que c'est ?
 
+[Video](https://www.youtube.com/watch?v=0z2kyjie3LU)
+
 David Grezinger, développeur chez Xebia, qui nous avait déjà fait une
 présentation sur les MOOCS à un précédent HumanTalks, nous a cette fois parlé
 de la Gamification (sujet qu'il a appris grâce à Coursera).
@@ -103,6 +107,8 @@ invite à aller directement à la source.
 
 ## Faire des jeux en Ruby avec Gosu
 
+[Video](https://www.youtube.com/watch?v=0ckw7sxiGoQ)
+
 Matthieu Segret, co-fondateur des HumanCoders nous a fait une présentation sur
 Ruby, et plus particulièrement Gosu. Gosu en Ruby est simplement une interface
 qui se bind sur une library en C qui permet de créer facilement des jeux 2D. 
@@ -119,6 +125,8 @@ Je ne vais pas trop m'étendre dessus, vu qu'il l'avait déjà présenté à un
 parisRB, il vous suffira de retrouver le compte-rendu initial. 
 
 ## Agile Games
+
+[Video](https://www.youtube.com/watch?v=q5tbKFJcOnw)
 
 Talk présenté par un formateur agile de So@t dont j'ai malheureusement oublié
 le nom. Il nous a parlé du jeu comme mécanisme d'amélioration, d'innovation et
@@ -170,6 +178,8 @@ arguments (neurologiques) sur en quoi c'est intéressant, et que ce n'est pas
 simplement parce que c'est plus fun.
 
 ## La création d'un AAA
+
+[Video](https://www.youtube.com/watch?v=CxtnIa2ss50)
 
 Alexis Moroz nous parle de son parcours de game designer dans plusieurs boites
 de jeu vidéo français. Il a surtout parlé de son travail sur Heavy Rain, chez
