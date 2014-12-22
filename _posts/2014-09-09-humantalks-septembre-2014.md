@@ -130,3 +130,9 @@ ce système. On peut manipuler des séquences d'évenement, quelque soit leur
 source (réseau, calcul, interaction UI de l'utilisateur) et les traiter comme
 s'il elle venaient toutes d'une même source et réagir sur leurs événements.
 RxJava permet de filtrer, merge, effectuer du map/reduce sur ces séquences.
+
+## Concatenate, Compress, Cache
+
+Il est assez difficile de faire un compte-rendu de son propre talk, du coup je
+vous invite à regarder [la vidéo](https://www.youtube.com/watch?v=ecc1zudWmX4)
+ou consulter [les slides](http://talks.pixelastic.com/webperfs-humantalks/#/).
