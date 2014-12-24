@@ -47,6 +47,11 @@ h5 {
 
 /* Content */
 
+/* Youtube */
+.youtube-player {
+  display:block;
+  margin:1rem auto;
+}
 
 
 
