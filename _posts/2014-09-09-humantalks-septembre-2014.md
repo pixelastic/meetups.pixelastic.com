@@ -133,6 +133,8 @@ RxJava permet de filtrer, merge, effectuer du map/reduce sur ces séquences.
 
 ## Concatenate, Compress, Cache
 
+{% youtube https://www.youtube.com/watch?v=ecc1zudWmX4 %}
+
 Il est assez difficile de faire un compte-rendu de son propre talk, du coup je
-vous invite à regarder [la vidéo](https://www.youtube.com/watch?v=ecc1zudWmX4)
-ou consulter [les slides](http://talks.pixelastic.com/webperfs-humantalks/#/).
+vous invite à regarder la vidéo ou consulter [les
+slides](http://talks.pixelastic.com/webperfs-humantalks/#/).

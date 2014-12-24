@@ -18,7 +18,7 @@ trois colonnes Bon, Moyen, Mauvais de chacun des talks).
 
 ### Ecrire sur Internet, c'est mieux avec Markdown
 
-[Video](https://www.youtube.com/watch?v=hdM1wltUTyQ)
+{% youtube https://www.youtube.com/watch?v=hdM1wltUTyQ %}
 
 Présentation de markdown. Vu que je prends déjà mes notes en markdown, prendre
 les notes de ce talk avait un petit coté inception.
@@ -34,7 +34,7 @@ stackoverflow.
 
 ### Les MOOCs
 
-[Video](https://www.youtube.com/watch?v=rrMwbQf7D7M)
+{% youtube https://www.youtube.com/watch?v=rrMwbQf7D7M %}
 
 Par Yannick Grenzinger, de Xebia.
 
@@ -91,7 +91,7 @@ Il a fini avec une liste de recommandations :
 
 ### LES LANGAGES ESOTERIQUES
 
-[Video](https://www.youtube.com/watch?v=1LEDsHHR6PA)
+{% youtube https://www.youtube.com/watch?v=1LEDsHHR6PA %}
 
 Conférence amusant et wtf sur les langages ésotériques, comme le brainfuck,
 dont le but n'est pas d'être lisible, ni même d'être pratique. A partir du
@@ -123,7 +123,7 @@ Plus d'infos sur :
 
 ### L'entreprise comme malade mental
 
-[Video](http://www.youtube.com/watch?v=STsrVWhx4jQ)
+{% youtube http://www.youtube.com/watch?v=STsrVWhx4jQ %}
 
 Sans doute la conf' la plus captivante de la soirée, en partie pour les
 discussions qu'elle a entrainée autour d'une bière ensuite.

@@ -17,7 +17,7 @@ la première présentation.
 
 ## Developers in tech
 
-[Vidéo](https://www.youtube.com/watch?v=g30DJ05QN-Y)
+{% youtube https://www.youtube.com/watch?v=g30DJ05QN-Y %}
 
 Présenté par Jean-loup Karst de [breaz.io](https://breaz.io/), un site de
 recherche d'emploi pour développeurs. Breaz "mets aux enchères" 7 à 10
@@ -83,7 +83,7 @@ parfaitement".
 
 ## Gérez vos processus avec Kanban
 
-[Vidéo](https://www.youtube.com/watch?v=U1o0_oX2iIY)
+{% youtube https://www.youtube.com/watch?v=U1o0_oX2iIY %}
 
 [Antoine Roux](https://twitter.com/antoine_roux) nous a fait un état des lieux et un retour
 d'expérience de la méthodologie Kanban, qu'il mets en pratique dans sa société
@@ -175,7 +175,7 @@ pour des équipes de support, ou de TMA, pour des listes de questions
 
 ## JHipster
 
-[Vidéo](https://www.youtube.com/watch?v=36v6DIk2jwY)
+{% youtube https://www.youtube.com/watch?v=36v6DIk2jwY %}
 
 Dernière présentation à base de live-coding par [Julien
 Dubois](https://twitter.com/juliendubois), créateur de JHipster.
