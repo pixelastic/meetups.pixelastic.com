@@ -47,8 +47,9 @@ h5 {
 
 /* Content */
 
-/* Youtube */
-.youtube-player {
+/* Video players */
+.youtube-player,
+.vimeo-player {
   display:block;
   margin:1rem auto;
 }
