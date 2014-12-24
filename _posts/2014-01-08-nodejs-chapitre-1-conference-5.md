@@ -44,10 +44,14 @@ Très intéressant, ça donne envie de jouer avec les données.
 
 ## Grunt
 
+{% youtube https://www.youtube.com/watch?v=LKolEWyBcSk %}
+
 Présentation rapide de Grunt, mais sincérement regardez les screencasts de
 CSSTricks ou egghead.io et vous en saurez autant, voire plus.
 
 ## node-libspotify
+
+{% youtube https://www.youtube.com/watch?v=z8eccPT8EXc %}
 
 Présentation de Florent Jaby et de son module nodejs qui wrappe la libraire C/C++ de
 spotify pour la rendre accessible depuis node. Florent étant un collégue, je

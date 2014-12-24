@@ -30,6 +30,8 @@ et Freelance Academy.
 
 ## Cassandra
 
+{% youtube https://www.youtube.com/watch?v=ag6I-rwTH8k %}
+
 Présentation de Duy Hai Doan, évangéliste chez Datastax, l'éditeur de
 Cassandra. Je ne connaissais pas grand chose à Cassandra mis à part que c'était
 une DB NoSQL. Je vais donc essayer de récapituler ce que j'en ai compris, parce
@@ -138,6 +140,8 @@ versions du driver devraient corriger ce soucis.
 
 ## Async is hard, test it harder
 
+{% youtube https://www.youtube.com/watch?v=887BW6nYiWs %}
+
 Après ça, Florent Jaby est venu nous parler de tests en NodeJS, et plus
 particulièrement de tests de code asynchrone.
 
@@ -198,6 +202,8 @@ dans NodeJs, inutile de le faire. Il n'est nécessaire que de tester la méthode
 à la fin.
 
 ## Breaz.io / Developers in tech
+
+{% youtube https://www.youtube.com/watch?v=tFfqFj93RZM %}
 
 Je vous renvoie à mon compte-rendu des HumanTalks précédent, Jean-loup
 y a donné à peu près le même talk.
