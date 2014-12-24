@@ -53,10 +53,10 @@ CSSTricks ou egghead.io et vous en saurez autant, voire plus.
 
 {% youtube https://www.youtube.com/watch?v=z8eccPT8EXc %}
 
-Présentation de Florent Jaby et de son module nodejs qui wrappe la libraire C/C++ de
-spotify pour la rendre accessible depuis node. Florent étant un collégue, je
-n'ai pas pris vraiment de notes, sachant qu'il pouvait m'expliquer tout ça
-directement si besoin.
+Présentation de Florent Jaby et de son module nodejs qui wrappe la librairie
+C/C++ de spotify pour la rendre accessible depuis node. Florent étant un
+collègue, je n'ai pas pris vraiment de notes, sachant qu'il pouvait m'expliquer
+tout ça directement si besoin.
 
 Très bonne présentation cela dit, Florent a réussi à rendre compréhensible et
 amusant un sujet qui est à la base pas super simple.
