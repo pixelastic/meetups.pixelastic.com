@@ -214,7 +214,7 @@ tout ne sera peut-être pas bon à garder.
 ## Conclusion
 
 Premier avant-gout de React, j'ai été assez séduit par la simplicité qui s'en
-dégage. Les dernière conférence m'a laissé plutot dubitatif (comme à chaque
+dégage. La dernière conférence m'a laissé plutot dubitatif (comme à chaque
 fois qu'on essaie de remplacer CSS par JS parce que _"CSS c'est trop
 compliqué"_).
 
