@@ -67,7 +67,7 @@ de créer un fichier final qui contient le contenu mis bout-à-bout de tous les
 fichiers initiaux. Votre processus de build devrait pouvoir s'en charger sans
 problème, mais un solution simple peut s'écrire en quelques lignes :
 
-```shell
+```sh
 cat ./src/*.css > ./dist/styles.css
 cat ./js/*.js > ./dist/scripts.js
 ```
@@ -333,7 +333,7 @@ Pour les éléments dont l'URL n'est pas significative, comme les feuilles de
 styles, les scripts, les polices de caractère ou les images, on utilisera une
 fraicheur maximum d'un an. Ceci permettra au client de garder indéfiniment la
 ressource dans son cache sans avoir besoin d'interroger à nouveau le serveur.
-On générera par contre une URL différent en fonction d'un hash du contenu
+On générera par contre une URL différente en fonction d'un hash du contenu
 à chaque fois que le contenu vient à changer. On prendra bien garde à modifier
 les références à ces fichiers dans les pages HTML.
 
@@ -346,12 +346,13 @@ légers, et les télécharger moins souvent.
 La concaténation automatique des fichiers doit être intégrée dans votre
 processus de build, afin de garder un environnement de développement clair. La
 compression en gzip ne nécessite que quelques modifications sur vos serveurs.
-La mise en place d'une stratégie de cache optimale nécessite à la fois des
-modifications sur le processus de build et sur la configuration des serveurs.
+La mise en place d'une stratégie de cache optimale par contre nécessite à la
+fois des modifications sur le processus de build et sur la configuration des
+serveurs.
 
 Toutes ces modifications sont relativement peu couteuses à mettre en place et
 ne dépendent aucunement ni de la technologie utilisée pour le front-end, ni de
-celle utilisée pour le back-end, elles peuvent être mise en place quelle que
+celle utilisée pour le back-end. Elles peuvent être mise en place quelle que
 soit votre stack technique. Il n'y a donc plus aucune raison pour ne pas les
 déployer dès aujourd'hui.
 
