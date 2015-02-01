@@ -65,7 +65,12 @@ pour télécharger les autres assets de votre page.
 Les fichiers CSS et Javascript se concatènent très bien. Il suffit simplement
 de créer un fichier final qui contient le contenu mis bout-à-bout de tous les
 fichiers initiaux. Votre processus de build devrait pouvoir s'en charger sans
-problème.
+problème, mais un solution simple peut s'écrire en quelques lignes :
+
+```shell
+cat ./src/*.css > ./dist/styles.css
+cat ./js/*.js > ./dist/scripts.js
+```
 
 À noter que la concaténation d'images (CSS Sprites) est aussi possible, mais
 nous ne l'aborderons pas dans cet article.
@@ -126,6 +131,7 @@ compress.filetype  = ("application/javascript", "application/json", \
 #### Nginx
 ```nginx
 gzip on;
+gzip_comp_level 6;
 gzip_types application/javascript application/json text/css text/html text/xml
 [...]; 
 ```
@@ -248,6 +254,11 @@ serveurs différents auront des inodes différents et par conséquent des ETag
 différents.  Votre système de validation ne fonctionnera plus dès lors que
 votre client sera redirigé vers un autre frontal.
 
+À noter que ce problème n'apparait pas sous nginx, qui ne prends pas en compte
+l'inode dans la génération de son ETag. Sous Apache, l'option `FileEtag MTime
+Size` permet de le désactiver, ainsi que `etag.use-inode = "disable"` sous
+lighttpd.
+
 ### Récapitulatif
 
 À la lumière de ces explications, nous pouvons donc retracer le parcours
@@ -308,13 +319,39 @@ La technique est en fait très proche des `Etag` vus précédement à la différ
 qu'ici nous sommes maitres de la génération du nom unique de fichier et du
 moment où nous souhaitons invalider le cache de nos clients.
 
+Au final, nous utilisons un mélange de ces deux techniques pour gérer un cache
+optimal. 
+
+Les éléments dont l'URL est significative, comme les pages HTML ou les
+retours d'une API définiront une fraicheur faible (de quelques minutes
+à quelques heures, en fonction de la fréquence moyenne de mise à jour). Ceci
+permet de s'assurer que le client aura rapidement la nouvelle version quand
+celle-ci est déployée, tout en limitant la charge sur le serveur et la quantité
+d'information transitant sur le réseau.
+
+Pour les éléments dont l'URL n'est pas significative, comme les feuilles de
+styles, les scripts, les polices de caractère ou les images, on utilisera une
+fraicheur maximum d'un an. Ceci permettra au client de garder indéfiniment la
+ressource dans son cache sans avoir besoin d'interroger à nouveau le serveur.
+On générera par contre une URL différent en fonction d'un hash du contenu
+à chaque fois que le contenu vient à changer. On prendra bien garde à modifier
+les références à ces fichiers dans les pages HTML.
+
 ## Conclusion
 
 Nous avons donc vu comment trois points très simples permettent de diminuer
 grandement le nombre de total de fichiers à télécharger, les rendre plus
 légers, et les télécharger moins souvent.
 
-Ces modifications ont des impacts assez légers sur votre processus de build et
-sur la configuration de votre serveur. Même s'il est plus facile de les prendre
-en compte dès le début d'un projet, ils peuvent toujours être ajoutés sur des
-produits déjà en production.
+La concaténation automatique des fichiers doit être intégrée dans votre
+processus de build, afin de garder un environnement de développement clair. La
+compression en gzip ne nécessite que quelques modifications sur vos serveurs.
+La mise en place d'une stratégie de cache optimale nécessite à la fois des
+modifications sur le processus de build et sur la configuration des serveurs.
+
+Toutes ces modifications sont relativement peu couteuses à mettre en place et
+ne dépendent aucunement ni de la technologie utilisée pour le front-end, ni de
+celle utilisée pour le back-end, elles peuvent être mise en place quelle que
+soit votre stack technique. Il n'y a donc plus aucune raison pour ne pas les
+déployer dès aujourd'hui.
+
