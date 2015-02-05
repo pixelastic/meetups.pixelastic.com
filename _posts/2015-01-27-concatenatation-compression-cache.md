@@ -39,6 +39,12 @@ pour le prochain fichier. En groupant les fichiers en un fichier de plus grande
 taille, le coût de calcul n'est payé qu'une seule fois et le reste du fichier
 peut se télécharger à la vitesse maximum.
 
+À noter que maintenir les connexions à votre serveur en `Keep-Alive` permet de
+réutiliser une connexion d'un asset vers le suivant et donc de ne payer le coût
+de calcul qu'une fois. Malheureusement, activer le `Keep-Alive` sur un serveur
+Apache risque aussi de limiter le nombre de connexions parallèle que votre
+serveur peut maintenir.
+
 ### SSL
 
 De la même manière, si votre serveur utilise une connexion sécurisée, il y a un
@@ -140,6 +146,23 @@ S'il y a bien une optimisation de performance qui nécessite peu de travail
 à mettre en place et qui améliore grandement les performances de chargement,
 c'est bien le Gzip. Cela ne nécessite aucun changement sur les fichiers servis,
 uniquement une activation de config sur le serveur.
+
+### Minification
+
+Pour aller plus loin, vous pouvez aussi investir sur la minification de vos
+assets. HTML, CSS et Javascript sont encore une fois les meilleurs candidats
+pour la minification. 
+
+La minification est un procédé qui va ré-écrire le code de vos assets dans une
+version qui utilise moins de caractères, et qui donc pésera moins lourd sur le
+réseau. D'une manière générale cela va surtout supprimer les commentaires et
+les sauts de ligne, mais des minificateurs plus spécialisés pourront renommer
+les variables de vos Javascript en des valeurs plus courtes, regrouper vos
+sélecteurs CSS ou supprimer les attributs redondants de vos pages HTML.
+
+L'ajout d'un processus de minification est plus complexe que l'activation du
+Gzip, et les gains sont aussi moins importants. C'est pourquoi nous vous
+conseillons de toujours commencer par la compression Gzip.
 
 ## Cache
 
