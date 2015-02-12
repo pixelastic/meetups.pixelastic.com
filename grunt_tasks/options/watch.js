@@ -19,8 +19,7 @@ module.exports = {
     files: [
       'app/**/index.html',
       'app/**/_layouts/**/*.html',
-      'app/**/_posts/*.md',
-      'app/**/_drafts/*.md',
+      'app/**/*.md',
       'app/**/_plugins/*.rb'
     ],
     tasks: [
@@ -41,7 +40,7 @@ module.exports = {
   css: {
     files: 'app/css/*.scss',
     tasks: [
-      'sass:devAppToTmp',
+      'newer:sass:devAppToTmp',
       'newer:autoprefixer:devTmpToJekyll',
       'rsync:devCssTmpToDist'
     ]

@@ -13,7 +13,7 @@ module.exports = {
         ]
       },
       js: {
-        cwd: 'tmp/jekyll/src',
+        cwd: 'tmp/jekyll/js',
         prefix: '/js',
         src: [
           'zepto.min.js',

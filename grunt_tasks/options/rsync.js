@@ -30,7 +30,7 @@ module.exports = {
   devCssTmpToDist: {
     options: {
       src: [
-        'tmp/css/*.css'
+        'tmp/css/src/*.css'
       ],
       dest: 'dist/css'
     }
