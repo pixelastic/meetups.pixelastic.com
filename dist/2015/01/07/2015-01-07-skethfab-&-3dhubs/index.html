@@ -1,0 +1,129 @@
+<!doctype html>
+<html class="no-js" lang="en-us">
+
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>
+       Skethfab &amp; 3DHubs - Meetups 
+    </title>
+    <meta name="description" content="Compte-rendus des meetups et conférences auxquels j'assiste">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+
+    <!-- fileblock:css css -->
+    <link href="/css/normalize.css" rel="stylesheet" />
+    <link href="/css/base.css" rel="stylesheet" />
+    <link href="/css/code.css" rel="stylesheet" />
+    <link href="/css/fonts.css" rel="stylesheet" />
+    <link href="/css/headings.css" rel="stylesheet" />
+    <link href="/css/layout.css" rel="stylesheet" />
+    <link href="/css/links.css" rel="stylesheet" />
+    <link href="/css/lists.css" rel="stylesheet" />
+    <link href="/css/misc.css" rel="stylesheet" />
+    <link href="/css/pagination.css" rel="stylesheet" />
+    <link href="/css/posts.css" rel="stylesheet" />
+    <link href="/css/quotes.css" rel="stylesheet" />
+    <link href="/css/search.css" rel="stylesheet" />
+    <link href="/css/tables.css" rel="stylesheet" />
+    <link href="/css/youtube.css" rel="stylesheet" />
+    <!-- endfileblock -->
+
+    <link rel="shortcut icon" href="/favicon.ico">
+
+    <link rel="alternate" type="application/rss+xml" title="RSS" href="/atom.xml">
+  </head>
+
+  <body>
+    <div class="sidebar">
+      <div class="sidebar-about">
+        <h1><a href="/index.html">Meetups</a></h1>
+        <p class="lead">Compte-rendus des meetups et conférences auxquels j'assiste</p>
+      </div>
+
+      <!--This is a CSS trick to hide/show the sidebar for mobiles-->
+      <input type="checkbox" class="sidebar-checkbox" id="sidebar-checkbox">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-item">
+          <a href="/">Accueil</a>
+        </li>
+        <li class="sidebar-nav-item">
+          <a href="/about/">À propos</a>
+        </li>
+        <li class="sidebar-nav-item">
+          <a href="/archive/">Archive</a>
+        </li>
+      </ul>
+
+      <form id="sidebar-search-form" class="sidebar-search" method="GET">
+        <input type="text" id="sidebar-search-input" class="sidebar-search-input" placeholder="Search"/>
+      </form>
+      <script id="search-results-empty-template" language="x-template">
+          <p class="search-results-empty">Aucun résultat trouvé.</p>
+      </script>
+      <script id="search-results-post-template" language="x-template">
+        <div class="post">
+        <h1 class="post-title"><a href="<%= url %>"><%= title %></a></h1>
+          <span class="post-date"><%= date %></span>
+          <%= content %>
+        </div>
+      </script>
+
+      <label for="sidebar-checkbox" class="sidebar-toggle-menu"></label>
+
+      <div class="footer">Code source disponible sur <a href="https://github.com/pixelastic/blog.pixelastic.com">GitHub</a></div>
+    </div>
+    <div class="layout">
+      <div class="content" id="content">
+
+        <div class="content-search">
+          <h1 class="page-title">Rechercher</h1>
+          <div class="posts search-results" id="search-results"></div>
+        </div>
+
+        <div class="content-display">
+          <div class="post">
+  <h1 class="post-title">Skethfab &amp; 3DHubs</h1>
+  <span class="post-date">07 Jan 2015</span>
+  <p>Sketchfab organisait à Numa un meetup, en partenariat avec 3DHubs. Je suis
+arrivé en retard (19h pour début à 18h), et du coup j&#39;étais très mal placé (sur
+un fauteuil dos à la scène, derrière un pilier, au fond). Vu qu&#39;il n&#39;y avait
+pas de micro pour les questions de l&#39;audience, je n&#39;ai pu qu&#39;entendre les
+réponses.</p>
+
+<p>Ce que j&#39;ai pu en retirer, une machine &quot;perso&quot; coute dans les 3000€ et la
+majorité des gens sur 3DHubs ne le font pas pour gagner de l&#39;argent (s&#39;ils
+peuvent se rembourser la machine c&#39;est déjà bien), mais pour rencontrer
+d&#39;autres makers.</p>
+
+<p>Et... c&#39;était fini !</p>
+
+<p>camera à 300€ sur un ipad + appli pour faire des scans 3D.
+musées de Londres ont scanné et ouvert au public Ramses 2. Pas trop d&#39;interet
+en France, semble plus rpotégé. Artistes font des copies &quot;pirates&quot; dans les
+musées, dans les parcs (environ 5 minutes).</p>
+
+  <hr>
+  <p class="tag-list">
+    Tags :  
+    
+  </p>
+  <p class="comments">
+    N'hésitez pas à me contacter sur Twitter (<a href="https://twitter.com/pixelastic/">@pixelastic</a>) pour toute question.
+  </p>
+</div>
+
+        </div>
+      </div>
+    </div>
+
+    <!-- fileblock:js js -->
+    <script src="/js/zepto.min.js"></script>
+    <script src="/js/moment.js"></script>
+    <script src="/js/lodash.min.js"></script>
+    <script src="/js/algoliasearch.min.js"></script>
+    <script src="/js/steppe.js"></script>
+    <script src="/js/search.js"></script>
+    <!-- endfileblock -->
+  </body>
+
+</html>

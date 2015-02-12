@@ -1,0 +1,308 @@
+<!doctype html>
+<html class="no-js" lang="en-us">
+
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>
+       ParisJS #42 - Meetups 
+    </title>
+    <meta name="description" content="Compte-rendus des meetups et conférences auxquels j'assiste">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+
+    <!-- fileblock:css css -->
+    <link href="/css/normalize.css" rel="stylesheet" />
+    <link href="/css/base.css" rel="stylesheet" />
+    <link href="/css/code.css" rel="stylesheet" />
+    <link href="/css/fonts.css" rel="stylesheet" />
+    <link href="/css/headings.css" rel="stylesheet" />
+    <link href="/css/layout.css" rel="stylesheet" />
+    <link href="/css/links.css" rel="stylesheet" />
+    <link href="/css/lists.css" rel="stylesheet" />
+    <link href="/css/misc.css" rel="stylesheet" />
+    <link href="/css/pagination.css" rel="stylesheet" />
+    <link href="/css/posts.css" rel="stylesheet" />
+    <link href="/css/quotes.css" rel="stylesheet" />
+    <link href="/css/search.css" rel="stylesheet" />
+    <link href="/css/tables.css" rel="stylesheet" />
+    <link href="/css/youtube.css" rel="stylesheet" />
+    <!-- endfileblock -->
+
+    <link rel="shortcut icon" href="/favicon.ico">
+
+    <link rel="alternate" type="application/rss+xml" title="RSS" href="/atom.xml">
+  </head>
+
+  <body>
+    <div class="sidebar">
+      <div class="sidebar-about">
+        <h1><a href="/index.html">Meetups</a></h1>
+        <p class="lead">Compte-rendus des meetups et conférences auxquels j'assiste</p>
+      </div>
+
+      <!--This is a CSS trick to hide/show the sidebar for mobiles-->
+      <input type="checkbox" class="sidebar-checkbox" id="sidebar-checkbox">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-item">
+          <a href="/">Accueil</a>
+        </li>
+        <li class="sidebar-nav-item">
+          <a href="/about/">À propos</a>
+        </li>
+        <li class="sidebar-nav-item">
+          <a href="/archive/">Archive</a>
+        </li>
+      </ul>
+
+      <form id="sidebar-search-form" class="sidebar-search" method="GET">
+        <input type="text" id="sidebar-search-input" class="sidebar-search-input" placeholder="Search"/>
+      </form>
+      <script id="search-results-empty-template" language="x-template">
+          <p class="search-results-empty">Aucun résultat trouvé.</p>
+      </script>
+      <script id="search-results-post-template" language="x-template">
+        <div class="post">
+        <h1 class="post-title"><a href="<%= url %>"><%= title %></a></h1>
+          <span class="post-date"><%= date %></span>
+          <%= content %>
+        </div>
+      </script>
+
+      <label for="sidebar-checkbox" class="sidebar-toggle-menu"></label>
+
+      <div class="footer">Code source disponible sur <a href="https://github.com/pixelastic/blog.pixelastic.com">GitHub</a></div>
+    </div>
+    <div class="layout">
+      <div class="content" id="content">
+
+        <div class="content-search">
+          <h1 class="page-title">Rechercher</h1>
+          <div class="posts search-results" id="search-results"></div>
+        </div>
+
+        <div class="content-display">
+          <div class="post">
+  <h1 class="post-title">ParisJS #42</h1>
+  <span class="post-date">21 Jan 2015</span>
+  <p>Hier soir, meetup <a href="http://parisjs.org/">parisjs</a> chez <a href="http://www.intechinfo.fr/">In&#39;Tech Info</a>, une école d&#39;informatique
+du coté des Gobelins (dont les locaux semblent être un ancien parking
+réaménagé).  Néanmoins, grande salle, plein de nouveaux venus, ça fait plaisir.</p>
+
+<p>Commençons par le gros point noir du meetup. Celui-ci était censé commencer
+à 19h, mais c&#39;est seulement à 19h45 que les organisateurs commencent à prendre
+la parole pour annoncer le programme. Et présenter parisjs, et montrer le
+nouveau site, et essayer de faire une démo d&#39;édition de markdown en live, et
+faire son auto-promotion, et donner la parole à tous les sponsors pour qu&#39;ils
+fasse de même, et du coup c&#39;est super long.</p>
+
+<p>C&#39;est le même travers que le meetup <a href="http://www.meetup.com/Nodejs-Paris/">nodejs paris</a> et <a href="http://www.meetup.com/parisrb/">paris.rb</a>. Ça ne
+commence jamais à l&#39;heure, et même quand ça commence, on doit encore se taper
+les publicités avant le film, comme au cinéma. La prochaine fois, je viendrai
+en retard.</p>
+
+<p>Bon, fini d&#39;être aigri, il y avait une annonce intéressante quand même. NUMA
+vient d&#39;ouvrir un <a href="http://cowork.numa.paris/">espace de coworking</a> de 150m², avec café à volonté,
+ouvert 24h/24, à destination des développeurs, et avec un device lab.</p>
+
+<h2>Dev Avengers</h2>
+
+<p>Mais les talks ont ensuite relevé le niveau. <a href="https://twitter.com/porteneuve">Christophe
+Porteneuve</a>, la bible vivante du Javascript, qui appelle tout les
+auteurs des grands frameworks par leurs petits prénoms et qui réfléchit encore
+plus vite qu&#39;il ne parle était le premier sur scène. 37 ans, toutes ses dents,
+19 ans dans le web, ça envoie du lourd.</p>
+
+<p>Il nous a présenté les <a href="http://bit.ly/devavengers">outils de travail intra-browser</a> qui permettent
+d&#39;améliorer la productivité de son workflow de travail. Fini le <code>Ctrl-S</code>,
+<code>Alt-tab</code>, <code>Ctrl-R</code> pour voir les modifications qu&#39;on vient de faire, on est en
+2015 bourdel.</p>
+
+<p>Petite explication de l&#39;utilité des sourcemaps, qui permettent, en ajoutant des
+commentaires dans un fichier minifié de faire le mapping vers les fichiers
+sources. Chrome les comprends depuis déjà 4 ans, et nous indique donc les
+erreurs dans la console réellement là où elles ont lieu dans les fichiers
+sources. Et encore mieux, elles peuvent faire le lien entre un fichier final et
+n&#39;importe quel type de fichier source, même des preprocesseurs comme Sass, Less
+ou Coffescript.</p>
+
+<p>Tout le reste du talk donnait des exemples avec Chrome, car c&#39;est le browser
+qui possède actuellement les meilleurs outils, même si Firefox et IE12 sont pas
+loin derrière.</p>
+
+<p>On sait tous qu&#39;on peut modifier le HTML et le CSS à la volée avec l&#39;inspecteur
+Chrome, mais on peut aussi le faire avec du JS. Le soucis c&#39;est que nos modifs
+restent en live dans la page chargée, mais que c&#39;est un peu plus compliqué pour
+les récupérer dans un vrai fichier sur le disque.</p>
+
+<p>Du coup, la solution c&#39;est les <code>workspaces</code> de Chrome. On lui définit un
+dossier de notre disque dur qui contient nos sources, et une fois qu&#39;on lui
+a donné l&#39;autorisation, on peut manuellement lui indiquer les mappings entre
+notre filesystem et notre network. Du coup, en faisant ainsi et avec les
+sourcemaps, on peut modifier directement un fichier source Sass depuis Chrome.</p>
+
+<p>Bon, sauf que dans ce cas là, on perds la preview instantanée de nos modifs
+dans le browser, parce que Chrome n&#39;a aucune idée de comment parser du Sass.
+Mais c&#39;est là que notre outil de build en mode <code>watch</code> peut venir nous aider.
+Grunt, Gulp et Brunch proposent tous un moyen d&#39;écouter les modifications du
+filesystem pour lancer des taches en fonction des fichiers modifiés.</p>
+
+<p>Il nous a ensuite parlé de <a href="https://github.com/facebook/fb-flo">fb-flo</a>, un outil de Facebook qui permet de lier
+un fichier actuellement chargé par Chrome (CSS ou JS) à un buffer ouvert dans
+son IDE, et de reporter automatiquement les modifs de l&#39;un vers l&#39;autre, sans
+avoir besoin de recharger la page.</p>
+
+<p>Dernier outil pour gagner du temps en test crossbrowser, c&#39;est <a href="http://www.browsersync.io/">BrowserSync</a>.
+On ouvre autant de pages qu&#39;on le souhaite sur différents browsers, desktop et
+mobile, et toute modification sur l&#39;un (scroll, typing dans un formulaire, etc)
+est répercutée instantanément dans les autres. L&#39;avantage est que pour les
+clics, il rejoue le même selecteur unique sur chaque device plutot que de
+cliquer à des coordonnées précises.</p>
+
+<p>Du coup, si on récapitule :</p>
+
+<ul>
+<li>Sourcemaps pour avoir la liaison entre un fichier minifié et les sources des
+preprocesseurs</li>
+<li>Workspaces pour faire le mapping entre un fichier du disque dur et un fichier
+chargé par Chrome (marche avec les sourcemaps). <em>Je modifie dans Chrome, ça
+change sur mon disque</em>.</li>
+<li>fb-flo pour faire du livereload du browser dès qu&#39;un fichier du disque
+change. <em>Je modifie sur mon disque, ça recharge dans Chrome</em>.</li>
+<li>BrowserSync pour tester sur plusieurs devices/browsers en parallèle.</li>
+</ul>
+
+<p>On a discuté ensuite autour d&#39;une bière et d&#39;une pizza où il m&#39;a convaincu
+d&#39;essayer <code>Stylus</code>. Syntaxe &quot;clean&quot;, à la <code>ruby</code>, <code>jade</code> ou <code>coffeescript</code>. Je
+ne suis pas fan de cette épuration habituellement, mais j&#39;avoue n&#39;avoir jamais
+réellement essayé. Par contre le fait de pouvoir redéfinir les propriétés de
+base CSS (du genre, dès que je mets telle propriété avec telle valeur, alors ça
+mets automatiquement telle autre). Et aussi, les variables des <code>mixins</code> sont
+scopées, ce qui est le truc qui m&#39;ennuie le plus avec Sass.</p>
+
+<p>Dans le même genre, il m&#39;a vendu <code>brunch</code> comme étant un grunt-like à base de
+<em>convention over configuration</em> (ce qui est tout le contraire de Grunt et de
+son <em>configuration over configuration over configuration</em>...). Du coup, faut
+vraiment que je teste.</p>
+
+<p>Et il a même dit du bien de <code>famous</code> (un peu moins d&#39;<code>angular</code>, forcément).</p>
+
+<h2>IONIC</h2>
+
+<p><a href="https://twitter.com/cedriclombardot">Cédric Lombardot</a> nous parle de Ionic
+Framework.</p>
+
+<p>Alors, <a href="http://ionicframework.com/">Ionic</a> c&#39;est un framework qui combine
+<a href="https://angularjs.org/">Angular</a> et <a href="http://cordova.apache.org/">Cordova</a> pour
+développer des applications hybrides. </p>
+
+<p>Cédric commence par nous expliquer les avantages et inconvénients de faire de
+l&#39;hybride. Le gros avantage de l&#39;hybride c&#39;est que c&#39;est le même code pour
+toutes les plateformes, ce qui évite de devoir faire deux applications, pour
+Android et iPhone, qui coutent deux fois plus cher.</p>
+
+<p>Par contre, mieux vaut éviter l&#39;hybride si on a besoin de perfs au top, parce
+qu&#39;une surcouche sera toujours plus lente que du natif. Ce qui inclue tous les
+super effets d&#39;animation mouf-mouf. Si on a besoin de certaines API très liées
+au device, Cordova ne nous y donnera pas forcément accès. Et finalement, si on
+n&#39;a besoin de développer que pour une unique plateforme, autant partir sur du
+natif.</p>
+
+<p>Dans les deux cas, pour pouvoir passer son app sur iPhone, il faudra passer par
+les 15 jours de validation Apple. Il n&#39;y a rien dans les CGU d&#39;Apple qui bloque
+l&#39;hybride plus que le natif.</p>
+
+<p>Maintenant, parlons de ce qu&#39;apporte Ionic. Déjà, il utilise Cordova, qui est
+le moteur open-source utilisé par Phonegap. Il gère aussi parfaitement les
+affichages d&#39;élements dans une page, même quand on fait apparaitre/disparaitre
+le clavier (source de bugs divers).</p>
+
+<p>Avec Ionic, on fait une application, pas un site web. On passe sur un paradigme
+où on réfléchit en terme de &quot;vues&quot; (écrans), et on doit alors penser à comment
+ceux-ci s&#39;emboitent, quel est le comportement du bouton back, etc.</p>
+
+<p>Ionic est fourni avec des directives (Angular oblige) pour la majorité des
+éléments de UI classiques d&#39;une app : header, footer, listes avec
+pull-to-refresh, swipe sur item pour avoir un menu, drag&#39;n&#39;drop, popup de choix
+d&#39;action, slideshow, etc</p>
+
+<p>Ça s&#39;installe classiquement à base de <code>npm</code> et génère un code boilerplate avec
+une petite appli pour comprendre comment les différents éléments interagissent.
+Si vous voulez vraiment aller vite, il existe même le <a href="http://ionicframework.com/creator/">Ionic
+Creator</a> pour générer sa UI à base de
+drag&#39;n&#39;drop.</p>
+
+<p>Ça pêche encore du coté Android quand le browser par défaut est le stockbrowser,
+qui a des perfs bien moins bonne que Chrome. Il y a des solutions en cours de
+développement pour contrer ça. Il n&#39;est pas non plus compatible sous Windows
+Phone pour le moment.</p>
+
+<p>Coté UI, Ionic vient avec son propre style. Il y a des essais pour reproduire
+un style natif Android ou iPhone, mais c&#39;est pas encore au point et jQuery
+mobile est plus avancé de ce coté là apparemment. Par contre, on a quand même
+le droit à une classe CSS sur le root indiquant si on est sous Android ou sous
+IOS pour tweaker notre app en fonction.</p>
+
+<h2>VIRTJS</h2>
+
+<p><a href="https://github.com/arcanis">Maël Nison</a> est venu nous parler un peu plus de
+Ionic, qu&#39;il a utilisé sur un projet perso nommé <a href="http://m.start9.io/">Start9</a>.</p>
+
+<p>Maël avait <a href="http://arcanis.github.io/presentation.parisjs-20140625/#/step-1">déjà
+présenté</a> un
+émulateur gameboy qu&#39;il avait développé en javascript. Il a cette fois-ci
+poussé le concept un peu plus loin en proposant un site web en Ionic,
+accessible donc depuis n&#39;importe quel browser, sur lequel on puisse uploader
+ses roms Gameboy et y jouer directement dans le navigateur.  L&#39;avantage est
+d&#39;avoir un système crossplatform, on peut commencer sa partie sur son téléphone
+dans le métro et la continuer au même endroit sur son desktop plus tard.</p>
+
+<p>Le gros avantage est que c&#39;est un simple site web. Pas besoin d&#39;installer
+quoique ce soit pour l&#39;utilisateur, et pas besoin de passer par la validation
+appStore pour le créateur.</p>
+
+<p>Coté techno, c&#39;est du node en backend, avec du
+<a href="http://sequelizejs.com/">sequelize</a> (ORM pour taper sur PostgreSQL et SQLite).
+<a href="https://github.com/systemjs/systemjs">Systemjs</a> et
+<a href="https://github.com/google/traceur-compiler">Traceur</a> pour ses modules ES6
+transformés en ES5. Comme ça, le jour où ES6 est partout, on peut enlever la
+transformation. Et sinon, du Ionic pour le front.</p>
+
+<p>Pour la suite ils envisagent de supporter de plus en plus de jeux, et de plus
+en plus de consoles. Ils passeront aussi à Angular 2 quand il sortira (pour
+rester sur une stack ES6). Leur retour sur Ionic c&#39;est que c&#39;est cool mais
+encore jeune, les issues sont fixées rapidement (si les mainteners sont pas en
+vacances...).</p>
+
+<h2>Conclusion</h2>
+
+<p>Une bonne soirée ParisJS, avec 3 talks très intéressant, une grande salle, de
+la pizza pour tout le monde et des discussions intéressantes autour d&#39;une
+bière.</p>
+
+  <hr>
+  <p class="tag-list">
+    Tags :  
+    
+      <a href="/tags/parisjs">#parisjs</a>
+    
+  </p>
+  <p class="comments">
+    N'hésitez pas à me contacter sur Twitter (<a href="https://twitter.com/pixelastic/">@pixelastic</a>) pour toute question.
+  </p>
+</div>
+
+        </div>
+      </div>
+    </div>
+
+    <!-- fileblock:js js -->
+    <script src="/js/zepto.min.js"></script>
+    <script src="/js/moment.js"></script>
+    <script src="/js/lodash.min.js"></script>
+    <script src="/js/algoliasearch.min.js"></script>
+    <script src="/js/steppe.js"></script>
+    <script src="/js/search.js"></script>
+    <!-- endfileblock -->
+  </body>
+
+</html>

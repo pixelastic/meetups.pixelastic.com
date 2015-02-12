@@ -1,0 +1,374 @@
+<!doctype html>
+<html class="no-js" lang="en-us">
+
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>
+       ngParis #17 - Meetups 
+    </title>
+    <meta name="description" content="Compte-rendus des meetups et conférences auxquels j'assiste">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+
+    <!-- fileblock:css css -->
+    <link href="/css/normalize.css" rel="stylesheet" />
+    <link href="/css/base.css" rel="stylesheet" />
+    <link href="/css/code.css" rel="stylesheet" />
+    <link href="/css/fonts.css" rel="stylesheet" />
+    <link href="/css/headings.css" rel="stylesheet" />
+    <link href="/css/layout.css" rel="stylesheet" />
+    <link href="/css/links.css" rel="stylesheet" />
+    <link href="/css/lists.css" rel="stylesheet" />
+    <link href="/css/misc.css" rel="stylesheet" />
+    <link href="/css/pagination.css" rel="stylesheet" />
+    <link href="/css/posts.css" rel="stylesheet" />
+    <link href="/css/quotes.css" rel="stylesheet" />
+    <link href="/css/search.css" rel="stylesheet" />
+    <link href="/css/tables.css" rel="stylesheet" />
+    <link href="/css/youtube.css" rel="stylesheet" />
+    <!-- endfileblock -->
+
+    <link rel="shortcut icon" href="/favicon.ico">
+
+    <link rel="alternate" type="application/rss+xml" title="RSS" href="/atom.xml">
+  </head>
+
+  <body>
+    <div class="sidebar">
+      <div class="sidebar-about">
+        <h1><a href="/index.html">Meetups</a></h1>
+        <p class="lead">Compte-rendus des meetups et conférences auxquels j'assiste</p>
+      </div>
+
+      <!--This is a CSS trick to hide/show the sidebar for mobiles-->
+      <input type="checkbox" class="sidebar-checkbox" id="sidebar-checkbox">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-item">
+          <a href="/">Accueil</a>
+        </li>
+        <li class="sidebar-nav-item">
+          <a href="/about/">À propos</a>
+        </li>
+        <li class="sidebar-nav-item">
+          <a href="/archive/">Archive</a>
+        </li>
+      </ul>
+
+      <form id="sidebar-search-form" class="sidebar-search" method="GET">
+        <input type="text" id="sidebar-search-input" class="sidebar-search-input" placeholder="Search"/>
+      </form>
+      <script id="search-results-empty-template" language="x-template">
+          <p class="search-results-empty">Aucun résultat trouvé.</p>
+      </script>
+      <script id="search-results-post-template" language="x-template">
+        <div class="post">
+        <h1 class="post-title"><a href="<%= url %>"><%= title %></a></h1>
+          <span class="post-date"><%= date %></span>
+          <%= content %>
+        </div>
+      </script>
+
+      <label for="sidebar-checkbox" class="sidebar-toggle-menu"></label>
+
+      <div class="footer">Code source disponible sur <a href="https://github.com/pixelastic/blog.pixelastic.com">GitHub</a></div>
+    </div>
+    <div class="layout">
+      <div class="content" id="content">
+
+        <div class="content-search">
+          <h1 class="page-title">Rechercher</h1>
+          <div class="posts search-results" id="search-results"></div>
+        </div>
+
+        <div class="content-display">
+          <div class="post">
+  <h1 class="post-title">ngParis #17</h1>
+  <span class="post-date">29 Jan 2015</span>
+  <p><a href="http://www.meetup.com/AngularJS-Paris/events/219615752/">Meetup angular</a>,
+organisé par <a href="http://www.leboncoin.fr/">le bon coin</a>. J&#39;avais un peu arreté d&#39;aller aux
+meetups angular (trop peu de contenu), mais là le programme annonçait un REX
+sur comment mélanger <a href="http://facebook.github.io/react/">React</a> et <a href="https://angularjs.org/">Angular</a>, du coup, j&#39;étais
+curieux.</p>
+
+<p>Le bon coin, derrière leurs airs de sites des années 80 mis en ligne dans un
+garage possède en fait de formidables bureaux en plein Paris. Le premier site
+date de 2006 et est Norvégien, puis la France a été la première filiale en
+2007 avant que le système ne s&#39;implante dans plus de 35 pays.</p>
+
+<p>La technologie sous-jacente est un moteur custom codé en C nommé <a href="http://www.blocket.se/">blocket</a> et
+réutilisé par toutes les filliales (qui peuvent donc faire des mises à jour de
+leur moteur facilement) avec quelques petites différences culturelles pour
+chaque pays.</p>
+
+<p>D&#39;un seul dev au départ, ils sont maintenant 250 dans la boite avec un objectif
+à 350 pour la fin de l&#39;année. Le bon coin, c&#39;est des chiffres de consultations
+extraordinaires. 90 millions de pages vues par mois, essentiellement des
+résultats de recherche, donc sans possibilité de mise en cache.</p>
+
+<p>Ils parviennent quand même à un <code>startRender</code> moyen de 0.7s. 6e site le plus
+visité de France, 700.000 nouvelles annonces chaque jour, 2 datacenters de 400
+serveurs. En terme de charge, c&#39;est du très lourd, leur conso normale
+correspondant aux pics de charge de ce qu&#39;on connait habituellement.</p>
+
+<p>Au dela du cœur de l&#39;appli, il y a toutes les applications de gestion
+(modération, monitoring, etc) qui sont développés dans des tas de langages
+différents. Il y en a pour tous les gouts : PostgreSQL, Python, Ruby, Go,
+Shell, PHP, des apps natives, du big data, de l&#39;hadoop, du capybara.</p>
+
+<p>Ah, et la question qu&#39;on se pose tous. Non, le compte
+<a href="https://twitter.com/TopBonCoin">@TopBonCoin</a> n&#39;est pas officiel, le bon coin
+ne faisant actuellement aucune publicité ou community management.</p>
+
+<p>Bon, assez parlé de l&#39;hôte, place aux talks.</p>
+
+<h2>React et Angular</h2>
+
+<p>Julien Bouquillon, alias <a href="https://twitter.com/revolunet">@revolunet</a> viens nous
+faire un retour d&#39;expérience sur l&#39;intégration de React dans Angular. Il
+a entendu beaucoup de bien de React et a voulu voir si ça se plugguait
+facilement.</p>
+
+<p>Ça fait deux ans qu&#39;il fait de l&#39;Angular, sur du mobile et sur du desktop et le
+problème récurrent pour lui, ce sont les perfs. Essentiellement sur mobile
+d&#39;ailleurs. Les problèmes de perf sont les mêmes sur les deux plateformes, mais
+les desktop étant plus puissants, il faut vraiment de grosses apps pour
+ressentir les ralentissement.</p>
+
+<p>Vu que React mets en avant sa rapidité, il a décidé de troquer les directives
+d&#39;Angular par des composants React pour voir la différence. Pour lui le reste
+d&#39;Angular est très bon. On gagne en productivité et en réusabilité, le
+framework fournit plein de choses de base et tout ça se teste facilement.
+Globalement, super framework... sauf pour les perfs.</p>
+
+<h3>What&#39;s wrong with Angular ?</h3>
+
+<p>Parce que le gros problème d&#39;Angular se trouve dans le data-binding, bête et
+méchant. C&#39;est le coté magique qui nous attire au début dans le framework, mais
+c&#39;est aussi le goulot de performances. Quand on inclue une variable dans un
+template pour qu&#39;elle soit bindée, l&#39;algo simpliste d&#39;Angular va simplement
+ré-évaluer chaque variable à chaque événement de l&#39;utilisateur. C&#39;est à dire au
+clic, au scroll, au touch, au keypress. Voire même sur des events qui ne
+viennent pas du user, comme le retour d&#39;une requete HTTP.</p>
+
+<p>Et ce, même si les éléments en questions sont en dehors du viewport, ou qu&#39;ils
+n&#39;ont aucun rapport avec l&#39;élément actuellement modifié. Bête et méchant on
+vous dit.</p>
+
+<p>Bon, sur une appli desktop, on voit pas trop le problème, ça va super vite.
+Mais sur mobile, on peut commencer à percevoir la lenteur, voir à la subir.
+À chaque interaction, la totalité du DOM est réevalué, c&#39;est pas rien. C&#39;est
+vraiment du <em>dirty</em> checking.</p>
+
+<p>Si on veut fournir un expérience smooth, il nous faut viser du 60 fps, ce qui
+corresponds à 16ms pour un refresh. 16ms pour un refresh de tout le DOM, c&#39;est
+pas énorme.</p>
+
+<p>Malheureusement, Angular ne nous donne pas beaucoup de points d&#39;actions pour
+pouvoir influencer ou améliorer ce rendering, le processus fait plus ou moins
+partie intégrante du core du méchanisme.</p>
+
+<p>La version 1.3 a fait de grosses améliorations à ce sujet, d&#39;au moins 50% de
+gain. Elle introduit aussi le principe des <code>bind-once</code>, et des filters
+stateful, qui peuvent n&#39;être executés qu&#39;une seule fois pour chaque valeur
+passée. On peut aussi éviter de mettre des méthodes à évaluer dans les
+templates mais simplement des variables, utiliser la syntax <code>track by</code> des
+<code>ng-repeat</code> et toujours essayer de mettre ses event handler sur les éléments
+les plus hauts.</p>
+
+<p>Malheureusement, il reste le cas des keypress. Si j&#39;ai un input, la totalité de
+mon DOM est réévalué pour chaque touche que va taper mon utilisateur.</p>
+
+<h3>Et React ?</h3>
+
+<p>React de son coté fonctionne avec un système intermédiaire entre ses data et le
+DOM, il y intercale un concept qui lui est propre : le virtual DOM. Les
+modifications de data influent directement sur le vDOM (qui n&#39;est pas rendu
+directement), et seulement le diff entre le DOM actuel et le vDOM sont reportés
+dans le DOM. Ça marche très bien, et du coup seul ce qui a changé est modifié.</p>
+
+<p>React intègre aussi par défaut un système d&#39;event delegation intelligent.
+Plutôt que d&#39;ajouter des handler sur plusieurs éléments, il ajoute un handler
+général sur la page et renvoie l&#39;event au bon élément cliqué. On arrete comme
+ça de dupliquer les handlers.</p>
+
+<p>Et surtout, React est explicite. Plus de magie. Chaque composant possède sa
+méthode <code>render</code> qui va retourner du HTML. On peut comme ça tester unitairement
+le rendu, mais surtout chaque composant est isolé et ses données ne fuitent
+plus vers l&#39;extérieur. Seul le contenu du composant est modifié, sans que cela
+n&#39;induise un rechargement de la totalité du DOM de la page.</p>
+
+<p>Sans compter que React s&#39;intègre parfaitement dans l&#39;écosystem npm et
+browserify.</p>
+
+<h3>Benchmarks</h3>
+
+<p>Il nous a fait une démo d&#39;un même composant codé une fois en Angular et une
+fois en React pour voir la différence de perfs. C&#39;était un tableau de 100
+éléments et de 5-6 colonnes. En cochant la première colonne de chaque
+ligne, on pouvait &quot;barrer&quot; l&#39;élément.</p>
+
+<p>En React comme en Angular, le chargement initial du composant prends environ
+autant de temps. Pas de gain à attendre de ce coté là. Par contre, si on coche
+une ligne du tableau Angular, les 1000 éléments sont ré-évalués alors que si on
+coche celle de React, seule la ligne cliquée est modifiée.</p>
+
+<p>Là où c&#39;est pire, c&#39;est qu&#39;en ajoutant un champ d&#39;input au dessus du tableau
+Angular, chaque <code>keypress</code> ré-évaluait la totalité du tableau. Et pire que
+tout, on a ajouté un bouton qui ne faisait rien (pas de <code>ng-click</code>, rien). Et
+bien cliquer dessus rechargeait encore tout le DOM Angular.</p>
+
+<p>Je crois que toute la beauté de React peut se résumer dans la phrase suivante
+de Julien :</p>
+
+<blockquote>
+<p>En React, un bouton qui ne fait rien, ne fait rien.</p>
+</blockquote>
+
+<h3>Bon, et mon React il va rentrer dans mon Angular ?</h3>
+
+<p>Oui. Il est tout à fait possible de mettre un composant React au beau milieu
+d&#39;une appli Angular. Il va vivre sa vie en isolation, sans générer de reflow
+Angular, et sans se modifier quand Angular se modifie.</p>
+
+<p>Par contre si on veut l&#39;introduire dans notre cycle Angular normal, il faut le
+wrapper lui-même dans une directive. Par contre, à partir du code de la
+directive, on entre dans un mode <em>explicit &gt; implicit</em> où on va définir des
+callbacks à notre composant qu&#39;il sera chargé d&#39;appeller quand il voudra
+communiquer son état vers l&#39;extérieur, et on ajoutera aussi des méthodes au
+composant pour pouvoir lui passer de nouvelles data depuis Angular.</p>
+
+<p>C&#39;est un peu plus de plomberie, mais on est alors certain qu&#39;il ne se mettra
+pas à jour sans raison, et il pourra agir en isolation complète.</p>
+
+<p>Il existe un projet, <a href="https://github.com/davidchang/ngReact">ngReact</a> qui
+défini justement ce type de directive, mais ils vont trop loin et ajoutent des
+watchers automatiques pour passer les infos d&#39;Angular vers React et vice-versa,
+ce qui nous fait revenir au problème de dirty checking du départ.</p>
+
+<h3>Conclusion</h3>
+
+<p>React peut s&#39;intégrer correctement dans Angular et vivre sa vie correctement en
+profitant de manière isolée de ses avantages. La plomberie reste un peu
+manuelle, mais permet une belle isolation. Néanmoins, la philosophie de l&#39;un et
+de l&#39;autre étant tellement différentes, je ne suis pas sur qu&#39;on tire vraiment
+le meilleur des deux mondes.</p>
+
+<h2>KillrChat</h2>
+
+<p><a href="https://twitter.com/doanduyhai">Duy Hai Doan</a>, tech évangéliste chez
+<a href="http://www.datastax.com/">Datastax</a> nous a <a href="http://www.slideshare.net/doanduyhai/introduction-to-killrchat">parlé d&#39;un pet
+project</a> de
+chat à base d&#39;Angular, <a href="http://projects.spring.io/spring-boot/">Spring Boot</a> et
+<a href="http://cassandra.apache.org/">Cassandra</a>. C&#39;est cool, il est payé pour faire
+des meetups et présenter Cassandra, du coup avec trois technos cools comme ça
+il peut réutiliser le même talk :)</p>
+
+<p>L&#39;idée de faire une appli de chat vient de sa frustration de faire des ateliers
+pour faire découvrir Cassandra et que les élèves ne repartent qu&#39;avec un énième
+&quot;Hello World&quot; qui ne sert pas à grand chose. Là, il a une vraie appli qui
+touche à toutes les couches.</p>
+
+<p>Et surtout, elle peut profiter des possibilités de scaling de Cassandra. En
+gros, quand le nombre de user se mets à grossir, il suffit d&#39;augmenter le
+nombre de nœuds sur lesquels les données sont stockées dans Cassandra.
+Cassandra s&#39;occupe de répartir les nouvelles données uniformément sur chaque
+nœud de manière à ce qu&#39;aucun ne soit particulièrement submergé. Pour plus
+d&#39;infos sur le fonctionne de Cassandra, je vous invite à relire <a href="http://meetups.pixelastic.com/2014/10/15/nodejs-chapitre-2-conference-2/">mon
+compte-rendu</a>
+du meetup nodejs paris.</p>
+
+<p>Le chat qu&#39;il a développé communique avec le back-end Spring Boot en websocket,
+avec <a href="https://github.com/sockjs">SockJS</a>. Entre les deux, il suffit de mettre
+un broker qui sait scaler (<a href="http://www.rabbitmq.com/">RabbitMQ</a>,
+<a href="http://zeromq.org/">ZeroMQ</a>, <a href="http://kafka.apache.org/">Kafka</a>) qui implémente
+un simple système de <a href="http://fr.wikipedia.org/wiki/PubSub">pub/sub</a> et front et
+back peuvent communiquer sans soucis, même avec une forte charge.</p>
+
+<h3>Et Angular dans tout ça ?</h3>
+
+<p>Duy Hai vient surtout du monde Java, le front c&#39;est pas forcément son domaine.
+Mais il a kiffé Angular, il s&#39;y est bien retrouvé. Il a aussi apprécié le
+fait qu&#39;il y ait des outils pour <a href="http://angular-ui.github.io/bootstrap/">se plugguer facilement avec
+Bootstrap</a> (car
+comme il le dit lui-même, si on lui laisse le design d&#39;un site ça sera
+horrible, avec bootstrap au moins c&#39;est pas trop moche).</p>
+
+<p>Il a quand même très rapidement implémenté des tas de bonnes pratiques en
+Angular (je ne sais pas si ce sont des bonnes pratiques issues de Java ou non).
+Par exemple, toute sa logique est distribuéed dans des services stateless, ses
+controllers se chargeant simplement d&#39;un rôle de passe-plat.</p>
+
+<p>Par contre, comme beaucoup, il s&#39;est fait avoir par les
+<a href="https://docs.angularjs.org/api/ngResource/service/$resource">$resources</a>.
+Déjà, selon qu&#39;on utilise les ressources avec des méthodes d&#39;instances ou des
+méthodes de classe, ce n&#39;est pas la même type d&#39;objet qui est retourné et le
+chaining des promises en devient d&#39;autant plus complexe (sans parler des
+promises angular qui ont leurs propres quirks).</p>
+
+<p>Ce qu&#39;il regrette dans Angular c&#39;est qu&#39;il faille une bonne connaissance de
+Javascript pour comprendre réellement ce qu&#39;il se passe sous le capot.
+Heureusement pour lui, il a découvert
+<a href="https://github.com/Zenika/angular-from-scratch">angular-from-scratch</a> qui se
+propose de recoder les mécaniques principales d&#39;Angular depuis rien pour bien
+assimiler petit à petit chacun des concepts.</p>
+
+<p>Globalement une présentation assez chouette, un REX avec des technos sympas.</p>
+
+<h2>Typescript</h2>
+
+<p>Pour finir, <a href="https://twitter.com/paulsouche">Paul Souche</a>, de
+<a href="http://www.sfeir.com/">Sfeir</a> nous parle de
+<a href="http://www.typescriptlang.org/">Typescript</a>.</p>
+
+<p>Bon, je vais la faire assez vite pour le coup. Typescript est une surcouche
+à Javascript, un peu comme <a href="http://coffeescript.org/">Coffeescript</a>, qui
+compile en Javascript. Le truc qu&#39;apporte Typescript, c&#39;est un typage fort des
+variables.</p>
+
+<p>On peut désormais définir le type de chacun de nos arguments de fonctions et
+définir des interfaces de classe. Et si jamais le compilateur s&#39;aperçoit qu&#39;on
+essaie de faire rentrer des ronds dans des carrés, il nous balance une
+exception et il compile pas.</p>
+
+<p>On peut aussi définir &quot;facilement&quot; des variables privées et publiques et même
+génerer automatiquement des getters et des setters. Ouais, ouais, comme un vrai
+javaiste.</p>
+
+<p>Bon, à part ça y a des linters et ça génère des sourcemaps.</p>
+
+<p>J&#39;ai vraiment beaucoup de mal à voir l&#39;intéret du truc, mais j&#39;imagine que ça
+va encore plus plaire aux javaistes qui se mettent au front.</p>
+
+<h2>Buffet</h2>
+
+<p>Et comme souvent, le buffet qui suit les talks est toujours l&#39;occasion de
+discuter et de rencontrer des gens très intéressants. Hésitez pas à venir taper
+la discut&#39; si vous êtes dans un meetup la prochaine fois.</p>
+
+  <hr>
+  <p class="tag-list">
+    Tags :  
+    
+      <a href="/tags/ngparis">#ngparis</a>
+    
+  </p>
+  <p class="comments">
+    N'hésitez pas à me contacter sur Twitter (<a href="https://twitter.com/pixelastic/">@pixelastic</a>) pour toute question.
+  </p>
+</div>
+
+        </div>
+      </div>
+    </div>
+
+    <!-- fileblock:js js -->
+    <script src="/js/zepto.min.js"></script>
+    <script src="/js/moment.js"></script>
+    <script src="/js/lodash.min.js"></script>
+    <script src="/js/algoliasearch.min.js"></script>
+    <script src="/js/steppe.js"></script>
+    <script src="/js/search.js"></script>
+    <!-- endfileblock -->
+  </body>
+
+</html>

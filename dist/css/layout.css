@@ -1,0 +1,223 @@
+@charset "UTF-8";
+/**
+ * Code color definitions:
+ *
+ * This colors are the exact same that I use in my custom vim `oroshi`
+ * colorscheme, adapated to RGB.
+ **/
+/**
+ * COLORS
+ **/
+/**
+ * Z-INDEX
+ **/
+/**
+ * Layout principles :
+ *
+ * The base (or optimal) layout is for desktop use. A large content for text,
+ * and a fixed sidebar on the right.
+ *
+ * For larger content, the sidebar will stay on the right side, with its
+ * constant width, but the content will be centered in the available space.
+ *
+ * For smaller content (like tablets), the sidebar will become a header with
+ * tabs menus, while for really small content (phones), the header will only
+ * contain a menu icon.
+ **/
+.layout {
+  margin-left: 400px;
+}
+@media (max-width: 1200px) {
+  .layout {
+    margin-right: 0;
+    margin-top: 75px;
+  }
+}
+
+.content {
+  max-width: 800px;
+  padding: 2rem 1rem;
+  margin: 0 auto;
+}
+@media (max-width: 1200px) {
+  .content {
+    padding-top: 2rem;
+  }
+}
+
+/**
+ * SIDEBAR
+ **/
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 400px;
+  padding: 2rem;
+  text-align: center;
+  color: rgba(255, 255, 255, 0.5);
+  background-color: #ac4142;
+  text-align: left;
+}
+@media (max-width: 1200px) {
+  .sidebar {
+    padding: .5rem 1rem;
+    bottom: auto;
+    left: 0;
+    width: auto;
+    height: 75px;
+    box-shadow: 0 5px 15px rgba(255, 255, 255, 0.7);
+  }
+}
+.sidebar a {
+  color: white;
+}
+
+@media (max-width: 1200px) {
+  .sidebar-about {
+    display: table;
+    float: left;
+    height: 100%;
+  }
+  .sidebar-about .lead {
+    display: none;
+  }
+}
+
+.sidebar-about h1 {
+  margin-top: 0;
+  font-family: "PermanentMarker";
+  font-size: 3.25rem;
+  color: white;
+}
+@media (max-width: 1200px) {
+  .sidebar-about h1 {
+    display: table-cell;
+    vertical-align: middle;
+  }
+}
+@media (max-width: 500px) {
+  .sidebar-about h1 {
+    font-size: 3rem;
+  }
+}
+.sidebar-about h1 a:hover {
+  text-decoration: none;
+}
+
+/**
+ * SIDEBAR NAV
+ **/
+.sidebar-checkbox {
+  display: none;
+}
+@media (max-width: 500px) {
+  .sidebar-checkbox:checked + .sidebar-nav {
+    display: block;
+  }
+}
+
+.sidebar-toggle-menu {
+  display: none;
+}
+@media (max-width: 500px) {
+  .sidebar-toggle-menu {
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 75px;
+    width: 4rem;
+    cursor: pointer;
+  }
+}
+.sidebar-toggle-menu:before, .sidebar-toggle-menu:after {
+  content: "";
+  display: block;
+  position: absolute;
+  box-sizing: border-box;
+  width: 2rem;
+  right: 1rem;
+}
+.sidebar-toggle-menu:before {
+  border-top: 6px solid white;
+  border-bottom: 6px solid white;
+  height: 16px;
+  top: 50%;
+  margin-top: -13px;
+}
+.sidebar-toggle-menu:after {
+  border-top: 6px solid white;
+  top: 50%;
+  margin-top: 7px;
+}
+
+.sidebar-nav {
+  padding-left: 0;
+  list-style: none;
+  margin: 0;
+}
+@media (max-width: 1200px) {
+  .sidebar-nav {
+    display: table;
+    float: right;
+    height: 100%;
+    font-size: 1.25rem;
+  }
+}
+@media (max-width: 500px) {
+  .sidebar-nav {
+    display: none;
+    position: absolute;
+    top: 75px;
+    right: 0;
+    left: 0;
+    height: auto;
+    background: #ac4142;
+  }
+}
+
+.sidebar-nav-item {
+  display: block;
+}
+@media (max-width: 1200px) {
+  .sidebar-nav-item {
+    display: table-cell;
+    vertical-align: middle;
+  }
+  .sidebar-nav-item a {
+    padding: 1rem;
+    display: block;
+  }
+}
+.sidebar-nav-item:hover, .sidebar-nav-item:focus {
+  text-decoration: underline;
+}
+.sidebar-nav-item.active {
+  font-weight: bold;
+}
+
+/**
+ * FOOTER
+ * 1. Should be lower than the one in sidebar-search.
+ **/
+.footer {
+  color: rgba(255, 255, 255, 0.5);
+  text-align: center;
+  font-size: 0.8rem;
+  width: 400px;
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  z-index: 100;
+  /* 1 */
+}
+@media (max-height: 450px) {
+  .footer {
+    display: none;
+  }
+}
+.footer a {
+  color: white;
+}

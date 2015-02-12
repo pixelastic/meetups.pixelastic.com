@@ -1,0 +1,59 @@
+/**
+ * Code color definitions:
+ *
+ * This colors are the exact same that I use in my custom vim `oroshi`
+ * colorscheme, adapated to RGB.
+ **/
+/**
+ * COLORS
+ **/
+/**
+ * Z-INDEX
+ **/
+/**
+ * Layout principles :
+ *
+ * The base (or optimal) layout is for desktop use. A large content for text,
+ * and a fixed sidebar on the right.
+ *
+ * For larger content, the sidebar will stay on the right side, with its
+ * constant width, but the content will be centered in the available space.
+ *
+ * For smaller content (like tablets), the sidebar will become a header with
+ * tabs menus, while for really small content (phones), the header will only
+ * contain a menu icon.
+ **/
+p {
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+
+strong {
+  color: #313131;
+}
+
+hr {
+  position: relative;
+  margin: 1.5rem 0;
+  border: 0;
+  border-top: 1px solid #EEEEEE;
+  border-bottom: 1px solid #FFFFFF;
+}
+
+abbr {
+  font-size: .85em;
+  font-weight: bold;
+  color: #555555;
+  text-transform: uppercase;
+}
+abbr[title] {
+  cursor: help;
+  border-bottom: 1px dotted #e5e5e5;
+}
+
+img {
+  display: block;
+  margin: 0 0 1rem;
+  border-radius: 5px;
+  max-width: 100%;
+}

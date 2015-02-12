@@ -1,0 +1,466 @@
+<!doctype html>
+<html class="no-js" lang="en-us">
+
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>
+       dotJS 2014 - Meetups 
+    </title>
+    <meta name="description" content="Compte-rendus des meetups et conférences auxquels j'assiste">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+
+    <!-- fileblock:css css -->
+    <link href="/css/normalize.css" rel="stylesheet" />
+    <link href="/css/base.css" rel="stylesheet" />
+    <link href="/css/code.css" rel="stylesheet" />
+    <link href="/css/fonts.css" rel="stylesheet" />
+    <link href="/css/headings.css" rel="stylesheet" />
+    <link href="/css/layout.css" rel="stylesheet" />
+    <link href="/css/links.css" rel="stylesheet" />
+    <link href="/css/lists.css" rel="stylesheet" />
+    <link href="/css/misc.css" rel="stylesheet" />
+    <link href="/css/pagination.css" rel="stylesheet" />
+    <link href="/css/posts.css" rel="stylesheet" />
+    <link href="/css/quotes.css" rel="stylesheet" />
+    <link href="/css/search.css" rel="stylesheet" />
+    <link href="/css/tables.css" rel="stylesheet" />
+    <link href="/css/youtube.css" rel="stylesheet" />
+    <!-- endfileblock -->
+
+    <link rel="shortcut icon" href="/favicon.ico">
+
+    <link rel="alternate" type="application/rss+xml" title="RSS" href="/atom.xml">
+  </head>
+
+  <body>
+    <div class="sidebar">
+      <div class="sidebar-about">
+        <h1><a href="/index.html">Meetups</a></h1>
+        <p class="lead">Compte-rendus des meetups et conférences auxquels j'assiste</p>
+      </div>
+
+      <!--This is a CSS trick to hide/show the sidebar for mobiles-->
+      <input type="checkbox" class="sidebar-checkbox" id="sidebar-checkbox">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-item">
+          <a href="/">Accueil</a>
+        </li>
+        <li class="sidebar-nav-item">
+          <a href="/about/">À propos</a>
+        </li>
+        <li class="sidebar-nav-item">
+          <a href="/archive/">Archive</a>
+        </li>
+      </ul>
+
+      <form id="sidebar-search-form" class="sidebar-search" method="GET">
+        <input type="text" id="sidebar-search-input" class="sidebar-search-input" placeholder="Search"/>
+      </form>
+      <script id="search-results-empty-template" language="x-template">
+          <p class="search-results-empty">Aucun résultat trouvé.</p>
+      </script>
+      <script id="search-results-post-template" language="x-template">
+        <div class="post">
+        <h1 class="post-title"><a href="<%= url %>"><%= title %></a></h1>
+          <span class="post-date"><%= date %></span>
+          <%= content %>
+        </div>
+      </script>
+
+      <label for="sidebar-checkbox" class="sidebar-toggle-menu"></label>
+
+      <div class="footer">Code source disponible sur <a href="https://github.com/pixelastic/blog.pixelastic.com">GitHub</a></div>
+    </div>
+    <div class="layout">
+      <div class="content" id="content">
+
+        <div class="content-search">
+          <h1 class="page-title">Rechercher</h1>
+          <div class="posts search-results" id="search-results"></div>
+        </div>
+
+        <div class="content-display">
+          <div class="post">
+  <h1 class="post-title">dotJS 2014</h1>
+  <span class="post-date">17 Nov 2014</span>
+  <p>Le 19 Novembre 2014, au <a href="http://www.theatredeparis.com/">Théatre de Paris</a>,
+avait lieu la nouvelle édition de <a href="http://www.dotjs.eu/">dotJS</a>. Un lieu
+magnifique, des speakers de renom et des présentations intéressantes. Je n&#39;ai
+pas réussi à sortir un fil directeur général au programme, mais voici un petit
+résumé des différentes conférences.</p>
+
+<p>C&#39;est dans l&#39;ordre chronologique de la journée, mais sans doute un peu en vrac
+dans les idées.</p>
+
+<h2>James Halliday aka Substack</h2>
+
+<p><iframe 
+class="youtube-player"
+type="text/html" 
+width="640" 
+height="390"
+src="http://www.youtube.com/embed/J9_VaU4N3Rg"
+frameborder="0"
+allowfullscreen
+></iframe></p>
+
+<p><a href="https://twitter.com/substack">Substack</a>, le mec qui code même dans son sommeil
+(jetez un œil à <a href="https://github.com/substack">sa timeline</a>), nous a parlé de...
+plein de choses. Je suis pas sur de pouvoir en ressortir le propos exact, mais
+j&#39;ai beaucoup apprécié le personnage et la session de questions-réponses qui
+a suivi son intervention.</p>
+
+<p>Il a commencé à nous parler de comment réussir à avoir une
+application web qui puisse fonctionner complétement offline, avec le mode
+online qui soit simplement un bonus. Pour ça, on passe par un cache manifest,
+qui définit la liste des éléments qui doivent être gardés pour le mode offline.
+Et si on veut aller encore plus loin, on mets carrément le cache manifest dans
+le cache manifest, comme ça on est sur que notre appli ne se connectera pas.</p>
+
+<p>Il a ensuite énoncé quelque chose de très vrai : un site offline est le
+meilleur moyen d&#39;avoir un scaling infini. Zero requête vers le serveur, pas de
+problème de charge, il peut y avoir une infinité de personnes qui utilisent le
+site en même temps, cela n&#39;influera en rien sur ses fonctionnalités.</p>
+
+<p>Il a développé, comme à son habitude, un ensemble de modules pour aller dans
+cette direction. L&#39;un d&#39;eux utilise <code>localStorage</code> pour garder un historique des
+anciennes versions du site directement dans le browser. Il est ainsi possible
+de revenir à des versions de la veille ou de la semaine dernière à partir du
+moment où on les a déjà téléchargé une fois.</p>
+
+<p>S&#39;en vient ensuite la question de l&#39;authentication quand on n&#39;a pas de serveur
+distant ? En utilisant les méthodes de crypto définies dans <code>crypto.subtle</code>, on
+peut réussir à faire une grosse partie de l&#39;authent directement dans le
+browser.</p>
+
+<p>Il a finalement parlé d&#39;un autre de ses modules,
+<a href="https://github.com/substack/forkdb">forkdb</a>, qui semble
+fonctionner comme un database key/value, mais où chaque value contient un hash
+des metadata de son historique, permettant d&#39;établir une <em>chain of trust</em> (à
+l&#39;instar des bitcoins), permettant de rejouer l&#39;intégralité des modifications
+apportées à la valeur. Cela permet de faire des bases de données
+décentralisées, qui tournent individuellement sur les browsers de chacun,
+touchant la même source de données, mais qui peuvent se réconcilier plus tard
+car l&#39;ensemble des transactions est gardé en mémoire et peut être rejouée.</p>
+
+<p>Au final je dois bien avouer que j&#39;ai pas tout compris aux applications
+concrètes de tout ça, mais ça donnait quand même envie !</p>
+
+<p>Pour finir, dans les questions-réponses dont je parlais il lui a été demandé
+comment il faisait pour être aussi productif. Sa réponse est sans appel : </p>
+
+<blockquote>
+<p>Facile, je n&#39;ai pas de boulot. Si vous voulez commencer à être productif,
+quittez votre job.</p>
+</blockquote>
+
+<p>En vrac sur d&#39;autres questions, notamment sur npm :</p>
+
+<blockquote>
+<p>Npm c&#39;est un peu comme une décharge publique. Tout le monde y mets plein de
+choses, des choses qui marchent, d&#39;autres qui marchent pas, et parfois, en
+fouillant bien on trouve des pépites. Comme dans tout langage, il faut une
+énorme quantité de mauvais code pour avoir du bon code. C&#39;est pour ça que les
+artistes qui font des chefs d&#39;œuvres vivent dans des taudis en bordel. Au final
+ce n&#39;est pas une question de langage, de si on mets des parenthèses et des
+points-virgules ou non, c&#39;est une histoire d&#39;écosystème de développeurs et de
+communauté.</p>
+</blockquote>
+
+<p>Vraiment, un chouette type !</p>
+
+<h2>Charlie Robbins</h2>
+
+<p>Ensuite, <a href="https://twitter.com/indexzero">Charlie Robbins</a>, de
+<a href="https://www.nodejitsu.com/">Nodejitsu</a> nous
+a parlé de npm aussi, mais d&#39;un point de vu statistique. Il a analysé les repos
+npm pour faire de l&#39;analyse statistique dessus et savoir les modules les plus
+utilisés comme dépendances, les versions les plus stables (ie. utilisées par le
+plus de packages), celles qui présentent le plus de failles de sécurités, etc.</p>
+
+<p>Le gars est sans doute très fort pour faire des statistiques sur des données de
+type graph (et ses slides sont très jolis), mais concrétement je n&#39;ai rien tiré
+réellement de cette présentation.</p>
+
+<h2>Justin Meyer</h2>
+
+<p><a href="https://twitter.com/justinbmeyer">Justin Meyer</a> nous a quand lui un peu
+éloigné du code et s&#39;est rapproché des humains derrière les écrans. Il
+a effectué lui aussi quelques stats, à plus petit échelle, sur les projets
+sur lesquels il a travaillé durant les dernières années. Il a ensuite noté
+chacun des projets selon des tas de critères (sortie dans les temps, effort de
+dev, nombre de bugs, etc) et pour chacun il a vérifié s&#39;ils possédaient
+telle ou telle carac (test unitaire, module loader, documentation, user
+testing, etc).</p>
+
+<p>Il a ensuite mis ces informations en regard pour en déduire les éléments qui
+influent le plus dans la réussite d&#39;un projet, afin de créer une checklist des
+choses à faire pour s&#39;assurer un maximum de chances de réussites.</p>
+
+<p>L&#39;idée est très intéressante, mais comme son initiative vient <a href="https://github.com/bitovi/checklist">à peine de
+commencer</a>, il n&#39;avait pas vraiment de
+réels chiffres à sortir sur les éléments les plus influençants. Néanmoins, en
+prenant quelques pincettes avec les chiffres (calculés sur un petit
+échantillon), on arrive quand même à isoler les éléments suivants comme ayant
+été des facteurs clés du succès du projet : </p>
+
+<ul>
+<li>user testing</li>
+<li>design documentation</li>
+<li>shared vision and roadmap</li>
+<li>release in less than 6 months</li>
+<li>social events</li>
+</ul>
+
+<h2>Domenic Denicola</h2>
+
+<p><a href="https://twitter.com/domenic">Domenic</a>, nous a ensuite parlé de
+<a href="https://github.com/tmpvar/jsdom">JSDom</a>. Selon
+lui, le meilleur moyen d&#39;apprendre comment quelque chose fonctionne est de le
+recoder... en Javascript. Lui et d&#39;autres ont donc recodé le principe du
+Document Object Model en nodejs, de manière à pouvoir parser un arbre HTML (et
+le CSS/JS qui en découle) sans avoir besoin d&#39;un browser.</p>
+
+<p>Un peu dubitatif au démarrage quand à l&#39;utilité d&#39;un tel projet, je suis
+finalement resté bluffé par le niveau de maturité de JSDom et je pense que je
+l&#39;utiliserai si le besoin s&#39;en fait sentir (pour éviter d&#39;utiliser tout une
+stack de browser quand juste le DOM est nécessaire).</p>
+
+<p>Ils réimplémentent complétement les API natives du DOM (<code>document</code>, <code>window</code>,
+<code>HTTPRequest</code>, etc). Le cas d&#39;usage le plus courant est pour faire du rendering
+complet coté serveur. On lui passe un input HTML, du JS et du CSS à coté, et on
+peut ensuite requêter le DOM pour obtenir les listeners, les styles, etc.</p>
+
+<p>Basé sur JSDom, il existe aussi <code>zombie.js</code> qui permet d&#39;aller un peu plus loin
+pour simuler un navigateur. On peut par exemple simuler le
+remplissage de formulaire. Il semble que la bibliothèque soit pas mal utilisée
+pour tricher sur les jeux en ligne.</p>
+
+<p>Afin d&#39;être au plus proche de la spec officielle du DOM, ils ont développé un
+outil qui accepte en input un fichier de spec au format <code>webidl</code>, et qui le
+transforme en un fichier de classe JSDom en Javascript. Comme ça, il est
+(presque) inutile de comprendre la spec pour pouvoir l&#39;implémenter.</p>
+
+<h2>Angus Croll</h2>
+
+<p><a href="https://twitter.com/angustweets">Angus Croll</a> nous a fait passer un très bon
+moment avec un talk extrèmement intéressant intitulé &quot;Code &amp; Literature&quot;. Pour
+lui, Javascript est un langage très souple qui permet de faire énormément de
+choses, et qui permet aussi de faire la même chose d&#39;énormément de façons
+différentes. Pour éviter de trop se disperser, on a inventé des best practices,
+qui fonctionnent dans la majorité des cas. Mais quand on rencontre un edge case
+imprévu qui va nous forcer à casser ces règles, on ne sait pas forcément
+comment faire car on n&#39;a jamais appris qu&#39;une seule manière de faire.</p>
+
+<p>Lui nous incite à tester, à jouer avec le code, à essayer. Javascript nous
+permet de faire les choses de manière impérative, object ou fonctionnelle,
+profitons-en. Ça ne suivra peut-être pas les guidelines et ne sera peut-être
+pas propre selon les standards du projet, mais ça nous fera apprendre des
+choses. Il n&#39;y a qu&#39;en essayant quelque chose d&#39;inconnu qu&#39;on peut apprendre.</p>
+
+<p>Lui aussi est d&#39;accord sur ce que disait Substack : il faut beaucoup de mauvais
+code pour avoir du bon code. C&#39;est une phase d&#39;apprentissage obligatoire, et il
+ne faut pas perdre de vue le coté fun de l&#39;apprentissage. Et les styleguides ne
+sont que des indications à un moment donné pour un projet donné, elles
+évoluent dans le temps et dans l&#39;espace.</p>
+
+<p>Par exemple, on considérait avant les notations <code>if (!!x)</code>, <code>fn &amp;&amp; fn()</code> ou
+<code>(function(){...}())</code> comme étant des bad smell, alors qu&#39;aujourd&#39;hui on les
+considère comme des syntaxes tout à fait valides, pour peu qu&#39;on sache bien les
+utiliser. Le niveau des codeurs de JS a évolué, et ce qui était considéré comme
+des syntaxes ésotériques fait aujourd&#39;hui partie intégrante du langage.</p>
+
+<p>Javascript est un langage à part entière, dont il faut comprendre les
+subtilités. Au début on semble être en terrain connu, la syntaxe est facile,
+qu&#39;on vienne de Java ou de C, on s&#39;y retrouve. Puis on commence à plonger un
+peu plus et on se rends compte qu&#39;on n&#39;avait vu que la partie émergée de
+l&#39;iceberg et que tout le &quot;weird shit&quot; se trouve caché en dessous. Et tout
+à coup, tout semble compliqué. Alors on se barde de plein de bonnes pratiques
+et de <code>jshint</code> et <code>jscs</code> et on se pense en sécurité. Mais on perds le fun.</p>
+
+<p>Playing is learning. C&#39;est en essayant de faire les choses différement qu&#39;on
+apprends. Les développeurs autodidactes sont souvent les meilleurs, parce
+qu&#39;ils ont fait des erreurs, et comprennent ce que cela implique, ce qui
+fonctionne et ce qui ne fonctionne pas. Ils peuvent penser à des alternatives,
+et continuent de s&#39;amuser.</p>
+
+<h2>Mike McNeil</h2>
+
+<p><a href="https://twitter.com/mikermcneil">Mike McNeil</a>, créateur de
+<a href="http://sailsjs.org/#/">SailsJS</a>, nous a parlé de machines. J&#39;ai pas pris
+énormément de notes sur cette conférence, donc je la fais essentiellement de
+tête.</p>
+
+<p>L&#39;idée des <a href="https://github.com/node-machine/machine">machines</a> est de définir
+les méthodes de ses modules sous forme d&#39;objet, qui contiennent effectivement
+dans une clé la méthode en elle-même, mais surtout pas mal de metadata sur la
+méthode autour. On peut par exemple y ajouter des méthodes de <code>preinput</code> ou
+<code>postoutput</code> pour sanitizer le contenu ou le formatter d&#39;une certaine manière.
+On peut aussi y définir les différents arguments, en indiquant des exemples, et
+une petite phrase de documentation.</p>
+
+<p>En faisant ainsi, on se rajoute une couche supérieure d&#39;abstraction au dessus
+de nos méthodes, mais on y gagne un moyen simple de faire de la documentation
+auto-générée et qui sera forcément à jour (pas comme des annotations sous forme
+de commentaire qui finissent toujours pas être désynchros).</p>
+
+<p>L&#39;idée parait intéressante, à condition que ces objets soient &quot;compilés&quot;
+finalement en JS (et hop, encore un preprocesseur de plus dans le pipe).</p>
+
+<h2>John-David Dalton</h2>
+
+<p><a href="https://twitter.com/jdalton">John-David Dalton</a>, créateur de
+<a href="https://lodash.com/">lodash</a>, nous a parlé des shims et des bibliothèques et
+pourquoi une bibliothèque est supérieure.</p>
+
+<p>Il commence par balayer tout un tas d&#39;a-priori qu&#39;on peut avoir sur les
+implémentations natives dans les browsers. Comme quoi la syntaxe est plus
+simple, que les perfs sont meilleures, qu&#39;il n&#39;y a pas besoin de compilation
+spéciale ou que les implémentations sont stables. Tout ceci n&#39;est pas vrai et
+il donne quelques exemples sur plusieurs browsers.</p>
+
+<p>Ensuite, il s&#39;attaque aux shims (qui consistent à définir manuellement des
+méthodes pour combler les trous des browsers, mais de laisser l&#39;implémentation
+native si elle existe). Les shims sont une bonne solution, mais qui n&#39;est pas
+parfaite selon lui. Notamment, on subit les régressions de performance qui
+peuvent apparaitre entre les versions des navigateurs. Mais surtout, on risque
+de casser des implémentations si on remplace un prototype natif par notre
+propre version, lors des futures versions où ce prototype sera implémenté.</p>
+
+<p>Pour lui, la meilleure solution est d&#39;utiliser une bibliothèque, qui elle
+s&#39;assure d&#39;être compatible entre tous les navigateurs. Lodash implémente la
+même API qu&#39;<a href="http://underscorejs.org/">underscore</a>, mais avec un axe
+particulier sur la performance. Pour avoir regardé le code source des deux
+librairies, celui d&#39;underscore est parfaitement lisible et clair et on aurait
+tous pu l&#39;écrire. Celui de lodash est bien plus complexe car même s&#39;il expose
+la même API les rouages internes passent par des optimisations bien plus
+importantes.</p>
+
+<p>En plus de ça, lodash offre du sucre syntaxique pour les appels les plus
+courants des méthodes et permet de chainer et de fusionner les itérations
+<code>map</code>, <code>filter</code> et <code>take</code>. Si vous souhaitez par exemple prendre les 10
+premiers éléments de votre liste qui matchent tel critère après être passé par
+telle transformation alors lodash s&#39;arretera dès qu&#39;il aura trouvé les 10
+élements. Avec underscore ou une autre implémentation classique, on aurait du
+itérer trois fois sur le même set (une pour la transfo, une pour le filter et
+une pour n&#39;en prendre que 10).</p>
+
+<h2>Soledad Penades</h2>
+
+<p>Démos de web audio, en jouant sur les pitchs et la fréquence. J&#39;avoue que j&#39;ai
+pas énormément de souvenirs de cette présentation.</p>
+
+<h2>Joe McCann</h2>
+
+<p><a href="https://twitter.com/joemccann">Joe McCann</a> nous parle d&#39;optimisations de V8,
+le moteur qui fait tourner node.  Pour lui, il y a deux types d&#39;ingénieurs;
+ceux qui se demandent &quot;comment ça marche ?&quot; et ceux qui se demandent &quot;qu&#39;est-ce
+que je peux construire avec ça ?&quot;. Lui se situe dans la première catégorie et
+a plongé dans les rouages de V8 pour nous remonter quelques astuces d&#39;optim de
+perf.</p>
+
+<p>V8 est extremement intelligent et va s&#39;occuper de faire la majorité des
+optimisations tout seul. Néanmoins, il y a moyen de l&#39;aider en le mettant sur
+la bonne piste.</p>
+
+<p>Déjà, définir des fonctions qui acceptent toujours le même nombre d&#39;arguments,
+et toujours de même type va lui permettre d&#39;optimiser la mémoire allouée. Quand
+on défini des objets, il est plus intéressants de définir l&#39;objet, avec toutes
+ses clés (même <code>null</code> ou <code>undefined</code>) plutot que de définir un objet vide et
+d&#39;ajouter ensuite les clés à la main. Ensuite, il faut favoriser les tableaux
+d&#39;élements de même type (éviter de mixer des int, string et objets par
+exemple), ce qui parait assez évident. Dans le même ordre d&#39;idée, V8 parvient
+plus facilement à optimiser les fonctions nommées que les fonctions anonymes,
+même si elles sont directement invoquées.</p>
+
+<p>Mais surtout, là où l&#39;optimisation devient plus obscure c&#39;est sur la taille (en
+caractères) d&#39;une fonction. En effet, par défaut, si une méthode fait moins de
+600 caractères (commentaires inclus) V8 va la garder en mémoire directement
+plutot que d&#39;avoir un pointeur vers sa définition. Joe nous a fait quelques
+démos en grossissant artificiellement la taille d&#39;une méthode en ajoutant
+simplement des commentaires et en la jouant des millions de fois. La différence
+entre les deux était flagrante (de 1 à 10s).</p>
+
+<p>Cette limite de 600 chars est paramétrable en passant un flag à V8
+à l&#39;initialisation (<code>--max_inlined_source_size</code>). Et il est aussi possible de
+changer cette limite on the fly directement dans une appli node (par exemple
+sur une route donnée), en utilisant la syntaxe (étrange) <code>%SetFlags()</code> qui
+permet de passer l&#39;instruction directement à la couche C depuis le js.</p>
+
+<h2>Paul O&#39;Shannessy</h2>
+
+<p><a href="https://twitter.com/zpao">Paul</a> nous a parlé de
+<a href="http://facebook.github.io/react/">React</a>. React est le V du trigramme MVC et
+vient de chez Facebook. Initialement, il s&#39;appellait XHP, un enfant illégitime
+entre PHP et XML.</p>
+
+<p>Le principe de React est d&#39;avoir des composants d&#39;UI réutilisables et qui sont
+uniquement responsables de l&#39;affichage de leur data. La donnée arrive forcément
+d&#39;en haut. Le composant recoit sa nouvelle donnée, mets à jour son affichage.</p>
+
+<p>Honnêtement, plus j&#39;entends parler de React et plus j&#39;ai envie d&#39;essayer. Ça me
+semble une manière tellement élégante d&#39;isoler ses composants UI tout en leur
+gardant une logique simple. Le composant n&#39;est pas responsable de la donnée, ce
+n&#39;est pas lui qui en garde une copie, il est juste notifié de son changement et
+se doit de se mettre à jour en fonction.</p>
+
+<p>Mon résumé de React ne lui fait hommage, mais on mettra ça sur le compte de la
+fatigue à la fin de l&#39;écriture de ce CR.</p>
+
+<h2>Julien Lecompte et Yehuda Katz</h2>
+
+<p>Je n&#39;ai pas parlé des interventions de <a href="https://twitter.com/powersander">Julien
+Lecompte</a> et <a href="https://twitter.com/wycats">Yehuda
+Katz</a> car je n&#39;ai pas pris de notes à ce moment
+(fatigue, manque de batterie de laptop ? je ne me souviens plus de la raison).</p>
+
+<p>Julien nous a parlé du YUI framework, de son histoire et de ce qu&#39;il est
+devenu. Yehuda nous a parlé de la difficulté de maintenir des projets
+open-source et de les faire monter de version majeure sans s&#39;aliéner toute la
+communauté (transparence, rétro-compatibilité, eat your own dogfood,
+open-source rapidement). Même s&#39;il ne l&#39;a pas nommé, tout ce qu&#39;il indiquait
+était l&#39;exact opposé de ce qu&#39;Angular est en train de faire pour sa v2.</p>
+
+<h2>Conclusion</h2>
+
+<p>Beaucoup de sujets ont été abordés durant cette journée, sans qu&#39;il ne soit
+possible de donner une ligne claire. Autant
+à <a href="http://www.dotscale.io/">dotScale</a> il était évident que le gros sujet était
+<a href="https://www.docker.com/">Docker</a> tellement toutes les présentations en
+parlaient, autant là tout le monde parlait de choses différentes : du backend,
+du frontend, des browsers, des serveurs, des outils de builds, des processus,
+etc.</p>
+
+<p>Je retiendrai particulièrement les interventions de Substack et Angus Croll
+comme étant les deux moments forts de la journée. Je noterai cependant la
+totale absence d&#39;Angular dans cet événement. Seul Yehuda en a parlé sans le
+citer, comme quoi, Angular et Javascript restent deux mondes différents.</p>
+
+  <hr>
+  <p class="tag-list">
+    Tags :  
+    
+      <a href="/tags/dotjs">#dotjs</a>
+    
+  </p>
+  <p class="comments">
+    N'hésitez pas à me contacter sur Twitter (<a href="https://twitter.com/pixelastic/">@pixelastic</a>) pour toute question.
+  </p>
+</div>
+
+        </div>
+      </div>
+    </div>
+
+    <!-- fileblock:js js -->
+    <script src="/js/zepto.min.js"></script>
+    <script src="/js/moment.js"></script>
+    <script src="/js/lodash.min.js"></script>
+    <script src="/js/algoliasearch.min.js"></script>
+    <script src="/js/steppe.js"></script>
+    <script src="/js/search.js"></script>
+    <!-- endfileblock -->
+  </body>
+
+</html>

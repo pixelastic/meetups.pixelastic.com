@@ -9,6 +9,7 @@ permalink:        pretty
 title:            'Meetups'
 description:      "Compte-rendus des meetups et conférences auxquels j'assiste"
 url:              http://meetups.pixelastic.com/
+base_url:         meetups.pixelastic.com
 
 author:
   name:           'Timothée Carry'
@@ -21,3 +22,7 @@ version:          1.0.0
 
 github:
   repo:           https://github.com/pixelastic/meetups.pixelastic.com
+
+# Build
+timezone:         "Europe/Paris"
+encoding:         "utf-8"

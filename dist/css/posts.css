@@ -1,0 +1,48 @@
+/**
+ * Code color definitions:
+ *
+ * This colors are the exact same that I use in my custom vim `oroshi`
+ * colorscheme, adapated to RGB.
+ **/
+/**
+ * COLORS
+ **/
+/**
+ * Z-INDEX
+ **/
+/**
+ * Layout principles :
+ *
+ * The base (or optimal) layout is for desktop use. A large content for text,
+ * and a fixed sidebar on the right.
+ *
+ * For larger content, the sidebar will stay on the right side, with its
+ * constant width, but the content will be centered in the available space.
+ *
+ * For smaller content (like tablets), the sidebar will become a header with
+ * tabs menus, while for really small content (phones), the header will only
+ * contain a menu icon.
+ **/
+.page,
+.post {
+  margin-bottom: 4em;
+}
+
+/* Blog post or page title */
+.page-title,
+.post-title {
+  color: #313131;
+}
+
+.page-title,
+.post-title {
+  margin-top: 0;
+}
+
+/* Meta data line below post title */
+.post-date {
+  display: block;
+  margin-top: -.5rem;
+  margin-bottom: 1rem;
+  color: #7a7a7a;
+}

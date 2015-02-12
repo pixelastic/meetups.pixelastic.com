@@ -1,0 +1,19 @@
+---
+layout: default
+---
+
+<div class="post">
+  <h1 class="post-title">{{ page.title | xml_escape }}</h1>
+  <span class="post-date">{{ page.date | date_to_string }}</span>
+  {{ content }}
+  <hr>
+  <p class="tag-list">
+    Tags :  
+    {% for tag in page.tags %}
+      <a href="/tags/{{ tag }}">#{{ tag }}</a>
+    {% endfor %}
+  </p>
+  <p class="comments">
+    N'hésitez pas à me contacter sur Twitter (<a href="https://twitter.com/pixelastic/">@pixelastic</a>) pour toute question.
+  </p>
+</div>

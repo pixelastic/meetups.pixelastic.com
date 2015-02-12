@@ -1,0 +1,214 @@
+<!doctype html>
+<html class="no-js" lang="en-us">
+
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>
+       ParisJs 40 - Meetups 
+    </title>
+    <meta name="description" content="Compte-rendus des meetups et conférences auxquels j'assiste">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+
+    <!-- fileblock:css css -->
+    <link href="/css/normalize.css" rel="stylesheet" />
+    <link href="/css/base.css" rel="stylesheet" />
+    <link href="/css/code.css" rel="stylesheet" />
+    <link href="/css/fonts.css" rel="stylesheet" />
+    <link href="/css/headings.css" rel="stylesheet" />
+    <link href="/css/layout.css" rel="stylesheet" />
+    <link href="/css/links.css" rel="stylesheet" />
+    <link href="/css/lists.css" rel="stylesheet" />
+    <link href="/css/misc.css" rel="stylesheet" />
+    <link href="/css/pagination.css" rel="stylesheet" />
+    <link href="/css/posts.css" rel="stylesheet" />
+    <link href="/css/quotes.css" rel="stylesheet" />
+    <link href="/css/search.css" rel="stylesheet" />
+    <link href="/css/tables.css" rel="stylesheet" />
+    <link href="/css/youtube.css" rel="stylesheet" />
+    <!-- endfileblock -->
+
+    <link rel="shortcut icon" href="/favicon.ico">
+
+    <link rel="alternate" type="application/rss+xml" title="RSS" href="/atom.xml">
+  </head>
+
+  <body>
+    <div class="sidebar">
+      <div class="sidebar-about">
+        <h1><a href="/index.html">Meetups</a></h1>
+        <p class="lead">Compte-rendus des meetups et conférences auxquels j'assiste</p>
+      </div>
+
+      <!--This is a CSS trick to hide/show the sidebar for mobiles-->
+      <input type="checkbox" class="sidebar-checkbox" id="sidebar-checkbox">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-item">
+          <a href="/">Accueil</a>
+        </li>
+        <li class="sidebar-nav-item">
+          <a href="/about/">À propos</a>
+        </li>
+        <li class="sidebar-nav-item">
+          <a href="/archive/">Archive</a>
+        </li>
+      </ul>
+
+      <form id="sidebar-search-form" class="sidebar-search" method="GET">
+        <input type="text" id="sidebar-search-input" class="sidebar-search-input" placeholder="Search"/>
+      </form>
+      <script id="search-results-empty-template" language="x-template">
+          <p class="search-results-empty">Aucun résultat trouvé.</p>
+      </script>
+      <script id="search-results-post-template" language="x-template">
+        <div class="post">
+        <h1 class="post-title"><a href="<%= url %>"><%= title %></a></h1>
+          <span class="post-date"><%= date %></span>
+          <%= content %>
+        </div>
+      </script>
+
+      <label for="sidebar-checkbox" class="sidebar-toggle-menu"></label>
+
+      <div class="footer">Code source disponible sur <a href="https://github.com/pixelastic/blog.pixelastic.com">GitHub</a></div>
+    </div>
+    <div class="layout">
+      <div class="content" id="content">
+
+        <div class="content-search">
+          <h1 class="page-title">Rechercher</h1>
+          <div class="posts search-results" id="search-results"></div>
+        </div>
+
+        <div class="content-display">
+          <div class="post">
+  <h1 class="post-title">ParisJs 40</h1>
+  <span class="post-date">14 Nov 2014</span>
+  <p>Pour la 40e édition, c&#39;est Deezer qui nous a accueilli dans leurs très beaux
+locaux. On sent une grande influence Spotify dans l&#39;organisation des équipes
+(grands open-spaces, dashboard de monitoring, salles de réunions funky et
+ambiance décalée).</p>
+
+<p>On a parlé de CSS en Javascript, du marché de l&#39;emploi pour les devs, de
+bitcoin et d&#39;OAuth 2 dans le browser.</p>
+
+<h3>GSS, où le CSS rêvé par un dev JS</h3>
+
+<p>Khalid Jebbari nous à (longuement) parlé de CSS, et de ses déboires avec. Il
+est développeur Javascript et pour lui réussir à aligner des éléments de layout
+en CSS relève du calvaire. Tout lui semble contre-intuitif et bourré de hack
+à connaitre. Citation verbatim : &quot;C&#39;est pour ça que les gens détestent CSS
+: parce que ça marche jamais comme on veut&quot;.</p>
+
+<p>Il va sans dire que je suis contre ce postulat de base. CSS, comme tous les
+langages de programmation, nécessite une phase d&#39;apprentissage pour en
+comprendre les paradigmes. Une fois qu&#39;on a saisi les éléments de base, il
+suffit de les assembler et de composer avec pour créer des layouts. Le langage
+est bien complexe à comprendre qu&#39;il n&#39;y parait initialement, et oui, il n&#39;est
+pas parfait. Aligner deux blocs cote à cote pour qu&#39;ils partagent la même
+hauteur ou aligner un élément verticalement sont des choses qui paraissent
+basiques mais qui sont complexes à faire. C&#39;est faisable, il faut apprendre
+comment, mais ce n&#39;est pas évident.</p>
+
+<p>Khalid nous a donc ensuite présenté une solution à base de Javascript, pour
+écrire du CSS, nommée GSS. Celle-ci est fondée sur syntaxe du type prolog, pour
+faire de la programmation logique.</p>
+
+<p>On définit en substance le résultat qu&#39;on souhaite obtenir : &quot;Je veux trois
+colonnes, de largeur identiques, dont la hauteur soit égale à la plus grande
+hauteur des trois, avec un espace de 10px entre chaque&quot;. Ensuite, le système
+teste toutes les possibilités pour trouver un ensemble de valeurs qui match.</p>
+
+<p>Sous le capot, les éléments sont ensuite positionnées en <code>position:absolute</code> et
+toute la partie calcul est reléguée au GPU. Dès qu&#39;une des contraintes change,
+alors tout est recalculé.</p>
+
+<p>C&#39;est une approche intéressante pour déclarer un layout, mais dans les faits
+tous les exemples qu&#39;il a résolu avec GSS pouvaient être résolu en CSS pur,
+pour peu qu&#39;on maitrise assez le langage. En l&#39;état, une implémentation en
+Javascript de GSS dans le navigateur me parait bien trop peu performant
+(nombreux calculs, repaints et entremelage thread Javascript/GPU/rendering)
+pour être utilisé en production.</p>
+
+<p>Au final, l&#39;idée est intéressante, et si cette syntaxe alternative était
+possible nativement, dans les browsers, elle pourrait être une alternative
+intéressante au CSS. Je doute qu&#39;elle soit réellement plus simple à apprendre
+cela-dit. En l&#39;état, sous forme de librairie externe, ça me semble surtout une
+solution bancale à un faux problème.</p>
+
+<h3>Developers in tech</h3>
+
+<p>Jean-loup Karst, de breaz.io nous a parlé des technos les plus utilisées
+aujourd&#39;hui par les startups parisiennes. Je vous renvoie au CR des HumanTalks
+d&#39;Octobre où il a donné sensiblement la même présentation.</p>
+
+<h3>Bitcoin in the browser</h3>
+
+<p>Excellet</p>
+
+<p>Bitcoin
+Internet contient du web, de smails, des ftp, etc. Les blockchain c&#39;est le même
+principes mais pour le moment on n&#39;a que de sbitcoins dessus. Ca permet de
+construire sdes sustemes décentralisés.
+Grosses problematiques de scurité, par reputation, etc.</p>
+
+<p>blockchain est une suite de sblocs. chaque bloc possede un hash de toutes les
+transactions précédente. donc on peut pas changer la liste sans changer le hash
+et donc invalider toute la suite. on regade le dernier block pour voir
+l&#39;historique</p>
+
+<p>wallet clé publique et clé privé
+clé public est comme un RIB, public, on peut la donner à tout le monde. On la
+donne à tout le monde.
+clé privé permet d&#39;envoyer de l&#39;argent. ne jamais la partager et la cacher
+contre tout</p>
+
+<p>actuelllement en CB, on autirise le commercan à prelever les sous. Avec
+bitcoin, on pousse des sous vers quelqu&#39;un d&#39;autres.</p>
+
+<p>les bitcoins sont immuales il appartiennent à quelqu&#39;un ou quelqu&#39;un d&#39;autres.
+Comme des terrain, il n&#39;a pas bougé quand on le donne, mais il appartient
+à quelqu&#39;un d&#39;autre.
+Sur une transaction, il y a un script avec un challenge à relever pour prouver
+que c&#39;est à moi. Pour prouver qu&#39;un bitcoin m&#39;appartient, y a deux choses
+à faire. On prouve qu&#39;on peut résoudre un challenge, et on rajoute un autre
+challenge pour prouver qu&#39;il n&#39;ay que l&#39;autre personne qui peut les dépenser.
+On utilise une clé privée pour sufner la transaction, les challenges.
+On fait un challenge qui dit &quot;seulle la personne qui possède la clé privée qui
+conrrespond à cette clé publique peut le dépenser&quot;. Mais on peut faire tous les
+challenges qu&#39;on veut (réputation, contrat à signer avec unfo, etc).</p>
+
+<p>aptget install bitcoin. Une journée pour synchroniser la blockahin du résearU.
+blockahin.info pour voir sur un UI l&#39;historique d&#39;une adresse bitcoin.</p>
+
+<p>lib nommée bitcore</p>
+
+<p>on demande une adresse au server node bitcoin.</p>
+
+  <hr>
+  <p class="tag-list">
+    Tags :  
+    
+      <a href="/tags/parisjs">#parisjs</a>
+    
+  </p>
+  <p class="comments">
+    N'hésitez pas à me contacter sur Twitter (<a href="https://twitter.com/pixelastic/">@pixelastic</a>) pour toute question.
+  </p>
+</div>
+
+        </div>
+      </div>
+    </div>
+
+    <!-- fileblock:js js -->
+    <script src="/js/zepto.min.js"></script>
+    <script src="/js/moment.js"></script>
+    <script src="/js/lodash.min.js"></script>
+    <script src="/js/algoliasearch.min.js"></script>
+    <script src="/js/steppe.js"></script>
+    <script src="/js/search.js"></script>
+    <!-- endfileblock -->
+  </body>
+
+</html>

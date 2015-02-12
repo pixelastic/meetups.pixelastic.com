@@ -1,0 +1,17 @@
+---
+layout: default
+id: archive-day
+---
+
+<div class="archive">
+  <h1 class="page-title">Archive du {{ page.day }} {{ page.month | date: "%B" }} {{ page.year }}</h1>
+  <ul class="archive-list">
+    {% for post in page.posts %}
+    <li> 
+      <a href="{{ post.url }}" title="{{ post.title | xml_escape }}">{{ post.title | xml_escape }}</a>
+    </li>
+    {% endfor %}
+  </ul>
+</div>
+
+
