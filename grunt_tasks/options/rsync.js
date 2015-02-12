@@ -11,16 +11,32 @@ module.exports = {
 
   /* DEV */
   // CSS
-  devCssDependenciesToTmp: {
+  devCssDependenciesToJekyll: {
     options: {
       src: [
         'bower_components/normalize-css/normalize.css'
       ],
-      dest: 'tmp/css/src'
+      dest: 'tmp/jekyll/css'
+    }
+  },
+  devCssDependenciesToDist: {
+    options: {
+      src: [
+        'bower_components/normalize-css/normalize.css'
+      ],
+      dest: 'dist/css'
+    }
+  },
+  devCssTmpToDist: {
+    options: {
+      src: [
+        'tmp/css/*.css'
+      ],
+      dest: 'dist/css'
     }
   },
   // JS
-  devJsDependenciesToTmp: {
+  devJsDependenciesToJekyll: {
     options: {
       src: [
         'bower_components/zepto/zepto.min.js',
@@ -28,22 +44,36 @@ module.exports = {
         'bower_components/lodash/dist/lodash.min.js',
         'bower_components/algoliasearch/dist/algoliasearch.min.js'
       ],
-      dest: 'tmp/js/src'
+      dest: 'tmp/jekyll/js'
     }
   },
-  devJsAppToTmp: {
+  devJsDependenciesToDist: {
+    options: {
+      src: [
+        'bower_components/zepto/zepto.min.js',
+        'bower_components/moment/moment.js',
+        'bower_components/lodash/dist/lodash.min.js',
+        'bower_components/algoliasearch/dist/algoliasearch.min.js'
+      ],
+      dest: 'dist/js'
+    }
+  },
+  devJsAppToJekyll: {
     options: {
       src: [
         'app/js/steppe.js',
         'app/js/search.js'
       ],
-      dest: 'tmp/js/src'
+      dest: 'tmp/jekyll/js'
     }
   },
-  devJsTmpToJekyll: {
+  devJsAppToDist: {
     options: {
-      src: 'tmp/js/src/*.js',
-      dest: 'tmp/jekyll/js'
+      src: [
+        'app/js/steppe.js',
+        'app/js/search.js'
+      ],
+      dest: 'dist/js'
     }
   },
   // HTML
@@ -90,14 +120,6 @@ module.exports = {
     }
   },
 
-  /* WATCH */
-  watchJsAppToDist: {
-    options: {
-      src: 'app/js/*.js',
-      dest: 'dist/js/'
-    }
-  },
-
   /* PROD */
   // CSS
   prodCssDependenciesToTmp: {
@@ -108,7 +130,7 @@ module.exports = {
       dest: 'tmp/css/src'
     }
   },
-  // CSS
+  // Js
   prodJsDependenciesToTmp: {
     options: {
       src: [
@@ -169,7 +191,7 @@ module.exports = {
   deployToPixelastic: {
     options: {
       src: 'dist/',
-      dest: 'pixelastic:/var/www/pixelastic.com/blog.pixelastic.com/',
+      dest: 'pixelastic:/var/www/pixelastic.com/meetups.pixelastic.com/',
       args: [
         '--verbose',
         '--archive',

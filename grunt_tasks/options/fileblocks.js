@@ -5,7 +5,7 @@ module.exports = {
     src: 'tmp/html/src/default.html',
     blocks: {
       css: {
-        cwd: 'tmp/css/src',
+        cwd: 'tmp/jekyll/css',
         prefix: '/css',
         src: [
           'normalize.css',
@@ -13,7 +13,7 @@ module.exports = {
         ]
       },
       js: {
-        cwd: 'tmp/js/src',
+        cwd: 'tmp/jekyll/src',
         prefix: '/js',
         src: [
           'zepto.min.js',

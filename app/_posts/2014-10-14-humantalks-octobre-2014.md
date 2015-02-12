@@ -34,7 +34,7 @@ parisiennes, créées depuis 2008, qui produisent une produit tech, donc elles n
 sont clairement pas représentatives du parc mondial des applications
 actuellement en production.
 
-![Stats de demande des technos backend](/public/img/2014-10-14/breaz.jpg)
+![Stats de demande des technos backend](/img/2014-10-14/breaz.jpg)
 
 On remarque que c'est toujours PHP qui est demandé majoritairement, avec
 Python, Node et Rails ensuite. Rails a subi une explosion en 2010 avant de
@@ -142,7 +142,7 @@ déplacée. S'il n'y a pas la place pour passer un item, il faut alors concentre
 tous les efforts pour faire baisser ce WIP, en tirant les tâches vers la droite
 pour les amener en done.
 
-![WIP Limits en Kanban](/public/img/2014-10-14/kanban.jpg)
+![WIP Limits en Kanban](/img/2014-10-14/kanban.jpg)
 
 L'analogie qu'il donne est celle de l'autoroute. Si toutes les voitures de
 l'autoroute sont concentrées au même endroit, tout avance lentement. Au
@@ -199,7 +199,7 @@ nous prépare une application complète avec tout le tooling déjà configuré.
 `pom.xml`, `Grunfile.js`, `package.json`, `bower.json`, tests unitaires, tout
 est là.
 
-![Live coding JHipster](/public/img/2014-10-14/jhipster.jpg)
+![Live coding JHipster](/img/2014-10-14/jhipster.jpg)
 
 On n'a plus qu'à lancer un petit coup de maven pour avoir un beau war
 executable qui contient tout le code back et front (minifié) prêt à être
