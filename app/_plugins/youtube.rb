@@ -6,21 +6,16 @@ module Jekyll
 
     def initialize(tag_name, input, tokens)
       super
-      input.chomp!
-      @youtube_id = CGI::parse(URI.parse(input).query)['v'][0]
-      @embed_url = "http://www.youtube.com/embed/#{@youtube_id}"
+      @text = input
+      # input.chomp!
+      # @youtube_id = CGI::parse(URI.parse(input).query)['v'][0]
+      # @embed_url = "http://www.youtube.com/embed/#{@youtube_id}"
     end
 
     def render(context)
-      return "<iframe 
-class=\"youtube-player\"
-type=\"text/html\" 
-width=\"640\" 
-height=\"390\"
-src=\"#{@embed_url}\"
-frameborder=\"0\"
-allowfullscreen
-></iframe>"
+        <<MARKUP.strip
+<iframe class="youtube-player" type="text/html" width="640" height="390" src="#{@embed_url}" frameborder="0" allowfullscreen></iframe>
+MARKUP
     end
   end
 end

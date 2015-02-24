@@ -8,7 +8,7 @@ permalink:        pretty
 # Setup
 title:            'Meetups'
 description:      "Compte-rendus des meetups et conférences auxquels j'assiste"
-url:              http://meetups.pixelastic.com/
+url:              http://meetups.pixelastic.com
 base_url:         meetups.pixelastic.com
 
 author:
