@@ -7,9 +7,9 @@ module Jekyll
     def initialize(tag_name, input, tokens)
       super
       @text = input
-      # input.chomp!
-      # @youtube_id = CGI::parse(URI.parse(input).query)['v'][0]
-      # @embed_url = "http://www.youtube.com/embed/#{@youtube_id}"
+      input.chomp!
+      @youtube_id = CGI::parse(URI.parse(input).query)['v'][0]
+      @embed_url = "http://www.youtube.com/embed/#{@youtube_id}"
     end
 
     def render(context)
