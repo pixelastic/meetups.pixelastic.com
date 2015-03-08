@@ -184,7 +184,7 @@
   width:$width-base-sidebar;
   position:fixed;
   bottom:0;
-  right:0;
+  left:0;
   z-index:$zIndex-1--footer; /* 1 */
   a {
     color:white;
