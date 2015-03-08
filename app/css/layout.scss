@@ -5,7 +5,7 @@
   // Not enough space to fit sidebar and content, we make the content take all
   // the width available
   @media(max-width: $width-base-page) {
-    margin-right:0;
+    margin-left:0;
     margin-top:$height-tablet-header;
   }
 }
@@ -37,7 +37,7 @@
   @media(max-width: $width-base-page) {
     padding: .5rem 1rem;
     bottom: auto;
-    left: 0;
+    right: 0;
     width: auto;
     height: $height-tablet-header;
     box-shadow: 0 5px 15px rgba(255,255,255,.7);
