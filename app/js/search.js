@@ -55,7 +55,7 @@
     var elementOffset = highlight.getBoundingClientRect().top + window.pageYOffset;
     var elementHeight = $(highlight).height();
     var windowHeight = $(window).height();
-    var scrollOffset = elementOffset - windowHeight/2 - elementHeight/2;
+    var scrollOffset = elementOffset - (windowHeight / 2) - (elementHeight / 2);
 
     window.scroll(0, scrollOffset);
   }, 100, { trailing: true });
