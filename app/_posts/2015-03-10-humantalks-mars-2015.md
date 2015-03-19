@@ -159,6 +159,8 @@ REX très intéressant au final, l'expérience semble très bien se passer à SO
 
 ## Ionic Framework
 
+![Ionic](/img/2015-03-10/ionic.jpg)
+
 [Loïc Knuchel][8] nous a ensuite parlé d'un sujet
 plus tech, le framework [Ionic][9].  Mélange
 d'[Angular][10] et de
@@ -199,6 +201,8 @@ directement accessible sous forme de site web (et dans ce cas, pas besoin
 d'approbation du store).
 
 ## L'intrapreneuriat, qu'est-ce que c'est ?
+
+![elCurator](/img/2015-03-10/elcurator.jpg)
 
 Finalement, c'est [Christopher Parola][14],
 co-fondateur d'[elCurator][15] qui vient nous parler
