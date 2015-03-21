@@ -123,8 +123,9 @@ remets en cause tout ça, incite les équipes à s'auto-organiser, à faire
 confiance à l'intelligence collective. Du coup, est-ce que le management est
 utile en mode agile ?
 
-Il nous a parlé de [Zappos][7] qui a viré ses 1500
-managers, et remis tout le monde au même niveau de hiérarchie. 
+Il nous a parlé de [Zappos][7] qui a supprimé 1500 postes de managers pour les
+redistribuer à d'autres postes dans l'entreprise, et remis tout le monde au
+même niveau de hiérarchie. 
 
 Chez Soat ils se sont séparés en différents cercles, regroupés par affinités,
 par buts (cercles de coachs agile, cercles par projets, cercles par techno,
