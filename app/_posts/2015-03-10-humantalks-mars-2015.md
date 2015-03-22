@@ -14,6 +14,8 @@ rapidement commencé.
 
 ## Tests de performances
 
+{% youtube https://www.youtube.com/watch?v=9upDU-sfc50 %}
+
 [Claude Falguière][4] nous a parlé de la
 difficulté à faire des tests de performances. Initialement, les tests de perfs
 étaient là pour s'assurer que la machine cible allait réussir à tenir la charge
@@ -105,6 +107,8 @@ Au final, encore une fois, pas de scaling sans devOps.
 
 ## L'holacratie, travailler sans manager
 
+{% youtube https://www.youtube.com/watch?v=Wp19qp_ETxs %}
+
 [Olivier Le Lan][5], coach agile de
 [SOAT][6] nous a fait un retour d'expérience sur le
 changement d'organisation qu'ils ont eu au sein de leur équipe de coachs agiles
@@ -160,7 +164,8 @@ REX très intéressant au final, l'expérience semble très bien se passer à SO
 
 ## Ionic Framework
 
-![Ionic](/img/2015-03-10/ionic.jpg)
+{% youtube https://www.youtube.com/watch?v=EB2CZndGU9A %}
+
 
 [Loïc Knuchel][8] nous a ensuite parlé d'un sujet
 plus tech, le framework [Ionic][9].  Mélange
@@ -185,6 +190,8 @@ d'inclure [Crosswalk][13] pour une execution plus
 rapide, et de tester les différentes vues Android/iOS directement dans le
 browser.
 
+
+![Ionic](/img/2015-03-10/ionic.jpg)
 La version 1.0 vient de sortir officiellement, ce qui donne vraiment envie de
 tester le système pour des POCs rapides. Pour une petite idée d'appli qui reste
 dans les standards de UI actuels, et pour se concentrer uniquement sur le
@@ -203,7 +210,8 @@ d'approbation du store).
 
 ## L'intrapreneuriat, qu'est-ce que c'est ?
 
-![elCurator](/img/2015-03-10/elcurator.jpg)
+{% youtube https://www.youtube.com/watch?v=_TmJ8MuhAdI %}
+
 
 Finalement, c'est [Christopher Parola][14],
 co-fondateur d'[elCurator][15] qui vient nous parler
@@ -221,6 +229,8 @@ eux deux en sont salariés.
 Question financement, au début tout est payé de leur poche : nom de domaine,
 hébergement. En tournant sur [Heroku][18], ils limitent
 énormément les coûts. Plus tard, ils seront hébérgés dans les locaux d'Octo.
+
+![elCurator](/img/2015-03-10/elcurator.jpg)
 
 Pourquoi avoir fait la bascule au bout de 2 ans ? Pour eux, c'est parce qu'ils
 commençaient à avoir des clients, et l'envie de travailler sur le projet
