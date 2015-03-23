@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Nodejs Paris S01E03"
+title: "Node.js Paris Chapitre 1, Conférence 3"
 tags: nodejs
 ---
 

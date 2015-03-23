@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "NodeJS - Chapitre 2, Conférence 2"
+title: "Node.js Paris Chapitre 2, Conférence 2"
 tags: nodejs
 ---
 

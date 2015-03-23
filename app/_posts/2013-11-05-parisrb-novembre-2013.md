@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "ParisRb Novembre 2013"
+title: "ParisRB Novembre 2013"
 tags: parisrb
 ---
 
