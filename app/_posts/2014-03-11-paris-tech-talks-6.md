@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 'Paris Tech Talks #6'
+title: "Paris Tech Talks #6"
 tags: techtalks
 ---
 ## Introduction
