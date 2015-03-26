@@ -10,7 +10,7 @@ module.exports = {
       src: 'tmp/jekyll',
       dest: 'dist/',
       drafts: true,
-      limit_posts: 10
+      limit_posts: 30
     }
   },
   prod: {
