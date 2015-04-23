@@ -4,11 +4,11 @@ title: "HumanTalks Avril 2015"
 tags: humantalks
 ---
 
-Chez Meetic. Evolution de SI, startup rapide, vers un truc plus REST, virer le
+Chez Meetic. Évolution de SI, startup rapide, vers un truc plus REST, virer le
 legacy. Passe en mode industrialisé, usine de dev, TDD, BDD, Docker, plein de
-choses qui font rever.
+choses qui font rêver.
 
-App natives de presta, faites en interne. Experience web mobile. refaire le
+App natives de presta, faites en interne. Expérience web mobile. Refaire le
 desktop, refait tout. Challengé par Tinder/Happened.
 
 Sponsors Arolla, Octo, présents dans la salle.
@@ -21,15 +21,15 @@ Raoul à la défense, en consulting.
 Picto homme/femme pas clair.
 Porte trop proche pour ouvrir
 vasque de robinet, trop proches
-seche main "automatique"
+sèche main "automatique"
 porte à ouvrir, donc germes
 
 LOL WUT?
 
 Liste déroulante de centaines d'items --
 Payer par carte, donner type de carte (se devine à partir du chiffre)
-Messages cryptiques (Ètes vous surs de ne pas vouloir annuler votre action
-? Oui, non, Annuler). Textes plus longs sur les boutons plutot que Yes/No.
+Messages cryptiques (Êtes vous surs de ne pas vouloir annuler votre action
+? Oui, non, Annuler). Textes plus longs sur les boutons plutôt que Yes/No.
 Afficher "non interdit", après que l'app propose quand même de le faire.
 Messages très techniques, messages intimidants, fait peur au user.
 
@@ -54,11 +54,11 @@ mais pas performant. Animation, transition qui rame sur des téléphones de moin
 de 3 ans (récent).
 
 Promesse, 60fps, sur tous les devices. Plein de démos super chanmé. Table
-periodique en 3D. Mais pas d'elements de UX. Résouds la perf, c'est magique,
+périodique en 3D. Mais pas d'éléments de UX. Résouds la perf, c'est magique,
 mais compliqué à utiliser.
 
 ScrollView, composant de base, buggué. Cycles de vie différent Angular/Famous
-à syncrhoniser. Tout est buggué.
+à synchroniser. Tout est buggué.
 
 Faut vouloir y aller. Sans Famous, UX, mais lent, rame, pas d'animation. Famous
 permet d'avoir cette fluidité, mais difficile à coder.
@@ -85,8 +85,8 @@ aussi on recréé un gros objet DAO à chaque fois, alors que chaque objet
 
 Factory
 
-propriété privée cvDao partagé dans toute la classe
-dans le constructeur on le créé en appellant la factory
+Propriété privée cvDao partagé dans toute la classe
+dans le constructeur on le créé en appelant la factory
 Factory problèmes : factories sont statiques, difficile pour les tests
 difficile à maintenir aussi, chaque factory peut avoir des dépendances en
 grappes
