@@ -28,7 +28,7 @@ On commence par le talk le moins technique de la soirée, plutôt porté sur l'U
 pour débutants. [Christophe Michel][6], d'[Arolla][7] nous raconte une petite
 histoire de toilettes d'une grande banque française noire et rouge.
 
-![UX](/img/2015-04-14/humantalks.jpg)
+![UX][8]
 
 Les toilettes sont un lieu exclusivement utilitaire, on y va parce qu'on
 a besoin d'y aller, et on n'y va que pour une seule chose. C'est donc un très
@@ -75,9 +75,9 @@ piqure de rappel bienvenue.
 Dans les commentaires de la page meetup, Christophe a donné pas mal d'idées de
 lecture pour creuser plus profondément :
 
-- [The Design of Everyday Things][8]
+- [The Design of Everyday Things][9]
 - [About Face: The Essentials of Interaction Design](http://www.amazon.fr/About-Face-Essentials-Interaction-Design/dp/1118766571)
-- [Don't Make Me Think][9]
+- [Don't Make Me Think][10]
 
 ## Famo.us / Angular
 
@@ -87,7 +87,7 @@ disclosure: je viens de passer les 6 derniers mois dans cette équipe, donc le
 sujet m'étais très familier._
 
 JC a orienté son talk non pas sur les spécificités de la refonte Meetic mais
-sur le choix de la technologie pour le faire. Ils sont partis sur [famous][10],
+sur le choix de la technologie pour le faire. Ils sont partis sur [famous][11],
 un framework d'animations JavaScript dont la promesse est de délivrer des
 performances aussi bonnes sur tous les devices, même les plus vieillissants.
 
@@ -104,7 +104,7 @@ années, et le coté innovant permet à la société qui l'utilise d'avoir un
 avantage face à ses concurrents.
 
 L'appli n'est pas entièrement bâtie sur famous, il y a aussi un socle en
-[Angular][11], mais là n'était pas le sujet du talk donc on est passé vite les
+[Angular][12], mais là n'était pas le sujet du talk donc on est passé vite les
 classiques reproches qui lui sont fait.
 
 Pour JC, la promesse de famous est de réussir là où HTML5 a échoué. C'est
@@ -119,15 +119,15 @@ Et ça marche. Famous utilise en partie le DOM HTML classique, mais place tout
 ses éléments en `position:absolute` dans un viewport de taille fixe et les
 anime en CSS. Des tas de démos du framework permettent de s'en rendre compte,
 tout s'anime dans tous les sens, comme cette [table périodique des éléments en
-3D][12].
+3D][13].
 
 Sauf que ce que Famous ne fait pas, ce sont les éléments de UI. La librairie ne
 fournit pas, ou très peu, d'éléments permettant de créer un UI facilement
-(comme peut le faire [Ionic][13] par exemple). Il faut donc récréer soi-même
+(comme peut le faire [Ionic][14] par exemple). Il faut donc récréer soi-même
 toute cette partie. Au final, on résout effectivement le problème de
 performance, mais au prix d'un plus long développement pour refaire ce que HTML
 nous offrait nativement (un peu comme [Flipboard et leur surutilisation du
-canvas][14].
+canvas][15].
 
 Si on rajoute à cela que Famous et Angular on des cycles de digest différents
 et qu'il faut réussir à synchroniser les deux, on rajoute une complexité
@@ -144,8 +144,8 @@ d'avoir un vrai prérequis de support de vieux devices comme Meetic).
 
 ## Google Guice
 
-Pour le 3e talk, [Pauline Iogna][15] nous a parlé d'injection de dépendances
-avec [Google Guice][16].
+Pour le 3e talk, [Pauline Iogna][16] nous a parlé d'injection de dépendances
+avec [Google Guice][17].
 
 Son talk était fait comme un cours didactique où on commençait avec un code
 dont les responsabilités étaient très couplées. Une méthode instanciait un
@@ -165,8 +165,8 @@ l'injection de dépendance devait se faire, ce qui permettait de garder un code
 simple mais explicite.
 
 Au final, j'ai apprécié la démarche de refacto pas à pas (cela m'a fait penser
-à un chapitre de [Practical Object-Oriented Design in Ruby][17] de [Sandi
-Metz][18] où elle explique aussi par l'exemple comment inverser les contrôles.
+à un chapitre de [Practical Object-Oriented Design in Ruby][18] de [Sandi
+Metz][19] où elle explique aussi par l'exemple comment inverser les contrôles.
 
 ## Vim, il y a encore des gens qui codent avec ça en 2015 ?
 
@@ -175,15 +175,15 @@ jours. Il est assez difficile de faire un récapitulatif de ce qu'est vim et
 surtout de donner envie d'essayer en 10mn, mais j'ai réussi à aborder la
 majorité des sujets qui me semblaient importants.
 
-Vous pouvez trouver les [slides ici][19], mais j'ai avant tout parlé du fait
+Vous pouvez trouver les [slides ici][20], mais j'ai avant tout parlé du fait
 que pour nous autres développeurs, notre éditeur de code est notre outil le
 plus important. On passe des heures devant jour après jour et année après
 année, il faut donc que cet outil nous fasse gagner du temps et que ce soit un
 plaisir de l'utiliser. C'est notre éditeur qui doit se plier à nous et non pas
 l'inverse.
 
-Je n'ai pas souhaité lancer un troll entre vim, emacs, [IntelliJ][20],
-[Sublime][21] et tous les bons éditeurs qui existent, j'ai simplement parlé de
+Je n'ai pas souhaité lancer un troll entre vim, emacs, [IntelliJ][21],
+[Sublime][22] et tous les bons éditeurs qui existent, j'ai simplement parlé de
 celui que j'utilise et de pourquoi je l'apprécie.
 
 Les avantages principaux de vim découlent tous du fait que c'est un éditeur en
@@ -202,7 +202,7 @@ peut se déplacer comme ça dans le fichier, déplacer des lignes ou des mots,
 changer des arguments, faire des copié-collé.
 
 Pour la petite histoire, j'avais assisté à un ParisJS il y a quelques années où
-Ryan Dahl, le créateur de [nodejs][22] était venu présenter son bébé. Il avait
+Ryan Dahl, le créateur de [nodejs][23] était venu présenter son bébé. Il avait
 fait une séance de live coding avec vim et j'avais été bien plus ébahi par vim
 que par nodejs à l'époque. Le code semblait se créer sous mes yeux sans que je
 comprenne comment il avait fait. Et c'est une force de vim que je retrouve
@@ -216,7 +216,8 @@ customisable : macros, plugins, remapping de touches, appel à la ligne de
 commande, etc.
 
 L'exercice était difficile, mais plusieurs personnes m'ont ensuite dit avoir
-envie d'essayer, je suis donc satisfait :).
+envie d'essayer, je suis donc satisfait :). Si vous voulez jeter un œil à ma
+config vim, c'est [par ici que ça se passe][24].
 
 
 ## Conclusion
@@ -235,18 +236,20 @@ Le mois prochain, les HumanTalks se passent chez Deezer, venez nombreux !
 [5]: https://www.happn.fr/fr/
 [6]: https://twitter.com/christopheml
 [7]: http://www.arolla.fr/
-[8]: http://www.amazon.com/Design-Everyday-Things-Donald-Norman/dp/1452654123
-[9]: http://www.amazon.fr/Dont-magke-thingk-Steve-Krug/dp/2744025526
-[10]: https://famo.us/
-[11]: https://angularjs.org/
-[12]: http://disrupt.famo.us/periodic402/
-[13]: http://ionicframework.com/
-[14]: http://engineering.flipboard.com/2015/02/mobile-web/)
-[15]: https://twitter.com/pauline_io
-[16]: https://github.com/google/guice/
-[17]: http://www.poodr.com/
-[18]: http://www.sandimetz.com/
-[19]: http://talks.pixelastic.com/vim-humantalks/#1
-[20]: https://www.jetbrains.com/idea/
-[21]: http://www.sublimetext.com/
-[22]: https://nodejs.org/
+[8]: /img/2015-04-14/humantalks.jpg
+[9]: http://www.amazon.com/Design-Everyday-Things-Donald-Norman/dp/1452654123
+[10]: http://www.amazon.fr/Dont-magke-thingk-Steve-Krug/dp/2744025526
+[11]: https://famo.us/
+[12]: https://angularjs.org/
+[13]: http://disrupt.famo.us/periodic402/
+[14]: http://ionicframework.com/
+[15]: http://engineering.flipboard.com/2015/02/mobile-web/)
+[16]: https://twitter.com/pauline_io
+[17]: https://github.com/google/guice/
+[18]: http://www.poodr.com/
+[19]: http://www.sandimetz.com/
+[20]: http://talks.pixelastic.com/vim-humantalks/#1
+[21]: https://www.jetbrains.com/idea/
+[22]: http://www.sublimetext.com/
+[23]: https://nodejs.org/
+[24]: https://github.com/pixelastic/oroshi/blob/master/config/vim/vimrc
