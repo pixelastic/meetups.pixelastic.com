@@ -108,7 +108,7 @@ L'appli n'est pas entièrement bâtie sur famous, il y a aussi un socle en
 classiques reproches qui lui sont fait.
 
 Pour JC, la promesse de famous est de réussir là où HTML5 a échoué. C'est
-à dire que les specs HTML5 promettent monts et merveilles en terme d'animation,
+à dire que les specs CSS3 promettent monts et merveilles en terme d'animation,
 mais le support est encore fragmentaire, parfois inexistant ou beaucoup trop
 lent sur de vieux devices. Famous quand à lui se pose comme une couche
 JavaScript sur les propriétés CSS 3D Transform. Ces propriétés utilisent la
