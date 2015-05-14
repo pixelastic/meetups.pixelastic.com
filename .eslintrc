@@ -2,7 +2,7 @@
   "ecmaFeatures": {
   },
   "env": {
-    "browser": true
+    "browser": true,
   },
   "rules": {
     "no-underscore-dangle": false,

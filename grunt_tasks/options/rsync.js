@@ -1,4 +1,4 @@
-'use strict';
+/* eslint-env node */
 
 module.exports = {
   options: {
@@ -130,7 +130,7 @@ module.exports = {
       dest: 'tmp/css/src'
     }
   },
-  // Js
+  // Js
   prodJsDependenciesToTmp: {
     options: {
       src: [

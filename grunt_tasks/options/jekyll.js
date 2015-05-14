@@ -1,6 +1,7 @@
-'use strict';
-
+/* eslint-env node */
+/* eslint camelcase: [2, {"properties": "never"}] */
 /* jshint camelcase: false */
+
 module.exports = {
   options: {
     config: '_config.yml'
