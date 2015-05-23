@@ -28,7 +28,7 @@ On commence par le talk le moins technique de la soirée, plutôt porté sur l'U
 pour débutants. [Christophe Michel][6], d'[Arolla][7] nous raconte une petite
 histoire de toilettes d'une grande banque française noire et rouge.
 
-![UX][8]
+{% youtube https://www.youtube.com/watch?v=BUEx02NDKF8 %}
 
 Les toilettes sont un lieu exclusivement utilitaire, on y va parce qu'on
 a besoin d'y aller, et on n'y va que pour une seule chose. C'est donc un très
@@ -43,6 +43,8 @@ indication au marqueur pour réussir à faire la différence. Une fois toutes ce
 épreuves terminées, on doit encore se battre avec les lavabos dont la vasque
 hyper-profonde se voit affublée de robinets qui coulent au ras des bords et
 d'une sèche-main "automatique" qui ne se mets jamais en marche.
+
+![UX][8]
 
 Bref, tout cette introduction permettait de mettre en valeur le fait que les
 personnes ayant construit ces lieux ne se sont jamais mis dans la peau des
@@ -85,6 +87,8 @@ On a ensuite enchainé sur le talk de Jean-Christophe Honde de Meetic, qui
 travaille justement dans l'équipe de refonte de l'appli mobile. _Full
 disclosure: je viens de passer les 6 derniers mois dans cette équipe, donc le
 sujet m'étais très familier._
+
+{% youtube https://www.youtube.com/watch?v=mCCW2uTOF7g %}
 
 JC a orienté son talk non pas sur les spécificités de la refonte Meetic mais
 sur le choix de la technologie pour le faire. Ils sont partis sur [famous][11],
@@ -147,6 +151,8 @@ d'avoir un vrai prérequis de support de vieux devices comme Meetic).
 Pour le 3e talk, [Pauline Iogna][16] nous a parlé d'injection de dépendances
 avec [Google Guice][17].
 
+{% youtube https://www.youtube.com/watch?v=HiVdTvzXcfs %}
+
 Son talk était fait comme un cours didactique où on commençait avec un code
 dont les responsabilités étaient très couplées. Une méthode instanciait un
 nouvel objet avant de le manipuler, ce qui rendait le tout difficilement
@@ -174,6 +180,8 @@ J'ai ensuite donné la dernière présentation, sur vim, mon éditeur de tous le
 jours. Il est assez difficile de faire un récapitulatif de ce qu'est vim et
 surtout de donner envie d'essayer en 10mn, mais j'ai réussi à aborder la
 majorité des sujets qui me semblaient importants.
+
+{% youtube https://www.youtube.com/watch?v=3AdNd3XYxEo %}
 
 Vous pouvez trouver les [slides ici][20], mais j'ai avant tout parlé du fait
 que pour nous autres développeurs, notre éditeur de code est notre outil le
