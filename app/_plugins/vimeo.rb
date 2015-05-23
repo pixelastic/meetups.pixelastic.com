@@ -6,7 +6,7 @@ module Jekyll
 
     def initialize(tag_name, input, tokens)
       super
-      input.chomp!
+      input = input.strip
       @vimeo_id = URI.parse(input).path
       @embed_url = "//player.vimeo.com/video#{@vimeo_id}"
     end

@@ -6,7 +6,7 @@ module Jekyll
 
     def initialize(tag_name, input, tokens)
       super
-      input.chomp!
+      input = input.strip
       @video_id = URI.parse(input).path.gsub('video/', '')
       @embed_url = "//www.dailymotion.com/embed/video/#{@video_id}"
     end

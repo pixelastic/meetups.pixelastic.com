@@ -6,7 +6,7 @@ module Jekyll
 
     def initialize(tag_name, input, tokens)
       super
-      input.chomp!
+      input = input.strip!
       @youtube_id = CGI::parse(URI.parse(input).query)['v'][0]
       @embed_url = "http://www.youtube.com/embed/#{@youtube_id}"
     end
