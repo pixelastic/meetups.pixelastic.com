@@ -17,6 +17,8 @@ pizzas.
 
 ## Github Awards, découvrez votre ranking
 
+https://www.youtube.com/watch?v=vrxW9ae-7UE
+
 Vincent Daubry. Co-fondateur Youboox, Ruby/iOS.
 
 Side projects, simple, pas de temps, fun. @SachaGreif.
@@ -43,6 +45,8 @@ Conclusion, ne laissez pas vos side projets trainer, sortez-les.
 
 ## Licences open-sources
 
+https://www.youtube.com/watch?v=j2n6MargPj8
+
 0. liberté d'executer le programme pour tous les usages
 1. liberté d'étudier et de l'adapter
 2. liberté de redistribuer
@@ -64,6 +68,7 @@ www.choisirunelicence.com
 ## BA-BA du scrapping
 
 http://www.slideshare.net/AlexandreGindre/le-baba-du-web-scraping
+https://www.youtube.com/watch?v=45EurjpgqhI
 
 Alexandre Gindre, Octo Technology. (@alexgindre)
 Disclaimer, pas fait chez Octo mais sur side projects ou avant.
