@@ -4,11 +4,9 @@ title: "Paris Hacker #12"
 tags: parishacker, varnish
 ---
 
-12 édition de
-[ParisHacker][1]. J'étais
-allé aux premières éditions il y a quelques années, où on discutait des top
-topics d'[HackerNews][2], où chacun pouvait
-présenter quelque chose en 5-10mn, où des questions étaient posées à la
+12 édition de [ParisHacker][1]. J'étais allé aux premières éditions il
+y a quelques années, où on discutait des top topics d'[HackerNews][2], où chacun
+pouvait présenter quelque chose en 5-10mn, où des questions étaient posées à la
 cantonnade.
 
 Tout ce coté s'est un peu perdu, et j'ai plus l'impression d'aller à un meetup
@@ -26,20 +24,16 @@ réellement.
 
 ## Hosting large audience websites with Varnish
 
-[Maxime Kurkdjian][4]
-d'[Oxalide][5] nous a parlé de leur business
-d'infogérance des gros sites de presse français. Le début de la conférence
-était en anglais (ce qui est d'usage aux ParisHacker), mais Maxime avait
-beaucoup de contenu à nous faire passer et la barrière de la langue l'obligeait
-à limiter les informations qu'il souhaitait faire passer. On a donc décidé de
-revenir en français pour la fin de la conférence, et c'était du coup beaucoup
-plus riche.
+[Maxime Kurkdjian][4] d'[Oxalide][5] nous a parlé de leur business d'infogérance
+des gros sites de presse français. Le début de la conférence était en anglais
+(ce qui est d'usage aux ParisHacker), mais Maxime avait beaucoup de contenu
+à nous faire passer et la barrière de la langue l'obligeait à limiter les
+informations qu'il souhaitait faire passer. On a donc décidé de revenir en
+français pour la fin de la conférence, et c'était du coup beaucoup plus riche.
 
-Oxalide s'occupe des sites de [20 minutes][6],
-l'[Express][7], [le parisien][8]
-ou encore [Radio France][9]. Leur cœur de métier est
-l'amélioration des perfs et la tenue de charge dans les métiers des médias et
-de la presse.
+Oxalide s'occupe des sites de [20 minutes][6], l'[Express][7], [le parisien][8]
+ou encore [Radio France][9]. Leur cœur de métier est l'amélioration des perfs et
+la tenue de charge dans les métiers des médias et de la presse.
 
 Ce sont des sites qui possèdent beaucoup de contenu, avec de nouvelles pages
 ajoutées chaque jour. En cas d'actualité intense, les serveurs sont très
