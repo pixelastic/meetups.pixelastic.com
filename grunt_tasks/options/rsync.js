@@ -193,9 +193,11 @@ module.exports = {
       src: 'dist/',
       dest: 'pixelastic:/var/www/pixelastic.com/meetups.pixelastic.com/',
       args: [
+        '--chmod=Du=rwx,Dg=rwx,Do=rx,Fu=rw,Fg=rw,Fo=r',
         '--verbose',
         '--archive',
         '--update',
+        '--delete',
         '--prune-empty-dirs',
         '--compress'
       ]
