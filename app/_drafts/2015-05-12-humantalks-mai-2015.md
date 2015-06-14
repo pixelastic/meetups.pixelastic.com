@@ -5,130 +5,180 @@ tags: humantalks
 ---
 
 Ce mois-ci, les HumanTalks étaient chez Deezer, dans leur belle grande salle du
-rez-de-chaussé. Un beau frigo rempli nous fait de l'œil, le buffet va être bien.
+rez-de-chaussé. Un beau frigo rempli nous fait de l'œil, le buffet va être bien,
+Deezer a tout prévu.
 
-Petite soirée des fails malgré tout. Déjà le projecteur refuse de projeter les
-slides de la présentation, l'un des speakers nous fait faux bond, les pizzas
-arrivent un peu tard, et la clim ne marche pas assez bien.
+La soirée s'est plutôt bien passée, malgré les quelques fails. Déjà, un des
+speakers n'est pas venu, alors qu'il avait confirmé encore la veille et n'a pas
+jugé utile de prévenir. L'un des trois autres speakers l'a alors remplacé au
+pied levé, mais sa présentation, trop commerciale, n'était pas trés
+convainquante. 
 
-Malgré tout, on a eu le droit à 4 présentations, avec Mickael Andrieu qui nous
-a fait une présentation impromptue pour nous faire patienter avant l'arrivée des
-pizzas.
+Du coup, toutes nos pizzas sont aussi arrivées avec un peu de retard et il
+a fallu attendre un peu avant de pouvoir manger. Le tout dans une salle bas de
+plafond, avec une clim qui marche mal. Oh, et on a eu le rétro-projecteur qui
+s'est mis à faire grève durant l'introduction aussi. Mais sisi, je vous assure,
+c'était bien.
 
 ## Github Awards, découvrez votre ranking
 
-https://www.youtube.com/watch?v=vrxW9ae-7UE
+{% youtube https://www.youtube.com/watch?v=vrxW9ae-7UE %}
 
-Vincent Daubry. Co-fondateur Youboox, Ruby/iOS.
+Vincent Daubry, co-fondateur de Yooboox et développer Ruby/iOS nous parle d'un
+petit side project qu'il a récemment mis au point et qui a assez fait parler de
+lui.
 
-Side projects, simple, pas de temps, fun. @SachaGreif.
+Il avait vu il y a quelques temps une présentation de Sacha, qui parlait des
+side-projects, et que ceux-ci devaien trestent simples, prendre peu de temps et
+surtout être fun.
 
-2 semaines, soir et week-end, ne se lasse pas. Voir où on se trouve sur github
-en fonction des differents rankings. Ca l'a daitr marer, c'est suffisant?
+Du coup, de son coté il s'est donné 2 semaines, en bossant le soir et le
+week-end pour terminer son projet. 2 semaines c'est assez long pour pouvoir
+construire quelque chose, et assez court pour ne pas se lasser.
 
-Déjà on liste tous les users et ler location. Ensuite on liste tous les repos
-avec les langages e les starts. on géocode les locations, et on peut ensuite
-faire du rankins.
+Son projet, nommé GitHub Awards permet de "noter" les différentes personnes
+inscrites sur GitHub pour voir qui est le plus gros commiteur sur telle ou telle
+techno selon différentes zones géographiques. C'est tout con, et ça le faisait
+marrer, ce qui est largement suffisant pour un side-project.
 
-api github bien ouverte, mais énorme. 5000 appels/h par apikey. Mais autre API
-"bulk" mais juste résumé. pas de location, stars, etc.
+Pour faire ça il a commencé à récupérer la liste de tous les users de GitHub et
+leur localisation. Puis, il a récupéré l'ensemble des repos, leur nombre de
+stars et les langages associés. Il y ensuite un petit travail pour recoder les
+coordonnées de location en quelque chose de plus exploitable par son système et
+ensuite il faut mettre au point une petit formule de ranking de tout ce beau
+monde.
 
-githubarchive, ensemble des events des repos publics depuis 2011, ensemble de
-comments, PR, clone, etc. Mais requetable sur google big query
-devient quelues gigas, on peut monter ça en mémoire en REDIS.
+Bon, l'avantage c'est que GitHub ouvre une API qui permet de récupérer toute ces
+infos sans avoir besoin de crawler les pages manuellement. Le problème c'est que
+la masse de données est énorme et GitHub ne permet que 5000 appels par heure par
+clé d'API. Néanmoins, GitHub propose une version "bulk" de son API qui expose
+moins d'informations mais permets d'en récupérer plus d'un coup.
 
-HN 2e page, ProductHunt.
+Heuresement, il existe à coté le projet GitHub Archive qui indexe depuis 2011
+l'ensemble des activités sur tous les repos de GitHub. C'est à dire les
+commentaires, les PR, les clones, etc. Tout ceci représente beaucoup de données
+mais est requetable avec Google Big Query et l'ensemble du dataset, bien que
+conséquent, peut être monté en mémoire avec Redis.
 
-200m visiteurs, 15% des utilisateurs de github.
+Du coup, après le coté technique, Vincent à souhaité tester le coté commercial.
+Il a posté sur HackerNews, a été featuré sur ProductHunt et a ainsi réussi
+à atteindre les 200 millions de visiteurs (ce qui représente quand même 15% des
+utilisateurs de GitHub). Ce qui est impressionnant c'est que son site web est un
+simple Rails (protégé par un bon système de cache) et qu'il a bien tenu la
+charge.
 
-Conclusion, ne laissez pas vos side projets trainer, sortez-les.
+Sa conclusion, que je partage, c'est qu'il ne faut pas laisser trainer ses
+side-projects. Il faut les sortir du placard rapidement, pour qu'ils ne prennent
+pas la poussière, et se donner un temps limité pour éviter cet effet d'abandon.
 
 ## Licences open-sources
 
-https://www.youtube.com/watch?v=j2n6MargPj8
+{% youtube https://www.youtube.com/watch?v=j2n6MargPj8 %}
 
-0. liberté d'executer le programme pour tous les usages
-1. liberté d'étudier et de l'adapter
-2. liberté de redistribuer
-3. liberté d'améliorer et de publier ses améliorations
+Le second talk, je l'attendais avec impatience. Mickael Andrieu souhaitais nous
+parler de licences Open-Source et des différences entres elles, ce qui est un
+sujet bien obscur pour moi.
 
-libre ≠ Open Source ?
+Malheureusement, je n'en sors pas avec beaucoup plus d'informations qu'avant. Je
+ne me risquerai pas à faire un résumé du talk que je dois bien avouer que je
+n'ai rien compris aux explications.
 
-Open Source Initiative. Entreprise, pragmatique.
-"Libre", si patch, doit tout refournir comme un seul tas. Dès qu'on ajoute du
-libre dans du proprio, tout devient libre.
-Open Source ne contamine pas le reste.
+J'ai bien compris qu'il y avait une forte différence entre Libre et Open-Source,
+mais je suis toujours aussi incapable de l'expliquer précisement, et je ne sais
+toujours pas expliquer la différence une MIT, GPL et Creative Commons.
 
-Simple et permissif : distribution, patchs, github => MIT
-précocuppé par les brevets, protection contre les propriétaires => Apache
-favrosier le partage => GPL
+Ah si, j'ai noté qu'il avait créé un site, www.choisirunelicence.com qui doit
+expliquer tout ça en détail.
 
-www.choisirunelicence.com
+## B.A.-BA du scrapping
 
-## BA-BA du scrapping
+{% youtube https://www.youtube.com/watch?v=45EurjpgqhI %}
 
-http://www.slideshare.net/AlexandreGindre/le-baba-du-web-scraping
-https://www.youtube.com/watch?v=45EurjpgqhI
+Alexandre Gindre, ex-collègue d'Octo nous a ensuite [parlé de web scrapping][1].
+Il a tout présenté dans des beaux slides brandés Octo mais il a bien précisé que
+ce dont il allait nous parlait n'était pas fait dans le cadre d'Octo. En effet,
+certaines parties du scrapping sont assez floues vis-à-vis de la légalité.
 
-Alexandre Gindre, Octo Technology. (@alexgindre)
-Disclaimer, pas fait chez Octo mais sur side projects ou avant.
+Déjà, il faut bien faire la différence entre le scrapping et le crawling. Le
+crawling va récupérer la totalité d'un site externe pour l'indexer tel quel de
+son coté (ce que fait Google typiquement). Le scrapping de son coté va
+"uniquement" extraire certaines infos du site.
 
-Scraping ≠ Crawling.
-Crawling on prends tout. Scrapping, on extrait les infos précises.
+L'archi nécessaire pour faire du scrapping est assez simple mais est à peu de
+choses près toujours la même. Dans un premier temps on va requeter le site
+cible, si possible caché derrière un proxy, et on va en extraire les données
+intéressantes. On va ensuite stocker ces données chez nous et les présenter dans
+une nouvelle UI, avec de nouvelles features.
 
-Site cible, (derrière un proxy), un outil scraper, ensuite on stocke et on
-le retraite dans un autre contexte.
+Alors, est-ce que c'est bien légal ? C'est là que c'est flou. Normalement,
+d'après la loi du droit d'auteur sur les bases de données, ce qui est sur un
+site appartient à son auteur. Mais en même temps, si ces données sont
+accessibles publiquement, il peut être admis qu'on puisse les utiliser. La
+jurisprudence vient rajouter un part de complexité dans l'équation aussi. Opodo
+avait scrappé les pages de Ryanair, et Ryanair avait alors porté plainte, mais
+Opodo a fini par gagner le procès car Ryanair n'a pas pu prouver que le
+scrapping leur avait porté préjudice, bien au contraire.
 
-Légal ? C'est flou. Droit d'auteur et droit sur les bases de données. Si sur
-site, appartient à l'auteur. Mais jurisprudence de Opodo contre Ryanair, mais
-Opodo a gagné car n'a pas causé de tort.
-Charte de societe.com indique que c'est interdir de scrapper. Mais reste flou si
-ça a une valeur légale.
-Attention à ne pas mettre en péril la plateforme, DDOS, car releve du pénal.
+Par contre, si jamais le site cible indique clairement qu'il ne faut pas le
+scrapper, alors il ne vaut mieux pas s'y frotter. C'est par exemple le cas de
+societe.com. Quand à savoir si une telle indication a réellement une force
+légale, c'est moins sur.
 
-PriceWiki, scrappe le cout de la vie dans différents pays.
-Rapportive extrait linkedin + photos + mails.
-GetHuman retrouve les emails des gens dans les sites.
-Parsely, innerballons, gov.co.uk
+Ce qui est sur par contre c'est que même si le scrapping en lui-même n'est pas
+interdit, il faut faire attention aux méthodes utilisées. Si on tape dessus
+comme un bourrin et qu'on mets en péril la stabilité de la plateforme, on risque
+d'être apparenté à un DDoS, ce qui est cette fois tout à fait repréhensible et
+relève du pénal.
 
-outils
-Kimonolabs, Import.io, services en saas en GUI pour scrapper n'importe quoi.
+On connait Opodo comme site de scrapping qui agrège les données de plusieurs
+sources, mais il en existe plein d'autres. Il y a PriceWiki qui scrappe le prix
+d'objets de la vie courante de différents pays afin de comparer le prix de la
+vie. Rapportive qui mets en commun les informations de LinkedIn, les photos et
+les adresses mails d'une personne. GetHuman qui scrappe les sites webs pour en
+extraire les adresses mails des gens à contacter. 
 
-frameworks
-Scrapy, ScrapingHub pour heberger, gerer la fréquence, prendre plein d'ips
-différentes.
+Si vous voulez le faire vous-même, il existe quelques outils en SaaS qui peuvent
+vous macher une grosse partie du boulot. Kimonolabs qui en quelques clics vous
+transforme n'importe quelle page en une API. Import.io qui vous propose un GUI
+pour vous permettre de scrapper n'importe quoi, s'occupe de vous masquer
+derrière un proxy et vous prévient en cas de mise à jour.
 
-Tor + Squid + Polipo pour anonymiser.
-Libs de parsing HTML bas niveau ne gèrent pas les erreurs HTTP, ni gèrent pas
-les tags malformés.
+En un peu plus manuel, il y a Scrapy et ScrapingHub pour la version SaaS qui
+vous permet d'héberger vous même le scrapper, de gérer la fréquence de mise
+à jour et le pool d'ip à utiliser.
 
-hidemyass pour changer son ip
-watcher pour regarder les pages avec un requete HEAD
+Si vous voulez le faire à la main, la combo Tor, Squid et Polipo permet de
+facilement anonymiser ses connections. Après pour parser le HTML et en extraire
+les infos intéressants il y Nokogiri en lib Ruby, mais celle-ci ne gère pas
+toute la logique de connection, gestion des erreurs HTTP, etc. C'est juste une
+lib de parsing HTML, donc il vous faut obtenir le fichier initial.
 
+Il a fini par quelques conseils de sioux pour éviter de trop se faire remarquer.
+Hidemyass pour changer son ip facilement. Envoyer de simples requetes curl en
+HEAD pour checker si la page a été mise à jour ou non. Regarder les flux RSS qui
+sont une source énorme d'infos sur les pages du site. Regarder les robots.txt et
+les sitemaps, et envoyer un faux header pour se faire passer pour Google Bots
+ouvre aussi pas mal de portes.
+
+Un talk super intéressant, pour une discipline que nous avons tous déjà du
+pratiquer au moins une fois, mais qui est toujours aussi casse-gueule et
+manuelle.
 
 ## BackBee
 
-Next-Gen Content Manager
+Et donc, le dernier talk, au pied levé par Mickael (qui nous avait déjà présenté
+les licences libres un peu avant). Il nous a parlé du CMS "_orienté gestion de
+contenu_" (?) qu'il développe, fondé sur Symfony et Doctrine.
 
-CMS orienté gestion de contenu. fondé sur composants Symfony et Doctrine.
-Gestion de contenu extensible, tout en GUI point'n'click.
+Encore une fois, j'ai pas réussi à vraiment comprendre ce qu'il faisait. Je me
+souviens qu'il y a de la config en yaml, un client js en front distinct du back,
+un système de templating, une API Rest, la possibilité de faire de l'edit in
+place mais très honnetement je serai bien incapable de dire ce que ça fait
+réellement.
 
-Templating, API REST, 
-client js en front distinct du projet back
-edit in place ?
+## Conclusion
 
-HttpKernel, HttpFoundation, event dispatcher, dependency injection
-requete <=> réponse
-
-...perdu...
-
-définition en yaml
+Au final, une soirée sympa mais malgré tout placée sous le signe du fail.
 
 
-
-
-
-## Informatique en milieu hospitalier
-
-???
-
+[1]: http://www.slideshare.net/AlexandreGindre/le-baba-du-web-scraping
