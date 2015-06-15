@@ -90,22 +90,22 @@ toujours pas expliquer la différence une MIT, GPL et Creative Commons.
 Ah si, j'ai noté qu'il avait créé un site, [www.choisirunelicence.com][15] qui
 doit expliquer tout ça en détail.
 
-## B.A.-BA du scrapping
+## B.A.-BA du scraping
 
 {% youtube https://www.youtube.com/watch?v=45EurjpgqhI %}
 
 [Alexandre Gindre][16], ex collègue d'[Octo][17] nous a ensuite [parlé de web
-scrapping][18]. Il a tout présenté dans des beaux slides brandés Octo mais il
+scraping][18]. Il a tout présenté dans des beaux slides brandés Octo mais il
 a bien précisé que ce dont il allait nous parlait n'était pas fait dans le cadre
-d'Octo. En effet, certaines parties du scrapping sont assez floues vis-à-vis de
+d'Octo. En effet, certaines parties du scraping sont assez floues vis-à-vis de
 la légalité.
 
-Déjà, il faut bien faire la différence entre le scrapping et le crawling. Le
+Déjà, il faut bien faire la différence entre le scraping et le crawling. Le
 crawling va récupérer la totalité d'un site externe pour l'indexer tel quel de
-son coté (ce que fait Google typiquement). Le scrapping de son coté va
+son coté (ce que fait Google typiquement). Le scraping de son coté va
 "uniquement" extraire certaines infos du site.
 
-L'archi nécessaire pour faire du scrapping est assez simple mais est à peu de
+L'archi nécessaire pour faire du scraping est assez simple mais est à peu de
 choses près toujours la même. Dans un premier temps on va requêter le site
 cible, si possible caché derrière un proxy, et on va en extraire les données
 intéressantes. On va ensuite stocker ces données chez nous et les présenter dans
@@ -116,36 +116,36 @@ d'après la loi du droit d'auteur sur les bases de données, ce qui est sur un
 site appartient à son auteur. Mais en même temps, si ces données sont
 accessibles publiquement, il peut être admis qu'on puisse les utiliser. La
 jurisprudence vient rajouter un part de complexité dans l'équation aussi.
-[Opodo][19] avait scrappé les pages de [Ryanair][20], et Ryanair avait alors
+[Opodo][19] avait scrapé les pages de [Ryanair][20], et Ryanair avait alors
 porté plainte, mais Opodo a fini par gagner le procès car Ryanair n'a pas pu
-prouver que le scrapping leur avait porté préjudice, bien au contraire.
+prouver que le scraping leur avait porté préjudice, bien au contraire.
 
 Par contre, si jamais le site cible indique clairement qu'il ne faut pas le
-scrapper, alors il ne vaut mieux pas s'y frotter. C'est par exemple le cas de
+scraper, alors il ne vaut mieux pas s'y frotter. C'est par exemple le cas de
 [societe.com][21]. Quand à savoir si une telle indication
 a réellement une force légale, c'est moins sur.
 
-Ce qui est sur par contre c'est que même si le scrapping en lui-même n'est pas
+Ce qui est sur par contre c'est que même si le scraping en lui-même n'est pas
 interdit, il faut faire attention aux méthodes utilisées. Si on tape dessus
 comme un bourrin et qu'on mets en péril la stabilité de la plateforme, on risque
 d'être apparenté à un DDoS, ce qui est cette fois tout à fait répréhensible et
 relève du pénal.
 
-On connait Opodo comme site de scrapping qui agrège les données de plusieurs
-sources, mais il en existe plein d'autres. Il y a [PriceWiki][22] qui scrappe le
+On connait Opodo comme site de scraping qui agrège les données de plusieurs
+sources, mais il en existe plein d'autres. Il y a [PriceWiki][22] qui scrape le
 prix d'objets de la vie courante de différents pays afin de comparer le prix de
 la vie.  [Rapportive][23] qui mets en commun les informations de LinkedIn, les
-photos et les adresses mails d'une personne.  [GetHuman][24] qui scrappe les
+photos et les adresses mails d'une personne.  [GetHuman][24] qui scrape les
 sites webs pour en extraire les adresses mails des gens à contacter. 
 
 Si vous voulez le faire vous-même, il existe quelques outils en SaaS qui peuvent
 vous mâcher une grosse partie du boulot.  [Kimonolabs][25] qui en quelques clics
 vous transforme n'importe quelle page en une API. [Import.io][26] qui vous
-propose un GUI pour vous permettre de scrapper n'importe quoi, s'occupe de vous
+propose un GUI pour vous permettre de scraper n'importe quoi, s'occupe de vous
 masquer derrière un proxy et vous prévient en cas de mise à jour.
 
 En un peu plus manuel, il y a [Scrapy][27] et [ScrapingHub][28] pour la version
-SaaS qui vous permet d'héberger vous même le scrapper, de gérer la fréquence de
+SaaS qui vous permet d'héberger vous même le scraper, de gérer la fréquence de
 mise à jour et le pool d'ip à utiliser.
 
 Si vous voulez le faire à la main, la combo [Tor][29], [Squid][30] et
