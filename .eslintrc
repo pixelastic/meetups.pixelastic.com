@@ -2,12 +2,13 @@
   "ecmaFeatures": {
   },
   "env": {
-    "browser": true,
+    "browser": true
   },
   "rules": {
+    "no-multi-str": false,
     "no-underscore-dangle": false,
     "no-use-before-define": "nofunc",
-    "quotes": "double",
+    "quotes": "single",
     "strict": "global"
   },
   "globals" : {

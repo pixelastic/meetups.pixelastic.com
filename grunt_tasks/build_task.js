@@ -26,7 +26,7 @@ module.exports = function(grunt) {
       'rsync:prodHtmlTmpToJekyll',
       // JEKYLL
       'rsync:prodJekyllPrepare',
-      'jekyll:prod',
+      'shell:jekyllProd',
       'htmlmin:prodDistToDist'
     ]);
 };

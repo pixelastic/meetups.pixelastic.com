@@ -33,6 +33,7 @@
   "maxdepth": 3,
   "maxlen": 120,
   "maxparams": 3,
+  "multistr": true,
   "newcap": true,
   "noarg": true,
   "node": true,
