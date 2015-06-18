@@ -19,9 +19,7 @@ module.exports = {
   },
   devCssDependenciesToDist: {
     options: {
-      src: [
-        'bower_components/normalize-css/normalize.css'
-      ],
+      src: 'bower_components/normalize-css/normalize.css',
       dest: 'dist/css'
     }
   },
@@ -49,10 +47,11 @@ module.exports = {
   devJsDependenciesToDist: {
     options: {
       src: [
-        'bower_components/zepto/zepto.min.js',
-        'bower_components/moment/moment.js',
-        'bower_components/lodash/dist/lodash.min.js',
-        'bower_components/algoliasearch/dist/algoliasearch.min.js'
+        'bower_components/algoliasearch/dist/algoliasearch.min.js',
+        'bower_components/algoliasearch-helper/dist/algoliasearch.helper.min.js',
+        'bower_components/hogan/web/builds/3.0.2/hogan-3.0.2.min.js',
+        'bower_components/jquery/dist/jquery.min.js',
+        'bower_components/moment/min/moment.min.js'
       ],
       dest: 'dist/js'
     }
@@ -68,8 +67,7 @@ module.exports = {
   devJsAppToDist: {
     options: {
       src: [
-        'app/js/steppe.js',
-        'app/js/search.js'
+        'app/js/*'
       ],
       dest: 'dist/js'
     }
@@ -132,10 +130,11 @@ module.exports = {
   prodJsDependenciesToTmp: {
     options: {
       src: [
-        'bower_components/zepto/zepto.min.js',
-        'bower_components/moment/moment.js',
-        'bower_components/lodash/dist/lodash.min.js',
-        'bower_components/algoliasearch/dist/algoliasearch.min.js'
+        'bower_components/algoliasearch/dist/algoliasearch.min.js',
+        'bower_components/algoliasearch-helper/dist/algoliasearch.helper.min.js',
+        'bower_components/hogan/web/builds/3.0.2/hogan-3.0.2.min.js',
+        'bower_components/jquery/dist/jquery.min.js',
+        'bower_components/moment/min/moment.min.js'
       ],
       dest: 'tmp/js/src'
     }
