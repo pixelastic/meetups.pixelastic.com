@@ -34,4 +34,4 @@ gems:
 
 algolia:
   application_id: 'O3F8QXYK6R'
-  index_name: 'meetups_blog_posts'
+  index_name: 'meetups_blog_posts_v2'
