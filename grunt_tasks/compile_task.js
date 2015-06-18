@@ -1,4 +1,4 @@
-'use strict';
+/* eslint-env node */
 
 module.exports = function(grunt) {
   grunt.registerTask(
@@ -18,6 +18,6 @@ module.exports = function(grunt) {
       'rsync:devHtmlTmpToJekyll',
       // JEKYLL
       'rsync:devJekyllPrepare',
-      'jekyll:dev'
+      'shell:jekyllDev'
     ]);
 };

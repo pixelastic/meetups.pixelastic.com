@@ -35,3 +35,4 @@ gems:
 algolia:
   application_id: 'O3F8QXYK6R'
   index_name: 'meetups_blog_posts_v2'
+  read_only_api_key: '8a569385505b041e6dec'

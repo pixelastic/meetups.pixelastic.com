@@ -39,19 +39,9 @@
         </li>
       </ul>
 
-      <form id="sidebar-search-form" class="sidebar-search" method="GET">
-        <input type="text" id="sidebar-search-input" class="sidebar-search-input" placeholder="Search"/>
+      <form class="algolia__form" action="/search/" method="GET">
+        <input type="text" class="algolia__input js-algolia__input" autocomplete="off" name="query" placeholder="Search in this site..." />
       </form>
-      <script id="search-results-empty-template" language="x-template">
-          <p class="search-results-empty">Aucun résultat trouvé.</p>
-      </script>
-      <script id="search-results-post-template" language="x-template">
-        <div class="post">
-        <h1 class="post-title"><a href="<%= url %>"><%= title %></a></h1>
-          <span class="post-date"><%= date %></span>
-          <%= content %>
-        </div>
-      </script>
 
       <label for="sidebar-checkbox" class="sidebar-toggle-menu"></label>
 
@@ -71,6 +61,26 @@
       </div>
     </div>
 
+    <script>
+      window.ALGOLIA_CONFIG = {
+        'applicationId': '{{ site.algolia.application_id }}',
+        'indexName': '{{ site.algolia.index_name }}',
+        'apiKey': '{{ site.algolia.read_only_api_key }}'
+      }
+    </script>
+    <script id="algolia__template" type="text/template">
+    {% raw %}
+      <div class="algolia__result">
+        <a class="algolia__result-link" href="{{ url }}#algolia:{{ css_selector }}">{{{ _highlightResult.title.value }}}</a>
+        {{#posted_at}}
+        <div class="algolia__result-date">{{ posted_at_readable }}</div>
+        {{/posted_at}}
+        <div class="algolia__result-text">{{{ _highlightResult.content.value }}}</div>
+    {% endraw %}
+    </script>
+    <script id="algolia__template--no-results" type="text/template">
+      No results found.
+    </script>
     <!-- fileblock:js js -->
     <!-- endfileblock -->
   </body>

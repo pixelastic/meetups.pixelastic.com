@@ -31,7 +31,10 @@ module.exports = {
     ]
   },
   bowerCss: {
-    files: 'bower_components/**/*.css',
+    files: [
+      'bower_components/**/*.css',
+      'app/css/vendors/*.css'
+    ],
     tasks: [
       'rsync:devCssDependenciesToJekyll',
       'rsync:devCssDependenciesToDist'

@@ -5,6 +5,7 @@
     "browser": true
   },
   "rules": {
+    "camelcase": false,
     "no-multi-str": false,
     "no-underscore-dangle": false,
     "no-use-before-define": "nofunc",
@@ -13,9 +14,9 @@
   },
   "globals" : {
     "$": false,
-    "AlgoliaSearch": false,
-    "Steppe": false,
-    "Zepto": false,
+    "algoliasearch": false,
+    "algoliasearchHelper": false,
+    "Hogan": false,
     "_": false,
     "moment": false
   }
