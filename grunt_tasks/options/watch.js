@@ -27,14 +27,11 @@ module.exports = {
       'fileblocks:dev',
       'rsync:devHtmlTmpToJekyll',
       'rsync:devJekyllPrepare',
-      'jekyll:dev'
+      'shell:jekyllDev'
     ]
   },
   bowerCss: {
-    files: [
-      'bower_components/**/*.css',
-      'app/css/vendors/*.css'
-    ],
+    files: 'bower_components/**/*.css',
     tasks: [
       'rsync:devCssDependenciesToJekyll',
       'rsync:devCssDependenciesToDist'

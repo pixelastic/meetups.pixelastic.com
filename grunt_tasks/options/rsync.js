@@ -13,10 +13,7 @@ module.exports = {
   // CSS
   devCssDependenciesToJekyll: {
     options: {
-      src: [
-        'bower_components/normalize-css/normalize.css',
-        'app/css/vendors/algolia.css'
-      ],
+      src: 'bower_components/normalize-css/normalize.css',
       dest: 'tmp/jekyll/css'
     }
   },

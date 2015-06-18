@@ -49,14 +49,11 @@
     </div>
     <div class="layout">
       <div class="content" id="content">
+        <div class="algolia__initial-content js-algolia__initial-content">{{ content }}</div>
 
-        <div class="content-search">
-          <h1 class="page-title">Rechercher</h1>
-          <div class="posts search-results" id="search-results"></div>
-        </div>
-
-        <div class="content-display">
-          {{ content }}
+        <div class="algolia__search-content js-algolia__search-content">
+          <h1 class="page-title">Search</h1>
+          <div class="posts algolia__results"></div>
         </div>
       </div>
     </div>
