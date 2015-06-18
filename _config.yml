@@ -27,3 +27,11 @@ github:
 # Build
 timezone:         "Europe/Paris"
 encoding:         "utf-8"
+
+# Algolia
+gems:
+  - algoliasearch-jekyll
+
+algolia:
+  application_id: 'O3F8QXYK6R'
+  index_name: 'meetups_blog_posts'
