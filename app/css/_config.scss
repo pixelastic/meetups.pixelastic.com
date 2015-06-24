@@ -62,7 +62,7 @@ $height-desktop-sidebar: 450px;
 $width-phone-page: 500px;
 
 // Breakpoint where we stop displaying the search in the nav
-$width-search-min: 1024px;
+$width-search-min: 1023px;
 
 @mixin clearfix {
   &:after {
