@@ -6,7 +6,7 @@ module.exports = {
   },
   livereload: {
     options: {
-      livereload: 35710
+      livereload: true
     },
     files: [
       'dist/css/*.css',
