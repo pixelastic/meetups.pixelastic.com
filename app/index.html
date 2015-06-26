@@ -28,17 +28,17 @@ id: index
 
 <div class="pagination">
   {% if paginator.next_page %}
-    <a class="pagination-item older" href="/page{{paginator.next_page}}">Suivant</a>
+    <a class="pagination-item older" href="/page{{paginator.next_page}}">Précédent</a>
   {% else %}
-    <span class="pagination-item older">Suivant</span>
+    <span class="pagination-item older">Précédent</span>
   {% endif %}
   {% if paginator.previous_page %}
     {% if paginator.page == 2 %}
-      <a class="pagination-item newer" href="/">Précédent</a>
+      <a class="pagination-item newer" href="/">Suivant</a>
     {% else %}
-      <a class="pagination-item newer" href="/page{{paginator.previous_page}}">Précédent</a>
+      <a class="pagination-item newer" href="/page{{paginator.previous_page}}">Suivant</a>
     {% endif %}
   {% else %}
-    <span class="pagination-item newer">Précédent</span>
+    <span class="pagination-item newer">Suivant</span>
   {% endif %}
 </div>
