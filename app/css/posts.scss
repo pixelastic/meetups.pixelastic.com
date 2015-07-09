@@ -1,31 +1,32 @@
-@import '_config';
+@import 'config';
 
 .page,
 .post {
   margin-bottom: 4em;
 }
 
-/* Blog post or page title */
+// Blog post or page title
 .page-title,
 .post-title {
   color: $grey-darker;
-}
-.page-title,
-.post-title {
   margin-top: 0;
 }
 
-/* Meta data line below post title */
+// Meta data line below post title
 .post-date {
-  display: block;
-  margin-top: -.5rem;
-  margin-bottom: 1rem;
   color: $grey-light;
+  display: block;
+  margin-bottom: 1rem;
+  margin-top: -.5rem;
 }
 
-/* Footnotes */
+// Footnotes
+sup {
+  padding-left: .1rem;
+}
+
 .footnotes {
-  font-size:.8rem;
-  padding-top:1rem;
-  border-top:1px solid #EEEEEE;
+  border-top: 1px solid $grey-lightest;
+  font-size: .8rem;
+  padding-top: 1rem;
 }
