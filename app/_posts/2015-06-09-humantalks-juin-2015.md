@@ -5,15 +5,15 @@ tags: humantalks
 ---
 
 Pour le mois de Juin, c'est Viadeo qui a pu nous accueillir. On avait 120
-personnes inscrites, mais on était dans les faits plus proche d'environ 90 sur
-place. Viadeo nous a accueilli dans leur cantine et on a pu ensuite se régaler
+personnes inscrites, mais on était dans les faits plus proches d'environ 90 sur
+place. Viadeo nous a accueillis dans leur cantine et on a pu ensuite se régaler
 de ce que leurs cuistots nous avaient préparés.
 
 Une session formidable, avec 4 talks passionnants pour contrebalancer la session
 du mois précédent qui m'avait un peu laissé sur ma faim. Cette fois on a parlé
 de RAML, de sociologie, d'UX et d'école de développement.
 
-# RAML
+# RAML <a name="raml"></a>
 
 [Yves Pasteur](https://twitter.com/ypasteur) nous a parlé de RAML, un format
 pour spécifier ces APIs. Le formalisme du langage permet ensuite
@@ -23,7 +23,7 @@ tester automatiquement.
 {% youtube https://www.youtube.com/watch?v=dOmL1QVbx4Q %}
 
 On le sait tous, le gros problème de la documentation c'est qu'elle n'est jamais
-à jour avec le code. Tout simplement parce que c'est une tâche chiante à faire
+à jour avec le code. Tout simplement parce que c'est une tâche pénible
 et qu'on la néglige bien souvent. Ici, RAML se situe dans la même lignée que les
 annotations, en permettant de spécifier son API en même temps qu'on la
 documente. Spec et doc ne font qu'un.
@@ -31,38 +31,38 @@ documente. Spec et doc ne font qu'un.
 RAML en terme de syntaxe, c'est du YAML, et ça veut aussi dire Restful API Model
 Language. En gros, on peut définir plusieurs versions de notre API, et pour
 chacune d'elle spécifier son url, ainsi que les endpoints possibles. On peut
-bien sur faire une hiérarchie de endpoints qui reflètent la hiérarchie de nos
-url, et pour chacun des niveaux indiquer une petite description ainsi que les
+bien sûr faire une hiérarchie de endpoints qui reflètent la hiérarchie de nos
+url, et pour chacun des niveaux indiqués une petite description ainsi que les
 paramètres attendus. 
 
 Tout ceci sera alors utilisé pour générer automatiquement la documentation à la
-manière d'un Swagger. Pour chacun des endpoints on peut bien sur spécifier des
+manière d'un Swagger. Pour chacun des endpoints on peut bien sûr spécifier des
 actions différentes selon le verbe utilisé, ainsi que la liste des paramètres
 attendus (qu'ils viennent de l'url, d'une query string, d'un body ou même de
 headers).
 
 Pour chacun de ces paramètres, on peut spécifier le type attendu, s'il est
 obligatoire ou non, et faire de même pour le type de réponse attendue ainsi que
-le code retour. On peut aussi bien sur spécifier des exemples pour chacun d'eux.
-Pour ne pas écrire des fichiers trop énormes ont peut bien sur utiliser des
+le code retour. On peut aussi bien sûr spécifier des exemples pour chacun d'eux.
+Pour ne pas écrire des fichiers trop énormes ont peut bien sûr utiliser des
 templates et inclure des fichiers.
 
-Tout ceci permet de définir dans un langage standard notre API. Il existe des
-parseurs de RAML dans plusieurs langages et déjà quelques outils qui en tirent
-partie (génération de docs, tests d'intégration, voire même génération d'un CRUD
+Tout ceci permet de définir notre API dans un format standardisé.
+Il existe des parseurs de RAML dans plusieurs langages et déjà quelques outils qui en tirent
+partie (génération de docs, tests d'intégration, voire génération d'un CRUD
 simple).
 
 Il y a plusieurs projets collaboratifs pour définir la spec RAML de certaines
 API bien connues comme Facebook, Twitter ou GitHub. Il n'est pas encore possible
 de détecter automatiquement quand une de ces API a ajouté de nouveaux endpoints
-grâce à RAML, mais on peut déjà tester si certains retours ont changés ou si
-certains endpoints ont disparus.
+grâce à RAML, mais on peut déjà tester si certains retours ont changé ou si
+certains endpoints ont disparu.
 
 Je ne connaissais pas du tout RAML mais je préfère largement ce formalisme de
 spec d'API que de faire un gros fichier doc, car c'est parsable et qu'on peut
 donc à terme le tester et générer la doc qui va avec.
 
-# Sociologie appliquée au développeur
+# Sociologie appliquée aux développeurs <a name="socio"></a>
 
 Sous ce titre assez étrange, c'est Sylvain Abélard qui nous a fait un talk
 ultra-touffu sur une douzaine de théorèmes et effets sociologiques qu'on est
@@ -71,20 +71,20 @@ forcément amenés à croiser dans le monde professionnel.
 {% youtube https://www.youtube.com/watch?v=ZxHgqw8a08c %}
 
 Beaucoup d'humour et passionnant, je vous recommande chaudement de regarder le
-talk mais surtout d'aller lire plus en détail plus d'informations sur chacun de
+talk mais surtout d'aller lire davantage d'informations sur chacun de
 ces effets.
 
-Sylvain est développeur, mais quand sa boite a commencé à grossir et qu'il a du
-embauché d'autres développeurs il s'est retrouvé à aussi devoir les manager.
+Sylvain est développeur, mais quand sa boîte a commencé à grossir et qu'il a dû
+embaucher d'autres développeurs il s'est retrouvé à aussi devoir les manager.
 Mais lui il code, il ne sait pas forcément comment gérer des humains. Du coup,
-il a fait comme pour tout nouveau framework qu'il ne connait pas : il a lu la
-doc. Et c'est donc après en avoir appris un peu plus sur la manière donc
+il a fait comme pour tout nouveau framework qu'il ne connaît pas : il a lu la
+doc. Et c'est donc après en avoir appris un peu plus sur la manière dont
 fonctionne le cerveau humain et particulièrement dans un contexte d'équipe qu'il
-nous a fait cette liste.
+nous a fait cette liste, [NdSAb: pour vous et votre chef][why_socio].
 
-On a tous déjà remarqué que plus une boite grossit et plus on a l'impression que
+[On a tous déjà remarqué][other_talks] que plus une boîte grossit et plus on a l'impression que
 les gens vont dans des directions différentes, que tout le monde pense avoir (ou
-pas d'ailleurs) l'intérêt de la boite à cœur, mais que pour autant tout le monde
+pas d'ailleurs) l'intérêt de la boîte à cœur, mais que pour autant tout le monde
 n'est pas aligné. Et le pire c'est que la majorité du temps, ce n'est même pas
 de la méchanceté, encore moins de l'incompétence, juste des raisons différentes
 que chacun ne peut ou ne veut pas forcément exprimer.
@@ -93,28 +93,32 @@ Pour mieux comprendre tout ça, Sylvain a donc posé des mots et nommé une
 douzaine d'effets, principes et théorèmes.
 
 
-## Principe de Peter
+## [Principe de Peter](https://fr.wikipedia.org/wiki/Principe_de_Peter) <a name="peter"></a>
 
 Celui-ci est simple, et on le croise tous autour de nous. C'est tout simplement
 que le principe même de hiérarchie et de promotion fait que des gens
 incompétents se retrouvent à des postes hauts placés. 
 
-Comment ça se fait ? Tout simplement parce que quand on est bons à ce qu'on
-fait, on obtient une promotion pour accéder à une position plus importante. Au
-début on n'est pas très bon à cette position, parce qu'on y débute, mais on
+Comment ça se fait ? Tout simplement parce que quand on est bon à ce qu'on
+fait, on obtient une promotion pour accéder à une position plus importante [NdSAb: ou pas][career_tips]. Au
+début on n'est pas très bon dans cette fonction, parce qu'on y débute, mais on
 finit par apprendre. Alors on monte encore d'un échelon, et encore d'un. Mais
 à un moment, on finit par ne plus monter, parce qu'on a atteint le maximum de ce
-qu'on était capable de faire.
+qu'on était capable de faire [NdSAb: je crois que tout le monde peut progresser,
+attention au "fixed-mindset"][fixed_growth_mindsets]
 
-Sauf qu'on n'est jamais rétrogradé. On ne redescends jamais au poste précédent,
+Sauf qu'on n'est jamais rétrogradé. On ne redescend jamais [(disons très rarement)][stepping_down] au poste précédent,
 celui où on bon. Cela signifie qu'au bout d'un moment, chacun se retrouve en
-poste à un poste où il n'est pas bon. 
+poste à un poste où il n'est pas bon.
 
-Du coup, il faut être plus conciliant avec les incompétents. Ils ne sont
+Du coup, il faut être plus conciliant avec les "incompétents". Ils ne sont
 peut-être pas bons à ce qu'ils font en ce moment, mais s'ils sont là c'est parce
-qu'ils étaient très bon à autre chose avant.
+qu'ils étaient très bons à autre chose avant.
 
-## Dunning-Krueger Effect
+... Ou que VOUS ne voyez pas à quoi ils sont compétents car VOUS êtes incompétent !
+C'est à dire que vous êtes sujet au...
+
+## [Dunning-Kruger Effect](https://en.wikipedia.org/wiki/Dunning%E2%80%93Kruger_effect) <a name="dunning_kruger"></a>
 
 Celui-ci, je l'adore. J'ai découvert la sensation il y a quelques années mais je
 ne savais pas qu'il avait un nom (et c'est d'ailleurs Sylvain qui m'avait filé
@@ -122,21 +126,30 @@ le lien vers plus d'explication).
 
 Cet effet explique simplement que _celui qui sait sait qu'il ne sait pas, alors
 que celui qui ne sait pas ne sait pas qu'il ne sait pas_. En d'autres termes, si
-vous êtes compétents dans un domaine, vous savez juger vos limites, vous savez
+vous êtes compétent dans un domaine, vous savez juger vos limites, vous savez
 ce que vous savez faire, vous savez ce que vous ne savez pas faire, vous voyez
 la réelle étendue du problème. Alors que celui qui est incompétent sera
-incapable de juger la réelle difficulté d'une tâche. Parce qu'il ne s'y connait
+incapable de juger la réelle difficulté d'une tâche. Parce qu'il ne s'y connaît
 pas vraiment, il ne verra pas ce qu'elle implique réellement et elle lui
-paraitre simple car il ne verra pas toute la complexité cachée que vous pouvez
+paraîtra simple car il ne verra pas toute la complexité cachée que vous pouvez
 voir.
 
-C'est malheureusement pour ça que les incompétents paraissent sûrs d'eux mais
+C'est malheureusement pour ça que les incompétents paraissent [sûrs d'eux][dumb_sure] mais
 que les gens compétents paraissent douter.
 
-## Hawthorne Effect
+## [Hawthorne Effect](https://fr.wikipedia.org/wiki/Effet_Hawthorne) <a name="hawthorne"></a>
 
-Le nom vient sans doute du psychologue qui a tenté une étude de productivité
-d'ouvriers dans une usine. Il cherchait à savoir si le degré de luminosité de la
+Le nom vient d'une usine de Chicago dans laquelle on a voulu étudier la productivité
+des ouvriers.
+
+<i>Attention, l'anecdote ci-dessous est inexacte.
+Lisez la page Wikipedia pour en savoir plus.
+Je laisse cependant cette version car elle est simple, amusante,
+que c'est celle de la vidéo, et qu'elle montre bien que Sylvain
+s'est fait avoir par un Woozle Effect :D
+</i>
+
+Un psychologue a cherché à savoir si le degré de luminosité de la
 pièce où ceux-ci travaillaient avait un impact sur leur productivité.
 
 Du coup, il a essayé d'augmenter la lumière pendant une semaine pour voir. Et il
@@ -160,34 +173,34 @@ subtils que changer son bureau de sens ou travailler dans un nouveau lieu donne
 de nouvelles idées, change les habitudes et permet de travailler différemment,
 bien souvent avec un effet bénéfique.
 
-## XY Problem
+## [X-Y Problem](http://www.perlmonks.org/?node_id=542341) <a name="xy_problem"></a>
 
 Celui-là est moins connu. On le retrouve quand on pose une question à quelqu'un
-mais qu'on à l'impression qu'il réponds à coté. On demande de l'aide à quelqu'un
+mais qu'on à l'impression qu'il répond à coté. On demande de l'aide à quelqu'un
 pour résoudre le problème X, mais lui nous donne la solution pour résoudre le
 problème Y parce que de son expérience, la cause du problème X est bien souvent
 Y, alors il souhaite nous faire gagner du temps.
 
 Sauf qu'en n'expliquant pas le processus, on à l'impression que l'autre ne
-comprends pas notre problème, ou s'en fout, et ne nous aide pas. Et c'est
+comprend pas notre problème, ou s'en fout, et ne nous aide pas. Et c'est
 d'ailleurs tout à fait vrai, on n'aide pas quelqu'un en lui donnant la solution
 à un problème qu'il n'a pas.
 
-## Effet d'audience
+## [Effet d'audience](https://en.wikipedia.org/wiki/Audience_effect) <a name="audience"></a>
 
 Cet effet est assez simple et indique que parfois, regarder par dessus l'épaule
 de quelqu'un quand il fait une tâche peut avoir un effet bénéfique, parfois cela
 peut avoir un effet néfaste. En effet, quand une tâche est simple, on
 procrastine, on glande un peu à la faire, du coup si on est surveillé, on est
-plus concentré. Au contraire, si la tâche est complexe, surveiller quelqu'un va
-simplement le ralentir, voir l'empêcher complètement de la compléter.
+moins dispersé. Au contraire, si la tâche est complexe, surveiller quelqu'un va
+simplement le ralentir, voir l'empêcher complètement de la réaliser.
 
 Le mieux est simplement de demander de temps en temps où l'autre en est, mais
 pas trop souvent.
 
-## Ringelman effect
+## [Ringelmann effect](https://en.wikipedia.org/wiki/Ringelmann_effect) <a name="ringelmann"></a>
 
-Sous ce nom compliqué se cache simplement l'effet de groupe. Plus un groupe est
+Sous ce nom compliqué se cache simplement l'effet de lourdeur hiérarchique. Plus un groupe est
 gros, moins il est efficace car il faut gérer, en plus de la tache à exécuter,
 l'overhead de la coordination du groupe. De plus, avec le grossissement d'un
 groupe arrive aussi la dilution de la responsabilité.
@@ -201,31 +214,46 @@ votre faute, il y a peu de chance qu'on puisse remonter jusqu'à vous.
 
 Ce genre d'ambiance plombe complètement la motivation, car de la même manière
 que vous ne pouvez pas être blâmé, vous ne pouvez pas non plus être récompensé.
-Si ce n'est la faute de personne quand ça foire, c'est grâce à personne non plus
-quand ça réussi.
+Si ce n'est la faute de personne quand ça foire, ce n'est grâce à personne non plus
+quand ça réussit.
+
+Les grands groupes aiment aussi les process, les cadres, les règles.
+On arrive facilement et
+[paradoxalement](http://thecodelesscode.com/case/164?lang=fr&trans=abelards)
+à de gros problèmes ou inadéquations ne résultant que de l'application
+de petites étapes qui, prises individuellement, ne montrent aucun
+souci en elle-mêmes. Sans réel coupable, ils peuvent aussi perdurer
+d'autant plus longtemps.
 
 Pour contrer ça, laissez de la liberté à chacun, limitez la hiérarchie au
 maximum (3 couches MAX).
 
-## Woozle effect
+## Woozle effect <a name="woozle"></a>
 
 Le principe de la rumeur. Comment les rumeurs et les légendes urbaines se
 forment. Comment à force de répéter et d'entendre tout le temps les mêmes
 fausses informations on fini par les assimiler comme des vérités et les répandre
-nous même.
+nous-mêmes.
 
-Vérifiez vos sources, attention aux "untel à dit ça", méfiez vous des vérités
-générales.
+Vérifiez vos sources, attention aux "untel à dit ça", méfiez-vous des vérités
+générales, entendre souvent la même chose ne veut pas dire que c'est vrai (ex : la pub)...
 
-## Matthew effect
+Ou comme dit dans [HPMOR](http://hpmor.com) (Harry Potter et les Méthodes de la Rationalité) :
+- "Que croyons-nous et pourquoi le croyons-nous ?"
+- "L'absence de preuve n'est pas une preuve d'absence."
+
+## [Matthew effect](https://en.wikipedia.org/wiki/Matthew_effect) <a name="matthew"></a>
 
 Si quelqu'un dans votre équipe est très compétent et qu'il est capable de faire
 un certain nombre de tâches plus rapidement que n'importe qui d'autre, il y a de
 fortes chances que vous alliez toujours le voir pour faire ces tâches.
 
-Du coup, cette personne n'a alors plus le temps de faire ses autres tâches,
+Dans un premier temps, cette personne, exposée à davantage de problèmes et de solutions,
+deviendra une ["Superstar"](https://fr.wikipedia.org/wiki/Effet_superstar).
+
+Mais dans une version plus perverse, cette personne finit par ne plus avoir le temps de faire ses autres tâches,
 voire si vous êtes plusieurs à aller le voir, il n'a même plus le temps de faire
-cette tâche là. Alors que pendant ce temps tout le reste de l'équipe, on ne lui
+son travail du tout. Alors que pendant ce temps tout le reste de l'équipe, on ne lui
 demande rien.
 
 Dans ce cas, il faut faire faire monter en compétence et déléguer. Machin est
@@ -235,30 +263,31 @@ certes moins rapides mais qui peuvent être plusieurs à exécuter ces tâches e
 parallèle et vous désengorgez les process.
 
 La solution n'est pas de virer ceux qui sont trop lents, et de ne garder que des
-experts d'une tache. À la place il faut faire monter tout le monde en compétence
-sur toutes les taches, pour avoir une équipe pluri-disciplinaire.
+experts d'un domaine. À la place il faut faire monter tout le monde en compétence
+sur tous les sujets, pour avoir une équipe pluri-disciplinaire.
 
-## Catfish effect
+C'est aussi plus facile pour gérer les maladies et les congés :)
+
+## [Catfish effect](https://en.wikipedia.org/wiki/Catfish_effect) <a name="catfish"></a>
 
 Celui-là, je le connaissais pas ! L'histoire veut qu'un groupe de pêcheurs en
 haute mer revenait régulièrement au port avec de grosses cargaisons de sardines.
-Mais après un si long voyages, leurs sardines n'étaient plus forcément très
-fraiches. Et les sardines peu fraiches se vendaient moins cher que les sardines
-fraiches.
+Mais après un si long voyage, leurs sardines n'étaient plus forcément très
+fraîches. Et les sardines peu fraîches se vendaient moins cher que les sardines
+fraîches.
 
-Pourtant, il y avait toujours un bateau qui allait pêcher au même endroit,
-revenez en même temps que les autres et pourtant avait des sardines plus
-fraiches. Son secret était qu'il gardait avec ses sardines un poisson-chat, qui
-tenait les sardines en éveil, pour ne pas se faire manger.
+Pourtant, il y avait toujours un bateau qui avait des sardines plus
+fraîches. Son secret était qu'il gardait avec ses sardines un poisson-chat,
+prédateur des sardies, ce qui les tenait en mouvement.
 
 L'émulation d'avoir un plus gros poisson avec elles, la compétition pour ne pas
-se faire manger les forçaient à rester alerte. Dans le monde du travail, cela ne
+se faire manger les forçaient à rester alertes. Dans le monde du travail, cela ne
 signifie pas de mettre un tueur sanguinaire au sein de votre open-space pour
 motiver tout le monde. Non, l'idée est de mettre un "maestro", quelqu'un de plus
 balaise dans l'équipe pour créer une émulation encore une fois faire monter en
 compétence le reste de l'équipe autour de lui.
 
-## Attribution Error
+## [Attribution Error](https://en.wikipedia.org/wiki/Fundamental_attribution_error) <a name="attribution_error"></a>
 
 - "Bidule qui est d'habitude toujours sympa, là il s'est vraiment comporté comme
   un salaud". 
@@ -272,8 +301,9 @@ rencontrée et vous avez continué à la voir de cette façon par la suite.
 
 Oubliez vos a priori, regardez ce que font les gens maintenant, pas par rapport
 à ce qu'ils ont fait avant.
+Et surtout, ne jugez pas hâtivement, et essayez de déchiffrer le contexte avant de parler.
 
-## Demo effect
+## [Demo effect](https://en.wikipedia.org/wiki/Demonstration_effect) <a name="demonstration"></a>
 
 Pas l'effet Bonaldi, mais celui qui dit que quand on montre aux autres comment
 faire, ils apprennent mieux que quand on leur dit comment faire. Surtout si la
@@ -281,25 +311,26 @@ tâche est chiante, il vaut mieux la faire une première fois avec la personne q
 va devoir la faire ensuite pour lui montrer et que ce ne soit pas toujours les
 mêmes qui fassent les tâches rébarbatives.
 
-## Walkman effect
+## [Walkman effect](https://en.wikipedia.org/wiki/Walkman_effect) <a name="walkman"></a>
 
-Celui-ci je ne suis pas sur que Sylvain n'ai pas inventé le nom. C'est le fait
+Celui-ci je ne suis pas sur que Sylvain n'ai pas inventé le nom (NdSAb : non pas du tout ^^). C'est le fait
 que les managers qui ne sont pas habitués à travailler avec des développeurs
 puissent s'offusquer du fait que nous travaillions avec notre casque rivé sur
 les oreilles, éloigné du monde extérieur.
 
 On fait ça pour pouvoir se concentrer, pour contrôler l'environnement dans
-lequel on travail, mais pour quelqu'un qui ne le sait pas, cela nous fait passer
+lequel on travaille, mais pour quelqu'un qui ne le sait pas, cela nous fait passer
 pour des asociaux qui n'aiment pas les gens.
 
-À nous d'expliquer et de faire comprendre pourquoi nous souhaitons nous isoler.
+À nous d'expliquer et de faire comprendre pourquoi nous souhaitons "reprendre le contrôle".
+
 
 ## Conclusion
 
 Finalement, un talk passionnant, je vous invite à regarder et partager cette
 vidéo.
 
-# De l'UX dans mon équipe Agile
+# De l'UX dans mon équipe Agile <a name="ux_agile"></a>
 
 Antoine Pezé, Octo Technology,  a ensuite parlé du rôle de l'UX designer dans
 une équipe agile.
@@ -345,7 +376,7 @@ le mode avion était toléré. Du coup, l'équipe a pu prendre en compte dès le
 début la création d'un mode offline et ne pas découvrir cette informations à la
 dernière minute.
 
-Idem, la boite avait pour idée de créer un fil de news dans l'application pour
+Idem, la boîte avait pour idée de créer un fil de news dans l'application pour
 les employés, mais après retour sur le terrain, cela n'intéresse personne. Du
 coup, la feature est mise de coté et l'équipe peut utiliser son temps pour faire
 des choses plus utiles.
@@ -375,7 +406,7 @@ trouvent des chemins détournés, comment certaines choses qui nous semblent
 Et allez pour la fin, il avait beau nous dire qu'il n'y avait pas de checklist
 d'UI, il a quand même donné le lien de [goodui.org](http://www.goodui.org/).
 
-# Wild Code School
+# Wild Code School <a name="wild_code_school"></a>
 
 Et pour le dernier talk c'est Romain Cœur qui nous a parlé de l'école
 d'informatique qu'il a fondée. La Wild Code School est spéciale car elle se
@@ -485,3 +516,39 @@ continue d'apprendre régulièrement.
 
 Encore une bien belle session. Merci à Viadeo de nous avoir accueilli, on eu le
 droit là à 4 talks passionnants.
+
+
+[why_socio] le but de l'auteur est de vous donner les armes soit en tant que (jeune ou moins jeune) manager, soit en tant que dev pour avoir les mots et les faits qui permettront d'expliquer à votre manager vos demandes pour améliorer vos conditions de travail.
+
+[other_talks] [Simon Guimezanes "Guide de la survie politique en entreprise"](http://vimeo.com/72344243)
+[Sylvain Abélard "Let's build pyramids"](https://speakerdeck.com/abelar_s/lets-build-pyramids)
+
+[career_tips] mais c'est un autre débat -- ceux qui pourraient en parler exigeront soit beaucoup d'argent (c'est légitime vu les k€ que tu peux gagner, mais ça reste vous qui prenez les risques), soit de couper la caméra.
+
+[fixed_growth_mindsets] Note de Sylvain Abélard : le "fixed mindset"
+dit que "vous avez un niveau d'intelligence fini, certains sont bêtes
+et d'autres plus ou moins intelligents. Le "growth mindset" dit que
+quel que soit le problème, on peut y arriver en travaillant davantage.
+Le Fixed Mindset donne des gens qui progressent peu et pour l'avoir
+vécu je le trouve dangereux et nocif. Il est la raison de mes talks
+[Hack your Brain](https://speakerdeck.com/abelar_s/hack-your-brain-fr),
+[Hack your motivation](https://speakerdeck.com/abelar_s/hack-your-motivation) et
+[Dark Side](https://speakerdeck.com/abelar_s/hack-your-brain-iii-the-dark-side)
+
+Pour en savoir plus : [https://en.wikipedia.org/wiki/Mindset#Fixed_mindset_and_growth_mindset]
+
+[stepping_down] hormis licenciement (difficile en France), changement
+de travail, mobilité interne... En tout cas changer de job tout court
+requiert de l'énergie et peu apprécient, surtout pour un poste moins
+"prestigieux socialement" ou à salaire moindre. Ceux qui savent bien
+négocier iront d'autant plus vite soit dans un poste très important où
+ils sont très incompétents (sans que cela ne se voie) soit dans un poste
+où ils maximisent leur propre bonheur, lequel est souvent défini par
+[Autonomy, Mastery and Purpose](https://duckduckgo.com/?q=Autonomy%2C+Mastery+and+Purpose)
+(Autonomie, Maîtrise, Objectif / Vision).
+
+[dumb_sure] Ajoutez à cela l'effet classique qu'en réunion comme dans tout contexte
+social, il est facile pour un extraverti d'imposer son point de vue ; que beaucoup de
+développeurs sont introvertis, et vous avez un mix explosif. En tant que "celui qui fait",
+il est alors de votre devoir d'améliorer vos skills sociaux en entreprise et lors des réunions !
+
