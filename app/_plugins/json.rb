@@ -1,12 +1,15 @@
 require 'json'
 module Jekyll
+  # Generate pages as JSON as well as HTML
   class JSONPostGenerator < Generator
     safe true
     priority :low
 
     def convert_liquid_tags(content)
-      info = { :filters => [Jekyll::Filters] }
-      return Liquid::Template.parse(content).render!({}, info);
+      info = {
+        filters: [Jekyll::Filters]
+      }
+      Liquid::Template.parse(content).render!({}, info)
     end
 
     def generate(site)
@@ -39,6 +42,7 @@ module Jekyll
     end
   end
 
+  # JSON page to generate
   class JSONPage < Page
     def initialize(site, path, post)
       @site = site

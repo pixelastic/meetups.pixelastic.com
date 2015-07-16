@@ -83,5 +83,5 @@ PLATFORMS
 
 DEPENDENCIES
   algoliasearch-jekyll
-  i18n (>= 0.7.0)
-  jekyll (>= 2.5.3)
+  i18n (~> 0.7.0)
+  jekyll (~> 2.5)
