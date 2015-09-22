@@ -4,66 +4,78 @@ title: "HumanTalks Juillet 2015"
 tags: humantalks
 ---
 
+_Note: For this post, I'll try to write in English. I'm now working in an
+english-speaking company and I'm already writing emails in English to give
+feedback on the HumanTalks sessions. I'm not used to write such lengthy posts in
+English, though. Hopefully I'll get better at it the more I do it._
 
-Chez prestatshop
-wordpress du excommerce
-recrute du devops, front-end, et validation des modules
-
+This session occured at Prestashop new office. Right near the Gare St-Lazare in
+Paris, the office was brand new and really nice. For those that don't know,
+Prestashop is the "Wordpress of e-commerce". They did a quick recruiting speech
+at the start of the meetup, and they are looking for devops and front-end devs.
 
 # OpenID Connect
 
-François Petitit, Octo (des octos tous les mois depuis...)
+The first talk was from my former colleague and mentor, François Petitit from
+Octo. He talked about the France Connect initiative, pushed by the French
+government to have some kind of state platform where all administrations could
+exchange data in a uniformed way.
 
-France Connect, consultant Octo
-Etat plateforme, poussé par l'état
-étatpropose de splatefomr pour développer des applications pour render sercice
-aux citoyens
+This ultimate goal is, as a citizen, that you do not have to fill the same form
+asking for your name, address and social security number everytime you apply to
+a state service. Also, this will remove the burden of having to provide all the
+necessary papers to an administration. With the France Connect initiative, your
+profile will be centralized and shared between all the state instances and they
+could securely get documents from one another.
 
-permet de déléguer la gestion des idenirés à d'uatres briques.
-fournisseur de service (par exemple mairie), qui demandent à des fournisseurs
-pour les identités
+François worked on the main bricks of implementation and on one of the first
+real-life implementations. France Connect wraps several identity providers and
+identity clients. Each brick can be either one, or even both.
 
-ex formulaire à remplir et envoyer par la poste
-mais avec france connect, on se login avec un de nos comptes d'idetité. soit
-impots soit assurance maladie avec les logins mot de passe d'ameli
-ensuite déjà identifié sur la mairie, avec les champs pré-remplis
+This mean that one brick could act as a provider of identity, responding to
+requests of other bricks with data about a citizen. It could also act as
+a client, asking data about a citizen to other bricks of the network.
 
-mais d'autres infos qu'ameli ne connait pas, alors on peut autoriser la CAF
-à récupérer les infos depuis d'autres sources. Chacune faisant référence sur
-certaine sdonnées
+The application on which François worked was both, so he add to implement both
+sides. The protocol used behind the scenes is OpenId Connect which is already
+ised by Google, Microsoft or Paypal. This must not be confused with OpenId.
 
-France Connect est à la fois client et fournisseur selon les providers, donc
-teste dans tous les sens. Derrière openid connect on des géants du web comme
-google, microsoft, paypal, etc
+OpenId was the ancestor, but it has now be deprecated and OpenId Connect is the
+new standard, which is based on OAuth 2. The OpenId group is an official group
+that can certify libraries and implementations of the protocol.
 
-Fondation pour OpenId à la base, gérer identité. Deprecated, devient
-OpenIdConnect, basé sur OAuth 2. Peuvent certifier des librairies et des
-implémentations.
+The OpenId Connect norm was finalized in 2014, with already some implementations
+in production. When you sign-in with Google on any site, this is using OpenId
+Connect. The spec defines ways to normalize the way sessions accross several
+sites are handled, as well as how multi-identities on one site should be
+treated.
 
-Norme finaliseée en 2014 avec des exemples en prod. Sign in with google est de
-l'open id connect. Normalisation des sessions multi-sites, des multi-identités
-sur un site, etc
+François told us about the real-life scenario they were implementing. Let's
+imagine you want to apply for a scholarship from you city website. Here, we are
+dealing with three actors. You, as the main user. The city, through its website.
+And an identity provider (to tell the city who you are).
 
-3 acteurs. utilisateur, mairie et fournisseur d'identité
-délégation odentfication. du browser redirgé vers la mairie
-renvoie vers le site de départ
-puis des appels de web services pour obtenir des informations, types sont
-normalisés pour les récupérer, standard entre plusieurs fournisseurs
+You start by navigating to your city website. It asks for identification. You
+can choose which site can give your identification from a list (it could be the
+social security, or the tax department). You're then redirected to the website
+you choose. You login there and you're automatically redirected back to the
+initial website (the city one), with all your information already filled in. The
+needed data was send by the social security/tax departement you logged to.
 
-plein de librairies, certifiés, utilisées par plein d'acteurs majeurs. 3 jours
-d'implémentation en gros pour consommer les informations. Pour devenir
-fournisseur, le plus gros travail c'est de récupérer les informations depuis sa
-base.
-"Pari" sur SAML, là dessus ou bien sur du sécifique.
-Personne ne l'avait vrament fait il y a un an, résultat bon pari car ça marce
-trés bien.
+OpenId connect defines a set of standard to define a person, what fields should
+be used. This makes exchange between different providers easier.
 
-Piège à savoir. Norme très large, plusieurs façons de faire la même chose, ou
-trous dans la norme. Attention donc aux librairies qui peuvent ne pas supporter
-la même feature d'un coté ou de l'autre.
+The current landscape of OpenId is full of libraries, used by big names and most
+of them are officially certified. You need about 3 days of work to be able to
+consume information from a provider. To become yourself a provider this can take
+a bit longer. From their experience, what took the most time was not the
+implementation it self, but being able to get access to the data in the first
+place.
 
-openid.net
-dev-franceconnect.fr (doc de comment fait sur franceconnect)
+Nevertheless, it is important to note that the OpenId specs are very large and
+some areas are not clear or you can do the same thing in very different ways.
+This results in various client/provider implementation handling thing so
+differently that they are not really compatible in the end.
 
 # Make your business SPOF-less
 
