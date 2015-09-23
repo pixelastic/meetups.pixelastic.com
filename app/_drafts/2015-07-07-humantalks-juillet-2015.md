@@ -77,69 +77,67 @@ some areas are not clear or you can do the same thing in very different ways.
 This results in various client/provider implementation handling thing so
 differently that they are not really compatible in the end.
 
-# Make your business SPOF-less
+## Make your business SPOF-less
 
-Co-fondateur de Jumboweb. Font des applis métier web et mobile sur mesure.
-Petite boite, 4 personnes.
+The second talk was from one of the founders of Jumboweb, a french web agency of
+4 people. The mostly do web and mobile custom applications. Their company is
+growing, which makes them have less and less time. They decided to start working
+remotely and gave us some feedback on how to make it go smoothly, even when
+something goes wrong.
 
-boite qui grossit, moins de temps chacun, travail en remote, comment faire pour
-que tout fonctionne bien, même quand quelque chose pète
+They realized that they had a lot of SPOFs in the way the did things. When you
+start looking for SPOFs, you find a lot of them. The A/C can be a SPOF during
+summer. Internet access and electricity certainly are. And each of the 4 members
+of the company are SPOFs also if they disappear.
 
-tout est spof, mot de passe, climatisation, electricité, internet. Et chacun est
-un spof s'il disparait
+They started to count how many projects would fail if one team member had an
+accident? 1, 2, 10? And would it put the whole company down? They had to find
+a way to limit that.
 
-combien de projet on plante si on disparait, 1, 2, 10 rpojetc, on mets la boite
-par terre?
+First of all, they added fallbacks to the tools they often use. Having a fixed
+telephone line in case the mobile one stops working. Backup all their work from
+their laptop machines to a decentralized server automatically, in another
+location.
 
-## Spof structurel
+Then, they put all the passwords in a Keepass file, shared in their Dropbox.
+They gave access to the Calendar and Financial information to everybody. Any
+tool one of them was using was also opened so anyone could use it, even if they
+did not need it at the time. This includes TODO lists, bug trackers, Evernote,
+Slack. The goal was that everybody had access to the same information.
 
-téléphone, local, machine
-prévoir des fallbacks
+Then, they started sharing their work. They wanted to do more than simply
+working together, they wanted to be able to have one of them working on the
+project of another easily.
 
-un serveur principal, quelques backups. serveur répliqué régulièrement sur un
-autre datacenter
+They do systematic peer programming, so that the code of one project of feature
+is not in only one person head, but at least in two. They do code review on
+everything, at first with only the two developpers involved, then with all the
+team. That way, everybody works on every projects, and when a critical bugfix is
+required, people at least know where to start. But still, they keep only one
+privileger interlocutor for each project when speaking with their clients.
 
-## Spof par omission
+They found that this was providing the best quality of their work. Everyone is
+able to work from anywhere, everybody learns, seniors can teach juniors and no
+project is ever stalled.
 
-mot de passe, accès aux comptes, agenda, finances, etc
-Keepass + Dropbox (ou Lastpass, Dashlane)
+But our jobs requires that we do a lot of technology watch to keep us afloat in
+this ever-changing world of web development. So, to be sure that all of them had
+enough time to read and learn while keeping the company running they created
+a kind of reward system.
 
-Tout partager, partager es todos, les bug tracker, evernote, slack, etc
+Each worked day earn employees "free time" that can be used for technology watch
+without pressure. They did the math and know the minimum number of worked
+hours that will keep their company running. Anyone has a couter of free time
+available and you're encouraged to use it. I must admit I did not completely
+understood the algorithm used here, but they did an open-source webapp to keep
+track of all the time spend on work and gained (they use the Freckle API to keep
+track of time).
 
-## SPOF métier
-
-Faire plus que travailler ensemble, faire comme si les collègues étaient
-interchangeables
-
-code pas dans une suele tete, peer programming systématique et code review avant
-d'aller en code review
-tout le monde touche à tous les projets
-mais un responsable projet par client pour garder un interlocuteur
-
-best quality, tout le lde travaille partout, tout le lnde apprends, les grands
-expliquent aux jeunes, pas de blocage de projet
-
-
-bon c'est cool mais on le sait déjà, mais on a la flemme
-
-chaque jour travaillé génére du temps de veille
-temps nécessaire pour etre rentable
-
-incite à faire du perr programming( pas bien compris pourquoi, mais semble
-marcher). Permet d'avoir un "capital temps" pour aller en rendez-vous client,
-glander, faire de la veilel. Si prends pas assez de temps de veille, "deviens
-mauvais".
-
-objectif est d'améliorer la qualité de vie plutot que de chercher les profis
-maximums. se vendent à l'heure, savent combien un projet est vendu, donc savent
-quand ils sot rentable
-
-Freckle? Time racking API. ON enclenche un timer quand on coemmence, et on peut
-récupérer les données pour faire les calculs
-
-Possibilité de faire du peer programming à distance avec TeamViewer ou hangout,
-peut etre plus productif en partageat un écran
-
+They decided that the goal of their company was the well-being of the 4 of them.
+More time for family, more time for personnal stuff, while still earning enough
+money to live with enough confort. They get payed by the hour, they know what
+the budget for a project is, so they can easily know when they're making
+a profit and when they're not.
 
 ## REX Développement mobile
 
