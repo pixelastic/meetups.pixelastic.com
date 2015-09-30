@@ -79,11 +79,11 @@ differently that they are not really compatible in the end.
 
 ## Make your business SPOF-less
 
-The second talk was from one of the founders of Jumboweb, a french web agency of
-4 people. The mostly do web and mobile custom applications. Their company is
-growing, which makes them have less and less time. They decided to start working
-remotely and gave us some feedback on how to make it go smoothly, even when
-something goes wrong.
+The second talk was from Alex Centa, one of the founders of Jumboweb, a french
+web agency of 4 people. The mostly do web and mobile custom applications. Their
+company is growing, which makes them have less and less time. They decided to
+start working remotely and gave us some feedback on how to make it go smoothly,
+even when something goes wrong.
 
 They realized that they had a lot of SPOFs in the way the did things. When you
 start looking for SPOFs, you find a lot of them. The A/C can be a SPOF during
@@ -141,45 +141,65 @@ a profit and when they're not.
 
 ## REX Développement mobile
 
-John Carmack, créateur de DOOM, facile de lancer des applications sur de petites
-plateformes, car petite platfroem, moins de choses à gérer.
+The next talk was the story of a David Wursteisen that wanted to create a native
+app.  He followed the advice from John Carmak (the creator of DOOM), who said
+that it is easier to launch application on small platforms, because you have
+less options and less things to consider.
 
-a voulu faire son jeu sur android, mais compliuqé besoin d'etre pluri
-disciplinaire
+So David started creating it own game on an Android device, but he soon
+discovered than creating a game is much more difficult than he initially
+thought. You need to be good on a large set of skills.
 
-donc a créé une petite appli qui passe en vibreur quand au boulot, volume chez
-soi, silence sinon
+So he started working on a simple app instead. He wanted an app that
+automatically set its phone to vibration mode when he was at work, maximum
+volume when at home, and silence mode at any other moment.
 
-download appli concurrente pour voir si bonne idée. teste son idée avce appli
-plus complete. bonne idée. va faore appli plus simple avec juste un use case
+He first downloaded an existing app that did the same thing, to see if the idea
+was actually useful. The test was positive, but the app he tested had much more
+features than he really needed. So he started working on its own app, with only
+one feature, but one he needed.
 
-teste la UI avec des slides. cgens comprennent pas
-teste avec des icones, marche mieux
-fait un proto avec une feuille de papier, permet de simpliier encoe la UI
+Before coding anything, he started testing the UI with slides. He showed it to
+several people, but nobody could understand how it worked. He tried with icons
+instead of text labels, he people racted better. Then he did a quick paper
+mockup and tested it on a few friends. He managed to simplify the UI still a bit
+more.
 
-Google propose trop de docs pour faire des apps on s'y perds. Facile à dev, du
-java (qu'il connait) et IDe qu'il connait.
-compliqué de faire enregistrer son appli, prends du temps
+So he started coding. At first he followed the Google tutorials and guidelines,
+but he found them to be overwhelmingly complex and finally used tools he already
+knew : IntelliJ and Java. He lost a bit of time understanding how to register
+its app on the Play Store, but finally it was released.
 
-si crash, pas d'infos sauf si quelqu'un appuie sur report quand crash (personne
-ne le fait) donc intégrer un reporter intégrér
+He then discovered than debugging an app in the wild is hard. When the app
+crashes on one of your user's phone, you have no way to access the stacktrace to
+debug (unless the user clicks on "Send the crash report". But nobody does that).
+He had to release a new version that included a crash reporter builtin.
 
-trouve un prix; 0.79€
-on le trouve pas facilement dans le playstore
-ccherche à cpntacter des journaux, mais lettre morte, pas trés interssant
+The app was working quite well, he now had to find a price to sell it. He chose
+0.79€. Now, it was time to make discovering of the app in the Play Store easier.
+At first it was quite hard to find the app (it is named Georing, but the Play
+Store suggested Goering instead. Not very helpful). He tried the good old method
+of contacting (online) newspaper to talk about its app, but none never replied.
 
-augmente le prix. 0.79€ semble de mauvais qualité. augmente, mais change pas
-grand chose sur les ventes.
-impossible de rendre une appli gratuite vers payante sur playstore. la passe en
-gratuit. 15 installations d'un coup
+He increased the price. 0.79€ seemed to cheap, so he thought that by increasing
+it, it would show that the app was of good quality. It actually did not change
+anything on its number of download. He finally decided to put it completly free
+(and here an important note, it is not possible to revert this choice. Once an
+app is set as free, there is no way to set a price for it later, so be careful
+when making that choice).
 
-s'incruste sur twitter, meetups, fete des meres, chinois
+This change actually paid off (no pun intended), as he got 15 new downloads! He
+then tried to make it more known by using Twitter, talking about it in meetups,
+to his friends and family. He considered adding ads inside the app at one point,
+but finally decided not to.
 
-veut pas rajouter de la pub dans l'appli
+In the end, I really liked this talk because it shown the whole journey of
+someone who never created a native app to one that is available on the store. He
+did not spend too much time on the technical side but much more on all the
+questions you have to ask yoursels when doing this kind of thing.
 
-demande à l'audience comment faire pour que l'appli soit plus téléchargée
-
-très honnette
+This was a very honest explanation, and I liked the posture he chose regarding
+price, ads, iterations and the MVP process.
 
 # Tails
 
