@@ -1,5 +1,5 @@
 # Dependencies
-markdown:         KramdownPygments
+markdown:         redcarpet
 highlighter:      pygments
 gems:             [i18n, algoliasearch-jekyll]
 
