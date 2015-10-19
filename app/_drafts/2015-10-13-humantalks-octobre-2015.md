@@ -104,45 +104,46 @@ one person that wrote it. Anyone can write code. Writing maintainable,
 understandable, shareable code is harder. The only way to do it properly is to
 talk to your colleagues, and code together.
 
-# Techniques de mémorisation
+# Memory techniques
+
+This talk, I gave it myself. I've written a summary of it [on my
+blog](http://blog.pixelastic.com/2015/10/16/memory-techniques/).
 
 
-# Hack mon compteur électrique
+# How to hack your electricity meter
 
-Cédric Finance. Raspberry Pi. Ses collègues lui demandent, "mais pourquoi?".
-Pour s'amuser au début. "Pourquoi? Parce que c'est possible".
+Cédric Finance told us about how he hacked its electricity meter at home with
+a Raspberry Pi. He did not actually really hacked it, he simply pluggued the
+Raspberry Pi to the public part of the meter and read the data sent by it.
 
-si on laisse le robinet couler, on voit ses euros couler avec ses yeux. Mais
-avec l'électricité, c'est moins tangible.
+He did it because he realized that we never really know how much electricty
+we're using. When he leave the water tap open, it's obvious how much water we're
+wasting, and we can almost see money flowing down the sink. For electricity, we
+never really know until we receive our bill. But he also simply did it because
+he could.
 
-maériel, raspberry pi, matériel, branché à la partie publique du compteur
+Getting back to the technical side of things. The meter sends data as a stream
+of keys/values. The data is not self explenatory but fortunatly the spec is
+available and it can easily be parsed. He realized that it gave him a much more
+accurate set of informations than what was printer on its bill.
 
-port série, il parle. on comprends pas, mais il parle
-clé valeur, plusieurs infos selon le contrat
-indice heure creuse/heure pleine, données plus précises que sur brochure/site
+As soon as he got the data, he pushed it to Thingspeak, a SaaS service to push
+streamed data and generate graphs. With that he quickly saw that its water
+heater was malfunctionning. It was supposed to only work on off-peak hours, but
+was actually always working. Knowing that, he fixed it.
 
-un soir, push vers thingspeak (stocker données), voir des graphiques
-voit que son chauffe-eau tourne tout le temps. coupe tout, démonte, remonte, et
-chuaffeau est maintenant que en heure creuse
+He then dropped Thingspeak to build a custom dashboard to capture data with
+a higher frequency. He let it run for more than a year and was then able to
+compare usage from one year to the next.
 
-remplace thingspeak par docker, mongo pour se faire son propre dashboard avec
-fréquence plus haute que thingspeak. compare par mois, année
+At first he did it just for fun, but he soon realized that he could better
+understand its electricity consumption and make some improvements to it. Now he
+went ever further, with humidity and heat sensors in his home and graphs for all
+that.
 
-au début, pour le fun, sans savoir pourquoi
-au finla, économie, et comprendre la consommation chez lui
-quand frigo vielllit, s'allume pour remettre du froid, on peut monitorer quand
-il s'allume
-possible de voir la consommation directement
+# Conclusion
 
-
-facile à brancher, besoin juste de quelques soudure pour 
-
-
-
-besoin de soudure? 
-légal
-peux gérer quelle prise se charge ou non?
-
-
-
-
+Once again, a nice serie of talks. And once again, my favorites are the personal
+sharing of experience. Next week will be a special event as we'll be celebrating
+the HumanTalks Paris birthday, in a bigger room than usual. Hope to see you
+there.
