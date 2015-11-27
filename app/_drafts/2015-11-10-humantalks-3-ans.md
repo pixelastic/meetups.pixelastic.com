@@ -4,53 +4,91 @@ title: "HumanTalks 3 Ans"
 tags: humantalks
 ---
 
-SG, 3 ans, plein de gens, plein de nouveaux, goodies sans doute
+For the third year anniversary of the HumanTalks, we did a special event. We
+were hosted at the Société Générale headquarters, in one of the most beautiful
+conference room I've ever seen. There also was more attendees than usual, and we
+gave some goodies, T-shirts and JetBrain licenses at the end.
 
-APE en nouveau. SG, interessé par plein de choses, casser idée recu du SI de
-banque. DevOps, Agile, Craftmanship
+It was also the first session with Antoine Pezé as our official new team member.
 
-breaz, selection d'entreprises pour les devs. techtalent.io, open data des
-offres/langages
+And for me, the first time I went to the SG building. I must say I had a bad
+feeling about the place at first. I feel like La Défense is really a creepy
+place, with everything I don't like about moder society. Big gray buildings that
+tower over you, and everything seems to have been constructed for giants. As
+human being, you feel like you're out of place. Big tall towers with thousands
+of people working in them, all dressed the same. The only sources of light were
+from the ads and the mall windows. Grey, work, consume.
 
-récompense les orateurs en chocolat et tshirt
+But then, in all this ocean of sadness, we met with Adrien Blind who is in
+charge of organising the meetups at the Société Générale. And I discovered that
+the SG is actually much more interesting in the inside than the outside. They
+are quick to iterate, have DevOps all the way from top to bottom, and really
+know and apply Agile and Software Craftsmanship philosophy. We'll see more about
+that in the last talk.
+
+## Front-end testing
+
+The first talk was done by William Ong, former colleague from Octo. He presented
+the front-end testing ref card they developped. It's a physical cardboard flyer
+that lists all the different kind of tests you can do to your front-end (from
+unit testing to performance testing and security testing), with examples, tools
+and advices.
+
+The content of the refcard is really really great. It gives a nice overview of
+what can (and should be done) today, but also advices on the costs of each of
+them and when to implement them or not.
+
+The web frontend landscape evolved a lot in the past years, and it is getting
+more and more complex with more and more logic being moved from the back-end to
+the front. To keep it sustainable, we now need to use the same kind of tooling
+we're used to use on the backend: testing harnesses.
+
+Unit testing are a must have. He won't even develop on that subject because it
+is obvious. No good quality code can endure the stress of time without unit
+testing. Code that isn't unit tested is not finished.
+
+But then, came all the other kinds of tests. When should we use them? Which
+tools should we use? Are they really needed? All the other tests are harder to
+put in place, so you should only add them if it helps you fight a pain you
+already experienced. No need to add those kind of tests in advance if you never
+experienced any issue on that part. They are costly to start, costly to
+maintain, so the benefit must be higher than the cost.
+
+For integration testing (here also named end-to-end testing or functionnal
+testing), you should only add them on the critical path of your users. The one
+that generate money (subscription funnel) for example. This kind of test will
+indirectly test the whole stack. It will warn you when the core functionnality
+you're testing is broken, but won't really help you diagnose where the issue
+could come from (database, back-end, front-end, etc). These tests are also the
+longer to write and will yield false positive whenever you update the
+design/markup.
+
+Talking about design, it is also possible to test your design. Using CasperCSS,
+you can take screenshots of your whole page or specific parts of it and check
+that they did not change with the previous commit. This will help you diagnose
+changes to the website created by a seemingly unrelated CSS commit. Those tests
+can be unvaluable, but they will also yield false positive results when a design
+change is actually expected. As for the integration test, limit yourself to the
+real main parts of your app.
+
+You can also test for common security exploits, like the top 10 OWASP. Some
+tools can test them on you website and warn you of any vulnerability. Another
+approach can also be to ask for a security audit, and I personnally also
+recommend opening an open hacker bounty program, like HackerOne.
+
+In the end, all tests share one benefit: they give you the freedom to make the
+code evolve without being afraid of breaking things. It gives you complete trust
+in the code.
+
+It was William first public talk, and the room was quite impressive with more
+than 120 attendees, so I guess he freaked out a bit. There were a few silences
+where you could feel that William was intimidated, and he looked a lot at his
+slides to give him some assurance. In the end, the message was here and it was
+interesting, and we'll be happy to have him on stage another time if he wants.
+
+## How to win at TCG with code
 
 
-## Test sur tous les fronts
-William Ong, @wyam
-Ref card front, tribu front-end
-
-archi web evolue, complexe, se doit de le maitriser
-beaucoup de code en front, il faut bien tester
-William pas à l'aise, des blancs, se rattrape en regardant les slides, mais
-perds le fil
-Important d'avoir des metrics de qualité, pour suivre l'évolution
-TU obligatoires
-autres tests à ne mettre en place que si une douleur, car prends du temps
-à mettre en place, ne mettre que si permet un gain
-sinon, mocha, chai pour les TU
-tests fonctionnels, suit un parcours utilisateur, de bout en bout. test la
-brique technique indirectement. désavantage, cher à mettre en place, casse
-souvent, long à runner
-uniquement sur fonctionnalités stables, toujours faire attention au cout de mise
-en place
-
-tests de sécurité, prémunir des failles de secu
-les connaitres, les corriger
-top 10 OWASP
-en parallele d'un audit de secu, besoin d'etre toujours à jour
-
-test de non-regression visuelle
-CasperCSS compare des captures écran avant, après
-facile à mettre en place, mais (avantage/inconvénient), ça pete quand le design
-change
-
-test permet de faire évoluer
-confiance dans le code
-TU plus importants que le reste
-fonctionnel que sur nominal et stable
-si nouveau type de test, bien faire attention au pour et contre
-
-## Gagner aux TCG 
 
 Gary Mialaret
 TCG, trading card game
