@@ -88,27 +88,49 @@ interesting, and we'll be happy to have him on stage another time if he wants.
 
 ## How to win at TCG with code
 
+I don't know how many coffees Gary Mialaret took before coming on stage for the
+next talk, but he seemed to be really happy to be here and was almost jumping
+and running while speaking.
 
+Gary told all us about TCG (Trading Card Games), and how those kind of game are
+no longer really about trading (Hearthstone for example, does not allow trading
+of cards). The main common ground of all those games is that it's a duel between
+two players, where each player create its deck of card before the game and must
+carefully balance the number of monster/spell cards (that can make him win), with
+the ressource cards (that are needed for using the monster/spell cards).
 
-Gary Mialaret
-TCG, trading card game
-mais on n'échange plus, le point commun est duel, affrontement, et ressources
-à gérer
+Empirically, every hardcore Magic player knows that a balanced deck needs 24
+ressource card, but Gary wanted to get to the math behind it to prove that it
+was the most optimal number.
 
-Magic, cartes "inutile" car ne servent qu'aux ressources. réponse générale est
-~24, mais on ne sait pas pourquoi
+He introduced us to the hypergeometric distribution mathematical function, that
+can calculate the probability of drawing a hand with at least `n` "good" cards,
+given the number of cards in a hand, the number of cards in a deck, and the
+ratio of good/bad cards in a deck.
 
-distance hyper géometrique, donne des valeurs pour avoir la bonne main
-mais ne prends pas en compte le mulligan
-pour ça, besoin de plus de code et de lancage de plein de mains pour savoir
-faut connaitre les rgles et se fixer des regles de mulligan
+While applying the method to a basic Magic deck we do __not__ get the 24 cards
+we talked about earlier. This is because this method does not take into account
+another Magic mechanisme called Mulligan, that lets you discard all your
+starting hand and start with a new one instead. To simulate that, he had to
+resort to a bit more coding. He generated thousands of different hands,
+discarding them when they did not meet his expectation and managed to get back
+to the magical 24 number.
 
-peut simuler avec des regles simples des combat de deck contre un goldfish, pour
-voir à quel tour on gagne en moyenne
+He went even further, simulating basic Magic rules, playing against what is
+called a goldfish (a player that does not respond to attacks, and basically does
+nothing). He went on creating adaptive algorithms, applying something similar to
+genetic selection on deck creation. He starts with simple deck, make them play
+against goldfishes, then keep the one that works best, apply a few random slight
+changed (a bit more of that card, a bit less of that one), and make them play
+again until he reached the best possible deck.
 
-dev all the things
-savoir poser les bonnes questions, savoir ce qu'on cherche, comprendre la
-réponse, permet au final de mieux comprendre le jeu
+His final conclusion is that we should ne hesitate to put some of our developer
+mind in action to solve things that are not related to development. The most
+important thing when we want to solve a problem, is to know which questions
+we're looking answers for. Magic is a very complex game, it is not possible to
+code every possible rule and generate every possible deck to find the ultimate
+one. But by focusing on one specific problem, we can learn a lot about the
+underlying principles and this, in turn, helps us devise a better deck.
 
 ## Instant
 
