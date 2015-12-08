@@ -65,6 +65,13 @@ travis
 digital ocean
 gelato => generates doc from API from swagger or blueprint
 
+make your api known
+stickers, not too big
+t-shirts, and female
+coupon and discounts
+hackathons (with the devs)
+slack, twitter, email, gitter
+
 
 
 
