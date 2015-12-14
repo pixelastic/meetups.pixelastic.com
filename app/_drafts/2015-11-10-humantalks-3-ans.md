@@ -132,7 +132,12 @@ code every possible rule and generate every possible deck to find the ultimate
 one. But by focusing on one specific problem, we can learn a lot about the
 underlying principles and this, in turn, helps us devise a better deck.
 
-## Instant
+## How our brain reacts to instant
+
+The next talk was done by Gaetan Gachet, colleague at Algolia. He talked about
+the way our brain will react to instant feedbacks.
+
+His presentation was explaining the theory.
 
 Peter Pirolli & Stuart Card
 Information Foraging
