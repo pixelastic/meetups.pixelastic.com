@@ -109,47 +109,75 @@ equality operators being dependent on the user configuration is... fucked up.
 Fortunatly, Vimscript also have the `==#` operators that is always
 case-insensitive, so that's the one you should ALWAYS use.
 
+## Directory structure
 
+Most Vim plugin packagers (Bundle, Vundle and Pathogen) expect you, as a plugin
+writer, to put your files in specific directories based on what they do. Most of
+this structure is actually taken from the vim structure itself.
 
-`==` depends des settings de l'utilisateur, du coup `==#` case-insensitive
+`ftdetects` will hold the code that is used to assign a specific `filetype` to
+files based on their name. `ftplugin` contains all the specific configuration to
+apply to a file based on its `filetype` (so those two usually works together).
 
-Bundle/Pathogen/Vundle propose une structure directory pour mettre ses codes
+For all the vim plugin writers out there, Thomas suggested using
+`tpope/scriptease` that provides a lot of debug tools.
 
-ftdetect pour définir les `ft`
-ftplugin pour loader en fonction dufiletype
-`plugin#funcName()` dans `autoload`, method autoloadé seulement quand on l'appelle la première
-fois, puis garde en cache
+## Tips and tricks
 
+Something you often see in plugin code is the `execute "normal! XXXXX"`.
+`execute` lets you pass an argument that is the command to execute, as a string.
+This allows you to build the string yourself from variables. The `normal!` tells
+vim to execute to following set of keys just like if the user is in normal mode.
+The `!` at the end of normal is mandatory to override the user mappings. With
+everything wrapped in a `execute` you can even use special chars like `<CR>` to
+act as an Enter press.
 
-tpope/scriptease => outils de debug
+# Syntastic
 
-`execute "normal! gg/foo<CR>"`
-force a passer en mode normal pour utiliser les commandes normales. avec un `!`
-pour bypasser les mappings du users
-wrappé dans `execute` pour pouvoir taper réellement Enter avec <CR>
+After Thomas talk, I briefly talked about Syntastic, the syntax checker for vim.
 
+I use syntasic a lot with various linters. Linters are commandline tools that
+analyze your code and output possible errors. The most basic ones only check for
+syntax correctness, but some can even warn you about unused variables,
+deprecated methods or even style violation (like camelCase vs snake_case
+naming).
 
-settings par défaut
-```vim
-check if !exists('g:pouet')
-  let g:pouet = 'default'
-endif
-```
+I use linters a lot in my workflow, and every code I push goes through a linter
+on our Continuous Integration platform (TravisCI). Travis is awesome, but it is
+asynchronous, meaning I will receive an email a few minutes after my push if the
+build fails. And this kills my flow.
 
+This is where syntastic comes in play. Syntastic lets you add instant linter
+feedback while you're in vim. The way I have it configured is to run the
+specified linters on the file I'm working whenever I save that file. If errors
+are found, they are displayed on screen, on the lines that contains the error,
+along with a small text message telling me what I did wrong.
 
-example de learn vimsvrit the hard way pour définir un nouvel opérateur
-genre grep la selection
-fnuction `s:funcname`, utilise avec `<SID>` ensuite
-@@ => unnamed register
+It is then just a matter of fixing the issues until they all disappear. Because
+the feedback loop is so quick, I found it extremely useful when learning new
+languages. I recently started a project in python and I never used it before.
+First thing I did was install `pylint` and configure syntastic for it. Everytime
+I saved my file, it was like having a personnal teacher telling me what I did
+wrong, warning me about deprecated methods and teaching me the best practices
+from the get go.
 
+I really recommend adding a linter to your workflow as soon as possible.
+A linter is not something you add once you know the language, but something you
+use to learn the language.
 
+Syntastic has support for more than a hundred language, so there's a great
+chance that yours is listed. Even if your language is not in the list, it is
+really easy to add a Syntastic wrapper to an existing linter. Without knowing
+much to Vimscript myself, I added 4 of them (Recess, Flog, Stylelint,
+Dockerfile_lint). All you need is a commandline linter that outputs the errors
+in a parsable format (json is preferred, but any text output could work).
 
-ternJS pour completion JS
-compilation à la main, puis devrait ùarcher avec les require
-YouCompleteMe, script à lancer
-exuberantCTags?
-UltiSnips autocompletion? + YouCompleteMe
-SuperTab?
+# Conclusion
+
+After those two talks, we all gathered together to discuss vim in a more
+friendly way, exchanging tips and plugins. Thanks again to Mediabox for hosting
+us, this meetup is a nice place to discover vim, whatever your experience with
+it.
 
 
 [1]: http://stevelosh.com/
