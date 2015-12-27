@@ -1,18 +1,14 @@
 # Dependencies
 markdown:         redcarpet
 highlighter:      pygments
-gems:             [i18n, algoliasearch-jekyll]
-
-# Markdown parser
-kramdown:
-  input: GFM
+gems:             [algoliasearch-jekyll]
 
 # Permalinks
 permalink:        pretty
 
 # Setup
 title:            'Meetups'
-description:      "Compte-rendus des meetups et conférences auxquels je participe"
+description:      "Notes from the various meetups I attend"
 url:              http://meetups.pixelastic.com
 base_url:         meetups.pixelastic.com
 
@@ -23,7 +19,7 @@ author:
 paginate:         5
 
 # Custom vars
-version:          1.0.0
+version:          1.1.0
 
 github:
   repo:           https://github.com/pixelastic/meetups.pixelastic.com

@@ -9,7 +9,7 @@ english-speaking company and I'm already writing emails in english to give
 feedback on the HumanTalks sessions. I'm not used to write such lengthy posts in
 english, though. Hopefully I'll get better at it the more I do it._
 
-This [HumanTalks session][1]took place at [UrbanLinkers][2], a Parisian
+This [HumanTalks session][1] took place at [UrbanLinkers][2], a Parisian
 recruiting company. The room was packed and we had just enough seats for
 everybody.
 

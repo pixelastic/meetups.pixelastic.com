@@ -29,10 +29,10 @@
       <input type="checkbox" class="sidebar-checkbox" id="sidebar-checkbox">
       <ul class="sidebar-nav">
         <li class="sidebar-nav-item{% if page.id == "index" %} active{% endif %}">
-          <a href="/">Accueil</a>
+          <a href="/">Home</a>
         </li>
         <li class="sidebar-nav-item{% if page.id == "about" %} active{% endif %}">
-          <a href="/about/">À propos</a>
+          <a href="/about/">About</a>
         </li>
         <li class="sidebar-nav-item{% if page.id == "archive" %} active{% endif %}">
           <a href="/archive/">Archive</a>
@@ -49,14 +49,14 @@
 
       <label for="sidebar-checkbox" class="sidebar-toggle-menu"></label>
 
-      <div class="footer">Code source disponible sur <a href="https://github.com/pixelastic/meetups.pixelastic.com">GitHub</a></div>
+      <div class="footer">Source code available on <a href="https://github.com/pixelastic/meetups.pixelastic.com">GitHub</a></div>
     </div>
     <div class="layout">
       <div class="content" id="content">
         <div class="algolia__initial-content js-algolia__initial-content">{{ content }}</div>
 
         <div class="algolia__search-content js-algolia__search-content">
-          <h1 class="page-title">Recherche</h1>
+          <h1 class="page-title">Search</h1>
           <div class="posts algolia__results"></div>
         </div>
       </div>
@@ -79,7 +79,7 @@
         <div class="algolia__result-text">{{{ _highlightResult.content.value }}}</div>
     {% endraw %}
     </script>
-    <script id="algolia__template--no-results" type="text/template">Aucun résultat trouvé.</script>
+    <script id="algolia__template--no-results" type="text/template">No results found</script>
     <!-- fileblock:js js -->
     <!-- endfileblock -->
   </body>

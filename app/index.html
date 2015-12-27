@@ -13,7 +13,7 @@ id: index
       </a>
     </h1>
 
-    <span class="post-date">{{ post.date | localize: "%e %b %Y" }}</span>
+    <span class="post-date">{{ post.date | date_to_string }}</span>
 
     {{ post.content }}
 
@@ -30,15 +30,15 @@ id: index
   {% if paginator.next_page %}
     <a class="pagination-item older" href="/page{{paginator.next_page}}">Précédent</a>
   {% else %}
-    <span class="pagination-item older">Précédent</span>
+    <span class="pagination-item older">Older</span>
   {% endif %}
   {% if paginator.previous_page %}
     {% if paginator.page == 2 %}
-      <a class="pagination-item newer" href="/">Suivant</a>
+      <a class="pagination-item newer" href="/">Newer</a>
     {% else %}
       <a class="pagination-item newer" href="/page{{paginator.previous_page}}">Suivant</a>
     {% endif %}
   {% else %}
-    <span class="pagination-item newer">Suivant</span>
+    <span class="pagination-item newer">Newer</span>
   {% endif %}
 </div>
