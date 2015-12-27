@@ -4,20 +4,22 @@ title: "Paris Vim Meetup #11"
 tags: vim
 ---
 
-I went to the 11th Paris Vim Meetup last week. As usual, it took place at
-Mediabox (near Place de Clichy), and we were a small group of about 10 people.
+I went to the 11th [Paris Vim Meetup][1] last week. As usual, it took place at
+[Silex Labs][2] (near Place de Clichy), and we were a small group of about 10 people.
 
-Thomas started by giving us a talk about vimscript, then I talked about
-Syntastic. And finally, we all discussed vim and plugins, and common issues and
-how to fix them.
+Thomas started by giving a talk about vimscript, then I talked about
+[Syntastic][3]. And finally, we all
+discussed vim and plugins, and common issues and how to fix them.
+
+![Pictures](/img/2015-12-14/flyer.jpg)
 
 ## Do you really need a plugin?
 
 This talk by Thomas was a way to explain what's involved in the writing of a vim
 plugin. It covers the vimscript aspect and all its quirks and was a really nice
 introduction for anyone wanting to jump in. Both Thomas and I learned vimscript
-from the awesome work of [Steve Losh][1] and its [Learn Vimscript the Hard
-Way][2] online book.
+from the awesome work of [Steve Losh][4] and his [Learn Vimscript the Hard
+Way][5] online book.
 
 Before jumping into making your own plugin, there are a few questions you should
 ask yourself. 
@@ -26,14 +28,14 @@ Isn't this feature already part of vim? Vim is such a huge piece of software
 that it is filled with features that you might not know. Do a quick Google
 search or skim through the `:h` to check if this isn't already included.
 
-Isn't there already a plugin for that? Vim has a huge ecosystem of plugins, of
-varying quality. Check the [GitHub mirror of vim-scripts.org][3] for an easy to clone
-list.
+Isn't there already a plugin for that? Vim has a huge ecosystem of plugins (of
+varying quality). Check the [GitHub mirror of vim-scripts.org][6] for an easy to
+clone list.
 
 And finally, ask yourself if your plugin is really useful. Don't forget that you
 can call any commandline tool from Vim, so maybe you do not have to code a whole
 plugin if an existing tool already does the job. I like to quote this [vim
-koan][4] on this subject:
+koan][7] on this subject:
 
 > A Markdown acolyte came to Master Wq to demonstrate his Vim plugin.
 >
@@ -53,19 +55,19 @@ koan][4] on this subject:
 ## Anybody can make a plugin
 
 Once you know you need your plugin, it's time to start, and it's really easy.
-[@bling][5], the author of [vim-bufferline][6] and [vim-airline][7], two popular
+[@bling][8], the author of [vim-bufferline][9] and [vim-airline][10], two popular
 plugins, didn't known how to write vimscript before starting writing those two.
-Everybody has to start somewhere, so you'd better start writing something that
-you need and will use.
+Everybody has to start somewhere, so it is better to write a plugin that you
+would yourself use, this will give you more motivation into doing it.
 
 A vim plugin can add almost any new feature to vim. It can be new motions or
 text objects, or even a wrapper on an existing commandline tool or even some
 syntax highlight.
 
 The vimscript language is a bit special. I like to say that if you've ever had
-to write something in bash and did not like it, you will not like Vimscript
-either. There are initiatives, like [underscore.vim][8], to bring a bit more sanity
-to it, but it is still hackish anyway.
+to write something in bash and did not like it, you will not like vimscript
+either. There are initiatives, like [underscore.vim][11], to bring a bit more
+sanity to it, but it is still hackish anyway.
 
 ## Vimscript basics
 
@@ -80,8 +82,8 @@ indices). You can also use Dictionaries, that are a bit like hashes, where each
 key is named (but will be forced to a string, no matter what).
 
 You can define functions with the `function` keyword, but vim will scream if you
-try to redefine a function that already existed. To suppress the warning, just
-use `function!`, with a final exclamation mark. This is really useful when
+try to redefine a function that was already defined. To suppress the warning,
+just use `function!`, with a final exclamation mark. This is really useful when
 developping and sourcing the same file over and over again.
 
 Variables in vimscript are scoped, and the scope is defined in the variable
@@ -112,7 +114,7 @@ case-insensitive, so that's the one you should ALWAYS use.
 ## Directory structure
 
 Most Vim plugin packagers (Bundle, Vundle and Pathogen) expect you, as a plugin
-writer, to put your files in specific directories based on what they do. Most of
+author, to put your files in specific directories based on what they do. Most of
 this structure is actually taken from the vim structure itself.
 
 `ftdetects` will hold the code that is used to assign a specific `filetype` to
@@ -120,21 +122,22 @@ files based on their name. `ftplugin` contains all the specific configuration to
 apply to a file based on its `filetype` (so those two usually works together).
 
 For all the vim plugin writers out there, Thomas suggested using
-`tpope/scriptease` that provides a lot of debug tools.
+[scriptease][12] that provides a lot of debug tools.
 
 ## Tips and tricks
 
 Something you often see in plugin code is the `execute "normal! XXXXX"`.
 `execute` lets you pass an argument that is the command to execute, as a string.
 This allows you to build the string yourself from variables. The `normal!` tells
-vim to execute to following set of keys just like if the user is in normal mode.
-The `!` at the end of normal is mandatory to override the user mappings. With
-everything wrapped in a `execute` you can even use special chars like `<CR>` to
-act as an Enter press.
+vim to execute the following set of keys just like when in normal mode. The `!`
+at the end of normal is mandatory to override the user mappings. With everything
+wrapped in a `execute` you can even use special chars like `<CR>` to act as an
+`Enter` press.
 
 # Syntastic
 
-After Thomas talk, I briefly talked about Syntastic, the syntax checker for vim.
+After Thomas talk, I briefly [talked about Syntastic][13], the syntax checker
+for vim.
 
 I use syntasic a lot with various linters. Linters are commandline tools that
 analyze your code and output possible errors. The most basic ones only check for
@@ -154,12 +157,14 @@ are found, they are displayed on screen, on the lines that contains the error,
 along with a small text message telling me what I did wrong.
 
 It is then just a matter of fixing the issues until they all disappear. Because
-the feedback loop is so quick, I found it extremely useful when learning new
-languages. I recently started a project in python and I never used it before.
-First thing I did was install `pylint` and configure syntastic for it. Everytime
-I saved my file, it was like having a personnal teacher telling me what I did
-wrong, warning me about deprecated methods and teaching me the best practices
-from the get go.
+the feedback loop is so quick, I find it extremely useful when learning new
+languages. I recently started a project in python, a language I never used
+before.
+
+The first thing I did was install [pylint][14] and configure syntastic for it.
+Everytime I saved my file, it was like having a personnal teacher telling me
+what I did wrong, warning me about deprecated methods and teaching me the best
+practices from the get go.
 
 I really recommend adding a linter to your workflow as soon as possible.
 A linter is not something you add once you know the language, but something you
@@ -168,23 +173,34 @@ use to learn the language.
 Syntastic has support for more than a hundred language, so there's a great
 chance that yours is listed. Even if your language is not in the list, it is
 really easy to add a Syntastic wrapper to an existing linter. Without knowing
-much to Vimscript myself, I added 4 of them (Recess, Flog, Stylelint,
-Dockerfile_lint). All you need is a commandline linter that outputs the errors
-in a parsable format (json is preferred, but any text output could work).
+much to Vimscript myself, I added 4 of them ([Recess][15], [Flog][16],
+[Stylelint][17], [Dockerfile_lint][18]). All you need is a commandline linter
+that outputs the errors in a parsable format (json is preferred, but any text
+output could work).
 
 # Conclusion
 
 After those two talks, we all gathered together to discuss vim in a more
-friendly way, exchanging tips and plugins. Thanks again to Mediabox for hosting
+friendly way, exchanging tips and plugins. Thanks again to Silex Labs for hosting
 us, this meetup is a nice place to discover vim, whatever your experience with
 it.
 
 
-[1]: http://stevelosh.com/
-[2]: http://learnvimscriptthehardway.stevelosh.com/
-[3]: https://github.com/vim-scripts?tab=repositories
-[4]: http://blog.sanctum.geek.nz/vim-koans/
-[5]: https://twitter.com/bling
-[6]: https://github.com/bling/vim-bufferline
-[7]: https://github.com/bling/vim-airline
-[8]: https://github.com/haya14busa/underscore.vim
+[1]: http://www.meetup.com/fr/Vim-Paris/events/226831909/
+[2]: http://www.silexlabs.org/
+[3]: https://github.com/scrooloose/syntastic
+[4]: http://stevelosh.com/
+[5]: http://learnvimscriptthehardway.stevelosh.com/
+[6]: https://github.com/vim-scripts?tab=repositories
+[7]: http://blog.sanctum.geek.nz/vim-koans/
+[8]: https://twitter.com/bling
+[9]: https://github.com/bling/vim-bufferline
+[10]: https://github.com/bling/vim-airline
+[11]: https://github.com/haya14busa/underscore.vim
+[12]: https://github.com/tpope/vim-scriptease
+[13]: http://talks.pixelastic.com/vim-syntastic/#1
+[14]: http://www.pylint.org/
+[15]: https://twitter.github.io/recess/
+[16]: https://github.com/seattlerb/flog
+[17]: http://stylelint.io/
+[18]: https://github.com/projectatomic/dockerfile_lint
