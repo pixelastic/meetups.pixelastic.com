@@ -9,6 +9,8 @@ de l'organisation, du coup j'ai pas beaucoup eu l'occasion de voir les
 présentations en elle-mêmes. Du coup, mon résumé sera un peu moins touffu que
 d'habitude (_ouf!_ dirons certains).
 
+![Intro](/img/2014-11-18/intro.jpg)
+
 ## De l'idée au projet
 
 {% youtube https://www.youtube.com/watch?v=qvaYpzTHRBc %}

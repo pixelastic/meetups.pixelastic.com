@@ -13,6 +13,8 @@ This [HumanTalks session][1] took place at [UrbanLinkers][2], a Parisian
 recruiting company. The room was packed and we had just enough seats for
 everybody.
 
+![Intro](/img/2015-10-13/intro.jpg)
+
 # IBM Bluemix
 
 The first talk was by [Alain Airbon][3], which was very nervous. He said so
@@ -55,6 +57,8 @@ more maintainable and more stable code in production. He announces numbers as
 high as a ROI of 4 to 1. For one hour spent on code review, we can save up to
 four hours of debugging. Almost 65% of bugs can be found before shipping, thanks
 to the reviews.
+
+![How to fail at code review](/img/2015-10-13/michel.jpg)
 
 Michel then shared 3 personal stories with us. First, he told us about that
 time when he worked for 10 days on a feature that was originally estimated to

@@ -203,6 +203,8 @@ price, ads, iterations and the MVP process.
 
 # Tails
 
+![Tails](/img/2015-07-07/tails.jpg)
+
 Jean Baylon
 Distrib Tails
 but est de passer inaperçu quand on est sur internet
