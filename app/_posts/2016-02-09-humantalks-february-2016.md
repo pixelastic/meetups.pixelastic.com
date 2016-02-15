@@ -84,7 +84,7 @@ self-service information should be enough for most of the users, and core
 developers of the service should be in direct contact with the users so they
 know how people really use their service.
 
-## JSWeet
+## JSweet
 
 The second talk was about [JSweet][7], a transpiler of Java to JavaScript.
 A transpiler is like a compiler, it transforms a language into another language,
@@ -101,7 +101,7 @@ lets you use vanilla JavaScript wherever you want.
 
 There already were attempts at a Java-to-JavaScript transpiler in the past,
 namely with [GWT][12], but it was not as promising as announced and carried many
-organic limitation. GWT is too much of a blackbox, and you couldn't use the
+organic limitations. GWT is too much of a blackbox, and you couldn't use the
 generated JavaScript with regular JS APIs, so that it was quickly outdated and
 the premise of having all Java in JavaScript wasn't even fulfilled. Mostly, it
 was done for developers that did not want to learn JavaScript and just wanted
