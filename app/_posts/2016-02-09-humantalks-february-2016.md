@@ -4,21 +4,18 @@ title: "HumanTalks February 2016"
 tags: humantalks
 ---
 
-This month's
-[HumanTalks][1] was
-hosted by [Criteo][2]. We had a hard time managing to
-correctly plug the laptops in to the projector and connect to the wifi so we
-started a bit late. This forced us to cut down the questions from 10mn to only
-6 or 7.
+This month's [HumanTalks][1] was hosted by [Criteo][2]. We had a hard time
+managing to correctly plug the laptops in to the projector and connect to the
+wifi so we started a bit late. This forced us to cut down the questions from
+10mn to only 6 or 7.
 
 ![Intro][3]
 
 ## Customer Solutions Engineer
 
-The first talk was by [Nicolas Baissas][4], my
-coworker at [Algolia][5]. He explained what the job of
-CSE really means. The job originated mostly in the Silicon Valley for SaaS
-companies, but is moving to all sort of companies.
+The first talk was by [Nicolas Baissas][4], my coworker at [Algolia][5]. He
+explained what the job of CSE really means. The job originated mostly in the
+Silicon Valley for SaaS companies, but is moving to all sort of companies.
 
 The goal of a CSE is to make the customers successful, by making them happy
 to use the product, for the longest amount of time. This is especially important
@@ -36,18 +33,18 @@ customers want to leave, by understanding what they are looking for while
 managing to bring more and more value of the product to the
 already happy customers.
 
-The only way to do that is to try to be part on their team
-and not trying to push selling more and more. CSE are their products' experts,
-and they share that expertise with the customers by email, by
+The only way to do that is to try to be part on their team, showing that you're
+on their side, and not trying to push selling more and more. CSE are experts on
+their product, and they share that expertise with the customers by email, by
 Skype or whenever possible, by meeting them directly. This also happens before,
-during and after Algolia's deployment in their system. The CSE ensures that
-they use the service at its best, and that it is used in
-the best way possible to fit their needs.
+during and after Algolia's deployment in their system. The CSE ensures that they
+use the service at its best, and that it is used in the best way possible to fit
+their needs.
 
 Month after month, they have a regular look at all the past implementations of
 their customers and reach out with advices if they see things that could be
-improved. Today Algolia has more than 1000 customers but only 4 CSEs, so this has
-trouble scaling. So in parallel they also work on making it easy for all the
+improved. Today Algolia has more than 1000 customers but only 4 CSEs, so this
+has trouble scaling. So in parallel they also work on making it easy for all the
 customers they do not have time to talk to.
 
 They write guides, explaining specific features in detail, with examples. They
@@ -64,11 +61,10 @@ suggested during a one-to-one call, but because they have the experience and kno
 how to code, they can just simply make it self-service for users directly.
 
 Some of the features are too complex to be correctly grasped just by reading the
-theory, like geosearch. So they created a demo
-with racal data, using all the best practices and letting users play with it
-to see how it was working. This worked really well and transformed a theoretical
-feature into a real life application and in turn generated signups to the
-service.
+theory, like geosearch. So they created a demo with real data, using all the
+best practices and letting users play with it to see how it was working. This
+worked really well and transformed a theoretical feature into a real life
+application and in turn generated signups to the service.
 
 What Nicolas really stressed out is that the role of a CSE is to be as close to
 the customer as possible, in order to really understand, in a real-life
