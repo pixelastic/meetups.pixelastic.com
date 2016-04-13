@@ -81,3 +81,60 @@ View my publicly-auditable identity here: https://keybase.io/pixelastic
 
 ==================================================================
 
+
+
+
+==================================================================
+https://keybase.io/pixelastic
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of http://meetups.pixelastic.com
+  * I am pixelastic (https://keybase.io/pixelastic) on keybase.
+  * I have a public key ASAmzFoSza4qlRZW1m6R0AibTQ5cIR8J1gQk9OCQQ4By4go
+
+To do so, I am signing this object:
+
+{
+    "body": {
+        "key": {
+            "eldest_kid": "0101b1dd98d7373b3fea6a0e5e852a7ba923c30b9f40c7ae13ac86c698166fc188eb0a",
+            "host": "keybase.io",
+            "kid": "012026cc5a12cdae2a951656d66e91d0089b4d0e5c211f09d60424f4e090438072e20a",
+            "uid": "0acbe49641e2ef3def8d5a8a05c6ea00",
+            "username": "pixelastic"
+        },
+        "service": {
+            "hostname": "meetups.pixelastic.com",
+            "protocol": "http:"
+        },
+        "type": "web_service_binding",
+        "version": 1
+    },
+    "client": {
+        "name": "keybase.io go client",
+        "version": "1.0.15"
+    },
+    "ctime": 1460538461,
+    "expire_in": 504576000,
+    "merkle_root": {
+        "ctime": 1460538375,
+        "hash": "6dea70f3d7b80243e4d574d61b4b6b5e8da79725e0aef1d67b3d70748baa4c02dd15b584132ad389d9880f2c43de92d77552c824c980b0d8e947e1ea5bbd16fe",
+        "seqno": 440759
+    },
+    "prev": "dea09df97906a605a6e3613e74585888bfd12cb449bed52530ae82edb8cfcb44",
+    "seqno": 23,
+    "tag": "signature"
+}
+
+which yields the signature:
+
+g6Rib2R5hqhkZXRhY2hlZMOpaGFzaF90eXBlCqNrZXnEIwEgJsxaEs2uKpUWVtZukdAIm00OXCEfCdYEJPTgkEOAcuIKp3BheWxvYWTFAwB7ImJvZHkiOnsia2V5Ijp7ImVsZGVzdF9raWQiOiIwMTAxYjFkZDk4ZDczNzNiM2ZlYTZhMGU1ZTg1MmE3YmE5MjNjMzBiOWY0MGM3YWUxM2FjODZjNjk4MTY2ZmMxODhlYjBhIiwiaG9zdCI6ImtleWJhc2UuaW8iLCJraWQiOiIwMTIwMjZjYzVhMTJjZGFlMmE5NTE2NTZkNjZlOTFkMDA4OWI0ZDBlNWMyMTFmMDlkNjA0MjRmNGUwOTA0MzgwNzJlMjBhIiwidWlkIjoiMGFjYmU0OTY0MWUyZWYzZGVmOGQ1YThhMDVjNmVhMDAiLCJ1c2VybmFtZSI6InBpeGVsYXN0aWMifSwic2VydmljZSI6eyJob3N0bmFtZSI6Im1lZXR1cHMucGl4ZWxhc3RpYy5jb20iLCJwcm90b2NvbCI6Imh0dHA6In0sInR5cGUiOiJ3ZWJfc2VydmljZV9iaW5kaW5nIiwidmVyc2lvbiI6MX0sImNsaWVudCI6eyJuYW1lIjoia2V5YmFzZS5pbyBnbyBjbGllbnQiLCJ2ZXJzaW9uIjoiMS4wLjE1In0sImN0aW1lIjoxNDYwNTM4NDYxLCJleHBpcmVfaW4iOjUwNDU3NjAwMCwibWVya2xlX3Jvb3QiOnsiY3RpbWUiOjE0NjA1MzgzNzUsImhhc2giOiI2ZGVhNzBmM2Q3YjgwMjQzZTRkNTc0ZDYxYjRiNmI1ZThkYTc5NzI1ZTBhZWYxZDY3YjNkNzA3NDhiYWE0YzAyZGQxNWI1ODQxMzJhZDM4OWQ5ODgwZjJjNDNkZTkyZDc3NTUyYzgyNGM5ODBiMGQ4ZTk0N2UxZWE1YmJkMTZmZSIsInNlcW5vIjo0NDA3NTl9LCJwcmV2IjoiZGVhMDlkZjk3OTA2YTYwNWE2ZTM2MTNlNzQ1ODU4ODhiZmQxMmNiNDQ5YmVkNTI1MzBhZTgyZWRiOGNmY2I0NCIsInNlcW5vIjoyMywidGFnIjoic2lnbmF0dXJlIn2jc2lnxECHabIWOue3VpiMyvq3eyK03z1ohsInUN6awRuYYWybQPqg29nxIQMn7xv/j2Zh+W/Z1ReYrue8lD6ye3lEc50PqHNpZ190eXBlIKN0YWfNAgKndmVyc2lvbgE=
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/pixelastic
+
+=
