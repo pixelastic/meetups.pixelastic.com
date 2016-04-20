@@ -4,83 +4,87 @@ title: "HumanTalks April 2016"
 tags: humantalks
 ---
 
-BeMyApp. Come back from japan, did not organize anything, as a tourist
+This month HumanTalk was at BeMyApp. I had a bad _a priori_ about BeMyApp.
+I always saw them associated with bullshit hackathons, but I went to a Paris.js
+meetup at their place and discussed a bit with organizer and I felt like it
+would be a good place to be hosted in the end. They are specialized in
+organizing hackathons, and they did organize bullshit ones, though.
+
+I just came back from Japan a couple of days before the event, so I mostly came
+as a regular attendee, not an organizer this time.
 
 # Apache Flink
 
-Thomas Le Naour, Consultant Octo
-Flink
-concurrent de spark, analyse de donnée en mémoire en streaming et enatch
-projet de recherche devenu projet Apache en decemre 2014
-marche en java, scala et python, mais python à la bourre
+First talk was very technical and about Apache Flink, by Thomas Le Naour, from
+Octo. I knew Flink only through the [is it big data or pokemon] quizz, so it was
+helpful to dig a bit more.
 
-framework big daa
+Flink is a direct competitor to Spark, allowing data analysis in streams and in
+batches. It started has a research project in 2014 and became an Apache project
+after that. It works in Java, Scala and Python, but the Python API is clearly
+lagging behind the other twos.
 
-enregistre la data sur disque, l'avale rapidement et la stocke
-puis peut faire du batch dessus pour anaylyser la donnée
-DataStream API (data = event)
-DataSet API (batch processing), machne learning, relationnel, graph processing
-couche d'optimisaion par dessus
-deployement en local ou déploiement en cloud (GCE/Amazon)
+The optimal setup has Flink pluggued behind a Kafka, to process data as it comes
+by and store it on the disk (usually in a Cassandra DB). Once the data is
+stored, Flink can do batch analysis on it (machine learning, graph processing,
+etc). In practice it means that you have two different Flink APIs. One is for
+the initial streaming of data (aptly named the DataStream API) and the other is
+for the following batches (DataSet API).
 
-kafka fait de la collecte de donnée, scale beaucoup, prends toute la donnée en
-masse. L'envoie dans Flink
-Les store dans un Cassandra par exemple
+You can deploy it locally on your machine or in clusters on Amazon or GCE. While
+in a cluster, each node of the cluster will process a small part of the data in
+parallel. This allows for easy scaling by adding new nodes to the cluster as you
+need them. It is designed to work on commodity hardware, so it includes some
+kind of fault tolerance. If a node is considered dead in the cluster (its last
+job did not succeed, or reached a timeout limit), the job is sent to anotre
+node. Once the bad node recover, it can get back in the cluster. When something
+like that happens, the whole treatment still succeed, but is delayed by the time
+it takes to detect it and fallback to another node.
 
-possible de le clusteriser, et chaque partie process une partie de la donnée,
-scaling horizontal sans problème
-mais commodity hardware donc fault tolerance needed. possible de detecter qu'un
-traitement n'a pas abouti, et le renvoie vers un autre. c'est le master qui
-detecte ça. donc plus long à traiter, mais se traite
+To orchestrate all this, one of the nodes is set as the master of the cluster.
+In addition to the default data treatment, it also handles the detection of
+faulty nodes. As master can also fail, you need ZooKeeper on top of them to
+elect a new master if one fails.
 
-les master sont changeant, et si un master tombe, un autre peu prendre la place
-(zookeeper)
+In a nutshell, Flink is still far from its main competitor in term of community
+and support, but it handles streaming while Spark does not. It is currently used
+in production as Spotify and Zalando, but if you already have something running
+on Spark, there is no need to switch as it would mean a complete rewrite.
 
-++ avantages
-realtime et streaming (alors que spark est en batch)
-low latency, quelques millisecondes et performance
-utilisé chez spotify et zalando
-5.5 millions de levée de fond
+# UX Sprint
 
--- défaults
-moins mature que Spark
-moins de communauté
-600 commiters sur Sparks, 40 sur Flink
+The second talk, by Antoine Pezé, was about a UX method to prototype a product
+from scratch quickly, including mockups and user testing.
 
+It's goal is to validate hypothesis about a potential products in 5 days, by
+developing a first usable prototype. The first two days are spent discussion
+about the project, putting ideas together, sketching a few main UI elements, and
+voting for the feature that everyone think are the most important.
 
-# Sprint
+The team involves a UX designer, a UI designer, a developer and a Product Owner
+from the get go, and they will work together for 5 days. They have their own
+room, with pen, paper and whiteboard.
 
-anciennement appellé design sprint
-concretiser une idée en 5 jours
-prototype animé, un peu de code, beaucoup de design
-mais utilisable sur des test utilisateurs
-time boxé en 5 jours
-equipe pluridisciplinaire: ux, design, codeur (et un PO)
-war room équipée
+They start by imagining the "perfect situation", where nothing can come wrong
+(perfect user, perfect data, perfect everything). They start by writing a list
+of hypothesis about their product (what they think it will fix, what are the
+current user frustrations, what they think the users will do with the product,
+etc). At the end, they will assert or remove those hypothesis based on the
+result of their first user tests.
 
-trouver la problématique
-se mettre en situation parfaite
-à la fin, liste d'ypohèses validés et des solutions pour avancer
+As Antoine said:
 
-"pour un bon produit, on ne cherche pas à répondre à un besoin, mais qu'on
-réponds à des douleurs"
+> To make a great product, you do not have to answer to a need, you have to
+> answer to pain points.
 
-de manière individuelle, on dessine 8 élément de UI de comment on le voit
-on mets en commun, on rafine, on vote sur les éléments
-ensuite ça donne un dessin simplise pour aider le travail du graphiste
-maquetes en une journée
-résultat final simple, épuré, le plus clair dans les features
+The first mockups focused on at least 8 UI elements that are really important in
+the product, and the UX/UI designers can start creating mockups. These mockups
+are really simple, straight to the point, and are then shown to users, in the
+field, to get their feedbacks during one day. 5 tests on 5 different people is
+enough to get the main issues, no need to do more.
 
-une journée de test
-5 tests utilisateurs
-assez pour trouver les erreurs principales
-on reprends la liste des hypothèses de dépatr et on valide/invalide et nouvelles
-idées à creuser
-
-avantage: feedback rapides sans aucun développement
-inconvénient: résultats semle pas différents d'une autre approche classique.
-mets ça sur le dos de la première fois
-
+Then they take all their initial hypothesis, validate or invalidate them, and
+this gives them a very strong basis on which start building the real project.
 
 # Defensive design
 
