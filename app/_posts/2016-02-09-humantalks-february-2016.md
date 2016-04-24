@@ -158,7 +158,7 @@ exists.
 Then I started getting lost in the talk. Some of the concepts he talked
 about were too alien to what I experience everyday that I had trouble
 understanding what it was really about. In the end he suggested a way to still
-rationalize those various independant parts, buy building a Platform that lets
+rationalize those various independant parts, by building a Platform that lets
 users build their own tools, even if they do not know how to code. This platform
 would get its data from a Referential that is accessible company-wide and hold
 the only real trustable source of data. And finally, the IT departement will
