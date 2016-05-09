@@ -1,116 +1,102 @@
 ---
 layout: post
 title: "HumanTalks Janvier 2016"
-tags:
+tags: humantalks
 ---
+
+Note: I'm actually writing this blog post several months after the event, so my
+memory might not be the freshest here.
+
+Anyway, we had 4 talks as usual for the HumanTalks, hosted at Deezer this time.
 
 ## Apache Zepellin
 
-Saad HAnsari (spell?)
+First talk was by Saad Ansari, with an introduction to Apache Zepellin. Their
+use-case was that they had a huge amount of tech data (mostly logs) and they had
+no idea what to do with it.
 
-grosse geeration de donned tech et metier, logs
-voulaient faire quelque chose de ces données, les étudie ren tirer des trucs
-mais données en vrac, pas triées, gros garbage "il suffit de les trier"
+They knew they should analyze it and extract relevant information from it, but
+they had so much data, in various forms, that they didn't really know where to
+start. Sorting them manually, even just to find which data was interesting and
+which was garbage was a very long task that weren't able to do.
 
-integrer les données, les analyser, les visualiser
+So they simply pushed them to Zeppelin. It understand the global structure of
+the data and display it in tables and/or graphs. It basically expect CSV data as
+input and then lets you use a SQL-like syntax to do requests on it and display
+visual graphs. The UI even provided a drag'n'drop feature for easier refinement.
 
-(Notebooks, IpyN, Jupyter)
+I was a bit confused as to who the target of such a tool was. Definitely it was
+not for any BigData expert, because the tool seem too basic. It wouldn't fit for
+someone not technical either because it still requires to write SQL queries.
+It's for the developer in between, to get an overall feeling of the data,
+without being to fine-grained. Nice to get a first overview of what to do with
+the data.
 
-OPenData RATP. metro, ligne, correspondance, villes, etc
-intégration dans zeppelin
-Zeppelin foncionne globalement avec Spark, pour parser les data
-monte un tableau en colonnes pour faire des requetes dessus.
+As the speaker put it, it's the Notepad++ of BigData. Just throw garbage CSV and
+logs in it, and then play with SQL and drag'n'drop to extract some meaning from
+it.
 
-En gros, CSV vers SQL et requetages dessus, + graphs
-système de drag'n'drop pour faire les requqtes
+## The Infinite, or why it is smaller that you may think
 
-semble basique, pas sur à qui ça s'adresse? Je ne fais pas de bigData, je ne
-ferai pas ça. Et sans doute trop basique pour experts.
-L'avanage est que ca peut parser facilement plein de formats, et jouer avec pour
-tenter des les correler. Pas mal s on doit trouver un sens à un tas de data
-hétéroclite. Genere des reports visuels, et peut le croner
+Next talk was a lot more complex to follow. I actually stopped taking notes to
+focus on what the speaker was saying and trying to grasp the concepts.
 
-"Notepad++ du BigData"
+It was about the mathematical definition of the Infinite and what it implies,
+and how we can actually count it. Really I cannot explain what it was about, but
+it was still interesting.
 
+At first I must say I really wondered what such a talk was doing in a meetup
+like the HumanTalks, and was expecting a big What The Fuck moment. I was
+actually gladly surprised to enjoy the talk.
 
-## L'infini ou pourquoi il est plus petit que vous le pensez
+## Why is it so hard to write APIs?
 
-Mathématicien, dévéloppeur 
+Then Alex Estela explained why it is so complex to build API, or rather, what
+are the main points that people are failing at?
 
-signe infinie, "fourre tout de l'école"
+First of all, REST is an exchange interface. It's main and sole purpose is to
+ease the exchange between two parties. The quality of the API will be as good as
+the communication there is between the various teams that are building it.
 
-préset dans onception de epsace et du temps depuis toujours
-pose proleme dans
+REST is just an interface, there is no standard and no specific language or
+infrastructure pattern to apply. This can be intimidating, and gives so many
+possible reasons to fail at building it.
 
-besoin de trop réfléchir pour prendre des notes. Néanmoins intéressant
+Often people build REST API like they built everything else, thinking of SOAP,
+and exposing actions, not resources. Often, they build an API that only expose
+the internals of the system, without any wrapping logic. You also often see APIs
+that are too tailored for the specific needs of one application, or on the other
+hand that can let you do anything but built with no specific use-case in mind so
+you have to retro-engineer it yourself to get things done.
 
-## Pourquoi est-ce si difficile de concevoir des API
+The technical aspect of building an API is not really an obstacle. It's just
+basic JSON over HTTP. Even HTTP/2 does not radically change things, it will just
+need a few adjustments here and there, but nothing to hard. The issue is the
+lack of standards, that give too many opportunities to do things badly. You can
+use specs like Swagger, RAML or Blueprint, they all are good choices with
+strength and weaknesses. Pick one, you cannot go wrong.
 
-Alex Estela
+There is no right way to build an API in terms of methodology. The one and only
+rule you have to follow is to keep it close to the users. Once again, an API is
+a mean of communication between two parties. You should build it with at least
+one customer using it. Create prototypes, iterate on it, use real-world data and
+use-cases, deploy on real infrastructure. And take extra care of the Developer
+Experience. Write clear documentation, give examples on how to use it, give
+showcases of what you can build with it. Use it. Eat your own dog food. Exposing
+resources is not enough, you also have to consume them.
 
-Restful basée sur HTTP
-Concevoir: interface d'échange, pas les technos ni les infras
+Make sure all teams that are building the API can easily talk to each other in
+the real world and collaborate. Collaboration is key here. All sides (producer
+and consumer) should give frequent feedback, as it comes.
 
-Consultant senior, mauvaise pratique chez les clients
+To conclude, building an API is not really different than building any app. You
+have to learn a new vocabulary, rethink a bit the way you organize your actions
+and data, and learn to use HTTP, but it's not really hard.
 
-mauvaises idées
-api qui fait du soap
-api miroir du SI, quie xpose tout n'importe comment
-api usage unique, genre pour appli mobile
-api fourre-tour, a rétro ingineerer soi-même, trop complexe
-
-## techno
-
-pas un probleme de techno
-HTTP on connait, json a se traite easy
-même la sécu c'est compliqué mais standard, on gère
-http2 va changer mais pas plus que ça
-
-probleme de ocncept
-rest c'est pas un standard c'est des principes théoriques
-plein de manières différentes de le faire, pas de bonne méthode à 100%
-les bonnes pratiques ne sont bonne que dans un contexte donné, mais de manière
-générale
-
-probleme d'outillage
-3 standards de spec( Swagger, RAML, Blueprint), mais tous des bons choix
-forces et faiblesses de chacun
-convergent les uns vers les autres, s'améliorent
-
-gros probleme de méthodo
-top down, bottom-up, test driven, code first, whatever
-spécifique pour le besoin, pas de meilleure méthodo
-d'abord les grosses features à valeur ajoutée?
-plutot avoir une grosse communauté de développeurs? DX
-suivre les contraintes du SI existant, organisation, partenaires?
-de toutes façons: prototypes, itéraion, vraies données, vraie infra, vrais cas
-de test. "Appellez ça Agile ou Lean si vous voulez"
-faire une API est comme faire un logiciel après tout
-
-probleme de collaboration
-collaoration est la base
-fournisseur expose aux collaborateurs, collaboration au centre
-rituels de discussion entre les deux parties
-feedbacks récurrent, démos, formation, au fil de l'eau
-documentation primordiale, la doc est un projet à part entière aussi important
-que l'API
-
-conclusion
-spécial, mais reste un logiciel
-nouveau vocabulaire, on pousse un peu le HTTP dans ses retranchements, pas si
-easy, mais pas le prolème de fond
-le logiciel fonctionne quand:
-on prototype
-rester pgramatique sur les concepts
-proche des ocnsommatteurs
-apprendre de ses erreurs
-outillage moderne
-grande collbaoration entre tous les acteurs
-
-méthodo et collaboration avant concepts et outils (Agile Manifesto)
-
-meilleure stratégie de version: prévenir dans les headers, etc les changements
-rester retro-compatible, avoir les deux versions en parallelle
+What you absolutly need are users. Real-world users that will consume your API
+and use it to build things. Create prototypes, stay close to the users, get
+feedback early and make sure every actor of the project can communication with
+the others.
 
 ## Why do tech people hate sales people ?
 
