@@ -216,26 +216,26 @@ price, ads, iterations and the MVP process.
 
 {% youtube https://www.youtube.com/watch?v=HLta6dfaMS0 %}
 
-Last talk was by Jean Baylon, and about the [Tails][12]
-Linux distribution.
+Last talk was by [Jean Baylon][12], and about the [Tails][13] Linux
+distribution.
 
 The goal of the distribution is to be anonymous when going on the Internet. It
 lets journalists pass through the multiple layers of censorship. It actually is
-part of the base tech package of [Reporters Without Borders][13] and was also
+part of the base tech package of [Reporters Without Borders][14] and was also
 approved by Snowden.
 
 Their are currently about 11k users (and one can wonder how we can get this
 number if the goal is actually to stay anonymous, maybe number of downloads?)
 and there are about 20 developers committing on the project on a regular basis.
-It got part of its funding from other projects in the field, like [TOR][14],
-[Debian][15] or the [Freedom of Press Foundation][16].
+It got part of its funding from other projects in the field, like [TOR][15],
+[Debian][16] or the [Freedom of Press Foundation][17].
 
 Tails should be used when you are doing something out of the ordinary. And it is
 not enough to protection your anonymity. If you use Tails to buy something on
 Amazon with your credit card and have it delivered at your place, it won't help.
 
 What it does is having TOR and Firefox installed and configured by default. It
-also has an encrypted [pidgin][17] and automatically spoof the MAC address. It
+also has an encrypted [pidgin][18] and automatically spoof the MAC address. It
 is loaded with `aircrack ng` to check the current wifi security and reliability
 and also contains a bitcoin wallet.
 
@@ -270,9 +270,10 @@ did. That's why I like the HumanTalks so much.
 [9]: http://keepass.info/
 [10]: https://www.dropbox.com/
 [11]: https://twitter.com/dwursteisen?lang=en
-[12]: https://tails.boum.org/
-[13]: https://rsf.org/en
-[14]: https://www.torproject.org/
-[15]: https://www.debian.org/
-[16]: https://freedom.press/
-[17]: https://www.pidgin.im/download/linux/
+[12]: https://twitter.com/jeanpatxi
+[13]: https://tails.boum.org/
+[14]: https://rsf.org/en
+[15]: https://www.torproject.org/
+[16]: https://www.debian.org/
+[17]: https://freedom.press/
+[18]: https://www.pidgin.im/download/linux/

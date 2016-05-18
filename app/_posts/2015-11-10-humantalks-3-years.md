@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "HumanTalks 3 Ans"
+title: "HumanTalks 3 Years"
 tags: humantalks
 ---
 
@@ -27,6 +27,8 @@ are quick to iterate, have DevOps all the way from top to bottom, and really
 know and apply Agile and Software Craftsmanship philosophy. We'll see more about
 that in the last talk.
 
+![The room](/img/2015-11-10/intro.jpg)
+
 ## Front-end testing
 
 The first talk was done by [William Ong][5], former coworker from Octo. He
@@ -34,6 +36,8 @@ presented the [front-end testing ref card][6] they developed. It's a physical
 cardboard flyer that lists all the different kind of tests you can do to your
 front-end (from unit testing to performance testing and security testing), with
 examples, tools and advices.
+
+![William](/img/2015-11-10/william.jpg)
 
 The content of the refcard is really really great. It gives a nice overview of
 what can (and should be done) today, but also advices on the costs of each of
@@ -92,6 +96,8 @@ I don't know how many coffees [Gary Mialaret][9] took before coming on stage for
 the next talk, but he seemed to be really happy to be here and was almost
 jumping and running while speaking.
 
+![Gary](/img/2015-11-10/gary.jpg)
+
 Gary told all us about TCG (Trading Card Games), and how those kind of game are
 no longer really about trading ([Hearthstone][10] for example, does not allow
 trading of cards). The main common ground of all those games is that it's a duel
@@ -137,6 +143,8 @@ underlying principles and this, in turn, helps us devise a better deck.
 
 The next talk was done by Gaetan Gachet, with whom I work at Algolia. He talked
 about the way our brain reacts to instant feedbacks.
+
+![Gaetan](/img/2015-11-10/gaetan.jpg)
 
 His presentation was explaining the theory of [Information Foraging][11]. The
 main idea is that the way we are today looking for information on websites is
@@ -191,9 +199,12 @@ is not enough.
 ## Culture Craft
 
 Last talk of the day was a nice story about what happened at Société Générale in
-the past years. Some people wanted to "wake up" the organisation. They felt like
-the overall strategy of the company was not adapted to its current culture. And
-that the current culture was slowly dying because of that.
+the past years, by [Thomas Pierrain][12]. Some people wanted to "wake up" the
+organisation. They felt like the overall strategy of the company was not adapted
+to its current culture. And that the current culture was slowly dying because of
+that.
+
+![Thomas](/img/2015-11-10/thomas.jpg)
 
 The speaker actually confessed that he wanted to leave the company at that time.
 But he stopped short when he realized that his thinking was actually just
@@ -254,3 +265,4 @@ own devices :)
 [9]: https://twitter.com/tolkicasts
 [10]: http://us.battle.net/hearthstone/en/
 [11]: https://en.wikipedia.org/wiki/Information_foraging
+[12]: https://twitter.com/tpierrain
