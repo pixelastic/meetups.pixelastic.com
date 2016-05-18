@@ -6,6 +6,8 @@ tags:
 
 ## POO: Historique
 
+{% youtube https://www.youtube.com/watch?v=Okz-tFyfu64 %}
+
 Développeur depuis 15 ans, Aspectize
 
 Qu'est-ce qu'une erreur. Meileure facon de faire? plein de gens font, est-ce
@@ -61,6 +63,8 @@ types, mais pas de dépendance pere/fils
 
 # Scrapoxy
 
+{% youtube https://www.youtube.com/watch?v=3ydT-5UbDC4 %}
+
 Fabien Vauchelles
 @fabienv
 
@@ -100,6 +104,8 @@ pour toujours passer au même endroit
 
 
 # Why do we fix bugs
+
+{% youtube https://www.youtube.com/watch?v=k2lJiiDzhaE %}
 
 Michal Svacha, Czech Republic
 programmer, musician, AI
@@ -142,6 +148,8 @@ bugs are fixed so we can see what we overlooked.
 
 
 # ReactJS in production
+
+{% youtube https://www.youtube.com/watch?v=Mg7oTkrMT2U %}
 
 Clément Dubois, @clement_d
 

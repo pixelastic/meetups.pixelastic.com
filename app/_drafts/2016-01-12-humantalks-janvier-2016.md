@@ -11,6 +11,8 @@ Anyway, we had 4 talks as usual for the HumanTalks, hosted at Deezer this time.
 
 ## Apache Zepellin
 
+{% youtube https://www.youtube.com/watch?v=NaPj52fJQoU %}
+
 First talk was by Saad Ansari, with an introduction to Apache Zepellin. Their
 use-case was that they had a huge amount of tech data (mostly logs) and they had
 no idea what to do with it.
@@ -38,6 +40,8 @@ it.
 
 ## The Infinite, or why it is smaller that you may think
 
+{% youtube https://www.youtube.com/watch?v=xg1b6_XXyAo %}
+
 Next talk was a lot more complex to follow. I actually stopped taking notes to
 focus on what the speaker was saying and trying to grasp the concepts.
 
@@ -50,6 +54,8 @@ like the HumanTalks, and was expecting a big What The Fuck moment. I was
 actually gladly surprised to enjoy the talk.
 
 ## Why is it so hard to write APIs?
+
+{% youtube https://www.youtube.com/watch?v=-7LWklt079c %}
 
 Then Alex Estela explained why it is so complex to build API, or rather, what
 are the main points that people are failing at?
@@ -99,6 +105,8 @@ feedback early and make sure every actor of the project can communication with
 the others.
 
 ## Why do tech people hate sales people ?
+
+{% youtube https://www.youtube.com/watch?v=oObnt3CvDRs %}
 
 son job c'est de vendre
 

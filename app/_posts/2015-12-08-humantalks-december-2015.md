@@ -12,6 +12,8 @@ delegated it to [me][2]
 
 ## Polyfill and Transpilers, one code for every browser
 
+{% youtube https://www.youtube.com/watch?v=e_qBM4oPcFQ %}
+
 First talk by Alexandre Barbier ([@alexbrbr][3], explain the why and how of
 progressive enhancement in js.
 
@@ -33,6 +35,8 @@ most used is [Babel][4] which just hit its 6th version
 
 ## Transhumanism, the singularity advent
 
+{% youtube https://www.youtube.com/watch?v=F5AfJYEtoY8 %}
+
 After Transpilers, Transhumanism by Pierre Cointe
 ([@pierre_cointe][5].
 
@@ -48,6 +52,8 @@ would be more powerful than an human brain.
 
 ## Develop application for the TV
 
+{% youtube https://www.youtube.com/watch?v=1z_Y7rvox9s %}
+
 The next talk was done by Mickaël GREGORI ([@meekah3ll][6]), and present us his
 experience developing application for the television.
 
@@ -60,6 +66,8 @@ To conclude he talked a bit about a standard that may be on its way, W3C being
 working on a *TV API*
 
 ## How to be more productive with three methods
+
+{% youtube https://www.youtube.com/watch?v=zu8evuY-eGY %}
 
 The fourth and last talk was made by Thibault Vigouroux ([@teaBough][7])
 

@@ -4,45 +4,44 @@ title: "HumanTalks March 2016"
 tags: humantalks
 ---
 
-Viadeo, greve
+The HumanTalks event of March was held at Viadeo. There was a serie of ongoing
+strikes in Paris at that time so a lot of people had to cancel their coming.
 
 ## Owasp Zap
 
-secu fun
+First talk was by Paul Molin, from Theodo. He told us more about a tool he tried
+named Owasp Zap. From is own words it is a way to make security fun.
 
-Paul Molin, Theodo
+Paul is used to work in an agile environment, where they push new features to
+prod every week. This usually does not work well with the classical security
+audi schema where an audit can take up to two months, and the code can have
+drastically changed when the audit is finished.
 
-dev agile, mets en prod toutes le ssemaines
-pas possible en général avec la secu
-audit de un mois ou deux avec contr audit
+The goal of the tool is to help developers find weaknesses into their own code
+themselves. Zap is an open web application project, where you can try various
+attacks on tailormade applications with vulnerabilities, as a way to practice
+and learn. It comes with a lot of documentations and a few tools.
 
-comment on fait?
-trouver les failles soi même
-zap open web application project
-donne des applus vulnérable pour s'entrainer
-documentation
-outils
+The Zap tool itself is perfect for beginners, but is also used by
+professionnals. It works as a proxy between the browser and the server and
+automatically modifiy the requests. It can for example automatically check that
+form verifications enabled on the front-end are also enabled on the back-end.
 
-zap, idéal pour débutants
-mais utilisé par professionel, récompensé
+He can work in a passive way, listening and recording every request, capturing
+the one that are done from an admin and then trying to play them again with
+a normal account to check that they are correctly blocked.
 
-proxy entre navigateur et serveur
-modifier les requetes
-vérifie les protections qui sont coté client mais pas serveur
-scan ce qu'il se passe, d emanière passive
-on peut lancer du spiderin, pour crawle tous les liens, etc e completer le
-contenu caché
-detecte des faills d ebuffer overflow, xss, sql
+He can also crawle the whole website to give the list of all accessible links,
+ensuring that no hidden content will actually leak. It also tests buffer
+overflow, XSS and SQL injection issues.
 
-demo, visite pas, trouve des liens avec le proxy, puis lane un sidering pour
-trouver toutes les pages
-ensuite, balayage avancé, sur toutes les pages trouvées
-trouve des erreurs et les range par criticité, avec lien vers explication et
-page cible
+It then generates a report of what it has found, ranging issues by criticity
+with links to the explanation and how to fix them.
 
-peut marquer des bouts de page comme étant non identifé
-spécifie la page de login, et comment se conncter, avec un bon login/pass
-puis teste toutes les pages pour vérifier que bien loggué
+You can mark some parts of the page as being for guest or for loggued in users
+(like a log-in form, or your name displayed in the header). It will then make
+sure that only the correct part is displayed based on you status.
 
-illégale si pas autorisation
-donc à le faire chez soi, sinon quelqu'un d'autre le fera
+I'll conclude on a note about the legal aspect of the tool. It is illegal to use
+it on a website if you were not explicitly allowed to do so. So better do it on
+manour own websites, or someone else will do anyway.
