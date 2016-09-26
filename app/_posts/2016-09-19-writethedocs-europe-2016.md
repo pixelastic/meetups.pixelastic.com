@@ -141,7 +141,7 @@ languages is also a great way to improve your writing skills.
 
 Even if not exactly what I was expecting, the event was a success. We all
 learned a lot, met interesting people, and even had the chance to pitch
-DocSearch. I think I will come again next week.
+DocSearch. I think I will come again next year.
 
 
 We will maybe even suggest a talk, because I feel that the way we write
