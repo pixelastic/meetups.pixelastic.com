@@ -56,7 +56,6 @@ a big file to RAM versus reading it line by line.
 
 ## Docs or it didn't happen
 
-
 Documentation is as important as code when it comes to features. If
 undocumented, any feature is outdated as soon as it's shipped. If you're in
 a Scrum environment, then it means documentation should be part of the
@@ -158,6 +157,7 @@ less time on support and is a good motivation.
 Thanks to all the organizers, speakers and attendees and hope to see you next
 year!
 
+You can find all the videos [on YouTube][23]
 
 [1]: http://www.writethedocs.org/conf/eu/2016/
 [2]: https://twitter.com/maxiloc
@@ -181,3 +181,4 @@ year!
 [20]: https://docs.google.com/presentation/d/1wbzJUM6EGWrjiew36uZcYkmqLW34oH_8KolyCtkuocI/view
 [21]: https://community.algolia.com/docsearch/
 [22]: https://www.algolia.com/doc
+[23]: https://www.youtube.com/playlist?list=PLZAeFn6dfHpnN8fXXHwPtPY33aLGGhYLJ
