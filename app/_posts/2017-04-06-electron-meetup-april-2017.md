@@ -4,16 +4,17 @@ title: "Electron Meetup April 2017"
 tags: electron
 ---
 
-Tonight was the Electron meetup in Paris. I didn't even know Electron there was
+Tonight was the [Electron][1] [meetup][2] in Paris. I didn't even know there was
 a dedicated meetup. I went there because my coworker Baptiste was doing a talk
 and I wanted to support him. I'm glad I went because I learned a lot.
 
 ## Auto-update in Electron
 
-Baptiste talked about one of the internal applications we are using at Algolia.
-The app lets the Algolia employees search into content that is spread across
-different other apps. Using a simple search bar, we can search in GitHub issues,
-Asana checklists, HelpScout tickets, Salesforce leads, Confluence pages, etc.
+[Baptiste][3] talked about one of the internal applications we are using at
+Algolia. The app lets the [Algolia][4] employees search into content that is
+spread across different other apps. Using a simple search bar, we can search in
+[GitHub][5] issues, [Asana][6] checklists, [HelpScout][7] tickets,
+[Salesforce][8] leads, [Confluence][9] pages, etc.
 
 He talked about the auto-update mechanism. Electron apps being desktop apps,
 people have to install them on their machine. Developers cannot push new content
@@ -21,9 +22,9 @@ as they would do for a website. They have to have an update mechanism in place,
 and it has to be automated because they cannot rely on users manually updating
 their version.
 
-Baptiste used a system call Nuts, a node app that you can host on Heroku, and
-that works as a middleware between your GitHub repo (where you pushed the new
-builds), and the installed applications.
+Baptiste used a system call [Nuts][10], a node app that you can host on Heroku,
+and that works as a middleware between your GitHub repo (where you pushed the
+new builds), and the installed applications.
 
 When the application starts (and every 5mn after that), it checks if a new
 package is available by contacting the Nuts server. Nuts in turn will query the
@@ -34,8 +35,9 @@ cases are handled in Electron through events fired in case of an update
 available or not.
 
 Now that the technical part is over, you have a lot of UX questions to ask
-yourself. What do you do with this new version? Do you install it without your user knowing? Do you ask confirmation first? Do you install it
-right away or do you wait for the next session?
+yourself. What do you do with this new version? Do you install it without your
+user knowing? Do you ask confirmation first? Do you install it right away or do
+you wait for the next session?
 
 At Algolia, we decided not to install new versions silently. Most of the users
 of the app are developers, and they want to know when they update, and which
@@ -75,14 +77,15 @@ code for you does not mean it will be the same experience for your users.
 
 ## GitScout
 
-Second talk was about GitScout, a MacOS app to handle GitHub issues. I was
-surprised at first that an Electron app was advertised as a "MacOS App", because
-Electron is supposed to be used on any platform.
+Second talk was by [Michael Lefebvre][11], about [GitScout][12], a MacOS app to
+handle GitHub issues. I was surprised at first that an Electron app was
+advertised as a "MacOS App", because Electron is supposed to be used on any
+platform.
 
 I understood why they want that way. They went to great lengths to have
 the same kind of UX in their app as you could have on a native Mac OS app. The
 main example they gave is about the popover notifications you can have in
-a native MacOS app. 
+a native MacOS app.
 
 Those popovers can float partly "outside" of their main window. This is not
 possible in an Electron app, as an app must live inside a window, and you cannot
@@ -105,9 +108,9 @@ worth it... until the next MacOS update breaks everything.
 
 ## Cross-platform app in electron
 
-Then Aircall did a presentation about the building of cross-platforms apps in
-Electron. The main tool to use is electron-build, which will help you package
-your build for each platform.
+Then [Maxence Haltel][13], from [Aircall][14] did a presentation about the
+building of cross-platforms apps in Electron. The main tool to use is
+[electron-build][15], which will help you package your build for each platform.
 
 Any platform can be built from any platform (using `wine` or `mono`), as long as
 you are not using any native C/C++ APIs. Also note that even if the code you
@@ -124,17 +127,17 @@ will be included. If you need to pass any other file, you'll have to pass them
 manually in the config.
 
 To release your app, you can either use Nuts like Baptiste talked about in the
-first talk, or use electron-release-server that you'll have to host but which
-will give much more power on the auth and release channels (beta, dev,
+first talk, or use [electron-release-server][16] that you'll have to host but
+which will give much more power on the auth and release channels (beta, dev,
 prod, etc).
 
 ## Audio in Electron
 
-Last talk was also by Aircall, but about the sound APIs. Sound in Electron is
-nothing more than what you can do with sound in Chrome. The Chrome
-version being set in an Electron app, you know what will be available
-and what will not. Furthermore, you can pass specific `flags` to Chrome to
-enable some features.
+Last talk was by [Matthieu Allegre][17], but about the sound APIs. Sound in
+Electron is nothing more than what you can do with sound in Chrome. The Chrome
+version being set in an Electron app, you know what will be available and what
+will not. Furthermore, you can pass specific `flags` to Chrome to enable some
+features.
 
 The demo was about listing all the input and output devices of the computer,
 firing events when a new one was added, and then capturing the input stream of
@@ -150,3 +153,22 @@ opens the road to interesting applications. I'll have to give it a try.
 I'm glad I came. I didn't know there was such a big Electron community in
 Paris (I would say we were around 60), and having that many interesting talks
 was worth it.
+
+
+[1]: https://electron.atom.io/
+[2]: https://www.meetup.com/fr-FR/Meetup-Electron-JS-Paris/events/238461075/
+[3]: https://github.com/CBaptiste
+[4]: https://www.algolia.com/
+[5]: https://github.com/
+[6]: https://asana.com/
+[7]: https://www.helpscout.net/
+[8]: https://www.salesforce.com/
+[9]: https://www.atlassian.com/software/confluence
+[10]: https://nuts.gitbook.com/
+[11]: https://twitter.com/lefebvremichael
+[12]: https://gitscout.com/
+[13]: https://twitter.com/shinomix
+[14]: https://aircall.io/
+[15]: https://yarnpkg.com/en/package/electron-build
+[16]: https://github.com/ArekSredzki/electron-release-server
+[17]: https://twitter.com/allegrem
