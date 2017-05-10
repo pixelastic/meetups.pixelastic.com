@@ -28,6 +28,8 @@ around us everyday that we use for having conversations. Slack, Messenger,
 Whatsapp. Even emails or comments. Add a virtual recipient as a chatbot and you
 can plug it to any existing workflow.
 
+![Chatbots][7]
+
 The greatest strength of chatbots is not that they can masquerade as humans
 (They cannot. Yet). It's that you can put them in all the existing
 medium we already have without requiring people to add one more mean of
@@ -80,62 +82,58 @@ there seem to be both a [nodejs][4] and a [.NET][5] version.
 
 ## Animations are for human being
 
-Francois Blavoet, dev android chez deezer
-UI, animations,
+Francois Blavoet, Android Developer at Deezer did the second talk. This time it
+was about animations in UI. Material Design was used as an example because it
+follows animation best practices.
 
-example sur material design, mais même principes d'animation partout
+One of the main goal of animation is to _delight_ the user. It does not bring
+any new feature to the app, but will work toward the branding and how people
+will remember the app and their experience using it. In the crowded space that
+is smartphone apps, great animations can sometimes be the one thing that will
+make your app more attractive.
 
-objectif: Delight
-emerveiller l'utilisateur
-pas d'interet fonctionnel, mais pourrsse le branding de l'application
-permet de se démarquer par rapport aux autres apps
-peut-etre réactuion de feeling, comme le bouton like de twitter, amas pas
-fonctionnel
+Animations also have a teaching function. Users don't have time to waste trying
+to learn how your app is working. By animating parts of the screen, you can show
+the user what is going on. You can add a smooth transition between two states
+instead of jumping from one to the other directly.
 
-users nont pas le temps d'apprendre  omment fonctionne votre app
-animer permet d'expliquer ce qu'il se passe
-doit montrer ce qui change facilement, peut pas juste mettre à jour
-on slide et on gade pour faire apparaitre un nouveau element
+Take the example of an email app. When a new email arrives in your inbox, you
+could add it to the list right when it arrives. But the change might be too
+quick for users to see it. Instead, by scrolling the list down and then fading
+in the new email, users can see and understand that something happened. There
+must be a continuity between the first step and the last one.
 
-animation web sont les même que les animations Disney des années 30
-conseils s'appliquent encore en UI, theorie sur ce qui focntctonne ou ne
-fonctionne as
-"imiter le vivant", onveusimler, car vu par unœil humain, qui percoit le mnde
-réell, donc lui donner des choses plaisantes à voir
-12 principes fonctamentaux d'animation dessin animé
+The principles on which great UI animations are based today are the same that
+were used in the 30s by the Walt Disney movies. The main goal is to give the
+illusion of life. Our eyes and brain are trained to see objects moving in
+a specific way in the real world. When animating objects on screen, we need to
+keep that in mind. For an animation to _feel right_, it needs to move like
+something real would move.
 
-Mise en scne: staging
-scene de départ et d'arrivée, doit avoir une continuité enre deux états
-pas besoin d'en faire trop, mais besoin de passer d'un écran à une autre
-users apprenent à utiliser l'application plus vite
+![The Illusion of Life][6]
 
-slow in and slow out
-mouvement est jamais linéaire, accelerarion et deceelarauio
-doit deccelrer jusqu'au point d'ariver, oindique au user que quelque chose
-apparait
-decceleration marche beaucoup mieux, vérufié par user testing
-mais si quitte la scene, doit accelerer.
-si entre, decellere, si part accellere
+It means that when moving an element from one spot to another, it should not
+follow a linear speed. No object in the real life can move instantly from
+immobile to its max speed, nor go from its max speed to a stop instantly. There
+is some acceleration or decceleration taking place. Same occurs in UI
+animations. Elements should start slow and then accelerate. The animation should
+not take more time, but it will be slower at first, then faster at the end.
+François also suggested that it's better to use decceleration for items that are
+entering the viewport and acceleration for items that are leaving it.
 
-animaion: 200-400ms
-si trop rapide personne ne la voit et pas fluide
-si trop rapide, on la percoit, et on attends la fin, donne l'idée que
-l'animation est lente
-300ms efault
-plus on vieillit moins on capte les animations (si on voit que les gens cliquent
-à coté, on peut savoir qu'ils sont vieux, et adapter les animation enf onction)
+He also suggested that animation last between 200ms and 400ms. Anything below
+200ms will be too fast for the human eye to catch and anything above 400ms will
+be long enough that the user will see the delay. That's why 300ms is usually the
+default value. Also important to keep in mind that the older you are, the
+harder it is for you to see animations.
 
-Arcs
-objets bougent en arc, pas en ligne droite généraement, on le percoit mieux,
-nous les humains
-
-material guidelines explique bien tout, reference
-Disney: Illusion of Life, gros bouquin
-project-phoebe: design mutatif, animation va change dans le temps. au debut peut
-aller lentement pour qu'il le voit, maisune  fois qu'il connait ben la UI, on
-peut aller plus vite car l sait deja ce qu'il se passe. potentiellement changer
-les couleurs et les tailles des objets aussi
-
+If you want to go deeper in the subject, the Material UI animation guidelines do
+a great job of explaining _why_ their best practices are set this way. You can
+also read the old _Disney: The Illusion of Life_ book. François also mentioned
+[Project Phoebe](https://phoebe.xyz/) that takes a look at mutative design, or
+how your design should evolve with your user knowledge of your app (you can make
+slow and visible animations at first when your users discover the app, then
+gradually remove them as they gets more used to it).
 
 ## Service Workers
 
@@ -214,3 +212,6 @@ question: dessinateur fait ça à temps plein?
 [3]: https://dev.botframework.com/
 [4]: https://docs.botframework.com/en-us/node/builder/overview/#navtitle
 [5]: https://docs.botframework.com/en-us/csharp/builder/sdkreference/
+[6]: /img/2017-05-09/illusion_of_life.jpg
+[7]: /img/2017-05-09/chatbots.png
+
