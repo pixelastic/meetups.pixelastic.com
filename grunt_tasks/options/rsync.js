@@ -3,10 +3,7 @@
 module.exports = {
   options: {
     recursive: true,
-    args: [
-      '--archive',
-      '--prune-empty-dirs'
-    ]
+    args: ['--archive', '--prune-empty-dirs'],
   },
 
   /* DEV */
@@ -14,22 +11,20 @@ module.exports = {
   devCssDependenciesToJekyll: {
     options: {
       src: 'bower_components/normalize-css/normalize.css',
-      dest: 'tmp/jekyll/css'
-    }
+      dest: 'tmp/jekyll/css',
+    },
   },
   devCssDependenciesToDist: {
     options: {
       src: 'bower_components/normalize-css/normalize.css',
-      dest: 'dist/css'
-    }
+      dest: 'dist/css',
+    },
   },
   devCssTmpToDist: {
     options: {
-      src: [
-        'tmp/css/src/*.css'
-      ],
-      dest: 'dist/css'
-    }
+      src: ['tmp/css/src/*.css'],
+      dest: 'dist/css',
+    },
   },
   // JS
   devJsDependenciesToJekyll: {
@@ -39,10 +34,10 @@ module.exports = {
         'bower_components/algoliasearch-helper/dist/algoliasearch.helper.min.js',
         'bower_components/hogan/web/builds/3.0.2/hogan-3.0.2.min.js',
         'bower_components/jquery/dist/jquery.min.js',
-        'bower_components/moment/min/moment.min.js'
+        'bower_components/moment/min/moment.min.js',
       ],
-      dest: 'tmp/jekyll/js'
-    }
+      dest: 'tmp/jekyll/js',
+    },
   },
   devJsDependenciesToDist: {
     options: {
@@ -51,26 +46,22 @@ module.exports = {
         'bower_components/algoliasearch-helper/dist/algoliasearch.helper.min.js',
         'bower_components/hogan/web/builds/3.0.2/hogan-3.0.2.min.js',
         'bower_components/jquery/dist/jquery.min.js',
-        'bower_components/moment/min/moment.min.js'
+        'bower_components/moment/min/moment.min.js',
       ],
-      dest: 'dist/js'
-    }
+      dest: 'dist/js',
+    },
   },
   devJsAppToJekyll: {
     options: {
-      src: [
-        'app/js/*'
-      ],
-      dest: 'tmp/jekyll/js'
-    }
+      src: ['app/js/*'],
+      dest: 'tmp/jekyll/js',
+    },
   },
   devJsAppToDist: {
     options: {
-      src: [
-        'app/js/*'
-      ],
-      dest: 'dist/js'
-    }
+      src: ['app/js/*'],
+      dest: 'dist/js',
+    },
   },
   // HTML
   devHtmlAppToTmp: {
@@ -84,9 +75,9 @@ module.exports = {
         '--prune-empty-dirs',
         '--include=*/',
         '--include=*.html',
-        '--exclude=*'
-      ]
-    }
+        '--exclude=*',
+      ],
+    },
   },
   devHtmlTmpToJekyll: {
     options: {
@@ -99,32 +90,26 @@ module.exports = {
         '--prune-empty-dirs',
         '--include=*/',
         '--include=*.html',
-        '--exclude=*'
-      ]
-    }
+        '--exclude=*',
+      ],
+    },
   },
   // JEKYLL
   devJekyllPrepare: {
     options: {
       src: './app/*',
       dest: './tmp/jekyll',
-      exclude: [
-        'css/',
-        'js/',
-        '_layouts'
-      ]
-    }
+      exclude: ['css/', 'js/', '_layouts'],
+    },
   },
 
   /* PROD */
   // CSS
   prodCssDependenciesToTmp: {
     options: {
-      src: [
-        'bower_components/normalize-css/normalize.css'
-      ],
-      dest: 'tmp/css/src'
-    }
+      src: ['bower_components/normalize-css/normalize.css'],
+      dest: 'tmp/css/src',
+    },
   },
   // Js
   prodJsDependenciesToTmp: {
@@ -134,10 +119,10 @@ module.exports = {
         'bower_components/algoliasearch-helper/dist/algoliasearch.helper.min.js',
         'bower_components/hogan/web/builds/3.0.2/hogan-3.0.2.min.js',
         'bower_components/jquery/dist/jquery.min.js',
-        'bower_components/moment/min/moment.min.js'
+        'bower_components/moment/min/moment.min.js',
       ],
-      dest: 'tmp/js/src'
-    }
+      dest: 'tmp/js/src',
+    },
   },
   // HTML
   prodHtmlAppToTmp: {
@@ -151,9 +136,9 @@ module.exports = {
         '--prune-empty-dirs',
         '--include=*/',
         '--include=*.html',
-        '--exclude=*'
-      ]
-    }
+        '--exclude=*',
+      ],
+    },
   },
   prodHtmlTmpToJekyll: {
     options: {
@@ -166,29 +151,24 @@ module.exports = {
         '--prune-empty-dirs',
         '--include=*/',
         '--include=*.html',
-        '--exclude=*'
-      ]
-    }
+        '--exclude=*',
+      ],
+    },
   },
   // JEKYLL
   prodJekyllPrepare: {
     options: {
       src: './app/*',
       dest: './tmp/jekyll',
-      exclude: [
-        'css/',
-        'js/',
-        'fonts/',
-        '_layouts'
-      ]
-    }
+      exclude: ['css/', 'js/', 'fonts/', '_layouts'],
+    },
   },
 
   /* DEPLOY */
   deployToPixelastic: {
     options: {
       src: 'dist/',
-      dest: 'pixelastic:/var/www/pixelastic.com/meetups.pixelastic.com/',
+      dest: 'pixelastic:/var/www/meetups.pixelastic.com/',
       args: [
         '--chmod=Du=rwx,Dg=rwx,Do=rx,Fu=rw,Fg=rw,Fo=r',
         '--verbose',
@@ -196,8 +176,8 @@ module.exports = {
         '--update',
         '--delete',
         '--prune-empty-dirs',
-        '--compress'
-      ]
-    }
-  }
+        '--compress',
+      ],
+    },
+  },
 };
