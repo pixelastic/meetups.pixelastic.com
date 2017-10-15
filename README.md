@@ -1,6 +1,6 @@
 # meetups.pixelastic.com
 
-Voici les sources du site accessible sur [http://meetups.pixelastic.com]().
+Voici les sources du site accessible sur [http://meetups.pixelastic.com](http://meetups.pixelastic.com).
 Vous y trouverez les compte-rendus des différents meetups et conférences
 auxquels je participe.
 
