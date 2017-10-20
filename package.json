@@ -11,10 +11,6 @@
   "bugs": {
     "url": "https://github.com/pixelastic/meetups.pixelastic.com/issues"
   },
-  "engines": {
-    "node": "0.10.21",
-    "npm": "1.3.11"
-  },
   "scripts": {
     "serve": "grunt serve",
     "deploy": "grunt deploy",
