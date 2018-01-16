@@ -1,35 +1,33 @@
-# Dependencies
-markdown:         redcarpet
-highlighter:      pygments
-gems:             [algoliasearch-jekyll]
+title: 'Meetups & Conferences'
+description: "Notes from the various meetups and conferences I attend"
+baseurl: "/"
+url: "http://meetups.pixelastic.com/"
+twitter_username: pixelastic
+github_username:  pixelastic
+# author:
+#   name:           'Timothée Carry'
+#   url:            https://twitter.com/pixelastic
+# github:
+#   repo:           https://github.com/pixelastic/meetups.pixelastic.com
 
-# Permalinks
-permalink:        pretty
+# # Build
+# timezone:         "Europe/Paris"
+# encoding:         "utf-8"
 
-# Setup
-title:            'Meetups'
-description:      "Notes from the various meetups and conferences I attend"
-url:              http://meetups.pixelastic.com
-base_url:         meetups.pixelastic.com
+# Build settings
+source: ./src
+destination: ./dist
+highlighter: pygments
+markdown: kramdown
+# markdown:         redcarpet
+permalink: pretty
+# paginate:         5
+plugins:
+  - jekyll-feed
+  - jekyll-paginate
 
-author:
-  name:           'Timothée Carry'
-  url:            https://twitter.com/pixelastic
-
-paginate:         5
-
-# Custom vars
-version:          1.1.0
-
-github:
-  repo:           https://github.com/pixelastic/meetups.pixelastic.com
-
-# Build
-timezone:         "Europe/Paris"
-encoding:         "utf-8"
-
-# Algolia
 algolia:
   application_id: 'O3F8QXYK6R'
   index_name: 'meetups'
   read_only_api_key: '6a027258345c8a569385505b041e6dec'
+

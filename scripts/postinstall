@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+bundle install
+
+# Adding CSS vendors
+mkdir -p ./src/_css/vendors
+cp ./node_modules/tachyons/css/tachyons.min.css ./src/_css/vendors

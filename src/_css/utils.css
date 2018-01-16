@@ -1,0 +1,86 @@
+.flrnw,
+.flex-row-nowrap {
+  display: flex;
+  flex-direction: row;
+}
+.flrw,
+.flex-row-wrap {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.flcnw,
+.flex-column-nowrap {
+  display: flex;
+  flex-direction: column;
+}
+.flcw,
+.flex-column-wrap {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+
+.fln,
+.flex-none {
+  flex: none;
+}
+.fla,
+.flex-auto {
+  flex: 1 1 auto;
+  min-width: 0;
+  min-height: 0;
+}
+
+.flrcv,
+.flex-row-center-vertical {
+  display: flex;
+  align-items: center;
+}
+.flrch,
+.flex-row-center-horizontal {
+  display: flex;
+  justify-content: center;
+}
+.flccv,
+.flex-column-center-vertical {
+  display: flex;
+  justify-content: center;
+}
+.flcch,
+.flex-column-center-horizontal {
+  display: flex;
+  align-items: center;
+}
+.flc,
+.flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.flspa,
+.flex-space-around {
+  justify-content: space-around;
+}
+.flspb,
+.flex-space-between {
+  justify-content: space-between;
+}
+
+.flral,
+.flex-row-align-left {
+  justify-content: flex-start;
+}
+.flrar,
+.flex-row-align-right {
+  justify-content: flex-end;
+}
+.flcat,
+.flex-column-align-top {
+  justify-content: flex-start;
+}
+.flcab,
+.flex-column-align-bottom {
+  justify-content: flex-end;
+}

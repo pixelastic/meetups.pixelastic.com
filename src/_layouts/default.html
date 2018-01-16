@@ -1,0 +1,58 @@
+<!doctype html>
+<html class="no-js" lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>
+      {% if page.id == "index" %} {{ site.title }} {% else %} {{ page.title | xml_escape }} - {{ site.title }} {% endif %}
+    </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="{{ site.description }}">
+
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="alternate" type="application/rss+xml" title="RSS" href="/atom.xml">
+  </head>
+
+  <body>
+    <div class="flrnw debug">
+      <div class="fln w5">
+        <h1><a href="/index.html">{{ site.title }}</a></h1>
+        <p class="lead">{{ site.description }}</p>
+
+        <ul>
+          <li>
+            <a href="/">Home</a>
+          </li>
+          <li>
+            <a href="/about/">About</a>
+          </li>
+          <li>
+            <a href="/archive/">Archive</a>
+          </li>
+        </ul>
+
+        <div class="footer">
+          Source code available on <a href="https://github.com/pixelastic/meetups.pixelastic.com">GitHub</a>
+        </div>
+      </div>
+        
+      <div class="fla">
+        {{ content }}
+      </div>
+    </div>
+  </body>
+      
+
+    <!--  <1!--This is a CSS trick to hide/show the sidebar for mobiles--1>-->
+    <!--  <input type="checkbox" class="sidebar-checkbox" id="sidebar-checkbox">-->
+    <!--  </ul>-->
+
+    <!--  <label for="sidebar-checkbox" class="sidebar-toggle-menu"></label>-->
+
+    <!--</div>-->
+    <!--<div class="layout">-->
+    <!--  <div class="content" id="content">-->
+    <!--  </div>-->
+    <!--</div>-->
+
+</html>
