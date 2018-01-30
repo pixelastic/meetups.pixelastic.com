@@ -1,13 +1,12 @@
 ---
 layout: page
-title: About
+title: About me
 id: about
 ---
 
 Hello,
 
-My name is Tim Carry and I'm a Developer Advocate at
-[Algolia][1].
+My name is Tim Carry and I'm a Developer Advocate at [Algolia][1].
 
 I live in Paris, a city with an incredible number of tech meetups and
 conferences. I also travel a lot to conferences around Europe.

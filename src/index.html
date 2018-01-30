@@ -5,50 +5,40 @@ id: index
 ---
 
 {% for post in paginator.posts %}
-  <h1><a href="{{ post.url }}">{{ post.title }}</a></h1>
-  <p class="author">
-    <span class="date">{{ post.date }}</span>
-  </p>
-  <div class="content">
+<div class="mb5">
+  <h1 class="ma0 mb1">
+    <a class="red f1 fw4 ma0" href="{{ post.url }}">{{ post.title | xml_escape }}</a>
+  </h1>
+  <div class="black-40 f4">{{ post.date | date_to_string }}</div>
+  <div class="f4 measure-wide black-70 lh-copy">
     {{ post.content }}
   </div>
+</div>
 {% endfor %}
 
-<!-- <div class="posts posts-display"> -->
-<!--   {% for post in paginator.posts %} -->
-<!--   <div class="post"> -->
-<!--     <h1 class="post-title"> -->
-<!--       <a href="{{ post.url }}"> -->
-<!--         {{ post.title | xml_escape }} -->
-<!--       </a> -->
-<!--     </h1> -->
+<!-- Pagination links -->
+<div class="measure-wide f4">
+  <div class="flrnw f5 w-100 h2">
+    {% if paginator.previous_page %}
+    <a href="{{ paginator.previous_page_path }}" class="fla flc">&lt;&lt; Previous</a>
+    {% endif %}
 
-<!--     <span class="post-date">{{ post.date | date_to_string }}</span> -->
+    {% for page in (1..paginator.total_pages) %}
+    {% if page == paginator.page %}
+    <span class="fla b black-70 flc">{{ page }}</span>
+    {% elsif page == 1 %}
+    <a class="fla flc" href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}">{{ page }}</a>
+    {% else %}
+    <a class="fla flc" href="{{ site.paginate_path | prepend: site.baseurl | replace: '//', '/' | replace: ':num', page }}">{{ page }}</a>
+    {% endif %}
+    {% endfor %}
 
-<!--     {{ post.content }} -->
+    {% if paginator.next_page %}
+    <a href="{{ paginator.next_page_path }}" class="fla flc">Next &gt;&gt;</a>
+    {% endif %}
+  </div>
+</div>
 
-<!--     <div class="tag-list"> -->
-<!--       {% for tag in post.tags %} -->
-<!--         <a href="/tags/{{ tag }}">#{{ tag }}</a> -->
-<!--       {% endfor %} -->
-<!--     </div> -->
-<!--   </div> -->
-<!--   {% endfor %} -->
-<!-- </div> -->
 
-<!-- <div class="pagination"> -->
-<!--   {% if paginator.next_page %} -->
-<!--     <a class="pagination-item older" href="/page{{paginator.next_page}}">Older</a> -->
-<!--   {% else %} -->
-<!--     <span class="pagination-item older">Older</span> -->
-<!--   {% endif %} -->
-<!--   {% if paginator.previous_page %} -->
-<!--     {% if paginator.page == 2 %} -->
-<!--       <a class="pagination-item newer" href="/">Newer</a> -->
-<!--     {% else %} -->
-<!--       <a class="pagination-item newer" href="/page{{paginator.previous_page}}">Newer</a> -->
-<!--     {% endif %} -->
-<!--   {% else %} -->
-<!--     <span class="pagination-item newer">Newer</span> -->
-<!--   {% endif %} -->
-<!-- </div> -->
+
+

@@ -2,6 +2,7 @@
 
 cat \
   ./src/_css/vendors/*.css \
+  ./src/_css/utils/*.css \
   ./src/_css/*.css \
   2>/dev/null \
   > ./src/css/main.css

@@ -1,3 +1,7 @@
+describe "Class" do
+  it "has feature" do
+  end
+end
 # module Jekyll
 #   # Monkeypatching Page to add a way to get the list of tags from a page
 #   class Post

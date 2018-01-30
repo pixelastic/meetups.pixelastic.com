@@ -13,46 +13,33 @@
     <link rel="alternate" type="application/rss+xml" title="RSS" href="/atom.xml">
   </head>
 
-  <body>
-    <div class="flrnw debug">
-      <div class="fln w5">
-        <h1><a href="/index.html">{{ site.title }}</a></h1>
-        <p class="lead">{{ site.description }}</p>
+  <body class="helvetica">
+    <div class="flcnw w-25 ph3 pt3 pb2 vh-100 fixed bg-red white">
+      <h1 class="fln f1">
+        <a href="/index.html" class="white b no-underline hover:no-underline">Meetups</a>
+      </h1>
+      <p class="lead fln f4 o-70 lh-copy">{{ site.description }}</p>
 
-        <ul>
-          <li>
-            <a href="/">Home</a>
-          </li>
-          <li>
-            <a href="/about/">About</a>
-          </li>
-          <li>
-            <a href="/archive/">Archive</a>
-          </li>
-        </ul>
+      <ul class="fln list pl0">
+        <li>
+          <a class="db white pv1 f4 hover:b hover:no-underline" href="/">Home</a>
+        </li>
+        <li>
+          <a class="db white pv1 f4 hover:b hover:no-underline" href="/about/">About</a>
+        </li>
+        <li>
+          <a class="db white pv1 f4 hover:b hover:no-underline" href="/archive/">Archive</a>
+        </li>
+      </ul>
 
-        <div class="footer">
-          Source code available on <a href="https://github.com/pixelastic/meetups.pixelastic.com">GitHub</a>
-        </div>
-      </div>
-        
-      <div class="fla">
-        {{ content }}
+      <div class="fln mta tc">
+        <span class="o-50">Source code available on </span>
+        <a class="white" href="https://github.com/pixelastic/meetups.pixelastic.com">GitHub</a>
       </div>
     </div>
+        
+    <div class="content ml-25 ph5 pv4">
+      {{ content }}
+    </div>
   </body>
-      
-
-    <!--  <1!--This is a CSS trick to hide/show the sidebar for mobiles--1>-->
-    <!--  <input type="checkbox" class="sidebar-checkbox" id="sidebar-checkbox">-->
-    <!--  </ul>-->
-
-    <!--  <label for="sidebar-checkbox" class="sidebar-toggle-menu"></label>-->
-
-    <!--</div>-->
-    <!--<div class="layout">-->
-    <!--  <div class="content" id="content">-->
-    <!--  </div>-->
-    <!--</div>-->
-
 </html>

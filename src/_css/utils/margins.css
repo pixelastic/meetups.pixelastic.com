@@ -1,0 +1,13 @@
+.mta { margin-top: auto; }
+.mra { margin-right: auto; }
+.mba { margin-bottom: auto; }
+.mla { margin-left: auto; }
+.mha { margin-right: auto; margin-left: auto;}
+.ma {
+  margin-top: auto;
+  margin-right: auto;
+  margin-bottom: auto;
+  margin-left: auto;
+}
+
+.ml-25 { margin-left: 25%; }

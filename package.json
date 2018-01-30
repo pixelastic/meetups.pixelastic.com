@@ -19,6 +19,8 @@
     "postinstall": "./scripts/postinstall"
   },
   "devDependencies": {
+    "onchange": "^3.3.0",
+    "parallelshell": "^3.0.2",
     "tachyons": "^4.9.1"
   },
   "dependencies": {}

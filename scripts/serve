@@ -1,4 +1,7 @@
 #!/usr/bin/env bash
 
 yarn run build:css
-bundle exec jekyll serve
+
+parallelshell \
+  "onchange './src/_css/**/*.css' -- yarn run build:css" \
+  "bundle exec jekyll serve --livereload"

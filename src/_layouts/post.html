@@ -2,18 +2,22 @@
 layout: default
 ---
 
-<div class="post">
-  <h1 class="post-title">{{ page.title | xml_escape }}</h1>
-  <span class="post-date">{{ page.date | date_to_string }}</span>
-  {{ content }}
+<div class="mb5">
+  <h1 class="ma0 mb1">
+    <a class="red f1 fw4 ma0" href="{{ page.url }}">{{ page.title | xml_escape }}</a>
+  </h1>
+  <div class="black-40 f4">{{ page.date | date_to_string }}</div>
+  <div class="f4 measure-wide black-70 lh-copy">
+    {{ content }}
+  </div>
   <hr>
-  <p class="tag-list">
-    Tags :  
+  <p class="f4">
+    <span class="black-70">Tags:</span>
     {% for tag in page.tags %}
       <a href="/tags/{{ tag }}">#{{ tag }}</a>
     {% endfor %}
   </p>
-  <p class="comments">
+  <p class="black-40">
     Want to add something ? Feel free to get in touch on Twitter : <a href="https://twitter.com/pixelastic/">@pixelastic</a>
   </p>
 </div>

@@ -11,13 +11,12 @@ module Jekyll
     end
 
     def render(_context)
-      %(
-        <iframe
-          class="vimeo-player"
-          width="640"
-          height="390"
-          src="#{@embed_url}"
-          frameborder="0" allowfullscreen></iframe>
+      %(<iframe
+            class="db mha"
+            width="640"
+            height="390"
+            src="#{@embed_url}"
+            frameborder="0" allowfullscreen></iframe>
       )
     end
   end

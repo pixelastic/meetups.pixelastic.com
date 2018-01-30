@@ -20,7 +20,7 @@ Evert month, a different company hosts the meetup. This time it was
 [Onepoint][3], and the place was gorgeous. If you were not there, here is what
 you missed:
 
-# 5 pre-conceived ideas about React Native
+## 5 pre-conceived ideas about React Native
 
 [Nicolas][4] is a mobile engineer at [BAM][5]. When they started, they were
 using [Cordova][6] to build mobile apps. Cordova embed a webview inside a native
@@ -74,7 +74,7 @@ about React Native before, and I feel I now have a better understanding of how
 it works, what it does and what it doesn't. Special kudos to Nicolas that
 prepared this talk in one week time!
 
-# E-learning without Internet
+## E-learning without Internet
 
 The second talk was a perfect segway as [Richard][10] talked about an
 application he wrote in React Native.
@@ -129,7 +129,7 @@ the app, but is unlocked when the correct code is entered.
 This was a nice and clever use-case for an offline app, using tech to bring
 knowledge to people!
 
-# Atomic Design
+## Atomic Design
 
 The following talk was another talk by a BAM employee. Thanks to them for
 filling the missing speaker slot so quickly! This time it was France, a mobile
@@ -185,7 +185,7 @@ keeping the styleguide up to date, and what form should the styleguide have
 (should it be an online document or should it take the form of a CSS framework
 for example?).
 
-# Microservices architectures
+## Microservices architectures
 
 The last talk was more high level, talking about microservices architectures.
 I've seen a lot of talks about microservices in the past, and a lot of them were
@@ -240,7 +240,7 @@ not have been the best introduction to microservices if you never heard about
 them before, but if you did, there were a few nice nuggets of information
 inside.
 
-# Next month
+## Next month
 
 Next month we'll be hosted by BlaBlaCar. Hope to see you there!
 

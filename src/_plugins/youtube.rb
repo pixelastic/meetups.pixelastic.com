@@ -12,8 +12,7 @@ module Jekyll
     end
 
     def render(_context)
-      %(
-        <iframe
+      %(<iframe
           class="youtube-player"
           type="text/html"
           width="640"

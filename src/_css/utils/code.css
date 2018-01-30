@@ -1,0 +1,154 @@
+:root {
+  /* COLORS */
+  --oroshi-pureblack: #000000;
+  --oroshi-black: #121212;
+  --oroshi-almostblack: #1C1C1C;
+  --oroshi-darkgrey: #262626;
+  --oroshi-grey: #626262;
+  --oroshi-lightgrey: #BCBCBC;
+  --oroshi-white: #D0D0D0;
+  --oroshi-purewhite: #000000;
+  --oroshi-blue: #5F87FF;
+  --oroshi-darkblue: #005F87;
+  --oroshi-calmblue: #5F87AF;
+  --oroshi-green: #00AF5F;
+  --oroshi-darkgreen: #008700;
+  --oroshi-calmgreen: #87AF87;
+  --oroshi-orange: #FF5F00;
+  --oroshi-darkorange: #FFAF00;
+  --oroshi-calmorange: #FF875F;
+  --oroshi-pink: #FF5FAF;
+  --oroshi-darkpink: #AF005F;
+  --oroshi-calmpink: #FF87AF;
+  --oroshi-purple: #D75FFF;
+  --oroshi-darkpurple: #AF5FAF;
+  --oroshi-calmpurple: #AF87FF;
+  --oroshi-red: #D70000;
+  --oroshi-darkred: #870000;
+  --oroshi-calmred: #FF5F5F;
+  --oroshi-yellow: #D7D700;
+  --oroshi-darkyellow: #AF8700;
+  --oroshi-calmyellow: #D7D75F;
+
+  /* COMMON */
+  --oroshi-normal: var(--oroshi-white);
+  --oroshi-chute: var(--oroshi-darkblue);
+  --oroshi-comment: var(--oroshi-grey);
+  --oroshi-functionName: var(--oroshi-green);
+  --oroshi-identifier: var(--oroshi-calmgreen);
+  --oroshi-constant: var(--oroshi-darkorange);
+  --oroshi-string: var(--oroshi-calmblue);
+  --oroshi-number: var(--oroshi-calmblue);
+  --oroshi-symbol: var(--oroshi-orange);
+  --oroshi-boolean: var(--oroshi-calmorange);
+  --oroshi-regexp: var(--oroshi-darkblue);
+
+  /* CSS */
+  --oroshi-css-tag: var(--oroshi-darkgreen);
+  --oroshi-css-class: var(--oroshi-green);
+  --oroshi-css-pseudoclass: var(--oroshi-darkorange);
+  --oroshi-css-media: var(--oroshi-yellow);
+  --oroshi-css-property: var(--oroshi-calmred);
+  --oroshi-css-value: var(--oroshi-calmblue);
+  /* RUBY */
+  --oroshi-ruby-class: var(--oroshi-calmred);
+  --oroshi-ruby-className: var(--oroshi-constant);
+  /* JAVASCRIPT */
+  --oroshi-js-function: var(--oroshi-calmred); 
+  --oroshi-js-undefined: var(--oroshi-calmred);
+  --oroshi-js-statement: var(--oroshi-darkgreen);
+  /* SHELL */
+  --oroshi-sh-statement: var(--oroshi-darkgreen);
+  /* HTML */
+  --oroshi-html-tag: var(--oroshi-darkgreen);
+  --oroshi-html-attribute: var(--oroshi-calmred);
+  /* PHP */
+  --oroshi-php-variable: var(--oroshi-calmgreen);
+  --oroshi-php-function: var(--oroshi-green);
+}
+
+code, pre {
+  font-family: Menlo, Monaco, "Courier New", monospace;
+}
+code {
+  color: var(--code-color);
+  background-color: var(--code-background);
+}
+
+div.highlighter-rouge {
+  background-color: var(--oroshi-black);
+  color: var(--oroshi-white);
+  font-size: 85%;
+  border-radius: 3px;
+}
+code.highlighter-rouge {
+  background-color: var(--oroshi-darkgrey);
+  color: var(--oroshi-calmred);
+  font-size: 85%;
+  border-radius: 3px;
+  padding: .1rem .25rem;
+}
+.highlighter-rouge pre {
+  padding: .5rem 1rem;
+  margin: 0;
+}
+
+/* Comments */
+.highlight .c, 
+.highlight .c1 {
+  color: var(--oroshi-comment);
+  font-weight:bold;
+}
+.highlight .sd {
+  color: var(--oroshi-comment);
+  font-style:normal;
+}
+/* Strings */
+.highlight .s,
+.highlight .s1,
+.highlight .s2 {
+  color: var(--oroshi-string);
+}
+
+
+
+.language-ahk .o { color: var(--oroshi-calmred); }
+.language-ahk .err { color: var(--oroshi-normal); background:none;}
+.language-apache .nb { color: var(--oroshi-green); }
+.language-apache .sx { color: var(--oroshi-normal); }
+.language-css .nc { color: var(--oroshi-css-class); }
+.language-css .nd { color: var(--oroshi-css-pseudoclass); }
+.language-css .nt { color: var(--oroshi-css-tag); }
+.language-css .k { color: var(--oroshi-css-property); }
+.language-css .nb { color: var(--oroshi-css-value); }
+.language-html .nt { color: var(--oroshi-html-tag); }
+.language-html .na { color: var(--oroshi-html-attribute); }
+.language-ini .err { color: var(--oroshi-normal); background:none; }
+.language-javascript .kd, .language-js .kd { color: var(--oroshi-js-function); }
+.language-javascript .sr, .language-js .sr { color: var(--oroshi-regexp); }
+.language-javascript .nx, .language-js .nx { color: var(--oroshi-normal); }
+.language-javascript .kc, .language-js .kc { color: var(--oroshi-js-undefined); }
+.language-javascript .k, .language-js .k { color: var(--oroshi-js-statement); }
+.language-json .nt { color: var(--oroshi-string); }
+.language-nginx .k { color: var(--oroshi-darkgreen); }
+.language-nginx .kn { color: var(--oroshi-darkgreen); }
+.language-nginx .s { color: var(--oroshi-normal); }
+.language-nginx .sr { color: var(--oroshi-normal); }
+.language-nginx .mi { color: var(--oroshi-normal); }
+.language-nginx .err { color: var(--oroshi-normal); background:none; }
+.language-php .nv { color: var(--oroshi-php-variable); }
+.language-php .k { color: var(--oroshi-calmred); }
+.language-php .nb { color: var(--oroshi-php-function); }
+.language-php .nf { color: var(--oroshi-normal); }
+.language-ruby .k { color: var(--oroshi-ruby-class); }
+.language-ruby .nc { color: var(--oroshi-ruby-className); }
+.language-ruby .nf { color: var(--oroshi-functionName); }
+.language-ruby .nb { color: var(--oroshi-normal); }
+.language-ruby .no { color: var(--oroshi-ruby-className); }
+.language-sh .o { color: var(--oroshi-normal); }
+.language-sh .nb { color: var(--oroshi-sh-statement); }
+.language-vim .k { color: var(--oroshi-darkgreen); }
+.language-vim .nb { color: var(--oroshi-darkgreen); }
+.language-vim .m { color: var(--oroshi-normal); }
+.language-vim .k { color: var(--oroshi-string); }
+.language-xml .nt { color: var(--oroshi-html-tag); }

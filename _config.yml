@@ -1,9 +1,26 @@
+# Metadata
 title: 'Meetups & Conferences'
-description: "Notes from the various meetups and conferences I attend"
-baseurl: "/"
+description: "Notes from the various meetups and conferences I attend."
 url: "http://meetups.pixelastic.com/"
-twitter_username: pixelastic
-github_username:  pixelastic
+
+# Build
+source: ./src
+destination: ./dist
+baseurl: ""
+plugins:
+  - jekyll-feed
+  - jekyll-paginate
+
+# Pagination
+paginate: 5
+
+# Algolia
+algolia:
+  application_id: 'O3F8QXYK6R'
+  index_name: 'meetups'
+  read_only_api_key: '6a027258345c8a569385505b041e6dec'
+
+
 # author:
 #   name:           'Timothée Carry'
 #   url:            https://twitter.com/pixelastic
@@ -14,20 +31,7 @@ github_username:  pixelastic
 # timezone:         "Europe/Paris"
 # encoding:         "utf-8"
 
-# Build settings
-source: ./src
-destination: ./dist
-highlighter: pygments
-markdown: kramdown
 # markdown:         redcarpet
 permalink: pretty
-# paginate:         5
-plugins:
-  - jekyll-feed
-  - jekyll-paginate
 
-algolia:
-  application_id: 'O3F8QXYK6R'
-  index_name: 'meetups'
-  read_only_api_key: '6a027258345c8a569385505b041e6dec'
 

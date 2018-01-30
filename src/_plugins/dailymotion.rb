@@ -11,8 +11,7 @@ module Jekyll
     end
 
     def render(_context)
-      %(
-        <iframe
+      %(<iframe
           class="dailymotion-player"
           width="640"
           height="390"
