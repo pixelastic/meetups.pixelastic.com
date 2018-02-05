@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Paris Hacker #12"
-tags: parishacker, varnish
+tags: parishacker varnish
 ---
 
 12 édition de [ParisHacker][1]. J'étais allé aux premières éditions il

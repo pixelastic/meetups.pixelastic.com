@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Concaténation, Compression, Cache"
-tags: humantalks, webperf
+tags: humantalks webperf
 ---
 
 Quand on cherche à optimiser les performances de son site web, il y a trois

@@ -27,7 +27,7 @@ id: index
     {% if page == paginator.page %}
     <span class="fla b black-70 flc">{{ page }}</span>
     {% elsif page == 1 %}
-    <a class="fla flc" href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}">{{ page }}</a>
+    <a class="fla flc" href="/">{{ page }}</a>
     {% else %}
     <a class="fla flc" href="{{ site.paginate_path | prepend: site.baseurl | replace: '//', '/' | replace: ':num', page }}">{{ page }}</a>
     {% endif %}

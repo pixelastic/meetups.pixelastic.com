@@ -1,0 +1,15 @@
+---
+layout: default
+---
+<h1 class="ma0 mb1">
+  <a class="red f1 fw4 ma0" href="{{ page.url }}">#{{ page.tag }}</a>
+</h1>
+
+<div class="measure-wide lh-copy pt3 f4">
+{% for post in page.posts %}
+  <div class="flrnw">
+    <a class="fla link pointer" href="{{ post.url }}">{{ post.title }}</a>
+    <span class="fln black-70 f5 i">{{ post.date | date_to_string }}</span>
+  </div>
+{% endfor %}
+</div>

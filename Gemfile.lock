@@ -49,6 +49,8 @@ GEM
     jekyll-paginate (1.1.0)
     jekyll-sass-converter (1.5.1)
       sass (~> 3.4)
+    jekyll-tagging (1.1.0)
+      nuggets
     jekyll-watch (2.0.0)
       listen (~> 3.0)
     json (2.1.0)
@@ -63,6 +65,7 @@ GEM
     multi_json (1.13.1)
     nokogiri (1.8.1)
       mini_portile2 (~> 2.3.0)
+    nuggets (1.5.0)
     pathutil (0.16.1)
       forwardable-extended (~> 2.6)
     public_suffix (3.0.1)
@@ -89,6 +92,7 @@ DEPENDENCIES
   jekyll-algolia (~> 1.0)
   jekyll-feed (~> 0.9)
   jekyll-paginate (~> 1.1)
+  jekyll-tagging (~> 1.1)
   pygments.rb (~> 1.2)
 
 BUNDLED WITH

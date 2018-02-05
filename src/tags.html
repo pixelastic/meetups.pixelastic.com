@@ -1,0 +1,15 @@
+---
+layout: default
+title: Home
+id: index
+---
+<h1 class="ma0 mb1">
+  <a class="red f1 fw4 ma0" href="{{ page.url }}">Tags</a>
+</h1>
+
+<ul class="measure-wide lh-copy pt3 f4">
+{% for tag in site.tags %}
+  {% assign tag_name = tag | first %}
+  <li class="black-70"><a class="link pointer" href="/{{ site.tag_page_dir }}/{{ tag_name }}">#{{ tag_name }}</a></li>
+{% endfor %}
+</div>
