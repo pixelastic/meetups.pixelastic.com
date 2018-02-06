@@ -1,7 +1,7 @@
 {
   "name": "meetups.pixelastic.com",
   "version": "1.0.0",
-  "description": "Recap of conferences and meetups I attend",
+  "description": "Recaps of conferences and meetups I attend",
   "author": "Tim \"pixelastic\" Carry",
   "private": true,
   "repository": {
