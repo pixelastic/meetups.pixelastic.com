@@ -1,0 +1,20 @@
+{% comment %}
+post-list.html
+  - posts: The list of posts to iterate on
+
+Displays a list of post, with a link to each and their date.
+{% endcomment %}
+
+<div class="measure-wide lh-copy f4">
+{% for post in include.posts %}
+  <div class="flrnw">
+    <a class="fla link pointer" href="{{ post.url }}" title="{{ post.title | xml_escape }}">
+      {{ post.title | xml_escape }}
+    </a>
+    <span class="fln light-grey f5 i flc">
+      {{ post.date | date_to_string }}
+    </span>
+  </div>
+{% endfor %}
+</div>
+

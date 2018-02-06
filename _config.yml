@@ -15,6 +15,22 @@ paginate: 5
 tag_page_layout: tag
 tag_page_dir: tags
 
+# Archives
+jekyll-archives:
+  enabled:
+    - year
+    - month
+    - day
+  layouts:
+    year: archive-year
+    month: archive-month
+    day: archive-day
+  permalinks:
+    year: '/:year/'
+    month: '/:year/:month/'
+    day: '/:year/:month/:day/'
+
+
 # Algolia
 algolia:
   application_id: 'O3F8QXYK6R'

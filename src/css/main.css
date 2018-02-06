@@ -157,6 +157,8 @@ code.highlighter-rouge {
 .language-xml .nt { color: var(--oroshi-html-tag); }
 .red { color: #AC4142; }
 .bg-red { background-color: #AC4142; }
+.grey { color: #313131; }
+.light-grey { color: rgba(0, 0, 0, .4) }
 .flrnw,
 .flex-row-nowrap {
   display: flex;
@@ -271,24 +273,24 @@ h1, h2, h3, h4, h5, h6 { font-family: PermanentMarker; }
 }
 
 .ml-25 { margin-left: 25%; }
-a { text-decoration: none; }
+a { text-decoration: none; color: #AC4142; }
 a:hover { text-decoration: underline; }
 
-.content a { color: #AC4142; }
-.content h1 {
+/* Styles applied to auto-generated content, coming from Markdown */
+.ctx-content h1 {
   color: #313131;
   margin-top: 1rem;
   margin-bottom: 0;
 }
-.content h2 {
+.ctx-content h2 {
   color: #313131;
   margin-top: 1rem;
   margin-bottom: 0;
   font-weight: 400;
 }
-.content h2 + p { margin-top: 0; }
+.ctx-content h2 + p { margin-top: 0; }
 
-.content img {
+.ctx-content img {
   display: block;
   margin: 0 auto 1rem;
   border-radius: 5px;

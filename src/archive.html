@@ -1,0 +1,25 @@
+---
+layout: default
+---
+{% include title.html title="All posts" %}
+
+{% assign postsByYear = site.posts | group_by_exp:"post", "post.date | date: '%Y'" %}
+{% for year in postsByYear %}
+<div class="mb4">
+  <h2 class="ma0 mb2">
+    <a href="/{{ year.name }}/" class="grey">{{ year.name }}</a>
+  </h2>
+  {% assign postsByMonth = year.items | group_by_exp:"post", "post.date | date: '%m'" %}
+  {% for month in postsByMonth %}
+    {% assign month_name = month.items.first.date | date: '%B' %}
+    <div class="ml3 mb3">
+      <h3 class="ma0 mb1 f4">
+        <a href="/{{ year.name }}/{{ month.name }}/" class="grey">{{ month_name }}</a>
+      </h3>
+      <div class="ml3">
+        {% include post-list.html posts=month.items %}
+      </div>
+    </div>
+  {% endfor %}
+</div>
+{% endfor %}

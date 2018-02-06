@@ -1,0 +1,12 @@
+{% comment %}
+title.html
+  - title: Title of the link
+
+Displays a page title, that links to the page itself
+{% endcomment %}
+<h1 class="ma0 mb4">
+  <a class="red f1 fw4 ma0" href="{{ page.url }}" title="{{ include.title }}">
+    {{ include.title | xml_escape }}
+  </a>
+</h1>
+

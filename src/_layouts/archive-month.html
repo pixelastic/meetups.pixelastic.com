@@ -2,9 +2,7 @@
 layout: default
 ---
 
-{% capture title %}
-#{{ page.tag }}
-{% endcapture %}
+{% assign title = page.date | date: "%B %Y" %}
 {% include title.html title=title %}
 
 {% include post-list.html posts=page.posts %}

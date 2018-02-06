@@ -2,22 +2,26 @@
 layout: default
 ---
 
-<div class="mb5">
-  <h1 class="ma0 mb1 ">
-    <a class="red f1 fw4 ma0" href="{{ page.url }}">{{ page.title | xml_escape }}</a>
-  </h1>
-  <div class="black-40 f4">{{ page.date | date_to_string }}</div>
-  <div class="f4 black-70 lh-copy measure-wide">
-    {{ content }}
-  </div>
-  <hr>
-  <p class="f4">
-    <span class="black-70">Tags:</span>
-    {% for tag in page.tags %}
-      <a href="/tags/{{ tag }}">#{{ tag }}</a>
-    {% endfor %}
-  </p>
-  <p class="black-40">
-    Want to add something ? Feel free to get in touch on Twitter : <a href="https://twitter.com/pixelastic/">@pixelastic</a>
-  </p>
+<h1 class="ma0 mb1">
+  <a class="red f1 fw4 ma0" href="{{ page.url }}" title="{{ page.title | xml_escape }}">
+    {{ page.title | xml_escape }}
+  </a>
+</h1>
+<div class="light-grey f4">{{ page.date | date_to_string }}</div>
+
+<div class="mt4 ctx-content">
+  {{ content }}
 </div>
+
+<hr>
+
+<p class="f4">
+  Tags:
+  {% for tag in page.tags %}
+    <a href="/tags/{{ tag }}">#{{ tag }}</a>
+  {% endfor %}
+</p>
+
+<p class="light-grey">
+  Want to add something ? Feel free to get in touch on Twitter : <a href="https://twitter.com/pixelastic/">@pixelastic</a>
+</p>

@@ -1,2 +1,4 @@
 .red { color: #AC4142; }
 .bg-red { background-color: #AC4142; }
+.grey { color: #313131; }
+.light-grey { color: rgba(0, 0, 0, .4) }
