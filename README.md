@@ -9,10 +9,10 @@ Les compte-rendus sont écrit en markdown et le site est généré avec
 
 # Installation
 
-## Installing Yarn dependencies
+## Initial setup
 
-`yarn install`
-`yarn global add -- grunt-cli`
+`touch _algolia_api_key` <= This file is needed, even empty, for grunt not to
+crash
 
 ## Installing Bundle dependencies
 
@@ -24,5 +24,22 @@ commands, hope it will help you too:
 
 - `bundle update json` (to update from 1.8.3 to 1.8.6)
 - `bundle update yajl-ruby` (to update from 1.2.1 to 1.2.3)
+
+## Global installs
+
+Grunt and bower are required globally:
+
+`yarn global add -- grunt-cli bower`
+
+## Installing NPM dependencies
+
+This is an old project; it **has to use npm, not yarn**.
+
+`npm install`
+
+
+## Running
+
+`npm run build`
 
 
