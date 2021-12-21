@@ -1,6 +1,21 @@
 GEM
   remote: https://rubygems.org/
   specs:
+    algoliasearch (1.27.5)
+      httpclient (~> 2.8, >= 2.8.3)
+      json (>= 1.5.1)
+    algoliasearch-jekyll (0.9.1)
+      algoliasearch (~> 1.12)
+      appraisal (~> 2.1.0)
+      awesome_print (~> 1.6)
+      json (>= 1.8.6)
+      nokogiri (~> 1.7, >= 1.7.2)
+      verbal_expressions (~> 0.1.5)
+    appraisal (2.1.0)
+      bundler
+      rake
+      thor (>= 0.14.0)
+    awesome_print (1.9.2)
     blankslate (2.1.2.4)
     celluloid (0.16.0)
       timers (~> 4.0.0)
@@ -15,6 +30,7 @@ GEM
     fast-stemmer (1.0.2)
     ffi (1.9.8)
     hitimes (1.2.2)
+    httpclient (2.8.3)
     i18n (0.7.0)
     jekyll (2.5.3)
       classifier-reborn (~> 2.0)
@@ -39,6 +55,7 @@ GEM
       sass (~> 3.2)
     jekyll-watch (1.2.1)
       listen (~> 2.7)
+    json (2.6.1)
     kramdown (1.7.0)
     liquid (2.6.2)
     listen (2.10.1)
@@ -46,28 +63,37 @@ GEM
       rb-fsevent (>= 0.9.3)
       rb-inotify (>= 0.9)
     mercenary (0.3.5)
+    mini_portile2 (2.6.1)
+    nokogiri (1.12.5)
+      mini_portile2 (~> 2.6.1)
+      racc (~> 1.4)
     parslet (1.5.0)
       blankslate (~> 2.0)
     posix-spawn (0.3.11)
     pygments.rb (0.6.3)
       posix-spawn (~> 0.3.6)
       yajl-ruby (~> 1.2.0)
+    racc (1.6.0)
+    rake (13.0.6)
     rb-fsevent (0.9.5)
     rb-inotify (0.9.5)
       ffi (>= 0.5.0)
     redcarpet (3.3.1)
     safe_yaml (1.0.4)
     sass (3.4.14)
+    thor (1.1.0)
     timers (4.0.1)
       hitimes
     toml (0.1.2)
       parslet (~> 1.5.0)
+    verbal_expressions (0.1.5)
     yajl-ruby (1.2.3)
 
 PLATFORMS
   ruby
 
 DEPENDENCIES
+  algoliasearch-jekyll
   i18n (~> 0.7.0)
   jekyll (~> 2.5)
 

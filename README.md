@@ -12,6 +12,7 @@ Les compte-rendus sont écrit en markdown et le site est généré avec
 ## Installing Yarn dependencies
 
 `yarn install`
+`yarn global add -- grunt-cli`
 
 ## Installing Bundle dependencies
 
