@@ -14,6 +14,10 @@ Les compte-rendus sont écrit en markdown et le site est généré avec
 `touch _algolia_api_key` <= This file is needed, even empty, for grunt not to
 crash
 
+Grunt and bower are required globally:
+
+`yarn global add -- grunt-cli bower`
+
 ## Installing Bundle dependencies
 
 `bundle install`
@@ -25,11 +29,10 @@ commands, hope it will help you too:
 - `bundle update json` (to update from 1.8.3 to 1.8.6)
 - `bundle update yajl-ruby` (to update from 1.2.1 to 1.2.3)
 
-## Global installs
+## Installing bower dependencies
 
-Grunt and bower are required globally:
+`bower install`
 
-`yarn global add -- grunt-cli bower`
 
 ## Installing NPM dependencies
 
