@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Paris Web 2013
+tags: parisweb
 ---
 
 ## Introduction
