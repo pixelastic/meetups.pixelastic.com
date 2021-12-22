@@ -5,7 +5,7 @@ module Jekyll
     def generate(site)
       year_list = []
       # Year
-      site.posts.group_by{ |post| {"year" => post.date.year} }.each do |period, posts|
+      site.posts.docs.group_by{ |post| {"year" => post.date.year} }.each do |period, posts|
         year_list << period["year"]
         posts = posts.sort_by { |post| post.date }.reverse
         archive_year = ArchiveYearIndex.new(site, posts, period["year"])
@@ -15,7 +15,7 @@ module Jekyll
       end
 
       # Month
-      site.posts.group_by{ |post| {"month" => post.date.month, "year" => post.date.year} }.each do |period, posts|
+      site.posts.docs.group_by{ |post| {"month" => post.date.month, "year" => post.date.year} }.each do |period, posts|
         posts = posts.sort_by { |post| post.date }.reverse
         archive_month = ArchiveMonthIndex.new(site, posts, period["year"], period["month"])
         archive_month.render(site.layouts, site.site_payload)
@@ -24,7 +24,7 @@ module Jekyll
       end
 
       # Day
-      site.posts.group_by{ |post| {"day" => post.date.day, "month" => post.date.month, "year" => post.date.year} }.each do |period, posts|
+      site.posts.docs.group_by{ |post| {"day" => post.date.day, "month" => post.date.month, "year" => post.date.year} }.each do |period, posts|
         posts = posts.sort_by { |post| post.date }.reverse
         archive_day = ArchiveDayIndex.new(site, posts, period["year"], period["month"], period["day"])
         archive_day.render(site.layouts, site.site_payload)
