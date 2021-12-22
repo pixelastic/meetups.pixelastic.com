@@ -7,7 +7,7 @@ id: all_tags
 <ul>
   {% for tag in page.tags %}
   <li> 
-    <a href="/tags/{{ tag }}">#{{ tag }}</a>
+    <a href="/tags/{{ tag.slug }}">#{{ tag.name }}</a>
   </li>
   {% endfor %}
 </ul>
