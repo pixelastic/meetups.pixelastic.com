@@ -1,20 +1,21 @@
+title:            'Meetups'
+description:      "Notes from the various meetups and conferences I attend"
+url:              http://meetups.pixelastic.com
+base_url:         meetups.pixelastic.com
+source: "app"
+author:
+  name:           'Timothée Carry'
+  url:            https://twitter.com/pixelastic
+
 # Dependencies
 markdown:         redcarpet
-highlighter:      pygments
-gems:             [algoliasearch-jekyll]
+plugins:             [jekyll-paginate]
 
 # Permalinks
 permalink:        pretty
 
 # Setup
-title:            'Meetups'
-description:      "Notes from the various meetups and conferences I attend"
-url:              http://meetups.pixelastic.com
-base_url:         meetups.pixelastic.com
 
-author:
-  name:           'Timothée Carry'
-  url:            https://twitter.com/pixelastic
 
 paginate:         5
 

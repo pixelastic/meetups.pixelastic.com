@@ -1,0 +1,120 @@
+---
+layout: post
+title: Réussir ses présentations PPT
+tags: madinier
+---
+
+J'ai eu la chance de participer à la formation "Réussir ses présentation PPT"
+à Octo. N'ayant jamais touché à PowerPoint et étant sous Linux, j'ai un peu
+galéré à installer une version de Windows Trial, et une version Office Trial
+pour pouvoir avoir PowerPoint le jour J. 
+
+Il s'est avéré que la formation portait plus sur les présentation en règle
+générale, sur les messages à faire passer et comment les passer que sur l'outil
+en lui-même. 
+
+La formation était orientée sur la création de présentations dans un contexte
+professionnel, à destination de nos clients finaux. Dans cette optique, on
+considère que l'on utilise le même support pour la présentation, en personne,
+devant eux, que celui qu'on leur enverra par mail et qu'ils pourront relire
+ensuite.
+
+Partant de là, il est important de proposer deux niveaux de lecture. Chaque
+slide doit porter un message, et on peut suivre la suite des messages, et donc
+le message global rien qu'en lisant les titres de chaque slide. Ensuite, si on
+veut avoir plus de détail, on peut aller le chercher dans la slide en question,
+et si vraiment on veut creuser très profondément, on peut rajouter des annexes
+qui explicitent certains points.
+
+Les slides doivent être auto-portants, notre présence ne doit pas être requise
+pour comprendre le gros du message. Notre auditoire possède une capacité de
+concentration limitée, il faut donc lui faciliter la lecture et la
+compréhension de chacun des messages. Si un message est trop complexe, on le
+découpe en deux slides.
+
+Même si l'auditeur décroche quelques secondes, pour cause d'un moment
+d'inatention, il faut que la slide puisse lui rappeller en un coup d'œil où on
+en est dans le déroulé. Ce n'est pas grave si notre auditoire décroche par
+moment, c'est normal. Mais il faut lui laisser la possibilité de suivre la
+présentation à son rythme et de pouvoir décrocher et raccrocher quand il le
+souhaite.
+
+Dans la même optique, il ne faut pas jouer sur le suspens, en annoncant petit
+à petit notre message, et en présentant la conclusion seulement à la fin. Il
+faut être direct, et présenter la solution dès le début. Ca s'applique tout
+aussi bien dans la présentation dans son ensemble que pour chaque slide prise
+séparement. On présent dès le début la conclusion de notre étude, ce que l'on
+pense qu'il faille faire, etc. Et ensuite, le reste de la présentation permet
+de démontrer, de prouver, de corroborer ce que l'on a annoncé dès le début. Il
+ne faut pas que l'auditeur ai à attendre la fin pour comprendre le message,
+sinon il va décrocher.
+
+C'est pour cela qu'il faut porter grande attention aux titres, et faire en
+sorte qu'ils ne soient pas creux. Il faut oublier les titres de genre
+"Contexte", "Constat", "Nos préconisations". Il faut que chaque texte
+transmette une prise de position, une description. Par exemple "Un contexte
+difficile", "Un constat en demie-teinte", "Former les développeurs pour plus de
+flexibilité".
+
+On a aussi vu, par la pratique, à quel point notre cerveau humain percoit les
+formes et les images beaucoup plus rapidement que le texte. Il faut donc faire
+attention aux éléments que l'on utilise pour illustrer nos propos, faire
+attention qu'ils ne phagocytent pas le message que l'on souhaite faire passer.
+Une image ne doit être incorporée que si elle ajoute réellement de la valeur,
+de l'illustration au message à passer. Une image qui donne un exemple est très
+parlante, notre cerveau s'en rappellera bien, mais une image "pour faire joli",
+va trop attirer le regard et le détourner du propos initial.
+
+On n'est pas là pour raconter une histoire, pour parler de soi ou pour
+divertir. On est là pour démontrer une thèse, pour montrer ce que l'on pense,
+et le démontrer ensuite. Notre message doit être clairement explicité, avec une
+slide par idée. On montre dès le début la conclusion, et on explicite seulement
+ensuite. On évite les titres creux, il faut qu'ils transpirent une conviction,
+une croyance. Les phrases doivent être simples, deux virgules maximum. Si la
+phrase est trop longue, alors l'idée est trop complexe. Pour rester factuel et
+uniforme essaie de garder tous les verbes à l'infinitif, sans les conjuguer. Au
+pire, on mets au présent. On évite les verbes trop génériques (faire, dire,
+être, avoir), on remplace par de synonymes plus précis. Et on ne doit pas avoir
+peur du blanc, du vide, il ne faut pas chercher à remplir la slide à tout prix.
+Par contre, ce que l'on mets doit être aéré, aligné, et cohérent.
+
+Si on doit faire une liste, on fait attention à la cohérence (liste de noms, de
+verbes, etc), et on mets en avant (en gras par exemple), les idées principales
+de chaque ligne. Si on a choisi le gras pour la mise en avant, on s'y tient, on
+n'utilise pas de la couleur ou de l'italique sur une autre slide. Dans la même
+idée, on limite le nombre de couleurs utilisées à 3, ou 4 au grand maximum. Une
+seule police maximum.
+
+Une fois sa slide terminée, on vérifie sa checklist pour être sûr de n'avoir
+rien oublié :
+- Deux niveaux de lecture. L'idée principale dans le titre, plus de détail dans
+  la slide. Je dois pouvoir suivre le plan général juste avec les titres.
+- Qu'est-ce que je veux dire ? Quel est mon message ? Quels sont les élements
+  chocs, convaincants ?
+- Est-ce que je suis obligé de dire tout ça ? Est-ce que je peux en enlever
+  ? Ou au contraire, est-ce que je n'ai pas oublié un élément primordial ?
+- D'abord la conclusion, ensuite la démonstration.
+- Est-ce que mes données, mes sources, mes graphes sont bien à jour ? Attention
+  aux copié-collé d'anciennes présentations dépassées.
+- Est-ce que mes visuels servent vraiment mon propos. C'est eux qu'on va voir
+  en premier, est-ce que c'est vraiment ça que je veux ou est-ce que c'est
+  superflu ?
+
+Enfin, si vous ne savez pas comment faire le plan général de votre
+présentation, il y a plusieurs idées assez classiques :
+- FSVOM: Les Faits, ce que l'on Sent, ce que l'on Veut, les Obstacles et les
+  Moyens
+- Diagnostic : Le problème, la possible solution, les conséquences et la
+  décision finale.
+- SOSRA: Situation, Observation, Sentiment, Réflexion, Action
+- PPL : Principes, Portée, Limites
+
+Et finalement un dernier conseil. Si après tout ces conseils vous avez bien
+taillé dans le lard de votre présentation et enlevé tout le superflu pour ne
+garder que l'essentiel et que votre message est bien clair, mais que malgré
+tout tout semble aussi important et capital, il faut encore prioriser. Si tout
+est important, en fait rien n'est important. Il va falloir prioriser, et
+prendre une décision, une conviction qu'on doit pouvoir démontrer dans la
+présentation.
+
+

@@ -1,8 +1,11 @@
 source 'https://rubygems.org'
 
-gem 'jekyll', '~> 2.5'
+gem 'jekyll', '~> 3.6'
 gem 'i18n', '~> 0.7.0'
 
-group :jekyll_plugins do
-  gem 'algoliasearch-jekyll'
-end
+gem 'jekyll-paginate'
+gem 'redcarpet'
+
+# group :jekyll_plugins do
+#   gem 'jekyll-algolia'
+# end

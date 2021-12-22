@@ -9,6 +9,9 @@ Les compte-rendus sont écrit en markdown et le site est généré avec
 
 # Installation
 
+Note that the `staging` folder is where I store the files that I don't currently
+need in the build (drafts, files that generate errors, etc).
+
 ## Initial setup
 
 `touch _algolia_api_key` <= This file is needed, even empty, for grunt not to
