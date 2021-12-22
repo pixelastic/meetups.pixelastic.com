@@ -49,7 +49,7 @@ module Jekyll
       @name = 'index.html'
       @dir = year.to_s()
       self.process(@name)
-      self.read_yaml(File.join(site.source, site.config['layouts'], 'archive'), 'year.html')
+      self.read_yaml(File.join(site.source, site.config['layouts_dir'], 'archive'), 'year.html')
       self.data['year'] = year
       self.data['posts'] = posts
       self.data['title'] = "Archive #{year}"
@@ -63,7 +63,7 @@ module Jekyll
       @name = 'index.html'
       @dir = File.join(year.to_s(), "%02d" % month.to_s())
       self.process(@name)
-      self.read_yaml(File.join(site.source, site.config['layouts'], 'archive'), 'month.html')
+      self.read_yaml(File.join(site.source, site.config['layouts_dir'], 'archive'), 'month.html')
       self.data['year'] = year
       self.data['month'] = month
       self.data['posts'] = posts
@@ -77,7 +77,7 @@ module Jekyll
       @base = site.source
       @name = 'index.html'
       self.process(@name)
-      self.read_yaml(File.join(site.source, site.config['layouts'], 'archive'), 'day.html')
+      self.read_yaml(File.join(site.source, site.config['layouts_dir'], 'archive'), 'day.html')
       self.data['year'] = year
       self.data['month'] = month
       self.data['day'] = day
@@ -94,7 +94,7 @@ module Jekyll
       @name = 'index.html'
       @dir = 'archive'
       self.process(@name)
-      self.read_yaml(File.join(site.source, site.config['layouts'], 'archive'), 'index.html')
+      self.read_yaml(File.join(site.source, site.config['layouts_dir'], 'archive'), 'index.html')
       self.data['years'] = years
       self.data['title'] = "Archive"
     end

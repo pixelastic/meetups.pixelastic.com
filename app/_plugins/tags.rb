@@ -1,29 +1,30 @@
+require 'awesome_print'
 module Jekyll
   # Monkeypatching Page to add a way to get the list of tags from a page
   class Post
     def tags
-      (self.data['tags'] || '').split(',').map() { |t| Tag.new(t) }
+      (data['tags'] || '').split(',').map { |t| Tag.new(t) }
     end
   end
 
   # Adding new Tag object
   class Tag
     TAG_NAME_MAP = {
-      "#"  => "sharp",
-      "/"  => "slash",
-      "\\" => "backslash",
-      "."  => "dot",
-      "+"  => "plus",
-      " "  => "-",
-      "$"  => "$"
-    }
+      '#' => 'sharp',
+      '/' => 'slash',
+      '\\' => 'backslash',
+      '.' => 'dot',
+      '+' => 'plus',
+      ' ' => '-',
+      '$' => '$'
+    }.freeze
 
     attr_accessor :name
 
     def initialize(name)
       @name = escape_name(name.downcase.strip)
     end
-    
+
     def to_s
       @name
     end
@@ -37,21 +38,21 @@ module Jekyll
     # Map a tag to its directory name. Certain characters are escaped,
     # using the TAG_NAME_MAP constant, above.
     def escape_name(name)
-      escaped_name = ""
+      escaped_name = ''
       name.each_char do |char|
         if (char =~ /[-A-Za-z0-9_]/) != nil
           escaped_name += char
         else
           converted_char = TAG_NAME_MAP[char]
-          if not converted_char
+          unless converted_char
             msg = "Bad character '#{char}' in tag '#{name}'"
             puts("*** #{msg}")
-            raise FatalException.new(msg)
+            raise FatalException, msg
           end
           escaped_name += converted_char
         end
       end
-      return escaped_name
+      escaped_name
     end
   end
 
@@ -62,13 +63,13 @@ module Jekyll
       tags = {}
 
       # Building a list of tags, with each associated post
-      site.posts.sort_by{ |post| post.date }.reverse.each do |post|
-        post_tags = post.tags
+      site.posts.docs.sort_by { |post| post.date }.reverse.each do |post|
+        post_tags = post.data['tags']
         post_tags.each do |post_tag|
-          if (!tags[post_tag.name]) 
+          unless tags[post_tag.name]
             tags[post_tag.name] = {
-              :tag => post_tag,
-              :posts => []
+              tag: post_tag,
+              posts: []
             }
           end
 
@@ -77,7 +78,7 @@ module Jekyll
       end
 
       # Creating index pages for every tag
-      tags.each do |key, value|
+      tags.each do |_key, value|
         tag_index = TagIndexPage.new(site, value[:tag], value[:posts])
         tag_index.render(site.layouts, site.site_payload)
         tag_index.write(site.dest)
@@ -86,7 +87,7 @@ module Jekyll
 
       # Adding an index with all tags
       tag_list = []
-      tags.each do |key, value|
+      tags.each do |_key, value|
         tag_list << value[:tag]
       end
       all_tags = AllTagsPage.new(site, tag_list)
@@ -94,7 +95,6 @@ module Jekyll
       all_tags.write(site.dest)
       site.pages << all_tags
     end
-
   end
 
   class TagIndexPage < Page
@@ -103,11 +103,11 @@ module Jekyll
       @base = site.source
       @name = 'index.html'
       @dir = "tags/#{tag}"
-      self.process(@name)
-      self.read_yaml(File.join(site.source, site.config['layouts'], 'tags'), 'tag.html')
-      self.data['tag'] = tag.to_liquid
-      self.data['posts'] = posts
-      self.data['title'] = "##{tag}"
+      process(@name)
+      read_yaml(File.join(site.source, site.config['layouts_dir'], 'tags'), 'tag.html')
+      data['tag'] = tag.to_liquid
+      data['posts'] = posts
+      data['title'] = "##{tag}"
     end
   end
 
@@ -116,12 +116,11 @@ module Jekyll
       @site = site
       @base = site.source
       @name = 'index.html'
-      @dir = "tags"
-      self.process(@name)
-      self.read_yaml(File.join(site.source, site.config['layouts'], 'tags'), 'index.html')
-      self.data['tags'] = tags
-      self.data['title'] = "Tags"
+      @dir = 'tags'
+      process(@name)
+      read_yaml(File.join(site.source, site.config['layouts_dir'], 'tags'), 'index.html')
+      data['tags'] = tags
+      data['title'] = 'Tags'
     end
   end
-
 end

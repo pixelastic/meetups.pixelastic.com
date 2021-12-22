@@ -3,6 +3,7 @@ GEM
   specs:
     addressable (2.8.0)
       public_suffix (>= 2.0.2, < 5.0)
+    awesome_print (1.9.2)
     colorator (1.1.0)
     em-websocket (0.5.3)
       eventmachine (>= 0.12.9)
@@ -57,6 +58,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  awesome_print
   i18n (~> 0.7.0)
   jekyll (~> 3.6)
   jekyll-paginate
