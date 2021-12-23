@@ -40,8 +40,10 @@
     "time-grunt": "0.4.0"
   },
   "dependencies": {
+    "algoliasearch": "4.11.0",
     "hogan.js": "3.0.2",
-    "instantsearch.js": "2.6.0",
+    "instantsearch.js": "4.36.0",
+    "instantsearch.css": "7.4.5",
     "jquery": "2.1.4",
     "lodash": "4.17.21",
     "moment": "2.10.3",

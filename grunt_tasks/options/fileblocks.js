@@ -16,11 +16,13 @@ module.exports = {
         cwd: 'tmp/jekyll/js',
         prefix: '/js',
         src: [
-          'lodash.min.js',
+          // Order here can be important
           'jquery.min.js',
+          'lodash.min.js',
           'moment.min.js',
           'hogan-3.0.2.min.js',
-          'instantsearch.min.js',
+          'algoliasearch-lite.umd.js',
+          'instantsearch.production.min.js',
           'algolia.js'
         ]
       }

@@ -1,8 +1,9 @@
 $(function () {
+
+  const searchClient = algoliasearch('O3F8QXYK6R', '6a027258345c8a569385505b041e6dec');
   const search = instantsearch({
-    appId: 'O3F8QXYK6R',
     indexName: 'meetups',
-    apiKey: '6a027258345c8a569385505b041e6dec'
+    searchClient: searchClient,
   });
 
   search.addWidget(
@@ -17,31 +18,34 @@ $(function () {
     instantsearch.widgets.hits({
       container: '#search-hits',
       transformItems: function (hits) {
-        return 
+        return _.map(hits, function (hit) {
+          hit.title = hit._highlightResult.title.value
+          hit.content = hit._highlightResult.content.value
+          return hit;
+        });
       },
       templates: {
         item: $("#algolia__template").text(),
         empty: $("#algolia__template--no-results").text(),
       }
-      // templates: {
-      //     hits: function (hit) { 
-      //       const postedAt = moment.unix(hit.date).fromNow();
-      //       const title = hit._highlightResult.title.value
-      //       const content = hit._highlightResult.content.value
-      //       const url = hit.url;
-
-      //       return `
-      //         <div class="algolia__result">
-      //           <a class="algolia__result-link" href="${url}">${title}</a>
-      //           <div class="algolia__result-date">${postedAt}</div>
-      //           <div class="algolia__result-text">${content}</div>
-      //         </div>
-      //       `
-      //     }
-      //   }
     })
   );
 
   // Starting the search
   search.start();
+
+
+  const $staticContent = $("#content-static");
+  const $searchContent = $("#content-search");
+  const $searchBar = $('.ais-SearchBox-input');
+  $searchBar.on('input', function(event) {
+    const query = event.target.value;
+    if (!query) {
+      $searchContent.hide();
+      $staticContent.show();
+    } else {
+      $searchContent.show();
+      $staticContent.hide();
+    }
+  });
 });

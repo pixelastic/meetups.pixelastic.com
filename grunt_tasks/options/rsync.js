@@ -2,15 +2,15 @@
 
 const jsDependencies = [
   'node_modules/hogan.js/dist/hogan-3.0.2.min.js',
-  'node_modules/instantsearch.js/dist/instantsearch.min.js',
+  'node_modules/algoliasearch/dist/algoliasearch-lite.umd.js',
+  'node_modules/instantsearch.js/dist/instantsearch.production.min.js',
   'node_modules/jquery/dist/jquery.min.js',
   'node_modules/lodash/lodash.min.js',
   'node_modules/moment/min/moment.min.js',
 ]
 const cssDependencies = [
   'node_modules/normalize.css/normalize.css',
-  'node_modules/instantsearch.js/dist/instantsearch.min.css',
-  'node_modules/instantsearch.js/dist/instantsearch-theme-algolia.min.css',
+  'node_modules/instantsearch.css/themes/satellite-min.css',
 ]
 
 module.exports = {
@@ -115,8 +115,7 @@ module.exports = {
   prodCssMapsToDist: {
     options: {
       src: [
-        'node_modules/instantsearch.js/dist/instantsearch.min.css.map',
-        'node_modules/instantsearch.js/dist/instantsearch-theme-algolia.min.css.map',
+        'tmp/css/src/*.map',
       ],
       dest: 'dist/css',
     },
@@ -131,7 +130,7 @@ module.exports = {
   prodJsMapsToDist: {
     options: {
       src: [
-        'node_modules/instantsearch.js/dist/instantsearch.min.js.map',
+        'node_modules/instantsearch.js/dist/instantsearch.production.min.js.map',
         'node_modules/jquery/dist/jquery.min.map',
       ],
       dest: 'dist/js',
