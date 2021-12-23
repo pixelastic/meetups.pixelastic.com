@@ -1,5 +1,18 @@
 /* eslint-env node */
 
+const jsDependencies = [
+  'node_modules/hogan.js/dist/hogan-3.0.2.min.js',
+  'node_modules/instantsearch.js/dist/instantsearch.min.js',
+  'node_modules/jquery/dist/jquery.min.js',
+  'node_modules/lodash/lodash.min.js',
+  'node_modules/moment/min/moment.min.js',
+]
+const cssDependencies = [
+  'node_modules/normalize.css/normalize.css',
+  'node_modules/instantsearch.js/dist/instantsearch.min.css',
+  'node_modules/instantsearch.js/dist/instantsearch-theme-algolia.min.css',
+]
+
 module.exports = {
   options: {
     recursive: true,
@@ -10,13 +23,13 @@ module.exports = {
   // CSS
   devCssDependenciesToJekyll: {
     options: {
-      src: 'bower_components/normalize-css/normalize.css',
+      src: cssDependencies,
       dest: 'tmp/jekyll/css',
     },
   },
   devCssDependenciesToDist: {
     options: {
-      src: 'bower_components/normalize-css/normalize.css',
+      src: cssDependencies,
       dest: 'dist/css',
     },
   },
@@ -29,25 +42,13 @@ module.exports = {
   // JS
   devJsDependenciesToJekyll: {
     options: {
-      src: [
-        'bower_components/algoliasearch/dist/algoliasearch.min.js',
-        'bower_components/algoliasearch-helper/dist/algoliasearch.helper.min.js',
-        'bower_components/hogan/web/builds/3.0.2/hogan-3.0.2.min.js',
-        'bower_components/jquery/dist/jquery.min.js',
-        'bower_components/moment/min/moment.min.js',
-      ],
+      src: jsDependencies,
       dest: 'tmp/jekyll/js',
     },
   },
   devJsDependenciesToDist: {
     options: {
-      src: [
-        'bower_components/algoliasearch/dist/algoliasearch.min.js',
-        'bower_components/algoliasearch-helper/dist/algoliasearch.helper.min.js',
-        'bower_components/hogan/web/builds/3.0.2/hogan-3.0.2.min.js',
-        'bower_components/jquery/dist/jquery.min.js',
-        'bower_components/moment/min/moment.min.js',
-      ],
+      src: jsDependencies,
       dest: 'dist/js',
     },
   },
@@ -107,21 +108,33 @@ module.exports = {
   // CSS
   prodCssDependenciesToTmp: {
     options: {
-      src: ['bower_components/normalize-css/normalize.css'],
+      src: cssDependencies,
       dest: 'tmp/css/src',
+    },
+  },
+  prodCssMapsToDist: {
+    options: {
+      src: [
+        'node_modules/instantsearch.js/dist/instantsearch.min.css.map',
+        'node_modules/instantsearch.js/dist/instantsearch-theme-algolia.min.css.map',
+      ],
+      dest: 'dist/css',
     },
   },
   // Js
   prodJsDependenciesToTmp: {
     options: {
-      src: [
-        'bower_components/algoliasearch/dist/algoliasearch.min.js',
-        'bower_components/algoliasearch-helper/dist/algoliasearch.helper.min.js',
-        'bower_components/hogan/web/builds/3.0.2/hogan-3.0.2.min.js',
-        'bower_components/jquery/dist/jquery.min.js',
-        'bower_components/moment/min/moment.min.js',
-      ],
+      src: jsDependencies,
       dest: 'tmp/js/src',
+    },
+  },
+  prodJsMapsToDist: {
+    options: {
+      src: [
+        'node_modules/instantsearch.js/dist/instantsearch.min.js.map',
+        'node_modules/jquery/dist/jquery.min.map',
+      ],
+      dest: 'dist/js',
     },
   },
   // HTML

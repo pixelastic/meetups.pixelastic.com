@@ -18,6 +18,9 @@ module.exports = function(grunt) {
       'rsync:devHtmlTmpToJekyll',
       // JEKYLL
       'rsync:devJekyllPrepare',
-      'shell:jekyllDev'
+      'shell:jekyllDev',
+      // CSS and JS maps
+      'rsync:prodCssMapsToDist',
+      'rsync:prodJsMapsToDist',
     ]);
 };

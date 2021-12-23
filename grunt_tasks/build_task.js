@@ -27,6 +27,9 @@ module.exports = function(grunt) {
       // JEKYLL
       'rsync:prodJekyllPrepare',
       'shell:jekyllProd',
-      'htmlmin:prodDistToDist'
+      'htmlmin:prodDistToDist',
+      // CSS and JS maps
+      'rsync:prodCssMapsToDist',
+      'rsync:prodJsMapsToDist',
     ]);
 };

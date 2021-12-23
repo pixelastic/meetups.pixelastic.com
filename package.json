@@ -36,9 +36,15 @@
     "grunt-rsync": "0.6.2",
     "grunt-shell": "1.1.2",
     "grunt-userev": "0.0.6",
-    "lodash": "2.4.1",
     "matchdep": "0.3.0",
     "time-grunt": "0.4.0"
   },
-  "dependencies": {}
+  "dependencies": {
+    "hogan.js": "3.0.2",
+    "instantsearch.js": "2.6.0",
+    "jquery": "2.1.4",
+    "lodash": "4.17.21",
+    "moment": "2.10.3",
+    "normalize.css": "3.0.1"
+  }
 }
