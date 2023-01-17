@@ -2,6 +2,7 @@
 /dist
 _site
 /tmp
+.sass-cache/
 
 # Dependencies
 /node_modules
