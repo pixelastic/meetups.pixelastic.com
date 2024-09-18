@@ -1,23 +1,28 @@
 # meetups.pixelastic.com
 
-Voici les sources du site accessible sur [http://meetups.pixelastic.com](http://meetups.pixelastic.com).
-Vous y trouverez les compte-rendus des différents meetups et conférences
-auxquels je participe.
+This repo holds the sources of the
+[http://meetups.pixelastic.com](http://meetups.pixelastic.com) website.
 
-Les compte-rendus sont écrit en markdown et le site est généré avec
-[Jekyll](http://jekyllrb.com/). Le thème vient de [Hyde](http://andhyde.com/).
+It contains recaps of various meetups and conferences I attended. There are
+a lot of recaps from around 2009, but then less and less of them. I still add
+some here once in a while.
 
-# Installation
+## Notes from 2024
 
-Note that the `staging` folder is where I store the files that I don't currently
-need in the build (drafts, files that generate errors, etc).
+We're in September 2024 and I need to make this old website run again. Many of
+the languages have seen major updates (several of them) and some tools do not
+even exist anymore. Below are some rough notes of what I did to make it somehow
+work a bit.
 
-## Initial setup
+- Install ruby deps with `bundle install`
+- Install `grunt-cli` globally
+- Create `_algolia_api_key` file, it's required
+- Install npm (yes, it *needs* npm) with `npm install`
+- If things don't work, remove the `package-lock.json` and `node_modules` and
+  retry `npm install`
+- Cross your fingers
+- Run `npm run build`
 
-`touch _algolia_api_key` <= This file is needed, even empty, for grunt not to
-crash
-
-Grunt and bower are required globally:
 
 `yarn global add -- grunt-cli bower`
 
