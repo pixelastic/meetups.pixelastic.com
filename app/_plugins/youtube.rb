@@ -3,7 +3,7 @@ module Jekyll
     def initialize(tag_name, value, tokens)
       super
       video_id = CGI.parse(URI.parse(value).query)['v'][0]
-      @embed_url = "http://www.youtube.com/embed/#{video_id}"
+      @embed_url = "https://www.youtube.com/embed/#{video_id}"
     end
 
     def render(_context)
