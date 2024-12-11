@@ -14,7 +14,7 @@ jobs:
       # Add SSH key
       - add_ssh_keys:
           fingerprints:
-            - "XX:XX:XX:XX:XX:XX:XX:XX:XX:XX:XX:XX:XX:XX:XX:XX" # Replace with your SSH key fingerprint
+            - "SHA256:I73ETs/VuuUA2z6GexfJ0q4U7GLwjY8jZlC15uq/aMw"
 
       # Install Ruby dependencies
       - ruby/install-deps
