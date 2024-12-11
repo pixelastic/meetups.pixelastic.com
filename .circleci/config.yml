@@ -10,27 +10,23 @@ jobs:
       - image: cimg/ruby:3.0-node
     steps:
       - checkout
-
-      # Add SSH key
       - add_ssh_keys:
           fingerprints:
             - "SHA256:I73ETs/VuuUA2z6GexfJ0q4U7GLwjY8jZlC15uq/aMw"
-
-      # Install Ruby dependencies
       - ruby/install-deps
-
-      # Install Node dependencies
       - node/install-packages:
           pkg-manager: yarn
 
-      # Store both Ruby and Node dependencies in cache
       - save_cache:
           key: v1-deps-{{ .Branch }}-{{ checksum "Gemfile.lock" }}-{{ checksum "yarn.lock" }}
           paths:
             - vendor/bundle
             - node_modules
 
-      # Run deploy script
+      - run:
+          name: Write Algolia API key
+          command: echo $ALGOLIA_API_KEY > _algolia_api_key
+
       - run:
           name: Deploy
           command: yarn run deploy
