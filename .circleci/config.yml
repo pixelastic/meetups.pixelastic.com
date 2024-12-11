@@ -5,7 +5,7 @@ orbs:
   ruby: circleci/ruby@2
 
 jobs:
-  build:
+  deploy:
     docker:
       - image: cimg/ruby:3.0-node
     steps:
