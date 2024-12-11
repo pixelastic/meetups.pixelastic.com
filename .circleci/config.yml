@@ -21,11 +21,11 @@ jobs:
 
       # Install Node dependencies
       - node/install-packages:
-          pkg-manager: npm
+          pkg-manager: yarn
 
       # Store both Ruby and Node dependencies in cache
       - save_cache:
-          key: v1-deps-{{ .Branch }}-{{ checksum "Gemfile.lock" }}-{{ checksum "package-lock.json" }}
+          key: v1-deps-{{ .Branch }}-{{ checksum "Gemfile.lock" }}-{{ checksum "yarn.lock" }}
           paths:
             - vendor/bundle
             - node_modules
