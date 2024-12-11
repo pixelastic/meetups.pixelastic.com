@@ -22,6 +22,7 @@ jobs:
             echo "    HostName ${SSH_HOST}" >> ~/.ssh/config
             echo "    User ${SSH_USER}" >> ~/.ssh/config
             chmod 600 ~/.ssh/config
+            ssh-keyscan -H ${SSH_HOST} >> ~/.ssh/known_hosts
       - add_ssh_keys:
           fingerprints:
             - "SHA256:I73ETs/VuuUA2z6GexfJ0q4U7GLwjY8jZlC15uq/aMw"
