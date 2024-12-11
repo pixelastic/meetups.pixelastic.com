@@ -89,6 +89,7 @@ DEPENDENCIES
   jekyll-algolia
   jekyll-paginate
   redcarpet
+  sass (~> 3.7.4)
 
 BUNDLED WITH
-   2.1.4
+   2.3.25

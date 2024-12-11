@@ -15,13 +15,10 @@ even exist anymore. Below are some rough notes of what I did to make it somehow
 work a bit.
 
 - Install ruby deps with `bundle install`
-- Install `grunt-cli` globally
 - Create `_algolia_api_key` file, it's required
-- Install npm (yes, it *needs* npm) with `npm install`
-- If things don't work, remove the `package-lock.json` and `node_modules` and
-  retry `npm install`
+- Run `yarn install`
 - Cross your fingers
-- Run `npm run build`
+- Run `yarn run build`
 
 
 `yarn global add -- grunt-cli bower`
@@ -41,16 +38,7 @@ commands, hope it will help you too:
 
 `bower install`
 
+## Installing node dependencies
 
-## Installing NPM dependencies
-
-This is an old project; it **has to use npm, not yarn**.
-
-`npm install`
-
-
-## Running
-
-`npm run build`
-
+`yarn install`
 
