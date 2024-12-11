@@ -9,30 +9,35 @@ jobs:
     docker:
       - image: cimg/ruby:3.0-node
     steps:
+      # System install
       - checkout
+      - run:
+          name: Install rsync
+          command: sudo apt-get update && sudo apt-get install -y rsync
       - add_ssh_keys:
           fingerprints:
             - "SHA256:I73ETs/VuuUA2z6GexfJ0q4U7GLwjY8jZlC15uq/aMw"
+
+      # Project dependencies
       - ruby/install-deps
       - node/install-packages:
           pkg-manager: yarn
-
       - save_cache:
           key: v1-deps-{{ .Branch }}-{{ checksum "Gemfile.lock" }}-{{ checksum "yarn.lock" }}
           paths:
             - vendor/bundle
             - node_modules
 
+      # Deploy
       - run:
           name: Write Algolia API key
           command: echo $ALGOLIA_API_KEY > _algolia_api_key
-
       - run:
           name: Deploy
           command: yarn run deploy
 
 workflows:
   version: 2
-  build_and_test:
+  deploy:
     jobs:
-      - build
+      - deploy
